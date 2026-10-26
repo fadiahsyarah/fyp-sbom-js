@@ -1,0 +1,6222 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-23T10:29:48.899Z",
+  "findings": [
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "lodash",
+      "version": "2.4.2",
+      "purl": "pkg:npm/lodash@2.4.2",
+      "vuln_id": "GHSA-35jh-r3h4-6jhm",
+      "cve_ids": [
+        "CVE-2021-23337"
+      ],
+      "severity": "High",
+      "cvss_max": 7.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.17.21"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Command Injection in lodash",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "moment",
+      "version": "2.0.0",
+      "purl": "pkg:npm/moment@2.0.0",
+      "vuln_id": "GHSA-8hfj-j24r-96c4",
+      "cve_ids": [
+        "CVE-2022-24785"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.29.2"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Path Traversal: 'dir/../../filename' in moment.locale",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "jsonwebtoken",
+      "version": "0.1.0",
+      "purl": "pkg:npm/jsonwebtoken@0.1.0",
+      "vuln_id": "GHSA-c7hr-j4mj-j2w6",
+      "cve_ids": [
+        "CVE-2015-9235"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.2.2"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Verification Bypass in jsonwebtoken",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "jsonwebtoken",
+      "version": "0.4.0",
+      "purl": "pkg:npm/jsonwebtoken@0.4.0",
+      "vuln_id": "GHSA-c7hr-j4mj-j2w6",
+      "cve_ids": [
+        "CVE-2015-9235"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.2.2"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Verification Bypass in jsonwebtoken",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "moment",
+      "version": "2.0.0",
+      "purl": "pkg:npm/moment@2.0.0",
+      "vuln_id": "GHSA-87vv-r9j6-g5qv",
+      "cve_ids": [
+        "CVE-2016-4055"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.11.2"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Regular Expression Denial of Service in moment",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "lodash",
+      "version": "2.4.2",
+      "purl": "pkg:npm/lodash@2.4.2",
+      "vuln_id": "GHSA-jf85-cpcp-j695",
+      "cve_ids": [
+        "CVE-2019-10744"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.17.12"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in lodash",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "moment",
+      "version": "2.0.0",
+      "purl": "pkg:npm/moment@2.0.0",
+      "vuln_id": "GHSA-446m-mv8f-q348",
+      "cve_ids": [
+        "CVE-2017-18214"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.19.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Regular Expression Denial of Service in moment",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "lodash",
+      "version": "2.4.2",
+      "purl": "pkg:npm/lodash@2.4.2",
+      "vuln_id": "GHSA-fvqr-27wr-82fm",
+      "cve_ids": [
+        "CVE-2018-3721"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.17.5"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in lodash",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "got",
+      "version": "8.3.2",
+      "purl": "pkg:npm/got@8.3.2",
+      "vuln_id": "GHSA-pfrx-2q88-qq97",
+      "cve_ids": [
+        "CVE-2022-33987"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "11.8.5"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Got allows a redirect to a UNIX socket",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "http-cache-semantics",
+      "version": "3.8.1",
+      "purl": "pkg:npm/http-cache-semantics@3.8.1",
+      "vuln_id": "GHSA-rc47-6667-2j5j",
+      "cve_ids": [
+        "CVE-2022-25881"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.1.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "http-cache-semantics vulnerable to Regular Expression Denial of Service",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "lodash",
+      "version": "2.4.2",
+      "purl": "pkg:npm/lodash@2.4.2",
+      "vuln_id": "GHSA-4xc9-xhrj-v574",
+      "cve_ids": [
+        "CVE-2018-16487"
+      ],
+      "severity": "High",
+      "cvss_max": 6.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.17.11"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in lodash",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sanitize-html",
+      "version": "1.4.2",
+      "purl": "pkg:npm/sanitize-html@1.4.2",
+      "vuln_id": "GHSA-cgfm-xwp7-2cvr",
+      "cve_ids": [
+        "CVE-2022-25887"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.7.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Sanitize-html Vulnerable To REDoS Attacks",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sanitize-html",
+      "version": "1.4.2",
+      "purl": "pkg:npm/sanitize-html@1.4.2",
+      "vuln_id": "GHSA-rjqq-98f6-6j3r",
+      "cve_ids": [
+        "CVE-2021-26539"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.3.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Improper Input Validation in sanitize-html",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "express-jwt",
+      "version": "0.1.3",
+      "purl": "pkg:npm/express-jwt@0.1.3",
+      "vuln_id": "GHSA-6g6m-m6h5-w9gf",
+      "cve_ids": [
+        "CVE-2020-15084"
+      ],
+      "severity": "High",
+      "cvss_max": 9.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.0.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Authorization bypass in express-jwt",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sanitize-html",
+      "version": "1.4.2",
+      "purl": "pkg:npm/sanitize-html@1.4.2",
+      "vuln_id": "GHSA-mjxr-4v3x-q3m4",
+      "cve_ids": [
+        "CVE-2021-26540"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.3.2"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Improper Input Validation in sanitize-html",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "decompress",
+      "version": "4.2.1",
+      "purl": "pkg:npm/decompress@4.2.1",
+      "vuln_id": "GHSA-hrh2-vp3x-79xf",
+      "cve_ids": [
+        "CVE-2026-101894"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.1,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "@xhmikosr/decompress: Path traversal via symlink chain",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "decompress",
+      "version": "4.2.1",
+      "purl": "pkg:npm/decompress@4.2.1",
+      "vuln_id": "GHSA-mp2f-45pm-3cg9",
+      "cve_ids": [
+        "CVE-2026-53486"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.1,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Decompress: Archive extraction can create files and links outside of the target directory",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sanitize-html",
+      "version": "1.4.2",
+      "purl": "pkg:npm/sanitize-html@1.4.2",
+      "vuln_id": "GHSA-xc6g-ggrc-qq4r",
+      "cve_ids": [
+        "CVE-2017-16016"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.11.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Cross-Site Scripting in sanitize-html",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "notevil",
+      "version": "1.3.3",
+      "purl": "pkg:npm/notevil@1.3.3",
+      "vuln_id": "GHSA-8g4m-cjm2-96wq",
+      "cve_ids": [
+        "CVE-2021-23771"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.5,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Sandbox escape in notevil and argencoders-notevil",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "crypto-js",
+      "version": "3.3.0",
+      "purl": "pkg:npm/crypto-js@3.3.0",
+      "vuln_id": "GHSA-xwcq-pm8m-c4vf",
+      "cve_ids": [
+        "CVE-2023-46233"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.2.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "crypto-js PBKDF2 1,000 times weaker than specified in 1993 and 1.3M times weaker than current standard",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sanitize-html",
+      "version": "1.4.2",
+      "purl": "pkg:npm/sanitize-html@1.4.2",
+      "vuln_id": "GHSA-rm97-x556-q36h",
+      "cve_ids": [
+        "CVE-2024-21501"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.12.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "sanitize-html Information Exposure vulnerability",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-23hp-3jrh-7fpw",
+      "cve_ids": [
+        "CVE-2026-59873"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.19"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Decompression/parse DoS via unlimited input",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "crypto-js",
+      "version": "3.3.0",
+      "purl": "pkg:npm/crypto-js@3.3.0",
+      "vuln_id": "GHSA-rg76-677x-56q9",
+      "cve_ids": [
+        "CVE-2026-71851"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.0.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "crypto-js: Insufficient Entropy in Cryptographic Secret Generation via Vulnerable CryptoJS Dependency Chain",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimatch",
+      "version": "3.0.5",
+      "purl": "pkg:npm/minimatch@3.0.5",
+      "vuln_id": "GHSA-3ppc-4f35-3m26",
+      "cve_ids": [
+        "CVE-2026-26996"
+      ],
+      "severity": "High",
+      "cvss_max": 8.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-34x7-hfp2-rc4v",
+      "cve_ids": [
+        "CVE-2026-24842"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.7"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sanitize-html",
+      "version": "1.4.2",
+      "purl": "pkg:npm/sanitize-html@1.4.2",
+      "vuln_id": "GHSA-3j7m-hmh3-9jmp",
+      "cve_ids": [
+        "CVE-2016-1000237"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.4.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Cross-Site Scripting in sanitize-html",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimatch",
+      "version": "3.0.5",
+      "purl": "pkg:npm/minimatch@3.0.5",
+      "vuln_id": "GHSA-7r86-cg39-jmmj",
+      "cve_ids": [
+        "CVE-2026-27903"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "http-cache-semantics",
+      "version": "3.8.1",
+      "purl": "pkg:npm/http-cache-semantics@3.8.1",
+      "vuln_id": "GHSA-ch52-4w7c-c8xp",
+      "cve_ids": [
+        "CVE-2026-93748"
+      ],
+      "severity": "High",
+      "cvss_max": 8.7,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "http-cache-semantics max-stale handling can disclose cross-user cached responses",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "jsonwebtoken",
+      "version": "0.1.0",
+      "purl": "pkg:npm/jsonwebtoken@0.1.0",
+      "vuln_id": "GHSA-8cf7-32gw-wr33",
+      "cve_ids": [
+        "CVE-2022-23539"
+      ],
+      "severity": "High",
+      "cvss_max": 8.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "9.0.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "jsonwebtoken unrestricted key type could lead to legacy keys usage",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "jsonwebtoken",
+      "version": "0.4.0",
+      "purl": "pkg:npm/jsonwebtoken@0.4.0",
+      "vuln_id": "GHSA-8cf7-32gw-wr33",
+      "cve_ids": [
+        "CVE-2022-23539"
+      ],
+      "severity": "High",
+      "cvss_max": 8.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "9.0.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "jsonwebtoken unrestricted key type could lead to legacy keys usage",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "jsonwebtoken",
+      "version": "0.1.0",
+      "purl": "pkg:npm/jsonwebtoken@0.1.0",
+      "vuln_id": "GHSA-hjrf-2m68-5959",
+      "cve_ids": [
+        "CVE-2022-23541"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "9.0.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "jsonwebtoken's insecure implementation of key retrieval function could lead to Forgeable Public/Private Tokens from RSA to HMAC",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "jsonwebtoken",
+      "version": "0.4.0",
+      "purl": "pkg:npm/jsonwebtoken@0.4.0",
+      "vuln_id": "GHSA-hjrf-2m68-5959",
+      "cve_ids": [
+        "CVE-2022-23541"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "9.0.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "jsonwebtoken's insecure implementation of key retrieval function could lead to Forgeable Public/Private Tokens from RSA to HMAC",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-r292-9mhp-454m",
+      "cve_ids": [
+        "CVE-2026-73566"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.21"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Uncontrolled recursion in mapHas/filesFilter allows uncatchable stack-overflow DoS via crafted long-path tar with member selection",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimatch",
+      "version": "3.0.5",
+      "purl": "pkg:npm/minimatch@3.0.5",
+      "vuln_id": "GHSA-23c5-xmqv-rm74",
+      "cve_ids": [
+        "CVE-2026-27904"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-8x88-c5mf-7j5w",
+      "cve_ids": [
+        "CVE-2026-59874"
+      ],
+      "severity": "High",
+      "cvss_max": 8.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.18"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Negative tar entry size causes infinite loop in archive replace",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-w8wr-v893-vjvp",
+      "cve_ids": [
+        "CVE-2026-59871"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.18"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Process crash via PAX numeric path type confusion",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "jsonwebtoken",
+      "version": "0.1.0",
+      "purl": "pkg:npm/jsonwebtoken@0.1.0",
+      "vuln_id": "GHSA-qwph-4952-7xr6",
+      "cve_ids": [
+        "CVE-2022-23540"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.6,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "9.0.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "jsonwebtoken vulnerable to signature validation bypass due to insecure default algorithm in jwt.verify()",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "jsonwebtoken",
+      "version": "0.4.0",
+      "purl": "pkg:npm/jsonwebtoken@0.4.0",
+      "vuln_id": "GHSA-qwph-4952-7xr6",
+      "cve_ids": [
+        "CVE-2022-23540"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.6,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "9.0.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "jsonwebtoken vulnerable to signature validation bypass due to insecure default algorithm in jwt.verify()",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-qffp-2rhf-9h96",
+      "cve_ids": [
+        "CVE-2026-29786"
+      ],
+      "severity": "High",
+      "cvss_max": 8.6,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.10"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "tar has Hardlink Path Traversal via Drive-Relative Linkpath",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-8qq5-rm4j-mr97",
+      "cve_ids": [
+        "CVE-2026-23745"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "decode-uri-component",
+      "version": "0.2.2",
+      "purl": "pkg:npm/decode-uri-component@0.2.2",
+      "vuln_id": "GHSA-vcc3-ghjq-m6fr",
+      "cve_ids": [
+        "CVE-2026-45822"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.6,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.5.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "decode-uri-component: Denial of service via exponential decoding of malformed percent-encoded input",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "basic-ftp",
+      "version": "5.3.1",
+      "purl": "pkg:npm/basic-ftp@5.3.1",
+      "vuln_id": "GHSA-c475-qrg2-pj4r",
+      "cve_ids": [
+        "CVE-2026-102990"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.2.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "basic-ftp: Quadratic-time CPU denial of service in Client.list() Unix directory-listing parser (RE_LINE backtracking)",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "decompress",
+      "version": "4.2.1",
+      "purl": "pkg:npm/decompress@4.2.1",
+      "vuln_id": "GHSA-h39j-r5qq-r9mm",
+      "cve_ids": [
+        "CVE-2026-10732"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "decompress: Arbitrary File Write via Archive Extraction (Zip Slip)",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-gvwx-54wh-qm9j",
+      "cve_ids": [
+        "CVE-2026-59875"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.17"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Uncaught Exception DoS via NUL byte in PAX path/linkpath records",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "lodash",
+      "version": "2.4.2",
+      "purl": "pkg:npm/lodash@2.4.2",
+      "vuln_id": "GHSA-f23m-r3pf-42rh",
+      "cve_ids": [
+        "CVE-2026-2950"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.18.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "uuid",
+      "version": "8.3.2",
+      "purl": "pkg:npm/uuid@8.3.2",
+      "vuln_id": "GHSA-w5hq-g745-h8pq",
+      "cve_ids": [
+        "CVE-2026-41907"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "11.1.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "file-type",
+      "version": "16.5.4",
+      "purl": "pkg:npm/file-type@16.5.4",
+      "vuln_id": "GHSA-5v7r-6r5c-r473",
+      "cve_ids": [
+        "CVE-2026-31808"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "21.3.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "file-type affected by infinite loop in ASF parser on malformed input with zero-size sub-header",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-r6q2-hw4h-h46w",
+      "cve_ids": [
+        "CVE-2026-23950"
+      ],
+      "severity": "High",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sanitize-html",
+      "version": "1.4.2",
+      "purl": "pkg:npm/sanitize-html@1.4.2",
+      "vuln_id": "GHSA-jxwj-j7wr-gfrw",
+      "cve_ids": [
+        "CVE-2026-63670"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.17.6"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "ApostropheCMS: Mutation-XSS / allowedTags bypass via literal `</textarea/>` solidus close",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sanitize-html",
+      "version": "1.4.2",
+      "purl": "pkg:npm/sanitize-html@1.4.2",
+      "vuln_id": "GHSA-x3q4-9hxx-gx8m",
+      "cve_ids": [
+        "CVE-2026-113654"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.18.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "ApostropheCMS sanitize-html: nonTextTags discard region ends early on an implied close, letting <noscript> content render",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-83g3-92jg-28cx",
+      "cve_ids": [
+        "CVE-2026-26960"
+      ],
+      "severity": "High",
+      "cvss_max": 7.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.8"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "jws",
+      "version": "0.2.6",
+      "purl": "pkg:npm/jws@0.2.6",
+      "vuln_id": "GHSA-869p-cjfg-cm3x",
+      "cve_ids": [
+        "CVE-2025-65945"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.2.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "auth0/node-jws Improperly Verifies HMAC Signature",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "decompress",
+      "version": "4.2.1",
+      "purl": "pkg:npm/decompress@4.2.1",
+      "vuln_id": "GHSA-jwp9-9v96-94mx",
+      "cve_ids": [
+        "CVE-2026-39243"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.5,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "decompress allows arbitrary hardlink creation during archive extraction",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sanitize-html",
+      "version": "1.4.2",
+      "purl": "pkg:npm/sanitize-html@1.4.2",
+      "vuln_id": "GHSA-qhxp-v273-g94h",
+      "cve_ids": [
+        "CVE-2019-25225"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.0.0-beta"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "sanitize-html is vulnerable to XSS through incomprehensive sanitization",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-9ppj-qmqm-q256",
+      "cve_ids": [
+        "CVE-2026-31802"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.11"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar Symlink Path Traversal via Drive-Relative Linkpath",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sanitize-html",
+      "version": "1.4.2",
+      "purl": "pkg:npm/sanitize-html@1.4.2",
+      "vuln_id": "GHSA-cv27-6wvh-8x7j",
+      "cve_ids": [
+        "CVE-2026-113661"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.4,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.18.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "ApostropheCMS: Incomplete CVE-2026-53606: `meta http-equiv=refresh` `content` still ships `javascript:` / `data:` URLs",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-vmf3-w455-68vh",
+      "cve_ids": [
+        "CVE-2026-53655"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.9,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.16"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar applies PAX size override to intermediary GNU long-name/long-link headers, causing tar parser interpretation differential (file smuggling)",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "@tootallnate/once",
+      "version": "1.1.2",
+      "purl": "pkg:npm/%40tootallnate/once@1.1.2",
+      "vuln_id": "GHSA-vpq2-c234-7xj6",
+      "cve_ids": [
+        "CVE-2026-3449"
+      ],
+      "severity": "Low",
+      "cvss_max": 3.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.0.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "@tootallnate/once vulnerable to Incorrect Control Flow Scoping",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "marsdb",
+      "version": "0.6.11",
+      "purl": "pkg:npm/marsdb@0.6.11",
+      "vuln_id": "GHSA-5mrr-rgp6-x4gr",
+      "cve_ids": [],
+      "severity": "Critical",
+      "cvss_max": null,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Command Injection in marsdb",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "jws",
+      "version": "0.2.6",
+      "purl": "pkg:npm/jws@0.2.6",
+      "vuln_id": "GHSA-gjcw-v447-2w7q",
+      "cve_ids": [
+        "CVE-2016-1000223"
+      ],
+      "severity": "High",
+      "cvss_max": 8.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Forgeable Public/Private Tokens in jws",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "juice-shop",
+      "commit": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "base64url",
+      "version": "0.0.6",
+      "purl": "pkg:npm/base64url@0.0.6",
+      "vuln_id": "GHSA-rvg8-pwq2-xj7q",
+      "cve_ids": [],
+      "severity": "Medium",
+      "cvss_max": null,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Out-of-bounds Read in base64url",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "y18n",
+      "version": "3.2.1",
+      "purl": "pkg:npm/y18n@3.2.1",
+      "vuln_id": "GHSA-c4w7-xm78-47vh",
+      "cve_ids": [
+        "CVE-2020-7774"
+      ],
+      "severity": "High",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.2.2"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in y18n",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "decode-uri-component",
+      "version": "0.2.0",
+      "purl": "pkg:npm/decode-uri-component@0.2.0",
+      "vuln_id": "GHSA-w573-4hg7-7wgq",
+      "cve_ids": [
+        "CVE-2022-38900"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.2.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "decode-uri-component vulnerable to Denial of Service (DoS)",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-3jfq-g458-7qm9",
+      "cve_ids": [
+        "CVE-2021-32804"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.4.14"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary File Creation/Overwrite due to insufficient absolute path sanitization",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "qs",
+      "version": "6.5.2",
+      "purl": "pkg:npm/qs@6.5.2",
+      "vuln_id": "GHSA-hrpp-h998-j3pp",
+      "cve_ids": [
+        "CVE-2022-24999"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.5.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "qs vulnerable to Prototype Pollution",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-r628-mhmh-qjhw",
+      "cve_ids": [
+        "CVE-2021-32803"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.4.15"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimist",
+      "version": "0.0.10",
+      "purl": "pkg:npm/minimist@0.0.10",
+      "vuln_id": "GHSA-xvch-5gv4-984h",
+      "cve_ids": [
+        "CVE-2021-44906"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.2.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in minimist",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimist",
+      "version": "0.0.8",
+      "purl": "pkg:npm/minimist@0.0.8",
+      "vuln_id": "GHSA-xvch-5gv4-984h",
+      "cve_ids": [
+        "CVE-2021-44906"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.2.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in minimist",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimist",
+      "version": "0.0.8",
+      "purl": "pkg:npm/minimist@0.0.8",
+      "vuln_id": "GHSA-xvch-5gv4-984h",
+      "cve_ids": [
+        "CVE-2021-44906"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.2.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in minimist",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimist",
+      "version": "1.2.0",
+      "purl": "pkg:npm/minimist@1.2.0",
+      "vuln_id": "GHSA-xvch-5gv4-984h",
+      "cve_ids": [
+        "CVE-2021-44906"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.2.6"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in minimist",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimist",
+      "version": "1.2.5",
+      "purl": "pkg:npm/minimist@1.2.5",
+      "vuln_id": "GHSA-xvch-5gv4-984h",
+      "cve_ids": [
+        "CVE-2021-44906"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.2.6"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in minimist",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "underscore",
+      "version": "1.9.1",
+      "purl": "pkg:npm/underscore@1.9.1",
+      "vuln_id": "GHSA-cf4h-3jhx-xvhq",
+      "cve_ids": [
+        "CVE-2021-23358"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.12.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary Code Execution in underscore",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "mixin-deep",
+      "version": "1.3.1",
+      "purl": "pkg:npm/mixin-deep@1.3.1",
+      "vuln_id": "GHSA-fhjf-83wg-r2j9",
+      "cve_ids": [
+        "CVE-2019-10746"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.3.2"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in mixin-deep",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "ini",
+      "version": "1.3.5",
+      "purl": "pkg:npm/ini@1.3.5",
+      "vuln_id": "GHSA-qqgx-2p2h-9c37",
+      "cve_ids": [
+        "CVE-2020-7788"
+      ],
+      "severity": "High",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.3.6"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "ini before 1.3.6 vulnerable to Prototype Pollution via ini.parse",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "ini",
+      "version": "1.3.5",
+      "purl": "pkg:npm/ini@1.3.5",
+      "vuln_id": "GHSA-qqgx-2p2h-9c37",
+      "cve_ids": [
+        "CVE-2020-7788"
+      ],
+      "severity": "High",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.3.6"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "ini before 1.3.6 vulnerable to Prototype Pollution via ini.parse",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-9r2w-394v-53qc",
+      "cve_ids": [
+        "CVE-2021-37701"
+      ],
+      "severity": "High",
+      "cvss_max": 8.6,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.4.16"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning using symbolic links",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "set-value",
+      "version": "0.4.3",
+      "purl": "pkg:npm/set-value@0.4.3",
+      "vuln_id": "GHSA-4g88-fppr-53pp",
+      "cve_ids": [
+        "CVE-2019-10747"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.0.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in set-value",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "set-value",
+      "version": "2.0.0",
+      "purl": "pkg:npm/set-value@2.0.0",
+      "vuln_id": "GHSA-4g88-fppr-53pp",
+      "cve_ids": [
+        "CVE-2019-10747"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.0.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in set-value",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "marked",
+      "version": "0.3.5",
+      "purl": "pkg:npm/marked@0.3.5",
+      "vuln_id": "GHSA-rrrm-qjm4-v8hf",
+      "cve_ids": [
+        "CVE-2022-21680"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.0.10"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Inefficient Regular Expression Complexity in marked",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "bson",
+      "version": "1.0.9",
+      "purl": "pkg:npm/bson@1.0.9",
+      "vuln_id": "GHSA-v8w9-2789-6hhr",
+      "cve_ids": [
+        "CVE-2020-7610"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Deserialization of Untrusted Data in bson",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "marked",
+      "version": "0.3.5",
+      "purl": "pkg:npm/marked@0.3.5",
+      "vuln_id": "GHSA-5v2h-r2cx-5xgj",
+      "cve_ids": [
+        "CVE-2022-21681"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.0.10"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Inefficient Regular Expression Complexity in marked",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "semver",
+      "version": "5.6.0",
+      "purl": "pkg:npm/semver@5.6.0",
+      "vuln_id": "GHSA-c2qf-rxjj-qqgw",
+      "cve_ids": [
+        "CVE-2022-25883"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "5.7.2"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "semver vulnerable to Regular Expression Denial of Service",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "semver",
+      "version": "5.7.0",
+      "purl": "pkg:npm/semver@5.7.0",
+      "vuln_id": "GHSA-c2qf-rxjj-qqgw",
+      "cve_ids": [
+        "CVE-2022-25883"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "5.7.2"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "semver vulnerable to Regular Expression Denial of Service",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "uglify-js",
+      "version": "2.4.24",
+      "purl": "pkg:npm/uglify-js@2.4.24",
+      "vuln_id": "GHSA-c9f4-xj24-8jqx",
+      "cve_ids": [
+        "CVE-2015-8858"
+      ],
+      "severity": "High",
+      "cvss_max": 7.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.6.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Regular Expression Denial of Service in uglify-js",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "kind-of",
+      "version": "6.0.2",
+      "purl": "pkg:npm/kind-of@6.0.2",
+      "vuln_id": "GHSA-6c8f-qphg-qjgp",
+      "cve_ids": [
+        "CVE-2019-20149"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.0.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Validation Bypass in kind-of",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimatch",
+      "version": "3.0.4",
+      "purl": "pkg:npm/minimatch@3.0.4",
+      "vuln_id": "GHSA-f8q6-p94x-37v3",
+      "cve_ids": [
+        "CVE-2022-3517"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.5"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "minimatch ReDoS vulnerability",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimatch",
+      "version": "3.0.4",
+      "purl": "pkg:npm/minimatch@3.0.4",
+      "vuln_id": "GHSA-f8q6-p94x-37v3",
+      "cve_ids": [
+        "CVE-2022-3517"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.5"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "minimatch ReDoS vulnerability",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "set-value",
+      "version": "0.4.3",
+      "purl": "pkg:npm/set-value@0.4.3",
+      "vuln_id": "GHSA-4jqc-8m5r-9rpr",
+      "cve_ids": [
+        "CVE-2021-23440"
+      ],
+      "severity": "High",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.0.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in set-value",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "set-value",
+      "version": "2.0.0",
+      "purl": "pkg:npm/set-value@2.0.0",
+      "vuln_id": "GHSA-4jqc-8m5r-9rpr",
+      "cve_ids": [
+        "CVE-2021-23440"
+      ],
+      "severity": "High",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.0.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in set-value",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "fsevents",
+      "version": "1.2.9",
+      "purl": "pkg:npm/fsevents@1.2.9",
+      "vuln_id": "GHSA-8r6j-v8pm-fqw3",
+      "cve_ids": [
+        "CVE-2023-45311"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.2.11"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Code injection in fsevents",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "debug",
+      "version": "2.2.0",
+      "purl": "pkg:npm/debug@2.2.0",
+      "vuln_id": "GHSA-9vvw-cc9w-f27h",
+      "cve_ids": [
+        "CVE-2017-20165"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.6.9"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "debug Inefficient Regular Expression Complexity vulnerability",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-qq89-hq3f-393p",
+      "cve_ids": [
+        "CVE-2021-37712"
+      ],
+      "severity": "High",
+      "cvss_max": 8.6,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.4.18"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning using symbolic links",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "nconf",
+      "version": "0.10.0",
+      "purl": "pkg:npm/nconf@0.10.0",
+      "vuln_id": "GHSA-6xwr-q98w-rvg7",
+      "cve_ids": [
+        "CVE-2022-21803"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.11.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in nconf",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "nconf",
+      "version": "0.6.9",
+      "purl": "pkg:npm/nconf@0.6.9",
+      "vuln_id": "GHSA-6xwr-q98w-rvg7",
+      "cve_ids": [
+        "CVE-2022-21803"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.11.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in nconf",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "marked",
+      "version": "0.3.5",
+      "purl": "pkg:npm/marked@0.3.5",
+      "vuln_id": "GHSA-x5pg-88wf-qq4p",
+      "cve_ids": [
+        "CVE-2017-16114"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.3.9"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Regular Expression Denial of Service in marked",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "braces",
+      "version": "2.3.2",
+      "purl": "pkg:npm/braces@2.3.2",
+      "vuln_id": "GHSA-grv7-fg5c-xmjg",
+      "cve_ids": [
+        "CVE-2024-4068"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Uncontrolled resource consumption in braces",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimist",
+      "version": "0.0.10",
+      "purl": "pkg:npm/minimist@0.0.10",
+      "vuln_id": "GHSA-vh95-rmgr-6w4m",
+      "cve_ids": [
+        "CVE-2020-7598"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.2.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in minimist",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimist",
+      "version": "0.0.8",
+      "purl": "pkg:npm/minimist@0.0.8",
+      "vuln_id": "GHSA-vh95-rmgr-6w4m",
+      "cve_ids": [
+        "CVE-2020-7598"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.2.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in minimist",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimist",
+      "version": "0.0.8",
+      "purl": "pkg:npm/minimist@0.0.8",
+      "vuln_id": "GHSA-vh95-rmgr-6w4m",
+      "cve_ids": [
+        "CVE-2020-7598"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.2.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in minimist",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimist",
+      "version": "1.2.0",
+      "purl": "pkg:npm/minimist@1.2.0",
+      "vuln_id": "GHSA-vh95-rmgr-6w4m",
+      "cve_ids": [
+        "CVE-2020-7598"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.2.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in minimist",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-5955-9wpr-37jh",
+      "cve_ids": [
+        "CVE-2021-37713"
+      ],
+      "severity": "High",
+      "cvss_max": 8.6,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.4.18"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary File Creation/Overwrite on Windows via insufficient relative path sanitization",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "debug",
+      "version": "2.2.0",
+      "purl": "pkg:npm/debug@2.2.0",
+      "vuln_id": "GHSA-gxpj-cx7g-858c",
+      "cve_ids": [
+        "CVE-2017-16137"
+      ],
+      "severity": "Low",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.6.9"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Regular Expression Denial of Service in debug",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "debug",
+      "version": "4.1.1",
+      "purl": "pkg:npm/debug@4.1.1",
+      "vuln_id": "GHSA-gxpj-cx7g-858c",
+      "cve_ids": [
+        "CVE-2017-16137"
+      ],
+      "severity": "Low",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.3.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Regular Expression Denial of Service in debug",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "i",
+      "version": "0.3.6",
+      "purl": "pkg:npm/i@0.3.6",
+      "vuln_id": "GHSA-x55w-vjjp-222r",
+      "cve_ids": [
+        "CVE-2021-3820"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.3.7"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "inflect vulnerable to Inefficient Regular Expression Complexity",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "marked",
+      "version": "0.3.5",
+      "purl": "pkg:npm/marked@0.3.5",
+      "vuln_id": "GHSA-7px7-7xjx-hxm8",
+      "cve_ids": [
+        "CVE-2017-1000427"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.3.7"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Marked vulnerable to XSS from data URIs",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "marked",
+      "version": "0.3.5",
+      "purl": "pkg:npm/marked@0.3.5",
+      "vuln_id": "GHSA-vfvf-mqq8-rwqc",
+      "cve_ids": [
+        "CVE-2016-10531"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.3.6"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Sanitization bypass using HTML Entities in marked",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "swig",
+      "version": "1.4.2",
+      "purl": "pkg:npm/swig@1.4.2",
+      "vuln_id": "GHSA-2rq5-699j-x7p6",
+      "cve_ids": [
+        "CVE-2023-25345"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary local file read vulnerability during template rendering",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "underscore",
+      "version": "1.9.1",
+      "purl": "pkg:npm/underscore@1.9.1",
+      "vuln_id": "GHSA-qpx9-hpmf-5gmw",
+      "cve_ids": [
+        "CVE-2026-27601"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.13.8"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Underscore has unlimited recursion in _.flatten and _.isEqual, potential for DoS attack",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "micromatch",
+      "version": "3.1.10",
+      "purl": "pkg:npm/micromatch@3.1.10",
+      "vuln_id": "GHSA-952p-6rrq-rcjv",
+      "cve_ids": [
+        "CVE-2024-4067"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.0.8"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Regular Expression Denial of Service (ReDoS) in micromatch",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "path-to-regexp",
+      "version": "0.1.7",
+      "purl": "pkg:npm/path-to-regexp@0.1.7",
+      "vuln_id": "GHSA-9wv6-86v2-598j",
+      "cve_ids": [
+        "CVE-2024-45296"
+      ],
+      "severity": "High",
+      "cvss_max": 7.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.1.10"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "path-to-regexp outputs backtracking regular expressions",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "body-parser",
+      "version": "1.18.3",
+      "purl": "pkg:npm/body-parser@1.18.3",
+      "vuln_id": "GHSA-qwcr-r2fm-qrc7",
+      "cve_ids": [
+        "CVE-2024-45590"
+      ],
+      "severity": "High",
+      "cvss_max": 8.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.20.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "body-parser vulnerable to denial of service when url encoding is enabled",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "path-to-regexp",
+      "version": "0.1.7",
+      "purl": "pkg:npm/path-to-regexp@0.1.7",
+      "vuln_id": "GHSA-rhx6-c78j-4q9w",
+      "cve_ids": [
+        "CVE-2024-52798"
+      ],
+      "severity": "High",
+      "cvss_max": 7.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.1.12"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "path-to-regexp contains a ReDoS",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "braces",
+      "version": "2.3.2",
+      "purl": "pkg:npm/braces@2.3.2",
+      "vuln_id": "GHSA-vfj7-8cjw-p6xm",
+      "cve_ids": [
+        "CVE-2026-93687"
+      ],
+      "severity": "High",
+      "cvss_max": 8.7,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-f5x3-32g6-xq36",
+      "cve_ids": [
+        "CVE-2024-28863"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.2.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Denial of service while parsing a tar file due to lack of folders count validation",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "ms",
+      "version": "0.7.1",
+      "purl": "pkg:npm/ms@0.7.1",
+      "vuln_id": "GHSA-w9mr-4mfr-499f",
+      "cve_ids": [
+        "CVE-2017-20162"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.0.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Vercel ms Inefficient Regular Expression Complexity vulnerability",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-23hp-3jrh-7fpw",
+      "cve_ids": [
+        "CVE-2026-59873"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.19"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Decompression/parse DoS via unlimited input",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-rgw5-rvv9-x895",
+      "cve_ids": [
+        "CVE-2026-69152"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.18"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-rgw5-rvv9-x895",
+      "cve_ids": [
+        "CVE-2026-69152"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.18"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimatch",
+      "version": "3.0.4",
+      "purl": "pkg:npm/minimatch@3.0.4",
+      "vuln_id": "GHSA-3ppc-4f35-3m26",
+      "cve_ids": [
+        "CVE-2026-26996"
+      ],
+      "severity": "High",
+      "cvss_max": 8.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimatch",
+      "version": "3.0.4",
+      "purl": "pkg:npm/minimatch@3.0.4",
+      "vuln_id": "GHSA-3ppc-4f35-3m26",
+      "cve_ids": [
+        "CVE-2026-26996"
+      ],
+      "severity": "High",
+      "cvss_max": 8.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-34x7-hfp2-rc4v",
+      "cve_ids": [
+        "CVE-2026-24842"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.7"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-mh99-v99m-4gvg",
+      "cve_ids": [
+        "CVE-2026-14257"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.17"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-mh99-v99m-4gvg",
+      "cve_ids": [
+        "CVE-2026-14257"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.17"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "path-to-regexp",
+      "version": "0.1.7",
+      "purl": "pkg:npm/path-to-regexp@0.1.7",
+      "vuln_id": "GHSA-37ch-88jc-xwx2",
+      "cve_ids": [
+        "CVE-2026-4867"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.1.13"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "path-to-regexp vulnerable to Regular Expression Denial of Service via multiple route parameters",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimatch",
+      "version": "3.0.4",
+      "purl": "pkg:npm/minimatch@3.0.4",
+      "vuln_id": "GHSA-7r86-cg39-jmmj",
+      "cve_ids": [
+        "CVE-2026-27903"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimatch",
+      "version": "3.0.4",
+      "purl": "pkg:npm/minimatch@3.0.4",
+      "vuln_id": "GHSA-7r86-cg39-jmmj",
+      "cve_ids": [
+        "CVE-2026-27903"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "express",
+      "version": "4.16.4",
+      "purl": "pkg:npm/express@4.16.4",
+      "vuln_id": "GHSA-rv95-896h-c2vc",
+      "cve_ids": [
+        "CVE-2024-29041"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.19.2"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Express.js Open Redirect in malformed URLs",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "bson",
+      "version": "1.0.9",
+      "purl": "pkg:npm/bson@1.0.9",
+      "vuln_id": "GHSA-4jwp-vfvf-657p",
+      "cve_ids": [
+        "CVE-2019-2391"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Deserialization of Untrusted Data in bson",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-r292-9mhp-454m",
+      "cve_ids": [
+        "CVE-2026-73566"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.21"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Uncontrolled recursion in mapHas/filesFilter allows uncatchable stack-overflow DoS via crafted long-path tar with member selection",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimatch",
+      "version": "3.0.4",
+      "purl": "pkg:npm/minimatch@3.0.4",
+      "vuln_id": "GHSA-23c5-xmqv-rm74",
+      "cve_ids": [
+        "CVE-2026-27904"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "minimatch",
+      "version": "3.0.4",
+      "purl": "pkg:npm/minimatch@3.0.4",
+      "vuln_id": "GHSA-23c5-xmqv-rm74",
+      "cve_ids": [
+        "CVE-2026-27904"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "marked",
+      "version": "0.3.5",
+      "purl": "pkg:npm/marked@0.3.5",
+      "vuln_id": "GHSA-p9wx-2529-fp83",
+      "cve_ids": [
+        "CVE-2018-25110"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.3.17"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Marked allows Regular Expression Denial of Service (ReDoS) attacks",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-f886-m6hf-6m8v",
+      "cve_ids": [
+        "CVE-2026-33750"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.13"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-f886-m6hf-6m8v",
+      "cve_ids": [
+        "CVE-2026-33750"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.13"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-8x88-c5mf-7j5w",
+      "cve_ids": [
+        "CVE-2026-59874"
+      ],
+      "severity": "High",
+      "cvss_max": 8.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.18"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Negative tar entry size causes infinite loop in archive replace",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-w8wr-v893-vjvp",
+      "cve_ids": [
+        "CVE-2026-59871"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.18"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Process crash via PAX numeric path type confusion",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-qffp-2rhf-9h96",
+      "cve_ids": [
+        "CVE-2026-29786"
+      ],
+      "severity": "High",
+      "cvss_max": 8.6,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.10"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "tar has Hardlink Path Traversal via Drive-Relative Linkpath",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-8qq5-rm4j-mr97",
+      "cve_ids": [
+        "CVE-2026-23745"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "decode-uri-component",
+      "version": "0.2.0",
+      "purl": "pkg:npm/decode-uri-component@0.2.0",
+      "vuln_id": "GHSA-vcc3-ghjq-m6fr",
+      "cve_ids": [
+        "CVE-2026-45822"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.6,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.5.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "decode-uri-component: Denial of service via exponential decoding of malformed percent-encoded input",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-6j4f-fj2g-mc7p",
+      "cve_ids": [
+        "CVE-2026-102276"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.19"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion: DoS via uncontrolled recursion in parseCommaParts causing stack exhaustion",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-6j4f-fj2g-mc7p",
+      "cve_ids": [
+        "CVE-2026-102276"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.19"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion: DoS via uncontrolled recursion in parseCommaParts causing stack exhaustion",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-qhr7-859c-m2p7",
+      "cve_ids": [
+        "CVE-2026-102278"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.20"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion: DoS via uncontrolled recursion on nested brace groups causing stack exhaustion",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-qhr7-859c-m2p7",
+      "cve_ids": [
+        "CVE-2026-102278"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.20"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion: DoS via uncontrolled recursion on nested brace groups causing stack exhaustion",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-gvwx-54wh-qm9j",
+      "cve_ids": [
+        "CVE-2026-59875"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.17"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Uncaught Exception DoS via NUL byte in PAX path/linkpath records",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-3jxr-9vmj-r5cp",
+      "cve_ids": [
+        "CVE-2026-13149"
+      ],
+      "severity": "High",
+      "cvss_max": 7.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.16"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion: DoS via exponential-time expansion of consecutive non-expanding {} groups",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-3jxr-9vmj-r5cp",
+      "cve_ids": [
+        "CVE-2026-13149"
+      ],
+      "severity": "High",
+      "cvss_max": 7.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.16"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion: DoS via exponential-time expansion of consecutive non-expanding {} groups",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "proxy-addr",
+      "version": "2.0.4",
+      "purl": "pkg:npm/proxy-addr@2.0.4",
+      "vuln_id": "GHSA-jqcg-44mw-7w3h",
+      "cve_ids": [
+        "CVE-2026-90711"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.0.8"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "qs",
+      "version": "6.5.2",
+      "purl": "pkg:npm/qs@6.5.2",
+      "vuln_id": "GHSA-4mjr-xmp4-gh2g",
+      "cve_ids": [
+        "CVE-2026-82417"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.16.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "qs: Denial of Service via Attacker Controlled isBuffer",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "qs",
+      "version": "6.5.2",
+      "purl": "pkg:npm/qs@6.5.2",
+      "vuln_id": "GHSA-6rw7-vpxm-498p",
+      "cve_ids": [
+        "CVE-2025-15284"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.14.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "cookie",
+      "version": "0.3.1",
+      "purl": "pkg:npm/cookie@0.3.1",
+      "vuln_id": "GHSA-pxg6-pf52-xh8x",
+      "cve_ids": [
+        "CVE-2024-47764"
+      ],
+      "severity": "Low",
+      "cvss_max": 6.9,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.7.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "cookie accepts cookie name, path, and domain with out of bounds characters",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-r6q2-hw4h-h46w",
+      "cve_ids": [
+        "CVE-2026-23950"
+      ],
+      "severity": "High",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "serve-static",
+      "version": "1.13.2",
+      "purl": "pkg:npm/serve-static@1.13.2",
+      "vuln_id": "GHSA-cm22-4g7w-348p",
+      "cve_ids": [
+        "CVE-2024-43800"
+      ],
+      "severity": "Low",
+      "cvss_max": 5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.16.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "serve-static vulnerable to template injection that can lead to XSS",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "send",
+      "version": "0.16.2",
+      "purl": "pkg:npm/send@0.16.2",
+      "vuln_id": "GHSA-m6fv-jmcg-4jfg",
+      "cve_ids": [
+        "CVE-2024-43799"
+      ],
+      "severity": "Low",
+      "cvss_max": 5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.19.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "send vulnerable to template injection that can lead to XSS",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-83g3-92jg-28cx",
+      "cve_ids": [
+        "CVE-2026-26960"
+      ],
+      "severity": "High",
+      "cvss_max": 7.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.8"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "express",
+      "version": "4.16.4",
+      "purl": "pkg:npm/express@4.16.4",
+      "vuln_id": "GHSA-qw6h-vgh9-j6wx",
+      "cve_ids": [
+        "CVE-2024-43796"
+      ],
+      "severity": "Low",
+      "cvss_max": 5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.20.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "express vulnerable to XSS via response.redirect()",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-q2hr-2g5m-vwhr",
+      "cve_ids": [
+        "CVE-2026-102277"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.21"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-q2hr-2g5m-vwhr",
+      "cve_ids": [
+        "CVE-2026-102277"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.21"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-v6h2-p8h4-qcjw",
+      "cve_ids": [
+        "CVE-2025-5889"
+      ],
+      "severity": "Low",
+      "cvss_max": 3.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.12"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion Regular Expression Denial of Service vulnerability",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "brace-expansion",
+      "version": "1.1.11",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "vuln_id": "GHSA-v6h2-p8h4-qcjw",
+      "cve_ids": [
+        "CVE-2025-5889"
+      ],
+      "severity": "Low",
+      "cvss_max": 3.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.12"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "brace-expansion Regular Expression Denial of Service vulnerability",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-9ppj-qmqm-q256",
+      "cve_ids": [
+        "CVE-2026-31802"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.11"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar Symlink Path Traversal via Drive-Relative Linkpath",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "body-parser",
+      "version": "1.18.3",
+      "purl": "pkg:npm/body-parser@1.18.3",
+      "vuln_id": "GHSA-v422-hmwv-36x6",
+      "cve_ids": [
+        "CVE-2026-12590"
+      ],
+      "severity": "Low",
+      "cvss_max": 5.9,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.20.6"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "4.4.8",
+      "purl": "pkg:npm/tar@4.4.8",
+      "vuln_id": "GHSA-vmf3-w455-68vh",
+      "cve_ids": [
+        "CVE-2026-53655"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.9,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.16"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar applies PAX size override to intermediary GNU long-name/long-link headers, causing tar parser interpretation differential (file smuggling)",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "on-headers",
+      "version": "1.0.1",
+      "purl": "pkg:npm/on-headers@1.0.1",
+      "vuln_id": "GHSA-76c9-3jph-rj3q",
+      "cve_ids": [
+        "CVE-2025-7339"
+      ],
+      "severity": "Low",
+      "cvss_max": 3.4,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "on-headers is vulnerable to http response header manipulation",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "fsevents",
+      "version": "1.2.9",
+      "purl": "pkg:npm/fsevents@1.2.9",
+      "vuln_id": "GHSA-xv2f-5jw4-v95m",
+      "cve_ids": [],
+      "severity": "Critical",
+      "cvss_max": null,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.2.11"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Malware in fsevents",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "mongodb",
+      "version": "2.2.36",
+      "purl": "pkg:npm/mongodb@2.2.36",
+      "vuln_id": "GHSA-mh5c-679w-hh4r",
+      "cve_ids": [],
+      "severity": "High",
+      "cvss_max": null,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.13"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Denial of Service in mongodb",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "nodegoat",
+      "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "helmet-csp",
+      "version": "1.2.2",
+      "purl": "pkg:npm/helmet-csp@1.2.2",
+      "vuln_id": "GHSA-c3m8-x3cg-qm2c",
+      "cve_ids": [],
+      "severity": "Medium",
+      "cvss_max": 6.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.9.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Configuration Override in helmet-csp",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "node-serialize",
+      "version": "0.0.4",
+      "purl": "pkg:npm/node-serialize@0.0.4",
+      "vuln_id": "GHSA-q4v7-4rhw-9hqm",
+      "cve_ids": [
+        "CVE-2017-5941"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Code Execution through IIFE in node-serialize",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "ejs",
+      "version": "2.7.4",
+      "purl": "pkg:npm/ejs@2.7.4",
+      "vuln_id": "GHSA-phwq-j96m-2c2q",
+      "cve_ids": [
+        "CVE-2022-29078"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.7"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "ejs template injection vulnerability",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-3jfq-g458-7qm9",
+      "cve_ids": [
+        "CVE-2021-32804"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.2.2"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary File Creation/Overwrite due to insufficient absolute path sanitization",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "express-fileupload",
+      "version": "0.4.0",
+      "purl": "pkg:npm/express-fileupload@0.4.0",
+      "vuln_id": "GHSA-9wcg-jrwf-8gg7",
+      "cve_ids": [
+        "CVE-2020-7699"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.9"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in express-fileupload",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "mathjs",
+      "version": "3.10.1",
+      "purl": "pkg:npm/mathjs@3.10.1",
+      "vuln_id": "GHSA-x2fc-mxcx-w4mf",
+      "cve_ids": [
+        "CVE-2020-7743"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Prototype Pollution in mathjs",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "dicer",
+      "version": "0.2.5",
+      "purl": "pkg:npm/dicer@0.2.5",
+      "vuln_id": "GHSA-wm7h-9275-46v2",
+      "cve_ids": [
+        "CVE-2022-24434"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Crash in HeaderParser in dicer",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "mysql2",
+      "version": "1.7.0",
+      "purl": "pkg:npm/mysql2@1.7.0",
+      "vuln_id": "GHSA-pmh2-wpjm-fj45",
+      "cve_ids": [
+        "CVE-2024-21512"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.9.8"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "mysql2 vulnerable to Prototype Pollution",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "mysql2",
+      "version": "1.7.0",
+      "purl": "pkg:npm/mysql2@1.7.0",
+      "vuln_id": "GHSA-fpw7-j2hg-69v5",
+      "cve_ids": [
+        "CVE-2024-21508"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.9.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "mysql2 Remote Code Execution (RCE) via the readCodeFor function",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "mathjs",
+      "version": "3.10.1",
+      "purl": "pkg:npm/mathjs@3.10.1",
+      "vuln_id": "GHSA-vx5c-87qx-cv6c",
+      "cve_ids": [
+        "CVE-2017-1001002"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.17.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary Code Execution in mathjs",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "form-data",
+      "version": "2.3.3",
+      "purl": "pkg:npm/form-data@2.3.3",
+      "vuln_id": "GHSA-fjxv-7rqg-78g4",
+      "cve_ids": [
+        "CVE-2025-7783"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.4,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.5.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "form-data uses unsafe random function in form-data for choosing boundary",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "mathjs",
+      "version": "3.10.1",
+      "purl": "pkg:npm/mathjs@3.10.1",
+      "vuln_id": "GHSA-pv8x-p9hq-j328",
+      "cve_ids": [
+        "CVE-2017-1001003"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.17.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary Code Execution in mathjs",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tough-cookie",
+      "version": "2.5.0",
+      "purl": "pkg:npm/tough-cookie@2.5.0",
+      "vuln_id": "GHSA-72xf-g2v4-qvf3",
+      "cve_ids": [
+        "CVE-2023-26136"
+      ],
+      "severity": "Medium",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.1.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "tough-cookie Prototype Pollution vulnerability",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "typed-function",
+      "version": "0.10.5",
+      "purl": "pkg:npm/typed-function@0.10.5",
+      "vuln_id": "GHSA-3qh4-r86r-grvm",
+      "cve_ids": [
+        "CVE-2017-1001004"
+      ],
+      "severity": "High",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.10.6"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary JavaScript Execution in typed-function",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sequelize",
+      "version": "4.44.4",
+      "purl": "pkg:npm/sequelize@4.44.4",
+      "vuln_id": "GHSA-wrh9-cjv3-2hpw",
+      "cve_ids": [
+        "CVE-2023-25813"
+      ],
+      "severity": "Critical",
+      "cvss_max": 10,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.19.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Sequelize vulnerable to SQL Injection via replacements",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "express-fileupload",
+      "version": "0.4.0",
+      "purl": "pkg:npm/express-fileupload@0.4.0",
+      "vuln_id": "GHSA-w4m6-x6c2-j5c9",
+      "cve_ids": [
+        "CVE-2022-27261"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Express-FileUpload Arbitrary File Overwrite",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "libxmljs",
+      "version": "0.19.10",
+      "purl": "pkg:npm/libxmljs@0.19.10",
+      "vuln_id": "GHSA-mg49-jqgw-gcj6",
+      "cve_ids": [
+        "CVE-2024-34392"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "libxmljs vulnerable to type confusion when parsing specially crafted XML",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-5955-9wpr-37jh",
+      "cve_ids": [
+        "CVE-2021-37713"
+      ],
+      "severity": "High",
+      "cvss_max": 8.6,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "4.4.18"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary File Creation/Overwrite on Windows via insufficient relative path sanitization",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "libxmljs",
+      "version": "0.19.10",
+      "purl": "pkg:npm/libxmljs@0.19.10",
+      "vuln_id": "GHSA-6433-x5p4-8jc7",
+      "cve_ids": [
+        "CVE-2024-34391"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "libxmljs vulnerable to type confusion when parsing specially crafted XML",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "mysql2",
+      "version": "1.7.0",
+      "purl": "pkg:npm/mysql2@1.7.0",
+      "vuln_id": "GHSA-4rch-2fh8-94vw",
+      "cve_ids": [
+        "CVE-2024-21511"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.9.7"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "MySQL2 for Node Arbitrary Code Injection",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "validator",
+      "version": "10.11.0",
+      "purl": "pkg:npm/validator@10.11.0",
+      "vuln_id": "GHSA-qgmg-gppg-76g5",
+      "cve_ids": [
+        "CVE-2021-3765"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.7.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Inefficient Regular Expression Complexity in validator.js",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sequelize",
+      "version": "4.44.4",
+      "purl": "pkg:npm/sequelize@4.44.4",
+      "vuln_id": "GHSA-f598-mfpv-gmfx",
+      "cve_ids": [
+        "CVE-2023-22578"
+      ],
+      "severity": "Critical",
+      "cvss_max": 10,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.29.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Sequelize - Default support for “raw attributes” when using parentheses",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sequelize",
+      "version": "4.44.4",
+      "purl": "pkg:npm/sequelize@4.44.4",
+      "vuln_id": "GHSA-vqfx-gj96-3w95",
+      "cve_ids": [
+        "CVE-2023-22579"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.9,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.28.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Unsafe fall-through in getWhereConditions",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "mysql2",
+      "version": "1.7.0",
+      "purl": "pkg:npm/mysql2@1.7.0",
+      "vuln_id": "GHSA-49j4-86m8-q2jw",
+      "cve_ids": [
+        "CVE-2024-21509"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.9,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.9.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "mysql2 vulnerable to Prototype Poisoning",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-f5x3-32g6-xq36",
+      "cve_ids": [
+        "CVE-2024-28863"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.2.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Denial of service while parsing a tar file due to lack of folders count validation",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "passport",
+      "version": "0.4.1",
+      "purl": "pkg:npm/passport@0.4.1",
+      "vuln_id": "GHSA-v923-w3x8-wh69",
+      "cve_ids": [
+        "CVE-2022-25896"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.6.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Passport vulnerable to session regeneration when a users logs in or out",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "form-data",
+      "version": "2.3.3",
+      "purl": "pkg:npm/form-data@2.3.3",
+      "vuln_id": "GHSA-hmw2-7cc7-3qxx",
+      "cve_ids": [
+        "CVE-2026-12143"
+      ],
+      "severity": "High",
+      "cvss_max": 8.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.5.6"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "form-data: CRLF injection in form-data via unescaped multipart field names and filenames",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sequelize",
+      "version": "4.44.4",
+      "purl": "pkg:npm/sequelize@4.44.4",
+      "vuln_id": "GHSA-v8fg-2rw7-q452",
+      "cve_ids": [
+        "CVE-2026-69240"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.37.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Sequelize: SQL Injection (Oracle DB)",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-23hp-3jrh-7fpw",
+      "cve_ids": [
+        "CVE-2026-59873"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.19"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Decompression/parse DoS via unlimited input",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-23hp-3jrh-7fpw",
+      "cve_ids": [
+        "CVE-2026-59873"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.19"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Decompression/parse DoS via unlimited input",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-34x7-hfp2-rc4v",
+      "cve_ids": [
+        "CVE-2026-24842"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.7"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-34x7-hfp2-rc4v",
+      "cve_ids": [
+        "CVE-2026-24842"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.7"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "mysql2",
+      "version": "1.7.0",
+      "purl": "pkg:npm/mysql2@1.7.0",
+      "vuln_id": "GHSA-mqr2-w7wj-jjgr",
+      "cve_ids": [
+        "CVE-2024-21507"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.9,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.9.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "mysql2 cache poisoning vulnerability",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "bcrypt",
+      "version": "1.0.3",
+      "purl": "pkg:npm/bcrypt@1.0.3",
+      "vuln_id": "GHSA-5wg4-74h6-q47v",
+      "cve_ids": [
+        "CVE-2020-7689"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "5.0.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Integer Overflow or Wraparound and Use of a Broken or Risky Cryptographic Algorithm in bcrypt",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "request",
+      "version": "2.88.2",
+      "purl": "pkg:npm/request@2.88.2",
+      "vuln_id": "GHSA-p8p7-x288-28g6",
+      "cve_ids": [
+        "CVE-2023-28155"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.1,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Server-Side Request Forgery in Request",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-r292-9mhp-454m",
+      "cve_ids": [
+        "CVE-2026-73566"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.21"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Uncontrolled recursion in mapHas/filesFilter allows uncatchable stack-overflow DoS via crafted long-path tar with member selection",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-r292-9mhp-454m",
+      "cve_ids": [
+        "CVE-2026-73566"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.21"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Uncontrolled recursion in mapHas/filesFilter allows uncatchable stack-overflow DoS via crafted long-path tar with member selection",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "validator",
+      "version": "10.11.0",
+      "purl": "pkg:npm/validator@10.11.0",
+      "vuln_id": "GHSA-vghf-hv5q-vc2g",
+      "cve_ids": [
+        "CVE-2025-12758"
+      ],
+      "severity": "High",
+      "cvss_max": 7.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.15.22"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Validator is Vulnerable to Incomplete Filtering of One or More Instances of Special Elements",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-8x88-c5mf-7j5w",
+      "cve_ids": [
+        "CVE-2026-59874"
+      ],
+      "severity": "High",
+      "cvss_max": 8.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.18"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Negative tar entry size causes infinite loop in archive replace",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-8x88-c5mf-7j5w",
+      "cve_ids": [
+        "CVE-2026-59874"
+      ],
+      "severity": "High",
+      "cvss_max": 8.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.18"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Negative tar entry size causes infinite loop in archive replace",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-w8wr-v893-vjvp",
+      "cve_ids": [
+        "CVE-2026-59871"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.18"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Process crash via PAX numeric path type confusion",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-w8wr-v893-vjvp",
+      "cve_ids": [
+        "CVE-2026-59871"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.18"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Process crash via PAX numeric path type confusion",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "ejs",
+      "version": "2.7.4",
+      "purl": "pkg:npm/ejs@2.7.4",
+      "vuln_id": "GHSA-ghr5-ch3p-vcr6",
+      "cve_ids": [
+        "CVE-2024-33883"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.9,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.10"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "ejs lacks certain pollution protection",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "libxmljs",
+      "version": "0.19.10",
+      "purl": "pkg:npm/libxmljs@0.19.10",
+      "vuln_id": "GHSA-jv72-59wq-8rxm",
+      "cve_ids": [
+        "CVE-2025-25341"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "not-fixed",
+      "fix_versions": [],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "libxmljs has segmentation fault, potentially leading to a denial-of-service (DoS)",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-qffp-2rhf-9h96",
+      "cve_ids": [
+        "CVE-2026-29786"
+      ],
+      "severity": "High",
+      "cvss_max": 8.6,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.10"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "tar has Hardlink Path Traversal via Drive-Relative Linkpath",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-qffp-2rhf-9h96",
+      "cve_ids": [
+        "CVE-2026-29786"
+      ],
+      "severity": "High",
+      "cvss_max": 8.6,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.10"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "tar has Hardlink Path Traversal via Drive-Relative Linkpath",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "sequelize",
+      "version": "4.44.4",
+      "purl": "pkg:npm/sequelize@4.44.4",
+      "vuln_id": "GHSA-8c25-f3mj-v6h8",
+      "cve_ids": [
+        "CVE-2023-22580"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.28.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Sequelize information disclosure vulnerability",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-8qq5-rm4j-mr97",
+      "cve_ids": [
+        "CVE-2026-23745"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-8qq5-rm4j-mr97",
+      "cve_ids": [
+        "CVE-2026-23745"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.3"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-gvwx-54wh-qm9j",
+      "cve_ids": [
+        "CVE-2026-59875"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.17"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Uncaught Exception DoS via NUL byte in PAX path/linkpath records",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-gvwx-54wh-qm9j",
+      "cve_ids": [
+        "CVE-2026-59875"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.17"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar: Uncaught Exception DoS via NUL byte in PAX path/linkpath records",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "qs",
+      "version": "6.5.5",
+      "purl": "pkg:npm/qs@6.5.5",
+      "vuln_id": "GHSA-4mjr-xmp4-gh2g",
+      "cve_ids": [
+        "CVE-2026-82417"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.16.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "qs: Denial of Service via Attacker Controlled isBuffer",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "qs",
+      "version": "6.5.5",
+      "purl": "pkg:npm/qs@6.5.5",
+      "vuln_id": "GHSA-6rw7-vpxm-498p",
+      "cve_ids": [
+        "CVE-2025-15284"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "6.14.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "uuid",
+      "version": "3.4.0",
+      "purl": "pkg:npm/uuid@3.4.0",
+      "vuln_id": "GHSA-w5hq-g745-h8pq",
+      "cve_ids": [
+        "CVE-2026-41907"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "11.1.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "cookie",
+      "version": "0.4.0",
+      "purl": "pkg:npm/cookie@0.4.0",
+      "vuln_id": "GHSA-pxg6-pf52-xh8x",
+      "cve_ids": [
+        "CVE-2024-47764"
+      ],
+      "severity": "Low",
+      "cvss_max": 6.9,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "0.7.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "cookie accepts cookie name, path, and domain with out of bounds characters",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-r6q2-hw4h-h46w",
+      "cve_ids": [
+        "CVE-2026-23950"
+      ],
+      "severity": "High",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-r6q2-hw4h-h46w",
+      "cve_ids": [
+        "CVE-2026-23950"
+      ],
+      "severity": "High",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.4"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "validator",
+      "version": "10.11.0",
+      "purl": "pkg:npm/validator@10.11.0",
+      "vuln_id": "GHSA-9965-vmph-33xx",
+      "cve_ids": [
+        "CVE-2025-56200"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.15.20"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "validator.js has a URL validation bypass vulnerability in its isURL function",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-83g3-92jg-28cx",
+      "cve_ids": [
+        "CVE-2026-26960"
+      ],
+      "severity": "High",
+      "cvss_max": 7.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.8"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-83g3-92jg-28cx",
+      "cve_ids": [
+        "CVE-2026-26960"
+      ],
+      "severity": "High",
+      "cvss_max": 7.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.8"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-9ppj-qmqm-q256",
+      "cve_ids": [
+        "CVE-2026-31802"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.11"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar Symlink Path Traversal via Drive-Relative Linkpath",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-9ppj-qmqm-q256",
+      "cve_ids": [
+        "CVE-2026-31802"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.11"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar Symlink Path Traversal via Drive-Relative Linkpath",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "2.2.2",
+      "purl": "pkg:npm/tar@2.2.2",
+      "vuln_id": "GHSA-vmf3-w455-68vh",
+      "cve_ids": [
+        "CVE-2026-53655"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.9,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.16"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar applies PAX size override to intermediary GNU long-name/long-link headers, causing tar parser interpretation differential (file smuggling)",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "tar",
+      "version": "6.2.1",
+      "purl": "pkg:npm/tar@6.2.1",
+      "vuln_id": "GHSA-vmf3-w455-68vh",
+      "cve_ids": [
+        "CVE-2026-53655"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.9,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "7.5.16"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "node-tar applies PAX size override to intermediary GNU long-name/long-link headers, causing tar parser interpretation differential (file smuggling)",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "mysql2",
+      "version": "1.7.0",
+      "purl": "pkg:npm/mysql2@1.7.0",
+      "vuln_id": "GHSA-3f6p-5ww8-9rcr",
+      "cve_ids": [],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.22.0"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "MySQL2: Auth Plugin Downgrade to mysql_clear_password Leaks Plaintext Credentials",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "mysql2",
+      "version": "1.7.0",
+      "purl": "pkg:npm/mysql2@1.7.0",
+      "vuln_id": "GHSA-rgwj-5xj2-c3m3",
+      "cve_ids": [],
+      "severity": "Medium",
+      "cvss_max": 5.9,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.23.1"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "MySQL2: Unbounded zlib inflate in compressed MySQL protocol handler allows decompression-bomb DoS",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvna",
+      "commit": "9ba473add536f66ac9007966acb2a775dd31277a",
+      "language": "javascript",
+      "package_type": "npm",
+      "package": "express-fileupload",
+      "version": "0.4.0",
+      "purl": "pkg:npm/express-fileupload@0.4.0",
+      "vuln_id": "GHSA-q3w9-g74q-vp5f",
+      "cve_ids": [],
+      "severity": "Low",
+      "cvss_max": null,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "1.1.6-alpha.6"
+      ],
+      "locations": [
+        "/package-lock.json"
+      ],
+      "description": "Denial of Service in express-fileupload",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    }
+  ]
+}

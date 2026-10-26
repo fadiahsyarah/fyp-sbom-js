@@ -1,0 +1,7 @@
+{
+  "repos": [
+    { "name": "juice-shop", "url": "https://github.com/juice-shop/juice-shop", "ref": "master" },
+    { "name": "nodegoat",   "url": "https://github.com/OWASP/NodeGoat",       "ref": "master" },
+    { "name": "dvna",       "url": "https://github.com/appsecco/dvna",        "ref": "master" }
+  ]
+}
