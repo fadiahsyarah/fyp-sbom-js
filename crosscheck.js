@@ -16,6 +16,7 @@ function npmAudit(dir) {
 
 const report = [];
 for (const repo of repos) {
+  if (!fs.existsSync(path.join(ROOT, "repos", repo.name, "package.json"))) continue;
   const raw = JSON.parse(npmAudit(path.join(ROOT, "repos", repo.name)));
   const npmIds = new Set();
   for (const pkg of Object.values(raw.vulnerabilities || {})) {
