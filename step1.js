@@ -13,7 +13,7 @@ function run(cmd, args, opts = {}) {
 
 function cloneRepo(repo) {
   const dir = path.join(REPOS_DIR, repo.name);
-  if (!fs.existsSync(dir)) run("git", ["clone", "--depth", "1", "--branch", repo.ref, repo.url, dir]);
+  if (!fs.existsSync(dir)) run("git", ["clone", "--depth", "1", ...(repo.ref ? ["--branch", repo.ref] : []), repo.url, dir]);
   if (repo.commit && run("git", ["-C", dir, "rev-parse", "HEAD"]).trim() !== repo.commit) {
     run("git", ["-C", dir, "fetch", "--depth", "1", "origin", repo.commit]);
     run("git", ["-C", dir, "checkout", "--quiet", repo.commit]);

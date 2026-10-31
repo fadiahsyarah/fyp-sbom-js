@@ -2,20 +2,20 @@
   "repos": [
     {
       "name": "juice-shop",
-      "url": "https://github.com/juice-shop/juice-shop",
-      "ref": "master",
+      "url": "https://github.com/fadiahsyarah/juice-shop",
+      "upstream": "https://github.com/juice-shop/juice-shop",
       "commit": "399fba76194305a312693eee44f4df64bdf0c3ce"
     },
     {
       "name": "nodegoat",
-      "url": "https://github.com/OWASP/NodeGoat",
-      "ref": "master",
+      "url": "https://github.com/fadiahsyarah/NodeGoat",
+      "upstream": "https://github.com/OWASP/NodeGoat",
       "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8"
     },
     {
       "name": "dvna",
-      "url": "https://github.com/appsecco/dvna",
-      "ref": "master",
+      "url": "https://github.com/fadiahsyarah/dvna",
+      "upstream": "https://github.com/appsecco/dvna",
       "commit": "9ba473add536f66ac9007966acb2a775dd31277a"
     }
   ]

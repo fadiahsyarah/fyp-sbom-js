@@ -1,8 +1,8 @@
 [
   {
     "repo": "juice-shop",
-    "grype": 57,
-    "npm_audit": 59,
+    "grype": 58,
+    "npm_audit": 62,
     "both": [
       "GHSA-35jh-r3h4-6jhm",
       "GHSA-8hfj-j24r-96c4",
@@ -30,14 +30,14 @@
       "GHSA-34x7-hfp2-rc4v",
       "GHSA-3j7m-hmh3-9jmp",
       "GHSA-7r86-cg39-jmmj",
+      "GHSA-r292-9mhp-454m",
       "GHSA-8cf7-32gw-wr33",
       "GHSA-hjrf-2m68-5959",
-      "GHSA-r292-9mhp-454m",
       "GHSA-23c5-xmqv-rm74",
       "GHSA-8x88-c5mf-7j5w",
       "GHSA-w8wr-v893-vjvp",
-      "GHSA-qwph-4952-7xr6",
       "GHSA-qffp-2rhf-9h96",
+      "GHSA-qwph-4952-7xr6",
       "GHSA-8qq5-rm4j-mr97",
       "GHSA-vcc3-ghjq-m6fr",
       "GHSA-c475-qrg2-pj4r",
@@ -62,18 +62,22 @@
       "GHSA-rvg8-pwq2-xj7q"
     ],
     "grype_only": [
-      "GHSA-ch52-4w7c-c8xp"
+      "GHSA-ch52-4w7c-c8xp",
+      "GHSA-hp3w-g68c-fv3c"
     ],
     "npm_only": [
       "GHSA-v75r-vx73-82pj",
       "GHSA-q69g-4hcv-6jg4",
-      "GHSA-7f5c-rpf4-86p8"
+      "GHSA-qr28-fpjm-wq7f",
+      "GHSA-3g3m-2fjr-6pw4",
+      "GHSA-7f5c-rpf4-86p8",
+      "GHSA-g3hv-75wg-m249"
     ]
   },
   {
     "repo": "nodegoat",
     "grype": 80,
-    "npm_audit": 196,
+    "npm_audit": 198,
     "both": [
       "GHSA-c4w7-xm78-47vh",
       "GHSA-w573-4hg7-7wgq",
@@ -130,13 +134,13 @@
       "GHSA-8x88-c5mf-7j5w",
       "GHSA-w8wr-v893-vjvp",
       "GHSA-qffp-2rhf-9h96",
+      "GHSA-jqcg-44mw-7w3h",
       "GHSA-8qq5-rm4j-mr97",
       "GHSA-vcc3-ghjq-m6fr",
       "GHSA-6j4f-fj2g-mc7p",
       "GHSA-qhr7-859c-m2p7",
       "GHSA-gvwx-54wh-qm9j",
       "GHSA-3jxr-9vmj-r5cp",
-      "GHSA-jqcg-44mw-7w3h",
       "GHSA-4mjr-xmp4-gh2g",
       "GHSA-6rw7-vpxm-498p",
       "GHSA-pxg6-pf52-xh8x",
@@ -177,6 +181,7 @@
       "GHSA-832h-xg76-4gv6",
       "GHSA-c6rq-rjc2-86v2",
       "GHSA-3xgq-45jj-v275",
+      "GHSA-qr28-fpjm-wq7f",
       "GHSA-h6ch-v84p-w6p9",
       "GHSA-73rr-hh4g-fpgx",
       "GHSA-ff7x-qrg7-qggm",
@@ -240,6 +245,7 @@
       "GHSA-xxjr-mmjv-4gpg",
       "GHSA-wrvr-8mpx-r7pp",
       "GHSA-hxm2-r34f-qmc5",
+      "GHSA-g3hv-75wg-m249",
       "GHSA-8hfj-j24r-96c4",
       "GHSA-wc69-rhjr-hc9g",
       "GHSA-ph34-pc88-72gc",
@@ -281,7 +287,7 @@
   {
     "repo": "dvna",
     "grype": 54,
-    "npm_audit": 54,
+    "npm_audit": 55,
     "both": [
       "GHSA-q4v7-4rhw-9hqm",
       "GHSA-phwq-j96m-2c2q",
@@ -339,6 +345,8 @@
       "GHSA-q3w9-g74q-vp5f"
     ],
     "grype_only": [],
-    "npm_only": []
+    "npm_only": [
+      "GHSA-g3hv-75wg-m249"
+    ]
   }
 ]
