@@ -1,5 +1,5 @@
 Path:      /home/fadiah/.cache/grype/db/6/vulnerability.db
 Schema:    v6.1.10
-Built:     2026-10-22T06:29:52Z
+Built:     2026-10-22T18:51:21Z
 From:      manual import
 Status:    valid

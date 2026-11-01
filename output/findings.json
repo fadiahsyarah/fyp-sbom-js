@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-31T05:50:59.119Z",
+  "generated_at": "2026-11-01T03:27:00.385Z",
   "findings": [
     {
       "repo": "webgoat",
@@ -4169,7 +4169,7 @@
         "5.3.1"
       ],
       "locations": [
-        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+        "/requirements.txt"
       ],
       "description": "Improper Input Validation in PyYAML",
       "epss": null,
@@ -4196,7 +4196,7 @@
         "5.3.1"
       ],
       "locations": [
-        "/requirements.txt"
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
       ],
       "description": "Improper Input Validation in PyYAML",
       "epss": null,
@@ -4358,33 +4358,6 @@
         "3.0.3"
       ],
       "locations": [
-        "/dockerized_labs/software_integrity_lab/requirements.txt"
-      ],
-      "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-2g68-c3qc-8985",
-      "cve_ids": [
-        "CVE-2024-34069"
-      ],
-      "severity": "High",
-      "cvss_max": 7.5,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.3"
-      ],
-      "locations": [
         "/dockerized_labs/crypto_failure_lab/requirements.txt"
       ],
       "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
@@ -4439,7 +4412,7 @@
         "3.0.3"
       ],
       "locations": [
-        "/dockerized_labs/sql_injection_lab/requirements.txt"
+        "/dockerized_labs/command_injection_lab/requirements.txt"
       ],
       "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
       "epss": null,
@@ -4493,7 +4466,7 @@
         "3.0.3"
       ],
       "locations": [
-        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+        "/dockerized_labs/software_integrity_lab/requirements.txt"
       ],
       "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
       "epss": null,
@@ -4520,7 +4493,34 @@
         "3.0.3"
       ],
       "locations": [
-        "/dockerized_labs/command_injection_lab/requirements.txt"
+        "/dockerized_labs/sql_injection_lab/requirements.txt"
+      ],
+      "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-2g68-c3qc-8985",
+      "cve_ids": [
+        "CVE-2024-34069"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.3"
+      ],
+      "locations": [
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
       ],
       "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
       "epss": null,
@@ -4601,7 +4601,7 @@
         "3.0.3"
       ],
       "locations": [
-        "/dockerized_labs/xxe_lab/requirements.txt"
+        "/dockerized_labs/insecure_design_lab/requirements.txt"
       ],
       "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
       "epss": null,
@@ -4628,115 +4628,7 @@
         "3.0.3"
       ],
       "locations": [
-        "/dockerized_labs/insecure_design_lab/requirements.txt"
-      ],
-      "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-2g68-c3qc-8985",
-      "cve_ids": [
-        "CVE-2024-34069"
-      ],
-      "severity": "High",
-      "cvss_max": 7.5,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.3"
-      ],
-      "locations": [
-        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
-      ],
-      "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-2g68-c3qc-8985",
-      "cve_ids": [
-        "CVE-2024-34069"
-      ],
-      "severity": "High",
-      "cvss_max": 7.5,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.3"
-      ],
-      "locations": [
-        "/dockerized_labs/broken_auth_lab/requirements.txt"
-      ],
-      "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-2g68-c3qc-8985",
-      "cve_ids": [
-        "CVE-2024-34069"
-      ],
-      "severity": "High",
-      "cvss_max": 7.5,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.3"
-      ],
-      "locations": [
-        "/dockerized_labs/xss_lab/requirements.txt"
-      ],
-      "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-2g68-c3qc-8985",
-      "cve_ids": [
-        "CVE-2024-34069"
-      ],
-      "severity": "High",
-      "cvss_max": 7.5,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.3"
-      ],
-      "locations": [
-        "/dockerized_labs/template_injection_lab/requirements.txt"
+        "/dockerized_labs/xxe_lab/requirements.txt"
       ],
       "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
       "epss": null,
@@ -4817,7 +4709,88 @@
         "3.0.3"
       ],
       "locations": [
-        "/challenge/labs/business_logic_lab/requirements.txt"
+        "/dockerized_labs/xss_lab/requirements.txt"
+      ],
+      "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-2g68-c3qc-8985",
+      "cve_ids": [
+        "CVE-2024-34069"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.3"
+      ],
+      "locations": [
+        "/dockerized_labs/template_injection_lab/requirements.txt"
+      ],
+      "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-2g68-c3qc-8985",
+      "cve_ids": [
+        "CVE-2024-34069"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.3"
+      ],
+      "locations": [
+        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
+      ],
+      "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-2g68-c3qc-8985",
+      "cve_ids": [
+        "CVE-2024-34069"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.3"
+      ],
+      "locations": [
+        "/dockerized_labs/broken_auth_lab/requirements.txt"
       ],
       "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
       "epss": null,
@@ -4858,8 +4831,8 @@
       "language": "javascript",
       "package_type": "python",
       "package": "werkzeug",
-      "version": "3.0.1",
-      "purl": "pkg:pypi/werkzeug@3.0.1",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
       "vuln_id": "GHSA-2g68-c3qc-8985",
       "cve_ids": [
         "CVE-2024-34069"
@@ -4871,7 +4844,7 @@
         "3.0.3"
       ],
       "locations": [
-        "/dockerized_labs/insec_des_lab/requirements.txt"
+        "/challenge/labs/business_logic_lab/requirements.txt"
       ],
       "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
       "epss": null,
@@ -4899,6 +4872,33 @@
       ],
       "locations": [
         "/dockerized_labs/broken_access_lab/requirements.txt"
+      ],
+      "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "3.0.1",
+      "purl": "pkg:pypi/werkzeug@3.0.1",
+      "vuln_id": "GHSA-2g68-c3qc-8985",
+      "cve_ids": [
+        "CVE-2024-34069"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.3"
+      ],
+      "locations": [
+        "/dockerized_labs/insec_des_lab/requirements.txt"
       ],
       "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
       "epss": null,
@@ -5897,7 +5897,34 @@
         "2.2.3"
       ],
       "locations": [
-        "/dockerized_labs/crypto_failure_lab/requirements.txt"
+        "/dockerized_labs/sql_injection_lab/requirements.txt"
+      ],
+      "description": "High resource usage when parsing multipart form data with many fields",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-xg9f-g7g7-2323",
+      "cve_ids": [
+        "CVE-2023-25577"
+      ],
+      "severity": "High",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.2.3"
+      ],
+      "locations": [
+        "/dockerized_labs/command_injection_lab/requirements.txt"
       ],
       "description": "High resource usage when parsing multipart form data with many fields",
       "epss": null,
@@ -5951,7 +5978,7 @@
         "2.2.3"
       ],
       "locations": [
-        "/dockerized_labs/sql_injection_lab/requirements.txt"
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
       ],
       "description": "High resource usage when parsing multipart form data with many fields",
       "epss": null,
@@ -5978,7 +6005,7 @@
         "2.2.3"
       ],
       "locations": [
-        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+        "/dockerized_labs/crypto_failure_lab/requirements.txt"
       ],
       "description": "High resource usage when parsing multipart form data with many fields",
       "epss": null,
@@ -6033,33 +6060,6 @@
       ],
       "locations": [
         "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
-      ],
-      "description": "High resource usage when parsing multipart form data with many fields",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-xg9f-g7g7-2323",
-      "cve_ids": [
-        "CVE-2023-25577"
-      ],
-      "severity": "High",
-      "cvss_max": 7.5,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "2.2.3"
-      ],
-      "locations": [
-        "/dockerized_labs/command_injection_lab/requirements.txt"
       ],
       "description": "High resource usage when parsing multipart form data with many fields",
       "epss": null,
@@ -6140,7 +6140,7 @@
         "2.2.3"
       ],
       "locations": [
-        "/dockerized_labs/xxe_lab/requirements.txt"
+        "/dockerized_labs/insecure_design_lab/requirements.txt"
       ],
       "description": "High resource usage when parsing multipart form data with many fields",
       "epss": null,
@@ -6167,7 +6167,7 @@
         "2.2.3"
       ],
       "locations": [
-        "/dockerized_labs/insecure_design_lab/requirements.txt"
+        "/dockerized_labs/xxe_lab/requirements.txt"
       ],
       "description": "High resource usage when parsing multipart form data with many fields",
       "epss": null,
@@ -6302,7 +6302,7 @@
         "2.2.5"
       ],
       "locations": [
-        "/dockerized_labs/sql_injection_lab/requirements.txt"
+        "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
       ],
       "description": "Flask vulnerable to possible disclosure of permanent session cookie due to missing Vary: Cookie header",
       "epss": null,
@@ -6329,7 +6329,7 @@
         "2.2.5"
       ],
       "locations": [
-        "/dockerized_labs/software_integrity_lab/requirements.txt"
+        "/dockerized_labs/crypto_failure_lab/requirements.txt"
       ],
       "description": "Flask vulnerable to possible disclosure of permanent session cookie due to missing Vary: Cookie header",
       "epss": null,
@@ -6383,7 +6383,7 @@
         "2.2.5"
       ],
       "locations": [
-        "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
+        "/dockerized_labs/software_integrity_lab/requirements.txt"
       ],
       "description": "Flask vulnerable to possible disclosure of permanent session cookie due to missing Vary: Cookie header",
       "epss": null,
@@ -6410,7 +6410,7 @@
         "2.2.5"
       ],
       "locations": [
-        "/dockerized_labs/crypto_failure_lab/requirements.txt"
+        "/dockerized_labs/sql_injection_lab/requirements.txt"
       ],
       "description": "Flask vulnerable to possible disclosure of permanent session cookie due to missing Vary: Cookie header",
       "epss": null,
@@ -7004,6 +7004,60 @@
         "3.0.6"
       ],
       "locations": [
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+      ],
+      "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-q34m-jh98-gwm2",
+      "cve_ids": [
+        "CVE-2024-49767"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.6"
+      ],
+      "locations": [
+        "/dockerized_labs/package_injection_lab/requirements.txt"
+      ],
+      "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-q34m-jh98-gwm2",
+      "cve_ids": [
+        "CVE-2024-49767"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.6"
+      ],
+      "locations": [
         "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
       ],
       "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
@@ -7059,60 +7113,6 @@
       ],
       "locations": [
         "/dockerized_labs/command_injection_lab/requirements.txt"
-      ],
-      "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-q34m-jh98-gwm2",
-      "cve_ids": [
-        "CVE-2024-49767"
-      ],
-      "severity": "Medium",
-      "cvss_max": 7.5,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.6"
-      ],
-      "locations": [
-        "/dockerized_labs/a9_uckv_lab/requirements.txt"
-      ],
-      "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-q34m-jh98-gwm2",
-      "cve_ids": [
-        "CVE-2024-49767"
-      ],
-      "severity": "Medium",
-      "cvss_max": 7.5,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.6"
-      ],
-      "locations": [
-        "/dockerized_labs/package_injection_lab/requirements.txt"
       ],
       "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
       "epss": null,
@@ -7274,7 +7274,7 @@
         "3.0.6"
       ],
       "locations": [
-        "/dockerized_labs/xss_lab/requirements.txt"
+        "/challenge/labs/bopla_lab/requirements.txt"
       ],
       "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
       "epss": null,
@@ -7301,7 +7301,7 @@
         "3.0.6"
       ],
       "locations": [
-        "/challenge/labs/bopla_lab/requirements.txt"
+        "/dockerized_labs/xss_lab/requirements.txt"
       ],
       "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
       "epss": null,
@@ -7355,33 +7355,6 @@
         "3.0.6"
       ],
       "locations": [
-        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
-      ],
-      "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-q34m-jh98-gwm2",
-      "cve_ids": [
-        "CVE-2024-49767"
-      ],
-      "severity": "Medium",
-      "cvss_max": 7.5,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.6"
-      ],
-      "locations": [
         "/dockerized_labs/template_injection_lab/requirements.txt"
       ],
       "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
@@ -7409,7 +7382,34 @@
         "3.0.6"
       ],
       "locations": [
-        "/dockerized_labs/dependency_attack_lab/requirements.txt"
+        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
+      ],
+      "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-q34m-jh98-gwm2",
+      "cve_ids": [
+        "CVE-2024-49767"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.6"
+      ],
+      "locations": [
+        "/challenge/labs/security_headers_lab/requirements.txt"
       ],
       "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
       "epss": null,
@@ -7463,34 +7463,7 @@
         "3.0.6"
       ],
       "locations": [
-        "/challenge/labs/security_headers_lab/requirements.txt"
-      ],
-      "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "3.0.1",
-      "purl": "pkg:pypi/werkzeug@3.0.1",
-      "vuln_id": "GHSA-q34m-jh98-gwm2",
-      "cve_ids": [
-        "CVE-2024-49767"
-      ],
-      "severity": "Medium",
-      "cvss_max": 7.5,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.6"
-      ],
-      "locations": [
-        "/dockerized_labs/insec_des_lab/requirements.txt"
+        "/dockerized_labs/dependency_attack_lab/requirements.txt"
       ],
       "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
       "epss": null,
@@ -7518,6 +7491,33 @@
       ],
       "locations": [
         "/dockerized_labs/broken_access_lab/requirements.txt"
+      ],
+      "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "3.0.1",
+      "purl": "pkg:pypi/werkzeug@3.0.1",
+      "vuln_id": "GHSA-q34m-jh98-gwm2",
+      "cve_ids": [
+        "CVE-2024-49767"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.6"
+      ],
+      "locations": [
+        "/dockerized_labs/insec_des_lab/requirements.txt"
       ],
       "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
       "epss": null,
@@ -7787,6 +7787,33 @@
         "2.3.8"
       ],
       "locations": [
+        "/dockerized_labs/crypto_failure_lab/requirements.txt"
+      ],
+      "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
+      "cve_ids": [
+        "CVE-2023-46136"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.3.8"
+      ],
+      "locations": [
         "/dockerized_labs/a9_uckv_lab/requirements.txt"
       ],
       "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
@@ -7814,61 +7841,7 @@
         "2.3.8"
       ],
       "locations": [
-        "/dockerized_labs/software_integrity_lab/requirements.txt"
-      ],
-      "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
-      "cve_ids": [
-        "CVE-2023-46136"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "2.3.8"
-      ],
-      "locations": [
         "/dockerized_labs/command_injection_lab/requirements.txt"
-      ],
-      "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
-      "cve_ids": [
-        "CVE-2023-46136"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "2.3.8"
-      ],
-      "locations": [
-        "/dockerized_labs/crypto_failure_lab/requirements.txt"
       ],
       "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
       "epss": null,
@@ -7923,6 +7896,33 @@
       ],
       "locations": [
         "/dockerized_labs/package_injection_lab/requirements.txt"
+      ],
+      "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
+      "cve_ids": [
+        "CVE-2023-46136"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.3.8"
+      ],
+      "locations": [
+        "/dockerized_labs/software_integrity_lab/requirements.txt"
       ],
       "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
       "epss": null,
@@ -8030,7 +8030,7 @@
         "2.3.8"
       ],
       "locations": [
-        "/dockerized_labs/insecure_design_lab/requirements.txt"
+        "/dockerized_labs/xxe_lab/requirements.txt"
       ],
       "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
       "epss": null,
@@ -8057,142 +8057,7 @@
         "2.3.8"
       ],
       "locations": [
-        "/dockerized_labs/xxe_lab/requirements.txt"
-      ],
-      "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
-      "cve_ids": [
-        "CVE-2023-46136"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "2.3.8"
-      ],
-      "locations": [
-        "/challenge/labs/business_logic_lab/requirements.txt"
-      ],
-      "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
-      "cve_ids": [
-        "CVE-2023-46136"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "2.3.8"
-      ],
-      "locations": [
-        "/dockerized_labs/xss_lab/requirements.txt"
-      ],
-      "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
-      "cve_ids": [
-        "CVE-2023-46136"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "2.3.8"
-      ],
-      "locations": [
-        "/challenge/labs/bopla_lab/requirements.txt"
-      ],
-      "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
-      "cve_ids": [
-        "CVE-2023-46136"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "2.3.8"
-      ],
-      "locations": [
-        "/dockerized_labs/dependency_attack_lab/requirements.txt"
-      ],
-      "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
-      "cve_ids": [
-        "CVE-2023-46136"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "2.3.8"
-      ],
-      "locations": [
-        "/dockerized_labs/template_injection_lab/requirements.txt"
+        "/dockerized_labs/insecure_design_lab/requirements.txt"
       ],
       "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
       "epss": null,
@@ -8246,7 +8111,34 @@
         "2.3.8"
       ],
       "locations": [
-        "/dockerized_labs/broken_auth_lab/requirements.txt"
+        "/dockerized_labs/template_injection_lab/requirements.txt"
+      ],
+      "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
+      "cve_ids": [
+        "CVE-2023-46136"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.3.8"
+      ],
+      "locations": [
+        "/challenge/labs/business_logic_lab/requirements.txt"
       ],
       "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
       "epss": null,
@@ -8274,6 +8166,114 @@
       ],
       "locations": [
         "/challenge/labs/security_headers_lab/requirements.txt"
+      ],
+      "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
+      "cve_ids": [
+        "CVE-2023-46136"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.3.8"
+      ],
+      "locations": [
+        "/dockerized_labs/broken_auth_lab/requirements.txt"
+      ],
+      "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
+      "cve_ids": [
+        "CVE-2023-46136"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.3.8"
+      ],
+      "locations": [
+        "/dockerized_labs/dependency_attack_lab/requirements.txt"
+      ],
+      "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
+      "cve_ids": [
+        "CVE-2023-46136"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.3.8"
+      ],
+      "locations": [
+        "/challenge/labs/bopla_lab/requirements.txt"
+      ],
+      "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
+      "cve_ids": [
+        "CVE-2023-46136"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.3.8"
+      ],
+      "locations": [
+        "/dockerized_labs/xss_lab/requirements.txt"
       ],
       "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
       "epss": null,
@@ -8462,7 +8462,7 @@
         "3.1.4"
       ],
       "locations": [
-        "/dockerized_labs/software_integrity_lab/requirements.txt"
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
       ],
       "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
       "epss": null,
@@ -8516,7 +8516,7 @@
         "3.1.4"
       ],
       "locations": [
-        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+        "/dockerized_labs/package_injection_lab/requirements.txt"
       ],
       "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
       "epss": null,
@@ -8543,7 +8543,7 @@
         "3.1.4"
       ],
       "locations": [
-        "/dockerized_labs/command_injection_lab/requirements.txt"
+        "/dockerized_labs/software_integrity_lab/requirements.txt"
       ],
       "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
       "epss": null,
@@ -8597,142 +8597,7 @@
         "3.1.4"
       ],
       "locations": [
-        "/dockerized_labs/package_injection_lab/requirements.txt"
-      ],
-      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.1.2",
-      "purl": "pkg:pypi/jinja2@3.1.2",
-      "vuln_id": "GHSA-h75v-3vvj-5mfj",
-      "cve_ids": [
-        "CVE-2024-34064"
-      ],
-      "severity": "Medium",
-      "cvss_max": 5.4,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.4"
-      ],
-      "locations": [
-        "/challenge/labs/security_headers_lab/requirements.txt"
-      ],
-      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.1.2",
-      "purl": "pkg:pypi/jinja2@3.1.2",
-      "vuln_id": "GHSA-h75v-3vvj-5mfj",
-      "cve_ids": [
-        "CVE-2024-34064"
-      ],
-      "severity": "Medium",
-      "cvss_max": 5.4,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.4"
-      ],
-      "locations": [
-        "/dockerized_labs/xss_lab/requirements.txt"
-      ],
-      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.1.2",
-      "purl": "pkg:pypi/jinja2@3.1.2",
-      "vuln_id": "GHSA-h75v-3vvj-5mfj",
-      "cve_ids": [
-        "CVE-2024-34064"
-      ],
-      "severity": "Medium",
-      "cvss_max": 5.4,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.4"
-      ],
-      "locations": [
-        "/challenge/labs/business_logic_lab/requirements.txt"
-      ],
-      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.1.2",
-      "purl": "pkg:pypi/jinja2@3.1.2",
-      "vuln_id": "GHSA-h75v-3vvj-5mfj",
-      "cve_ids": [
-        "CVE-2024-34064"
-      ],
-      "severity": "Medium",
-      "cvss_max": 5.4,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.4"
-      ],
-      "locations": [
-        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
-      ],
-      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.1.2",
-      "purl": "pkg:pypi/jinja2@3.1.2",
-      "vuln_id": "GHSA-h75v-3vvj-5mfj",
-      "cve_ids": [
-        "CVE-2024-34064"
-      ],
-      "severity": "Medium",
-      "cvss_max": 5.4,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.4"
-      ],
-      "locations": [
-        "/dockerized_labs/template_injection_lab/requirements.txt"
+        "/dockerized_labs/command_injection_lab/requirements.txt"
       ],
       "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
       "epss": null,
@@ -8786,7 +8651,142 @@
         "3.1.4"
       ],
       "locations": [
+        "/dockerized_labs/template_injection_lab/requirements.txt"
+      ],
+      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
+      "vuln_id": "GHSA-h75v-3vvj-5mfj",
+      "cve_ids": [
+        "CVE-2024-34064"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.4,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.4"
+      ],
+      "locations": [
+        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
+      ],
+      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
+      "vuln_id": "GHSA-h75v-3vvj-5mfj",
+      "cve_ids": [
+        "CVE-2024-34064"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.4,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.4"
+      ],
+      "locations": [
+        "/dockerized_labs/xss_lab/requirements.txt"
+      ],
+      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
+      "vuln_id": "GHSA-h75v-3vvj-5mfj",
+      "cve_ids": [
+        "CVE-2024-34064"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.4,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.4"
+      ],
+      "locations": [
         "/dockerized_labs/broken_auth_lab/requirements.txt"
+      ],
+      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
+      "vuln_id": "GHSA-h75v-3vvj-5mfj",
+      "cve_ids": [
+        "CVE-2024-34064"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.4,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.4"
+      ],
+      "locations": [
+        "/challenge/labs/security_headers_lab/requirements.txt"
+      ],
+      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
+      "vuln_id": "GHSA-h75v-3vvj-5mfj",
+      "cve_ids": [
+        "CVE-2024-34064"
+      ],
+      "severity": "Medium",
+      "cvss_max": 5.4,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.4"
+      ],
+      "locations": [
+        "/challenge/labs/business_logic_lab/requirements.txt"
       ],
       "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
       "epss": null,
@@ -9029,6 +9029,33 @@
         "3.1.3"
       ],
       "locations": [
+        "/dockerized_labs/sql_injection_lab/requirements.txt"
+      ],
+      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.0.1",
+      "purl": "pkg:pypi/jinja2@3.0.1",
+      "vuln_id": "GHSA-h5c8-rqwp-cp95",
+      "cve_ids": [
+        "CVE-2024-22195"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
         "/dockerized_labs/a9_uckv_lab/requirements.txt"
       ],
       "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
@@ -9151,87 +9178,6 @@
       "language": "javascript",
       "package_type": "python",
       "package": "jinja2",
-      "version": "3.0.1",
-      "purl": "pkg:pypi/jinja2@3.0.1",
-      "vuln_id": "GHSA-h5c8-rqwp-cp95",
-      "cve_ids": [
-        "CVE-2024-22195"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.1,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.3"
-      ],
-      "locations": [
-        "/dockerized_labs/sql_injection_lab/requirements.txt"
-      ],
-      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.1.2",
-      "purl": "pkg:pypi/jinja2@3.1.2",
-      "vuln_id": "GHSA-h5c8-rqwp-cp95",
-      "cve_ids": [
-        "CVE-2024-22195"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.1,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.3"
-      ],
-      "locations": [
-        "/challenge/labs/security_headers_lab/requirements.txt"
-      ],
-      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.1.2",
-      "purl": "pkg:pypi/jinja2@3.1.2",
-      "vuln_id": "GHSA-h5c8-rqwp-cp95",
-      "cve_ids": [
-        "CVE-2024-22195"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.1,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.3"
-      ],
-      "locations": [
-        "/challenge/labs/business_logic_lab/requirements.txt"
-      ],
-      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
       "version": "3.1.2",
       "purl": "pkg:pypi/jinja2@3.1.2",
       "vuln_id": "GHSA-h5c8-rqwp-cp95",
@@ -9272,7 +9218,7 @@
         "3.1.3"
       ],
       "locations": [
-        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
+        "/dockerized_labs/xss_lab/requirements.txt"
       ],
       "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
       "epss": null,
@@ -9353,7 +9299,61 @@
         "3.1.3"
       ],
       "locations": [
-        "/dockerized_labs/xss_lab/requirements.txt"
+        "/challenge/labs/security_headers_lab/requirements.txt"
+      ],
+      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
+      "vuln_id": "GHSA-h5c8-rqwp-cp95",
+      "cve_ids": [
+        "CVE-2024-22195"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/challenge/labs/business_logic_lab/requirements.txt"
+      ],
+      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
+      "vuln_id": "GHSA-h5c8-rqwp-cp95",
+      "cve_ids": [
+        "CVE-2024-22195"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
       ],
       "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
       "epss": null,
@@ -9380,115 +9380,34 @@
         "3.0.6"
       ],
       "locations": [
-        "/dockerized_labs/a9_uckv_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join not safe on Windows",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-f9vj-2wh5-fj8j",
-      "cve_ids": [
-        "CVE-2024-49766"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.6"
-      ],
-      "locations": [
-        "/dockerized_labs/sql_injection_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join not safe on Windows",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-f9vj-2wh5-fj8j",
-      "cve_ids": [
-        "CVE-2024-49766"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.6"
-      ],
-      "locations": [
-        "/dockerized_labs/software_integrity_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join not safe on Windows",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-f9vj-2wh5-fj8j",
-      "cve_ids": [
-        "CVE-2024-49766"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.6"
-      ],
-      "locations": [
-        "/dockerized_labs/package_injection_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join not safe on Windows",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-f9vj-2wh5-fj8j",
-      "cve_ids": [
-        "CVE-2024-49766"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.6"
-      ],
-      "locations": [
         "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join not safe on Windows",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-f9vj-2wh5-fj8j",
+      "cve_ids": [
+        "CVE-2024-49766"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.6"
+      ],
+      "locations": [
+        "/dockerized_labs/command_injection_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join not safe on Windows",
       "epss": null,
@@ -9542,7 +9461,88 @@
         "3.0.6"
       ],
       "locations": [
-        "/dockerized_labs/command_injection_lab/requirements.txt"
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join not safe on Windows",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-f9vj-2wh5-fj8j",
+      "cve_ids": [
+        "CVE-2024-49766"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.6"
+      ],
+      "locations": [
+        "/dockerized_labs/package_injection_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join not safe on Windows",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-f9vj-2wh5-fj8j",
+      "cve_ids": [
+        "CVE-2024-49766"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.6"
+      ],
+      "locations": [
+        "/dockerized_labs/software_integrity_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join not safe on Windows",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-f9vj-2wh5-fj8j",
+      "cve_ids": [
+        "CVE-2024-49766"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.6"
+      ],
+      "locations": [
+        "/dockerized_labs/sql_injection_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join not safe on Windows",
       "epss": null,
@@ -9677,7 +9677,7 @@
         "3.0.6"
       ],
       "locations": [
-        "/dockerized_labs/dependency_attack_lab/requirements.txt"
+        "/dockerized_labs/broken_auth_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join not safe on Windows",
       "epss": null,
@@ -9731,33 +9731,6 @@
         "3.0.6"
       ],
       "locations": [
-        "/challenge/labs/bopla_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join not safe on Windows",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-f9vj-2wh5-fj8j",
-      "cve_ids": [
-        "CVE-2024-49766"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.6"
-      ],
-      "locations": [
         "/challenge/labs/security_headers_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join not safe on Windows",
@@ -9785,34 +9758,7 @@
         "3.0.6"
       ],
       "locations": [
-        "/dockerized_labs/broken_auth_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join not safe on Windows",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-f9vj-2wh5-fj8j",
-      "cve_ids": [
-        "CVE-2024-49766"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.0.6"
-      ],
-      "locations": [
-        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
+        "/dockerized_labs/xss_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join not safe on Windows",
       "epss": null,
@@ -9866,7 +9812,61 @@
         "3.0.6"
       ],
       "locations": [
-        "/dockerized_labs/xss_lab/requirements.txt"
+        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join not safe on Windows",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-f9vj-2wh5-fj8j",
+      "cve_ids": [
+        "CVE-2024-49766"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.6"
+      ],
+      "locations": [
+        "/dockerized_labs/dependency_attack_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join not safe on Windows",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-f9vj-2wh5-fj8j",
+      "cve_ids": [
+        "CVE-2024-49766"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.0.6"
+      ],
+      "locations": [
+        "/challenge/labs/bopla_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join not safe on Windows",
       "epss": null,
@@ -10433,7 +10433,7 @@
         "3.1.6"
       ],
       "locations": [
-        "/dockerized_labs/crypto_failure_lab/requirements.txt"
+        "/dockerized_labs/package_injection_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -10461,60 +10461,6 @@
       ],
       "locations": [
         "/dockerized_labs/sql_injection_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-29vq-49wr-vm6x",
-      "cve_ids": [
-        "CVE-2026-27199"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.6"
-      ],
-      "locations": [
-        "/dockerized_labs/command_injection_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-29vq-49wr-vm6x",
-      "cve_ids": [
-        "CVE-2026-27199"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.6"
-      ],
-      "locations": [
-        "/dockerized_labs/a9_uckv_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -10595,7 +10541,61 @@
         "3.1.6"
       ],
       "locations": [
-        "/dockerized_labs/package_injection_lab/requirements.txt"
+        "/dockerized_labs/crypto_failure_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-29vq-49wr-vm6x",
+      "cve_ids": [
+        "CVE-2026-27199"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.6"
+      ],
+      "locations": [
+        "/dockerized_labs/command_injection_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-29vq-49wr-vm6x",
+      "cve_ids": [
+        "CVE-2026-27199"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.6"
+      ],
+      "locations": [
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -10730,115 +10730,7 @@
         "3.1.6"
       ],
       "locations": [
-        "/challenge/labs/business_logic_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-29vq-49wr-vm6x",
-      "cve_ids": [
-        "CVE-2026-27199"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.6"
-      ],
-      "locations": [
-        "/dockerized_labs/template_injection_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-29vq-49wr-vm6x",
-      "cve_ids": [
-        "CVE-2026-27199"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.6"
-      ],
-      "locations": [
         "/challenge/labs/bopla_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-29vq-49wr-vm6x",
-      "cve_ids": [
-        "CVE-2026-27199"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.6"
-      ],
-      "locations": [
-        "/dockerized_labs/broken_auth_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-29vq-49wr-vm6x",
-      "cve_ids": [
-        "CVE-2026-27199"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.6"
-      ],
-      "locations": [
-        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -10892,6 +10784,87 @@
         "3.1.6"
       ],
       "locations": [
+        "/dockerized_labs/xss_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-29vq-49wr-vm6x",
+      "cve_ids": [
+        "CVE-2026-27199"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.6"
+      ],
+      "locations": [
+        "/dockerized_labs/template_injection_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-29vq-49wr-vm6x",
+      "cve_ids": [
+        "CVE-2026-27199"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.6"
+      ],
+      "locations": [
+        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-29vq-49wr-vm6x",
+      "cve_ids": [
+        "CVE-2026-27199"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.6"
+      ],
+      "locations": [
         "/dockerized_labs/dependency_attack_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
@@ -10919,7 +10892,34 @@
         "3.1.6"
       ],
       "locations": [
-        "/dockerized_labs/xss_lab/requirements.txt"
+        "/challenge/labs/business_logic_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-29vq-49wr-vm6x",
+      "cve_ids": [
+        "CVE-2026-27199"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.6"
+      ],
+      "locations": [
+        "/dockerized_labs/broken_auth_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -11459,7 +11459,34 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+        "/dockerized_labs/command_injection_lab/requirements.txt"
+      ],
+      "description": "Jinja has a sandbox breakout through indirect reference to format method",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.0.1",
+      "purl": "pkg:pypi/jinja2@3.0.1",
+      "vuln_id": "GHSA-q2x7-8rv6-6q7h",
+      "cve_ids": [
+        "CVE-2024-56326"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.5"
+      ],
+      "locations": [
+        "/dockerized_labs/software_integrity_lab/requirements.txt"
       ],
       "description": "Jinja has a sandbox breakout through indirect reference to format method",
       "epss": null,
@@ -11513,7 +11540,7 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/software_integrity_lab/requirements.txt"
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
       ],
       "description": "Jinja has a sandbox breakout through indirect reference to format method",
       "epss": null,
@@ -11581,8 +11608,8 @@
       "language": "javascript",
       "package_type": "python",
       "package": "jinja2",
-      "version": "3.0.1",
-      "purl": "pkg:pypi/jinja2@3.0.1",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
       "vuln_id": "GHSA-q2x7-8rv6-6q7h",
       "cve_ids": [
         "CVE-2024-56326"
@@ -11594,7 +11621,34 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/command_injection_lab/requirements.txt"
+        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
+      ],
+      "description": "Jinja has a sandbox breakout through indirect reference to format method",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
+      "vuln_id": "GHSA-q2x7-8rv6-6q7h",
+      "cve_ids": [
+        "CVE-2024-56326"
+      ],
+      "severity": "Medium",
+      "cvss_max": 7.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.5"
+      ],
+      "locations": [
+        "/dockerized_labs/xss_lab/requirements.txt"
       ],
       "description": "Jinja has a sandbox breakout through indirect reference to format method",
       "epss": null,
@@ -11648,7 +11702,7 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
+        "/dockerized_labs/dependency_attack_lab/requirements.txt"
       ],
       "description": "Jinja has a sandbox breakout through indirect reference to format method",
       "epss": null,
@@ -11703,60 +11757,6 @@
       ],
       "locations": [
         "/challenge/labs/security_headers_lab/requirements.txt"
-      ],
-      "description": "Jinja has a sandbox breakout through indirect reference to format method",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.1.2",
-      "purl": "pkg:pypi/jinja2@3.1.2",
-      "vuln_id": "GHSA-q2x7-8rv6-6q7h",
-      "cve_ids": [
-        "CVE-2024-56326"
-      ],
-      "severity": "Medium",
-      "cvss_max": 7.8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.5"
-      ],
-      "locations": [
-        "/dockerized_labs/xss_lab/requirements.txt"
-      ],
-      "description": "Jinja has a sandbox breakout through indirect reference to format method",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.1.2",
-      "purl": "pkg:pypi/jinja2@3.1.2",
-      "vuln_id": "GHSA-q2x7-8rv6-6q7h",
-      "cve_ids": [
-        "CVE-2024-56326"
-      ],
-      "severity": "Medium",
-      "cvss_max": 7.8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.5"
-      ],
-      "locations": [
-        "/dockerized_labs/dependency_attack_lab/requirements.txt"
       ],
       "description": "Jinja has a sandbox breakout through indirect reference to format method",
       "epss": null,
@@ -12053,7 +12053,115 @@
         "3.1.4"
       ],
       "locations": [
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-hgf8-39gv-g3f2",
+      "cve_ids": [
+        "CVE-2025-66221"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.4"
+      ],
+      "locations": [
+        "/dockerized_labs/command_injection_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-hgf8-39gv-g3f2",
+      "cve_ids": [
+        "CVE-2025-66221"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.4"
+      ],
+      "locations": [
         "/dockerized_labs/crypto_failure_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-hgf8-39gv-g3f2",
+      "cve_ids": [
+        "CVE-2025-66221"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.4"
+      ],
+      "locations": [
+        "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-hgf8-39gv-g3f2",
+      "cve_ids": [
+        "CVE-2025-66221"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.4"
+      ],
+      "locations": [
+        "/dockerized_labs/package_injection_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -12108,114 +12216,6 @@
       ],
       "locations": [
         "/dockerized_labs/sql_injection_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-hgf8-39gv-g3f2",
-      "cve_ids": [
-        "CVE-2025-66221"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.4"
-      ],
-      "locations": [
-        "/dockerized_labs/package_injection_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-hgf8-39gv-g3f2",
-      "cve_ids": [
-        "CVE-2025-66221"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.4"
-      ],
-      "locations": [
-        "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-hgf8-39gv-g3f2",
-      "cve_ids": [
-        "CVE-2025-66221"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.4"
-      ],
-      "locations": [
-        "/dockerized_labs/a9_uckv_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-hgf8-39gv-g3f2",
-      "cve_ids": [
-        "CVE-2025-66221"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.4"
-      ],
-      "locations": [
-        "/dockerized_labs/command_injection_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -12350,7 +12350,7 @@
         "3.1.4"
       ],
       "locations": [
-        "/challenge/labs/bopla_lab/requirements.txt"
+        "/dockerized_labs/template_injection_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -12404,33 +12404,6 @@
         "3.1.4"
       ],
       "locations": [
-        "/dockerized_labs/template_injection_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-hgf8-39gv-g3f2",
-      "cve_ids": [
-        "CVE-2025-66221"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.4"
-      ],
-      "locations": [
         "/dockerized_labs/insufficient_logging_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
@@ -12458,7 +12431,7 @@
         "3.1.4"
       ],
       "locations": [
-        "/dockerized_labs/broken_auth_lab/requirements.txt"
+        "/challenge/labs/bopla_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -12486,6 +12459,33 @@
       ],
       "locations": [
         "/dockerized_labs/dependency_attack_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-hgf8-39gv-g3f2",
+      "cve_ids": [
+        "CVE-2025-66221"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.4"
+      ],
+      "locations": [
+        "/dockerized_labs/broken_auth_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -12755,6 +12755,87 @@
         "3.1.6"
       ],
       "locations": [
+        "/dockerized_labs/command_injection_lab/requirements.txt"
+      ],
+      "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.0.1",
+      "purl": "pkg:pypi/jinja2@3.0.1",
+      "vuln_id": "GHSA-cpwx-vrp4-4pq7",
+      "cve_ids": [
+        "CVE-2025-27516"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.6"
+      ],
+      "locations": [
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+      ],
+      "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.0.1",
+      "purl": "pkg:pypi/jinja2@3.0.1",
+      "vuln_id": "GHSA-cpwx-vrp4-4pq7",
+      "cve_ids": [
+        "CVE-2025-27516"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.6"
+      ],
+      "locations": [
+        "/dockerized_labs/software_integrity_lab/requirements.txt"
+      ],
+      "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.0.1",
+      "purl": "pkg:pypi/jinja2@3.0.1",
+      "vuln_id": "GHSA-cpwx-vrp4-4pq7",
+      "cve_ids": [
+        "CVE-2025-27516"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.6"
+      ],
+      "locations": [
         "/dockerized_labs/package_injection_lab/requirements.txt"
       ],
       "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
@@ -12809,169 +12890,7 @@
         "3.1.6"
       ],
       "locations": [
-        "/dockerized_labs/software_integrity_lab/requirements.txt"
-      ],
-      "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.0.1",
-      "purl": "pkg:pypi/jinja2@3.0.1",
-      "vuln_id": "GHSA-cpwx-vrp4-4pq7",
-      "cve_ids": [
-        "CVE-2025-27516"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8.8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.6"
-      ],
-      "locations": [
         "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
-      ],
-      "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.0.1",
-      "purl": "pkg:pypi/jinja2@3.0.1",
-      "vuln_id": "GHSA-cpwx-vrp4-4pq7",
-      "cve_ids": [
-        "CVE-2025-27516"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8.8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.6"
-      ],
-      "locations": [
-        "/dockerized_labs/command_injection_lab/requirements.txt"
-      ],
-      "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.0.1",
-      "purl": "pkg:pypi/jinja2@3.0.1",
-      "vuln_id": "GHSA-cpwx-vrp4-4pq7",
-      "cve_ids": [
-        "CVE-2025-27516"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8.8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.6"
-      ],
-      "locations": [
-        "/dockerized_labs/a9_uckv_lab/requirements.txt"
-      ],
-      "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.1.2",
-      "purl": "pkg:pypi/jinja2@3.1.2",
-      "vuln_id": "GHSA-cpwx-vrp4-4pq7",
-      "cve_ids": [
-        "CVE-2025-27516"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8.8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.6"
-      ],
-      "locations": [
-        "/dockerized_labs/broken_auth_lab/requirements.txt"
-      ],
-      "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.1.2",
-      "purl": "pkg:pypi/jinja2@3.1.2",
-      "vuln_id": "GHSA-cpwx-vrp4-4pq7",
-      "cve_ids": [
-        "CVE-2025-27516"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8.8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.6"
-      ],
-      "locations": [
-        "/dockerized_labs/dependency_attack_lab/requirements.txt"
-      ],
-      "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.1.2",
-      "purl": "pkg:pypi/jinja2@3.1.2",
-      "vuln_id": "GHSA-cpwx-vrp4-4pq7",
-      "cve_ids": [
-        "CVE-2025-27516"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8.8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.6"
-      ],
-      "locations": [
-        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
       ],
       "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
       "epss": null,
@@ -13052,6 +12971,87 @@
         "3.1.6"
       ],
       "locations": [
+        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
+      ],
+      "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
+      "vuln_id": "GHSA-cpwx-vrp4-4pq7",
+      "cve_ids": [
+        "CVE-2025-27516"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.6"
+      ],
+      "locations": [
+        "/dockerized_labs/dependency_attack_lab/requirements.txt"
+      ],
+      "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
+      "vuln_id": "GHSA-cpwx-vrp4-4pq7",
+      "cve_ids": [
+        "CVE-2025-27516"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.6"
+      ],
+      "locations": [
+        "/dockerized_labs/broken_auth_lab/requirements.txt"
+      ],
+      "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
+      "vuln_id": "GHSA-cpwx-vrp4-4pq7",
+      "cve_ids": [
+        "CVE-2025-27516"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.6"
+      ],
+      "locations": [
         "/challenge/labs/security_headers_lab/requirements.txt"
       ],
       "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
@@ -13106,34 +13106,7 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/software_integrity_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-87hc-h4r5-73f7",
-      "cve_ids": [
-        "CVE-2026-21860"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.5"
-      ],
-      "locations": [
-        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+        "/dockerized_labs/sql_injection_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
       "epss": null,
@@ -13187,7 +13160,7 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/crypto_failure_lab/requirements.txt"
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
       "epss": null,
@@ -13214,7 +13187,7 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
+        "/dockerized_labs/software_integrity_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
       "epss": null,
@@ -13268,7 +13241,34 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/sql_injection_lab/requirements.txt"
+        "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-87hc-h4r5-73f7",
+      "cve_ids": [
+        "CVE-2026-21860"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.5"
+      ],
+      "locations": [
+        "/dockerized_labs/crypto_failure_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
       "epss": null,
@@ -13349,7 +13349,7 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/xxe_lab/requirements.txt"
+        "/dockerized_labs/insecure_design_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
       "epss": null,
@@ -13376,7 +13376,7 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/insecure_design_lab/requirements.txt"
+        "/dockerized_labs/xxe_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
       "epss": null,
@@ -13403,61 +13403,7 @@
         "3.1.5"
       ],
       "locations": [
-        "/challenge/labs/security_headers_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-87hc-h4r5-73f7",
-      "cve_ids": [
-        "CVE-2026-21860"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.5"
-      ],
-      "locations": [
-        "/challenge/labs/business_logic_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-87hc-h4r5-73f7",
-      "cve_ids": [
-        "CVE-2026-21860"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.5"
-      ],
-      "locations": [
-        "/dockerized_labs/xss_lab/requirements.txt"
+        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
       "epss": null,
@@ -13511,7 +13457,7 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/template_injection_lab/requirements.txt"
+        "/challenge/labs/business_logic_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
       "epss": null,
@@ -13538,7 +13484,7 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/dependency_attack_lab/requirements.txt"
+        "/challenge/labs/security_headers_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
       "epss": null,
@@ -13592,7 +13538,61 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
+        "/dockerized_labs/dependency_attack_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-87hc-h4r5-73f7",
+      "cve_ids": [
+        "CVE-2026-21860"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.5"
+      ],
+      "locations": [
+        "/dockerized_labs/template_injection_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-87hc-h4r5-73f7",
+      "cve_ids": [
+        "CVE-2026-21860"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.5"
+      ],
+      "locations": [
+        "/dockerized_labs/xss_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names with compound extensions",
       "epss": null,
@@ -14618,34 +14618,7 @@
         "3.1.9"
       ],
       "locations": [
-        "/dockerized_labs/package_injection_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-g6x2-hccm-hh4m",
-      "cve_ids": [
-        "CVE-2026-102598"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.9"
-      ],
-      "locations": [
-        "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
+        "/dockerized_labs/sql_injection_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -14673,33 +14646,6 @@
       ],
       "locations": [
         "/dockerized_labs/a9_uckv_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-g6x2-hccm-hh4m",
-      "cve_ids": [
-        "CVE-2026-102598"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.9"
-      ],
-      "locations": [
-        "/dockerized_labs/software_integrity_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -14780,7 +14726,61 @@
         "3.1.9"
       ],
       "locations": [
-        "/dockerized_labs/sql_injection_lab/requirements.txt"
+        "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-g6x2-hccm-hh4m",
+      "cve_ids": [
+        "CVE-2026-102598"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.9"
+      ],
+      "locations": [
+        "/dockerized_labs/software_integrity_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-g6x2-hccm-hh4m",
+      "cve_ids": [
+        "CVE-2026-102598"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.9"
+      ],
+      "locations": [
+        "/dockerized_labs/package_injection_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -14915,61 +14915,34 @@
         "3.1.9"
       ],
       "locations": [
+        "/challenge/labs/security_headers_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-g6x2-hccm-hh4m",
+      "cve_ids": [
+        "CVE-2026-102598"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.9"
+      ],
+      "locations": [
         "/challenge/labs/business_logic_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-g6x2-hccm-hh4m",
-      "cve_ids": [
-        "CVE-2026-102598"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.9"
-      ],
-      "locations": [
-        "/dockerized_labs/xss_lab/requirements.txt"
-      ],
-      "description": "Werkzeug safe_join() allows Windows special device names",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.3.7",
-      "purl": "pkg:pypi/werkzeug@2.3.7",
-      "vuln_id": "GHSA-g6x2-hccm-hh4m",
-      "cve_ids": [
-        "CVE-2026-102598"
-      ],
-      "severity": "Medium",
-      "cvss_max": 6.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.9"
-      ],
-      "locations": [
-        "/dockerized_labs/broken_auth_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -15023,7 +14996,7 @@
         "3.1.9"
       ],
       "locations": [
-        "/dockerized_labs/template_injection_lab/requirements.txt"
+        "/dockerized_labs/broken_auth_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -15104,7 +15077,34 @@
         "3.1.9"
       ],
       "locations": [
-        "/challenge/labs/security_headers_lab/requirements.txt"
+        "/dockerized_labs/template_injection_lab/requirements.txt"
+      ],
+      "description": "Werkzeug safe_join() allows Windows special device names",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.3.7",
+      "purl": "pkg:pypi/werkzeug@2.3.7",
+      "vuln_id": "GHSA-g6x2-hccm-hh4m",
+      "cve_ids": [
+        "CVE-2026-102598"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.9"
+      ],
+      "locations": [
+        "/dockerized_labs/xss_lab/requirements.txt"
       ],
       "description": "Werkzeug safe_join() allows Windows special device names",
       "epss": null,
@@ -15266,88 +15266,7 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/software_integrity_lab/requirements.txt"
-      ],
-      "description": "Jinja has a sandbox breakout through malicious filenames",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.0.1",
-      "purl": "pkg:pypi/jinja2@3.0.1",
-      "vuln_id": "GHSA-gmj6-6f8f-6699",
-      "cve_ids": [
-        "CVE-2024-56201"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8.8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.5"
-      ],
-      "locations": [
         "/dockerized_labs/a9_uckv_lab/requirements.txt"
-      ],
-      "description": "Jinja has a sandbox breakout through malicious filenames",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.0.1",
-      "purl": "pkg:pypi/jinja2@3.0.1",
-      "vuln_id": "GHSA-gmj6-6f8f-6699",
-      "cve_ids": [
-        "CVE-2024-56201"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8.8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.5"
-      ],
-      "locations": [
-        "/dockerized_labs/command_injection_lab/requirements.txt"
-      ],
-      "description": "Jinja has a sandbox breakout through malicious filenames",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.0.1",
-      "purl": "pkg:pypi/jinja2@3.0.1",
-      "vuln_id": "GHSA-gmj6-6f8f-6699",
-      "cve_ids": [
-        "CVE-2024-56201"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8.8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.5"
-      ],
-      "locations": [
-        "/dockerized_labs/sql_injection_lab/requirements.txt"
       ],
       "description": "Jinja has a sandbox breakout through malicious filenames",
       "epss": null,
@@ -15402,6 +15321,87 @@
       ],
       "locations": [
         "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
+      ],
+      "description": "Jinja has a sandbox breakout through malicious filenames",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.0.1",
+      "purl": "pkg:pypi/jinja2@3.0.1",
+      "vuln_id": "GHSA-gmj6-6f8f-6699",
+      "cve_ids": [
+        "CVE-2024-56201"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.5"
+      ],
+      "locations": [
+        "/dockerized_labs/command_injection_lab/requirements.txt"
+      ],
+      "description": "Jinja has a sandbox breakout through malicious filenames",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.0.1",
+      "purl": "pkg:pypi/jinja2@3.0.1",
+      "vuln_id": "GHSA-gmj6-6f8f-6699",
+      "cve_ids": [
+        "CVE-2024-56201"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.5"
+      ],
+      "locations": [
+        "/dockerized_labs/software_integrity_lab/requirements.txt"
+      ],
+      "description": "Jinja has a sandbox breakout through malicious filenames",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.0.1",
+      "purl": "pkg:pypi/jinja2@3.0.1",
+      "vuln_id": "GHSA-gmj6-6f8f-6699",
+      "cve_ids": [
+        "CVE-2024-56201"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.5"
+      ],
+      "locations": [
+        "/dockerized_labs/sql_injection_lab/requirements.txt"
       ],
       "description": "Jinja has a sandbox breakout through malicious filenames",
       "epss": null,
@@ -15482,61 +15482,7 @@
         "3.1.5"
       ],
       "locations": [
-        "/dockerized_labs/dependency_attack_lab/requirements.txt"
-      ],
-      "description": "Jinja has a sandbox breakout through malicious filenames",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.1.2",
-      "purl": "pkg:pypi/jinja2@3.1.2",
-      "vuln_id": "GHSA-gmj6-6f8f-6699",
-      "cve_ids": [
-        "CVE-2024-56201"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8.8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.5"
-      ],
-      "locations": [
         "/dockerized_labs/xss_lab/requirements.txt"
-      ],
-      "description": "Jinja has a sandbox breakout through malicious filenames",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "jinja2",
-      "version": "3.1.2",
-      "purl": "pkg:pypi/jinja2@3.1.2",
-      "vuln_id": "GHSA-gmj6-6f8f-6699",
-      "cve_ids": [
-        "CVE-2024-56201"
-      ],
-      "severity": "Medium",
-      "cvss_max": 8.8,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.5"
-      ],
-      "locations": [
-        "/dockerized_labs/template_injection_lab/requirements.txt"
       ],
       "description": "Jinja has a sandbox breakout through malicious filenames",
       "epss": null,
@@ -15591,6 +15537,60 @@
       ],
       "locations": [
         "/dockerized_labs/broken_auth_lab/requirements.txt"
+      ],
+      "description": "Jinja has a sandbox breakout through malicious filenames",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
+      "vuln_id": "GHSA-gmj6-6f8f-6699",
+      "cve_ids": [
+        "CVE-2024-56201"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.5"
+      ],
+      "locations": [
+        "/dockerized_labs/dependency_attack_lab/requirements.txt"
+      ],
+      "description": "Jinja has a sandbox breakout through malicious filenames",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "jinja2",
+      "version": "3.1.2",
+      "purl": "pkg:pypi/jinja2@3.1.2",
+      "vuln_id": "GHSA-gmj6-6f8f-6699",
+      "cve_ids": [
+        "CVE-2024-56201"
+      ],
+      "severity": "Medium",
+      "cvss_max": 8.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.5"
+      ],
+      "locations": [
+        "/dockerized_labs/template_injection_lab/requirements.txt"
       ],
       "description": "Jinja has a sandbox breakout through malicious filenames",
       "epss": null,
@@ -16211,6 +16211,87 @@
         "2.2.3"
       ],
       "locations": [
+        "/dockerized_labs/software_integrity_lab/requirements.txt"
+      ],
+      "description": "Incorrect parsing of nameless cookies leads to __Host- cookies bypass",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-px8h-6qxv-m22q",
+      "cve_ids": [
+        "CVE-2023-23934"
+      ],
+      "severity": "Low",
+      "cvss_max": 3.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.2.3"
+      ],
+      "locations": [
+        "/dockerized_labs/crypto_failure_lab/requirements.txt"
+      ],
+      "description": "Incorrect parsing of nameless cookies leads to __Host- cookies bypass",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-px8h-6qxv-m22q",
+      "cve_ids": [
+        "CVE-2023-23934"
+      ],
+      "severity": "Low",
+      "cvss_max": 3.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.2.3"
+      ],
+      "locations": [
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+      ],
+      "description": "Incorrect parsing of nameless cookies leads to __Host- cookies bypass",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "werkzeug",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/werkzeug@2.0.1",
+      "vuln_id": "GHSA-px8h-6qxv-m22q",
+      "cve_ids": [
+        "CVE-2023-23934"
+      ],
+      "severity": "Low",
+      "cvss_max": 3.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.2.3"
+      ],
+      "locations": [
         "/dockerized_labs/sql_injection_lab/requirements.txt"
       ],
       "description": "Incorrect parsing of nameless cookies leads to __Host- cookies bypass",
@@ -16265,87 +16346,6 @@
         "2.2.3"
       ],
       "locations": [
-        "/dockerized_labs/a9_uckv_lab/requirements.txt"
-      ],
-      "description": "Incorrect parsing of nameless cookies leads to __Host- cookies bypass",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-px8h-6qxv-m22q",
-      "cve_ids": [
-        "CVE-2023-23934"
-      ],
-      "severity": "Low",
-      "cvss_max": 3.5,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "2.2.3"
-      ],
-      "locations": [
-        "/dockerized_labs/crypto_failure_lab/requirements.txt"
-      ],
-      "description": "Incorrect parsing of nameless cookies leads to __Host- cookies bypass",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-px8h-6qxv-m22q",
-      "cve_ids": [
-        "CVE-2023-23934"
-      ],
-      "severity": "Low",
-      "cvss_max": 3.5,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "2.2.3"
-      ],
-      "locations": [
-        "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
-      ],
-      "description": "Incorrect parsing of nameless cookies leads to __Host- cookies bypass",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "werkzeug",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/werkzeug@2.0.1",
-      "vuln_id": "GHSA-px8h-6qxv-m22q",
-      "cve_ids": [
-        "CVE-2023-23934"
-      ],
-      "severity": "Low",
-      "cvss_max": 3.5,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "2.2.3"
-      ],
-      "locations": [
         "/dockerized_labs/package_injection_lab/requirements.txt"
       ],
       "description": "Incorrect parsing of nameless cookies leads to __Host- cookies bypass",
@@ -16373,7 +16373,7 @@
         "2.2.3"
       ],
       "locations": [
-        "/dockerized_labs/software_integrity_lab/requirements.txt"
+        "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
       ],
       "description": "Incorrect parsing of nameless cookies leads to __Host- cookies bypass",
       "epss": null,
@@ -16616,61 +16616,61 @@
         "3.1.3"
       ],
       "locations": [
-        "/dockerized_labs/software_integrity_lab/requirements.txt"
-      ],
-      "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "flask",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/flask@2.0.1",
-      "vuln_id": "GHSA-68rp-wp8r-4726",
-      "cve_ids": [
-        "CVE-2026-27205"
-      ],
-      "severity": "Low",
-      "cvss_max": 4.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.3"
-      ],
-      "locations": [
-        "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
-      ],
-      "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "flask",
-      "version": "2.0.1",
-      "purl": "pkg:pypi/flask@2.0.1",
-      "vuln_id": "GHSA-68rp-wp8r-4726",
-      "cve_ids": [
-        "CVE-2026-27205"
-      ],
-      "severity": "Low",
-      "cvss_max": 4.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.3"
-      ],
-      "locations": [
         "/dockerized_labs/sql_injection_lab/requirements.txt"
+      ],
+      "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "flask",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/flask@2.0.1",
+      "vuln_id": "GHSA-68rp-wp8r-4726",
+      "cve_ids": [
+        "CVE-2026-27205"
+      ],
+      "severity": "Low",
+      "cvss_max": 4.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/dockerized_labs/package_injection_lab/requirements.txt"
+      ],
+      "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "flask",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/flask@2.0.1",
+      "vuln_id": "GHSA-68rp-wp8r-4726",
+      "cve_ids": [
+        "CVE-2026-27205"
+      ],
+      "severity": "Low",
+      "cvss_max": 4.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/dockerized_labs/software_integrity_lab/requirements.txt"
       ],
       "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
       "epss": null,
@@ -16751,7 +16751,7 @@
         "3.1.3"
       ],
       "locations": [
-        "/dockerized_labs/package_injection_lab/requirements.txt"
+        "/dockerized_labs/crypto_failure_lab/requirements.txt"
       ],
       "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
       "epss": null,
@@ -16778,7 +16778,7 @@
         "3.1.3"
       ],
       "locations": [
-        "/dockerized_labs/crypto_failure_lab/requirements.txt"
+        "/dockerized_labs/open_source_library_attack_lab/requirements.txt"
       ],
       "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
       "epss": null,
@@ -16832,7 +16832,7 @@
         "3.1.3"
       ],
       "locations": [
-        "/dockerized_labs/xxe_lab/requirements.txt"
+        "/dockerized_labs/insecure_design_lab/requirements.txt"
       ],
       "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
       "epss": null,
@@ -16886,142 +16886,7 @@
         "3.1.3"
       ],
       "locations": [
-        "/dockerized_labs/insecure_design_lab/requirements.txt"
-      ],
-      "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "flask",
-      "version": "2.3.3",
-      "purl": "pkg:pypi/flask@2.3.3",
-      "vuln_id": "GHSA-68rp-wp8r-4726",
-      "cve_ids": [
-        "CVE-2026-27205"
-      ],
-      "severity": "Low",
-      "cvss_max": 4.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.3"
-      ],
-      "locations": [
-        "/dockerized_labs/dependency_attack_lab/requirements.txt"
-      ],
-      "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "flask",
-      "version": "2.3.3",
-      "purl": "pkg:pypi/flask@2.3.3",
-      "vuln_id": "GHSA-68rp-wp8r-4726",
-      "cve_ids": [
-        "CVE-2026-27205"
-      ],
-      "severity": "Low",
-      "cvss_max": 4.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.3"
-      ],
-      "locations": [
-        "/dockerized_labs/template_injection_lab/requirements.txt"
-      ],
-      "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "flask",
-      "version": "2.3.3",
-      "purl": "pkg:pypi/flask@2.3.3",
-      "vuln_id": "GHSA-68rp-wp8r-4726",
-      "cve_ids": [
-        "CVE-2026-27205"
-      ],
-      "severity": "Low",
-      "cvss_max": 4.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.3"
-      ],
-      "locations": [
-        "/dockerized_labs/xss_lab/requirements.txt"
-      ],
-      "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "flask",
-      "version": "2.3.3",
-      "purl": "pkg:pypi/flask@2.3.3",
-      "vuln_id": "GHSA-68rp-wp8r-4726",
-      "cve_ids": [
-        "CVE-2026-27205"
-      ],
-      "severity": "Low",
-      "cvss_max": 4.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.3"
-      ],
-      "locations": [
-        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
-      ],
-      "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
-      "epss": null,
-      "epss_percentile": null,
-      "kev": null,
-      "llm_verdict": null
-    },
-    {
-      "repo": "pygoat",
-      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
-      "language": "javascript",
-      "package_type": "python",
-      "package": "flask",
-      "version": "2.3.3",
-      "purl": "pkg:pypi/flask@2.3.3",
-      "vuln_id": "GHSA-68rp-wp8r-4726",
-      "cve_ids": [
-        "CVE-2026-27205"
-      ],
-      "severity": "Low",
-      "cvss_max": 4.3,
-      "fix_state": "fixed",
-      "fix_versions": [
-        "3.1.3"
-      ],
-      "locations": [
-        "/dockerized_labs/broken_auth_lab/requirements.txt"
+        "/dockerized_labs/xxe_lab/requirements.txt"
       ],
       "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
       "epss": null,
@@ -17103,6 +16968,141 @@
       ],
       "locations": [
         "/challenge/labs/bopla_lab/requirements.txt"
+      ],
+      "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "flask",
+      "version": "2.3.3",
+      "purl": "pkg:pypi/flask@2.3.3",
+      "vuln_id": "GHSA-68rp-wp8r-4726",
+      "cve_ids": [
+        "CVE-2026-27205"
+      ],
+      "severity": "Low",
+      "cvss_max": 4.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/dockerized_labs/broken_auth_lab/requirements.txt"
+      ],
+      "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "flask",
+      "version": "2.3.3",
+      "purl": "pkg:pypi/flask@2.3.3",
+      "vuln_id": "GHSA-68rp-wp8r-4726",
+      "cve_ids": [
+        "CVE-2026-27205"
+      ],
+      "severity": "Low",
+      "cvss_max": 4.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/dockerized_labs/dependency_attack_lab/requirements.txt"
+      ],
+      "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "flask",
+      "version": "2.3.3",
+      "purl": "pkg:pypi/flask@2.3.3",
+      "vuln_id": "GHSA-68rp-wp8r-4726",
+      "cve_ids": [
+        "CVE-2026-27205"
+      ],
+      "severity": "Low",
+      "cvss_max": 4.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/dockerized_labs/insufficient_logging_lab/requirements.txt"
+      ],
+      "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "flask",
+      "version": "2.3.3",
+      "purl": "pkg:pypi/flask@2.3.3",
+      "vuln_id": "GHSA-68rp-wp8r-4726",
+      "cve_ids": [
+        "CVE-2026-27205"
+      ],
+      "severity": "Low",
+      "cvss_max": 4.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/dockerized_labs/template_injection_lab/requirements.txt"
+      ],
+      "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "flask",
+      "version": "2.3.3",
+      "purl": "pkg:pypi/flask@2.3.3",
+      "vuln_id": "GHSA-68rp-wp8r-4726",
+      "cve_ids": [
+        "CVE-2026-27205"
+      ],
+      "severity": "Low",
+      "cvss_max": 4.3,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "3.1.3"
+      ],
+      "locations": [
+        "/dockerized_labs/xss_lab/requirements.txt"
       ],
       "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
       "epss": null,
@@ -18193,6 +18193,60 @@
       "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
       "language": "javascript",
       "package_type": "python",
+      "package": "pillow",
+      "version": "12.1.0",
+      "purl": "pkg:pypi/pillow@12.1.0",
+      "vuln_id": "GHSA-v9pv-5gc8-w2m6",
+      "cve_ids": [
+        "CVE-2026-96639"
+      ],
+      "severity": "Critical",
+      "cvss_max": 9.8,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/requirements.txt"
+      ],
+      "description": "Pillow multi-frame loaders can reuse stale native image storage after mode transitions",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "black",
+      "version": "26.1.0",
+      "purl": "pkg:pypi/black@26.1.0",
+      "vuln_id": "GHSA-cg8m-r9f2-5wm2",
+      "cve_ids": [
+        "CVE-2026-114134"
+      ],
+      "severity": "High",
+      "cvss_max": 8.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "26.10.1"
+      ],
+      "locations": [
+        "/requirements.txt"
+      ],
+      "description": "Black: GitHub Action installs unvalidated required-version from pyproject.toml",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
       "package": "cryptography",
       "version": "39.0.1",
       "purl": "pkg:pypi/cryptography@39.0.1",
@@ -18208,6 +18262,168 @@
         "/requirements.txt"
       ],
       "description": "Vulnerable OpenSSL included in cryptography wheels",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "12.1.0",
+      "purl": "pkg:pypi/pillow@12.1.0",
+      "vuln_id": "GHSA-3j72-p6qg-6xp7",
+      "cve_ids": [
+        "CVE-2026-96642"
+      ],
+      "severity": "High",
+      "cvss_max": 7.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/requirements.txt"
+      ],
+      "description": "Pillow: TarIO negative size field causes infinite CPU-spin loop",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "12.1.0",
+      "purl": "pkg:pypi/pillow@12.1.0",
+      "vuln_id": "GHSA-9v9v-9qvf-h2hj",
+      "cve_ids": [
+        "CVE-2026-96644"
+      ],
+      "severity": "High",
+      "cvss_max": 7.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/requirements.txt"
+      ],
+      "description": "Pillow: Heap over-read in WMF/EMF rendering via 16-bit dimension truncation (Windows builds)",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "12.1.0",
+      "purl": "pkg:pypi/pillow@12.1.0",
+      "vuln_id": "GHSA-g4qv-2jxx-769h",
+      "cve_ids": [
+        "CVE-2026-96643"
+      ],
+      "severity": "High",
+      "cvss_max": 7.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/requirements.txt"
+      ],
+      "description": "Pillow: PNG eXIf chunk makes EXIF parsing run in quadratic time",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "12.1.0",
+      "purl": "pkg:pypi/pillow@12.1.0",
+      "vuln_id": "GHSA-g7cr-3p24-7wf7",
+      "cve_ids": [
+        "CVE-2026-96778"
+      ],
+      "severity": "High",
+      "cvss_max": 7.7,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/requirements.txt"
+      ],
+      "description": "Pillow: Heap buffer overflow writing JPEG comment after ICC profile fills buffer",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "12.1.0",
+      "purl": "pkg:pypi/pillow@12.1.0",
+      "vuln_id": "GHSA-g842-9rc4-69pw",
+      "cve_ids": [
+        "CVE-2026-96637"
+      ],
+      "severity": "High",
+      "cvss_max": 7.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/requirements.txt"
+      ],
+      "description": "Pillow: Decompression bomb check bypass in SpiderImagePlugin.seek() leads to unbounded allocation DoS",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "12.1.0",
+      "purl": "pkg:pypi/pillow@12.1.0",
+      "vuln_id": "GHSA-mrfp-p49p-3hf2",
+      "cve_ids": [
+        "CVE-2026-96640"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/requirements.txt"
+      ],
+      "description": "Pillow PDF append accepts malformed shared page-tree DAG causing resource exhaustion",
       "epss": null,
       "epss_percentile": null,
       "kev": null,
@@ -18248,6 +18464,114 @@
       "package": "pillow",
       "version": "8.0.0",
       "purl": "pkg:pypi/pillow@8.0.0",
+      "vuln_id": "GHSA-3j72-p6qg-6xp7",
+      "cve_ids": [
+        "CVE-2026-96642"
+      ],
+      "severity": "High",
+      "cvss_max": 7.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+      ],
+      "description": "Pillow: TarIO negative size field causes infinite CPU-spin loop",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "8.0.0",
+      "purl": "pkg:pypi/pillow@8.0.0",
+      "vuln_id": "GHSA-9v9v-9qvf-h2hj",
+      "cve_ids": [
+        "CVE-2026-96644"
+      ],
+      "severity": "High",
+      "cvss_max": 7.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+      ],
+      "description": "Pillow: Heap over-read in WMF/EMF rendering via 16-bit dimension truncation (Windows builds)",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "8.0.0",
+      "purl": "pkg:pypi/pillow@8.0.0",
+      "vuln_id": "GHSA-g842-9rc4-69pw",
+      "cve_ids": [
+        "CVE-2026-96637"
+      ],
+      "severity": "High",
+      "cvss_max": 7.1,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+      ],
+      "description": "Pillow: Decompression bomb check bypass in SpiderImagePlugin.seek() leads to unbounded allocation DoS",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "8.0.0",
+      "purl": "pkg:pypi/pillow@8.0.0",
+      "vuln_id": "GHSA-mrfp-p49p-3hf2",
+      "cve_ids": [
+        "CVE-2026-96640"
+      ],
+      "severity": "High",
+      "cvss_max": 8.2,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+      ],
+      "description": "Pillow PDF append accepts malformed shared page-tree DAG causing resource exhaustion",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "8.0.0",
+      "purl": "pkg:pypi/pillow@8.0.0",
       "vuln_id": "GHSA-xvh5-g6gv-559v",
       "cve_ids": [
         "CVE-2026-112902"
@@ -18262,6 +18586,56 @@
         "/dockerized_labs/a9_uckv_lab/requirements.txt"
       ],
       "description": "Pillow: Memory disclosure and segfault in libtiff encoder via crafted TIFF tags",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pyjwt",
+      "version": "2.4.0",
+      "purl": "pkg:pypi/pyjwt@2.4.0",
+      "vuln_id": "GHSA-pxh4-856f-4h89",
+      "cve_ids": [],
+      "severity": "High",
+      "cvss_max": 7.4,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.14.0"
+      ],
+      "locations": [
+        "/requirements.txt"
+      ],
+      "description": "PyJWT: HS256/384/512 verify accepts empty HMAC key via oct JWK (PyJWK/PyJWKClient) enabling token forgery",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pyjwt",
+      "version": "2.8.0",
+      "purl": "pkg:pypi/pyjwt@2.8.0",
+      "vuln_id": "GHSA-pxh4-856f-4h89",
+      "cve_ids": [],
+      "severity": "High",
+      "cvss_max": 7.4,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.14.0"
+      ],
+      "locations": [
+        "/dockerized_labs/sec_misconfig/requirements.txt"
+      ],
+      "description": "PyJWT: HS256/384/512 verify accepts empty HMAC key via oct JWK (PyJWK/PyJWKClient) enabling token forgery",
       "epss": null,
       "epss_percentile": null,
       "kev": null,
@@ -18287,6 +18661,87 @@
         "/requirements.txt"
       ],
       "description": "pyca/cryptography has a vulnerable OpenSSL included in cryptography wheels",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "12.1.0",
+      "purl": "pkg:pypi/pillow@12.1.0",
+      "vuln_id": "GHSA-24rc-8hj2-v98c",
+      "cve_ids": [
+        "CVE-2026-96638"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/requirements.txt"
+      ],
+      "description": "Pillow: BMP RLE decoder memory-amplification DoS via unbounded delta escape / absolute mode",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "12.1.0",
+      "purl": "pkg:pypi/pillow@12.1.0",
+      "vuln_id": "GHSA-4rm8-3hmm-39fg",
+      "cve_ids": [
+        "CVE-2026-96641"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/requirements.txt"
+      ],
+      "description": "Pillow: Reachable undefined behavior in native integer operations, potentially leading to denial of service or logic integrity compromise",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "12.1.0",
+      "purl": "pkg:pypi/pillow@12.1.0",
+      "vuln_id": "GHSA-p8hx-v2p6-rp84",
+      "cve_ids": [
+        "CVE-2026-96636"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/requirements.txt"
+      ],
+      "description": "Pillow: Decompression-bomb protection bypass via multi-frame seek() in MPO and DCX (MpoImageFile.seek / DcxImageFile.seek)",
       "epss": null,
       "epss_percentile": null,
       "kev": null,
@@ -18327,6 +18782,33 @@
       "package": "pillow",
       "version": "8.0.0",
       "purl": "pkg:pypi/pillow@8.0.0",
+      "vuln_id": "GHSA-4rm8-3hmm-39fg",
+      "cve_ids": [
+        "CVE-2026-96641"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+      ],
+      "description": "Pillow: Reachable undefined behavior in native integer operations, potentially leading to denial of service or logic integrity compromise",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "8.0.0",
+      "purl": "pkg:pypi/pillow@8.0.0",
       "vuln_id": "GHSA-jgpv-4h4c-xhw3",
       "cve_ids": [],
       "severity": "Medium",
@@ -18339,6 +18821,33 @@
         "/dockerized_labs/a9_uckv_lab/requirements.txt"
       ],
       "description": "Uncontrolled Resource Consumption in pillow",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "pygoat",
+      "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pillow",
+      "version": "8.0.0",
+      "purl": "pkg:pypi/pillow@8.0.0",
+      "vuln_id": "GHSA-p8hx-v2p6-rp84",
+      "cve_ids": [
+        "CVE-2026-96636"
+      ],
+      "severity": "Medium",
+      "cvss_max": 6.5,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "13.0.0"
+      ],
+      "locations": [
+        "/dockerized_labs/a9_uckv_lab/requirements.txt"
+      ],
+      "description": "Pillow: Decompression-bomb protection bypass via multi-frame seek() in MPO and DCX (MpoImageFile.seek / DcxImageFile.seek)",
       "epss": null,
       "epss_percentile": null,
       "kev": null,
@@ -21644,6 +22153,31 @@
         "/requirements.txt"
       ],
       "description": "certifi bundles emSign root CAs with compromised intermediate CA keys",
+      "epss": null,
+      "epss_percentile": null,
+      "kev": null,
+      "llm_verdict": null
+    },
+    {
+      "repo": "dvga",
+      "commit": "a961308c02d1fb462b192681c336b0739e432da7",
+      "language": "javascript",
+      "package_type": "python",
+      "package": "pyjwt",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/pyjwt@2.0.1",
+      "vuln_id": "GHSA-pxh4-856f-4h89",
+      "cve_ids": [],
+      "severity": "High",
+      "cvss_max": 7.4,
+      "fix_state": "fixed",
+      "fix_versions": [
+        "2.14.0"
+      ],
+      "locations": [
+        "/requirements.txt"
+      ],
+      "description": "PyJWT: HS256/384/512 verify accepts empty HMAC key via oct JWK (PyJWK/PyJWKClient) enabling token forgery",
       "epss": null,
       "epss_percentile": null,
       "kev": null,
