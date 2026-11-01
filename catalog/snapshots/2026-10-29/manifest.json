@@ -1,0 +1,20 @@
+{
+  "snapshot": "2026-10-29",
+  "downloaded_at_utc": "2026-10-29T08:52:20+00:00",
+  "kev": {
+    "file": "kev.json",
+    "source_url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+    "catalog_version": "2026.10.28",
+    "date_released": "2026-10-28T19:00:04.8077Z",
+    "count": 1762,
+    "sha256": "c72e8b7751209e7575ed777439e3f4e9295ba86b4edf5d52730959d8bf9bfe64"
+  },
+  "epss": {
+    "file": "epss_scores.csv.gz",
+    "source_url": "https://epss.empiricalsecurity.com/epss_scores-current.csv.gz",
+    "model_version": "v2026.06.15",
+    "score_date": "2026-10-28T12:03:13Z",
+    "count": 396966,
+    "sha256": "aa9eefe4155babd88985c26528087bba5053405d4d64aed85ea5dc5c2e16c4e9"
+  }
+}

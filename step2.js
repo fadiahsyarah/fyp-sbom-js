@@ -10,7 +10,7 @@ const { execFileSync } = require("child_process");
 const ROOT = __dirname;
 const OUT = path.join(ROOT, "output");
 const arg = (name, def) => { const i = process.argv.indexOf(name); return i > -1 ? process.argv[i + 1] : def; };
-const CATALOG = arg("--catalog", path.join(process.env.HOME || "", "fyp", "vuln-catalog"));
+const CATALOG = arg("--catalog", fs.existsSync(path.join(ROOT, "catalog", "snapshots")) ? path.join(ROOT, "catalog") : path.join(process.env.HOME || "", "fyp", "vuln-catalog"));
 const SNAPSHOT = arg("--snapshot", "2026-10-29");
 const SNAP_DIR = path.join(CATALOG, "snapshots", SNAPSHOT);
 
@@ -97,9 +97,8 @@ enriched.forEach((f, i) => { f.exploitability_rank = i + 1; });
 fs.writeFileSync(path.join(OUT, "enriched_findings.json"),
   JSON.stringify({ schema_version: "1.0", generated_at: new Date().toISOString(), snapshot: SNAPSHOT, findings: enriched }, null, 2));
 
-const cols = [["exploitability_rank", "exploitability_rank"], ["priority", "priority"], ["repo", "repo"], ["package", "package"], ["version", "version"],
-  ["vuln_id", "vuln_id"], ["cve_ids", "cve_ids"], ["severity", "severity"], ["epss_score", "epss_score"], ["epss_percentile", "epss_percentile"],
-  ["in_kev", "in_kev"], ["kev_date_added", "kev_date_added"], ["kev_ransomware_use", "kev_ransomware_use"], ["fix_versions", "fix_versions"], ["cve_source", "cve_source"]];
+const cols = ["exploitability_rank", "priority", "repo", "package", "version", "vuln_id", "cve_ids", "severity", "epss_score", "epss_percentile",
+  "epss_cve", "in_kev", "kev_date_added", "kev_due_date", "kev_ransomware_use", "fix_versions", "cve_source", "fix_state"].map(k => [k, k]);
 const cell = (k, v) => {
   if (k === "in_kev") return v ? "Yes" : "No";
   const s = Array.isArray(v) ? v.join(" ") : v === null || v === undefined ? "" : String(v);

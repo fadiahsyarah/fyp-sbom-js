@@ -1,0 +1,89 @@
+{
+  "checked_at": "2026-11-01T05:45:45.710Z",
+  "api": "https://api.first.org/data/v1/epss",
+  "date": "2026-10-28",
+  "sample_size": 10,
+  "matches": 10,
+  "rows": [
+    {
+      "cve": "CVE-2023-4863",
+      "snapshot_epss": 0.99979,
+      "snapshot_percentile": 0.9998,
+      "api_epss": 0.99979,
+      "api_percentile": 0.9998,
+      "match": true
+    },
+    {
+      "cve": "CVE-2021-39144",
+      "snapshot_epss": 0.98124,
+      "snapshot_percentile": 0.99912,
+      "api_epss": 0.98124,
+      "api_percentile": 0.99912,
+      "match": true
+    },
+    {
+      "cve": "CVE-2013-7285",
+      "snapshot_epss": 0.84362,
+      "snapshot_percentile": 0.99697,
+      "api_epss": 0.84362,
+      "api_percentile": 0.99697,
+      "match": true
+    },
+    {
+      "cve": "CVE-2020-26217",
+      "snapshot_epss": 0.82717,
+      "snapshot_percentile": 0.99666,
+      "api_epss": 0.82717,
+      "api_percentile": 0.99666,
+      "match": true
+    },
+    {
+      "cve": "CVE-2020-26259",
+      "snapshot_epss": 0.82392,
+      "snapshot_percentile": 0.99661,
+      "api_epss": 0.82392,
+      "api_percentile": 0.99661,
+      "match": true
+    },
+    {
+      "cve": "CVE-2021-21351",
+      "snapshot_epss": 0.82136,
+      "snapshot_percentile": 0.99653,
+      "api_epss": 0.82136,
+      "api_percentile": 0.99653,
+      "match": true
+    },
+    {
+      "cve": "CVE-2020-26258",
+      "snapshot_epss": 0.81817,
+      "snapshot_percentile": 0.99645,
+      "api_epss": 0.81817,
+      "api_percentile": 0.99645,
+      "match": true
+    },
+    {
+      "cve": "CVE-2021-21341",
+      "snapshot_epss": 0.77801,
+      "snapshot_percentile": 0.99568,
+      "api_epss": 0.77801,
+      "api_percentile": 0.99568,
+      "match": true
+    },
+    {
+      "cve": "CVE-2021-29505",
+      "snapshot_epss": 0.77232,
+      "snapshot_percentile": 0.99552,
+      "api_epss": 0.77232,
+      "api_percentile": 0.99552,
+      "match": true
+    },
+    {
+      "cve": "CVE-2024-23334",
+      "snapshot_epss": 0.76875,
+      "snapshot_percentile": 0.99546,
+      "api_epss": 0.76875,
+      "api_percentile": 0.99546,
+      "match": true
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+Snapshot 2026-10-29: KEV 1762 (catalog 2026.10.28), EPSS 396966 CVEs (score date 2026-10-28T12:03:13Z)
+
+886 findings, 426 unique CVEs, 858 with EPSS, 2 in KEV, 20 with no CVE
+  P1 - in CISA KEV     2
+  P2 - EPSS >= 10%     36
+  P3 - EPSS 1-10%      252
+  P4 - EPSS < 1%       568
+  P5 - no EPSS score   28
+
+By repo (P1 / P2 / P3 / P4 / P5):
+  pygoat       1 / 10 / 154 / 383 / 16
+  webgoat      1 / 19 / 16 / 0 / 0
+  dvpwa        0 / 1 / 9 / 51 / 2
+  nodegoat     0 / 4 / 44 / 54 / 3
+  juice-shop   0 / 2 / 16 / 40 / 5
+  dvga         0 / 0 / 13 / 40 / 2
+
+Top 10 most exploitable:
+  #1   P1  pygoat      pillow 8.0.0  CVE-2023-4863  EPSS=0.99979  High
+  #2   P1  webgoat     xstream 1.4.5  CVE-2021-39144  EPSS=0.98124  High
+  #3   P2  webgoat     xstream 1.4.5  CVE-2013-7285  EPSS=0.84362  Critical
+  #4   P2  webgoat     xstream 1.4.5  CVE-2020-26217  EPSS=0.82717  High
+  #5   P2  webgoat     xstream 1.4.5  CVE-2020-26259  EPSS=0.82392  Medium
+  #6   P2  webgoat     xstream 1.4.5  CVE-2021-21351  EPSS=0.82136  Medium
+  #7   P2  webgoat     xstream 1.4.5  CVE-2020-26258  EPSS=0.81817  Medium
+  #8   P2  webgoat     xstream 1.4.5  CVE-2021-21341  EPSS=0.77801  High
+  #9   P2  webgoat     xstream 1.4.5  CVE-2021-29505  EPSS=0.77232  High
+  #10  P2  dvpwa       aiohttp 3.5.3  CVE-2024-23334  EPSS=0.76875  High
+
+Wrote output/enriched_findings.json, output/ranked_findings.csv, output/step2_metadata.json
+  CVE-2023-4863    snapshot 0.99979 / 0.9998   API 0.99979 / 0.9998   MATCH
+  CVE-2021-39144   snapshot 0.98124 / 0.99912   API 0.98124 / 0.99912   MATCH
+  CVE-2013-7285    snapshot 0.84362 / 0.99697   API 0.84362 / 0.99697   MATCH
+  CVE-2020-26217   snapshot 0.82717 / 0.99666   API 0.82717 / 0.99666   MATCH
+  CVE-2020-26259   snapshot 0.82392 / 0.99661   API 0.82392 / 0.99661   MATCH
+  CVE-2021-21351   snapshot 0.82136 / 0.99653   API 0.82136 / 0.99653   MATCH
+  CVE-2020-26258   snapshot 0.81817 / 0.99645   API 0.81817 / 0.99645   MATCH
+  CVE-2021-21341   snapshot 0.77801 / 0.99568   API 0.77801 / 0.99568   MATCH
+  CVE-2021-29505   snapshot 0.77232 / 0.99552   API 0.77232 / 0.99552   MATCH
+  CVE-2024-23334   snapshot 0.76875 / 0.99546   API 0.76875 / 0.99546   MATCH
+
+API cross-check (2026-10-28): 10/10 match. Wrote output/epss_api_check.json
