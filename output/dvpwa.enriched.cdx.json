@@ -1,0 +1,6202 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:ddbed31c-9025-4eee-b0d6-98266e317c22",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-10T01:43:16.687Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "syft",
+          "version": "1.55.0"
+        },
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "grype",
+          "version": "0.121.0"
+        },
+        {
+          "type": "application",
+          "name": "fyp-sbom-js step2.js",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "repo:dvpwa",
+      "type": "application",
+      "name": "dvpwa",
+      "version": "a1d8f89fac2e57093189853c6527c2b01fc1d9c1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/fadiahsyarah/dvpwa"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/anxolerd/dvpwa"
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "fyp:snapshot",
+        "value": "2026-10-29"
+      },
+      {
+        "name": "fyp:kev:catalog_version",
+        "value": "2026.10.28"
+      },
+      {
+        "name": "fyp:kev:sha256",
+        "value": "c72e8b7751209e7575ed777439e3f4e9295ba86b4edf5d52730959d8bf9bfe64"
+      },
+      {
+        "name": "fyp:epss:score_date",
+        "value": "2026-10-28T12:03:13Z"
+      },
+      {
+        "name": "fyp:epss:model_version",
+        "value": "v2026.06.15"
+      },
+      {
+        "name": "fyp:epss:sha256",
+        "value": "aa9eefe4155babd88985c26528087bba5053405d4d64aed85ea5dc5c2e16c4e9"
+      },
+      {
+        "name": "fyp:grype:db_built",
+        "value": "2026-10-22T18:51:21Z"
+      },
+      {
+        "name": "fyp:ranking",
+        "value": "1) in KEV  2) higher EPSS score  3) higher EPSS percentile  4) higher severity"
+      }
+    ]
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+      "type": "library",
+      "name": "aiohttp",
+      "version": "3.5.3",
+      "cpe": "cpe:2.3:a:python-aiohttp:python-aiohttp:3.5.3:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/aiohttp@3.5.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp:python_aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp:python-aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp:python_aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp:python-aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp:python_aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp:aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp:aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp:aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/aiohttp-jinja2@1.1.0?package-id=25745c1f9ced19c8",
+      "type": "library",
+      "name": "aiohttp-jinja2",
+      "version": "1.1.0",
+      "cpe": "cpe:2.3:a:python-aiohttp-jinja2:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/aiohttp-jinja2@1.1.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp-jinja2:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp_jinja2:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp_jinja2:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp-jinja2:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp-jinja2:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp_jinja2:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp_jinja2:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp-jinja2:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp-jinja2:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp_jinja2:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp_jinja2:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp-jinja2:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp-jinja2:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp_jinja2:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp_jinja2:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/aiohttp-session@2.7.0?package-id=71b2500e73abc7e9",
+      "type": "library",
+      "name": "aiohttp-session",
+      "version": "2.7.0",
+      "cpe": "cpe:2.3:a:aio-libs:aiohttp_session:2.7.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/aiohttp-session@2.7.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/aiopg@0.15.0?package-id=9bb4cb7bb4d43e21",
+      "type": "library",
+      "name": "aiopg",
+      "version": "0.15.0",
+      "cpe": "cpe:2.3:a:python-aiopg:python-aiopg:0.15.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/aiopg@0.15.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiopg:python_aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiopg:python-aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiopg:python_aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiopg:python-aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiopg:python_aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiopg:aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiopg:aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiopg:aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/aioredis@1.2.0?package-id=1d40cfd8602fc080",
+      "type": "library",
+      "name": "aioredis",
+      "version": "1.2.0",
+      "cpe": "cpe:2.3:a:python-aioredis:python-aioredis:1.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/aioredis@1.2.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aioredis:python_aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aioredis:python-aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aioredis:python_aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aioredis:python-aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aioredis:python_aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aioredis:aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aioredis:aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aioredis:aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/async-timeout@3.0.1?package-id=4d5835491bc71fb9",
+      "type": "library",
+      "name": "async-timeout",
+      "version": "3.0.1",
+      "cpe": "cpe:2.3:a:python-async-timeout:python-async-timeout:3.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/async-timeout@3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-async-timeout:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async_timeout:python-async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async_timeout:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async-timeout:python-async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async-timeout:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async_timeout:python-async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async_timeout:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-async-timeout:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-async-timeout:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async_timeout:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async_timeout:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-async:python-async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-async:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async:python-async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async-timeout:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async-timeout:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async_timeout:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async_timeout:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async:python-async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-async:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-async:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/attrs@18.2.0?package-id=52f059f8694c3682",
+      "type": "library",
+      "name": "attrs",
+      "version": "18.2.0",
+      "cpe": "cpe:2.3:a:python-attrs:python-attrs:18.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/attrs@18.2.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-attrs:python_attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_attrs:python-attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_attrs:python_attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:attrs:python-attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:attrs:python_attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-attrs:attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_attrs:attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:attrs:attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/chardet@3.0.4?package-id=565876e75d9f01be",
+      "type": "library",
+      "name": "chardet",
+      "version": "3.0.4",
+      "cpe": "cpe:2.3:a:python-chardet:python-chardet:3.0.4:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/chardet@3.0.4",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-chardet:python_chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_chardet:python-chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_chardet:python_chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:chardet:python-chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:chardet:python_chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-chardet:chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_chardet:chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:chardet:chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/hiredis@0.3.1?package-id=c0010bf818cd0789",
+      "type": "library",
+      "name": "hiredis",
+      "version": "0.3.1",
+      "cpe": "cpe:2.3:a:python-hiredis:python-hiredis:0.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/hiredis@0.3.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-hiredis:python_hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_hiredis:python-hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_hiredis:python_hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:hiredis:python-hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:hiredis:python_hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-hiredis:hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_hiredis:hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:hiredis:hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/idna@2.8?package-id=9eaf949ddc81b770",
+      "type": "library",
+      "name": "idna",
+      "version": "2.8",
+      "cpe": "cpe:2.3:a:kjd:internationalized_domain_names_in_applications:2.8:*:*:*:*:python:*:*",
+      "purl": "pkg:pypi/idna@2.8",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/jinja2@2.10?package-id=cac9478da23b3a61",
+      "type": "library",
+      "name": "jinja2",
+      "version": "2.10",
+      "cpe": "cpe:2.3:a:python-jinja2:python-jinja2:2.10:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/jinja2@2.10",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-jinja2:python_jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_jinja2:python-jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_jinja2:python_jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jinja2:python-jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jinja2:python_jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-jinja2:jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_jinja2:jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jinja2:jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/markupsafe@1.1.0?package-id=c68044b44cee095d",
+      "type": "library",
+      "name": "markupsafe",
+      "version": "1.1.0",
+      "cpe": "cpe:2.3:a:python-markupsafe:python-markupsafe:1.1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/markupsafe@1.1.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-markupsafe:python_markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_markupsafe:python-markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_markupsafe:python_markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:markupsafe:python-markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:markupsafe:python_markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-markupsafe:markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_markupsafe:markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:markupsafe:markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/multidict@4.5.2?package-id=38887899fcdd42d6",
+      "type": "library",
+      "name": "multidict",
+      "version": "4.5.2",
+      "cpe": "cpe:2.3:a:python-multidict:python-multidict:4.5.2:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/multidict@4.5.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-multidict:python_multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_multidict:python-multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_multidict:python_multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:multidict:python-multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:multidict:python_multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-multidict:multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_multidict:multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:multidict:multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/psycopg2@2.7.6.1?package-id=3b17dc5eb020ec6f",
+      "type": "library",
+      "name": "psycopg2",
+      "version": "2.7.6.1",
+      "cpe": "cpe:2.3:a:python-psycopg2:python-psycopg2:2.7.6.1:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/psycopg2@2.7.6.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-psycopg2:python_psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_psycopg2:python-psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_psycopg2:python_psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:psycopg2:python-psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:psycopg2:python_psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-psycopg2:psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_psycopg2:psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:psycopg2:psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/pyyaml@3.13?package-id=9baf4086d0b93c56",
+      "type": "library",
+      "name": "pyyaml",
+      "version": "3.13",
+      "cpe": "cpe:2.3:a:python-pyyaml:python-pyyaml:3.13:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/pyyaml@3.13",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-pyyaml:python_pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_pyyaml:python-pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_pyyaml:python_pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-pyyaml:pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_pyyaml:pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:pyyaml:python-pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:pyyaml:python_pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:pyyaml:pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/trafaret@1.2.0?package-id=9a2cccda9ed6eb79",
+      "type": "library",
+      "name": "trafaret",
+      "version": "1.2.0",
+      "cpe": "cpe:2.3:a:python-trafaret:python-trafaret:1.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/trafaret@1.2.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret:python_trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret:python-trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret:python_trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret:trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret:trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret:python-trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret:python_trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret:trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/trafaret-config@2.0.2?package-id=1343bf99ac5b1a0a",
+      "type": "library",
+      "name": "trafaret-config",
+      "version": "2.0.2",
+      "cpe": "cpe:2.3:a:python-trafaret-config:python-trafaret-config:2.0.2:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/trafaret-config@2.0.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret-config:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret_config:python-trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret_config:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret-config:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret-config:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret:python-trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret:python-trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret_config:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret_config:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret-config:python-trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret-config:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret_config:python-trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret_config:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret-config:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret-config:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret:python-trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret_config:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret_config:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/yarl@1.3.0?package-id=5b3ce801a12d6fe1",
+      "type": "library",
+      "name": "yarl",
+      "version": "1.3.0",
+      "cpe": "cpe:2.3:a:python-yarl:python-yarl:1.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/yarl@1.3.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-yarl:python_yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_yarl:python-yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_yarl:python_yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-yarl:yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_yarl:yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:yarl:python-yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:yarl:python_yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:yarl:yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "26ca2b7dc025d550",
+      "type": "file",
+      "name": "/home/fadiah/fyp/sbom-javascript/repos/dvpwa/requirements.txt",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "39b373e7fabecadf09e30370fc2ec92f0506d399"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "8bc89ba777cd128b0bee274187c49ca6a92e4daecdbf475922b3fc2ff1c449fa"
+        }
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "bom-ref": "vuln-10",
+      "id": "GHSA-5h86-8mv2-jq9f",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-5h86-8mv2-jq9f"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-23334",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23334"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.2,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp is vulnerable to directory traversal",
+      "recommendation": "Upgrade aiohttp to 3.9.2",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P2 - EPSS >= 10%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "10"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.76875"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.99546"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2024-23334"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-48",
+      "id": "GHSA-8q59-q68h-6hv4",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-8q59-q68h-6hv4"
+      },
+      "references": [
+        {
+          "id": "CVE-2020-14343",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-14343"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "critical",
+          "score": 10,
+          "method": "other"
+        }
+      ],
+      "description": "Improper Input Validation in PyYAML",
+      "recommendation": "Upgrade pyyaml to 5.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/pyyaml@3.13?package-id=9baf4086d0b93c56",
+          "versions": [
+            {
+              "version": "3.13",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "48"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.05984"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.93282"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2020-14343"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-50",
+      "id": "GHSA-rprw-h62v-c2w7",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-rprw-h62v-c2w7"
+      },
+      "references": [
+        {
+          "id": "CVE-2017-18342",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18342"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "critical",
+          "score": 9.8,
+          "method": "other"
+        }
+      ],
+      "description": "PyYAML insecurely deserializes YAML strings leading to arbitrary code execution",
+      "recommendation": "Upgrade pyyaml to 5.1",
+      "affects": [
+        {
+          "ref": "pkg:pypi/pyyaml@3.13?package-id=9baf4086d0b93c56",
+          "versions": [
+            {
+              "version": "3.13",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "50"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.05656"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.92942"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2017-18342"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-76",
+      "id": "GHSA-g3rq-g295-4j3m",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-g3rq-g295-4j3m"
+      },
+      "references": [
+        {
+          "id": "CVE-2020-28493",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-28493"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.9,
+          "method": "other"
+        }
+      ],
+      "description": "Regular Expression Denial of Service (ReDoS) in Jinja2",
+      "recommendation": "Upgrade jinja2 to 2.11.3",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.10?package-id=cac9478da23b3a61",
+          "versions": [
+            {
+              "version": "2.10",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "76"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.03589"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.89386"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2020-28493"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-77",
+      "id": "GHSA-462w-v97r-4m45",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-462w-v97r-4m45"
+      },
+      "references": [
+        {
+          "id": "CVE-2019-10906",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10906"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.6,
+          "method": "other"
+        }
+      ],
+      "description": "Jinja2 sandbox escape via string formatting",
+      "recommendation": "Upgrade jinja2 to 2.10.1",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.10?package-id=cac9478da23b3a61",
+          "versions": [
+            {
+              "version": "2.10",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "77"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.03534"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.89221"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2019-10906"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-154",
+      "id": "GHSA-v6wp-4m6f-gcjg",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-v6wp-4m6f-gcjg"
+      },
+      "references": [
+        {
+          "id": "CVE-2021-21330",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-21330"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 6.1,
+          "method": "other"
+        }
+      ],
+      "description": "`aiohttp` Open Redirect vulnerability (`normalize_path_middleware` middleware)",
+      "recommendation": "Upgrade aiohttp to 3.7.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "154"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.01905"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.79639"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2021-21330"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-202",
+      "id": "GHSA-jjg7-2v4v-x38h",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-jjg7-2v4v-x38h"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-3651",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-3651"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "Internationalized Domain Names in Applications (IDNA) vulnerable to denial of service from specially crafted inputs to idna.encode",
+      "recommendation": "Upgrade idna to 3.7",
+      "affects": [
+        {
+          "ref": "pkg:pypi/idna@2.8?package-id=9eaf949ddc81b770",
+          "versions": [
+            {
+              "version": "2.8",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "202"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.01386"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.72123"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2024-3651"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-208",
+      "id": "GHSA-45c4-8wx5-qw6w",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-45c4-8wx5-qw6w"
+      },
+      "references": [
+        {
+          "id": "CVE-2023-37276",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-37276"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp.web.Application vulnerable to HTTP request smuggling via llhttp HTTP request parser",
+      "recommendation": "Upgrade aiohttp to 3.8.5",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "208"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.01337"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.71118"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2023-37276"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-280",
+      "id": "GHSA-5m98-qgg9-wh84",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-5m98-qgg9-wh84"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-30251",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-30251"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp vulnerable to Denial of Service when trying to parse malformed POST requests",
+      "recommendation": "Upgrade aiohttp to 3.9.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "280"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.01094"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.65386"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2024-30251"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-284",
+      "id": "GHSA-8qpw-xqxj-h4r2",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-8qpw-xqxj-h4r2"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-23829",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23829"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.9,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp's HTTP parser (the python one, not llhttp) still overly lenient about separators",
+      "recommendation": "Upgrade aiohttp to 3.9.2",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "284"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.01029"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.63558"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2024-23829"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-310",
+      "id": "GHSA-h75v-3vvj-5mfj",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-h75v-3vvj-5mfj"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-34064",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-34064"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 5.4,
+          "method": "other"
+        }
+      ],
+      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "recommendation": "Upgrade jinja2 to 3.1.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.10?package-id=cac9478da23b3a61",
+          "versions": [
+            {
+              "version": "2.10",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "310"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00979"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.62065"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2024-34064"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-315",
+      "id": "GHSA-qvrw-v9rv-5rjx",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-qvrw-v9rv-5rjx"
+      },
+      "references": [
+        {
+          "id": "CVE-2023-49082",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49082"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.9,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp's ClientSession is vulnerable to CRLF injection via method",
+      "recommendation": "Upgrade aiohttp to 3.9.0",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "315"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00948"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.61051"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2023-49082"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-336",
+      "id": "GHSA-h5c8-rqwp-cp95",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-h5c8-rqwp-cp95"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-22195",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22195"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.1,
+          "method": "other"
+        }
+      ],
+      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "recommendation": "Upgrade jinja2 to 3.1.3",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.10?package-id=cac9478da23b3a61",
+          "versions": [
+            {
+              "version": "2.10",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "336"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00892"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.59295"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2024-22195"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-339",
+      "id": "GHSA-q3qx-c6g2-7pw2",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-q3qx-c6g2-7pw2"
+      },
+      "references": [
+        {
+          "id": "CVE-2023-49081",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49081"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.2,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp's ClientSession is vulnerable to CRLF injection via version",
+      "recommendation": "Upgrade aiohttp to 3.9.0",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "339"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00882"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.59022"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2023-49081"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-341",
+      "id": "GHSA-gfw2-4jvh-wgfg",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-gfw2-4jvh-wgfg"
+      },
+      "references": [
+        {
+          "id": "CVE-2023-47627",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-47627"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP has problems in HTTP parser (the python one, not llhttp)",
+      "recommendation": "Upgrade aiohttp to 3.8.6",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "341"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00857"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.58293"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2023-47627"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-344",
+      "id": "GHSA-xx9p-xxvh-7g8j",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-xx9p-xxvh-7g8j"
+      },
+      "references": [
+        {
+          "id": "CVE-2023-47641",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-47641"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 6.5,
+          "method": "other"
+        }
+      ],
+      "description": "Aiohttp has inconsistent interpretation of `Content-Length` vs. `Transfer-Encoding` differing in C and Python fallbacks",
+      "recommendation": "Upgrade aiohttp to 3.8.0",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "344"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00834"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.57525"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2023-47641"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-394",
+      "id": "GHSA-7gpw-8wmc-pm8g",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-7gpw-8wmc-pm8g"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-27306",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27306"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.1,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp Cross-site Scripting vulnerability on index pages for static file handling",
+      "recommendation": "Upgrade aiohttp to 3.9.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "394"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00666"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.51694"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2024-27306"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-449",
+      "id": "GHSA-6mq8-rvhq-8wgg",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-6mq8-rvhq-8wgg"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-69223",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69223"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP's HTTP Parser auto_decompress feature is vulnerable to zip bomb",
+      "recommendation": "Upgrade aiohttp to 3.13.3",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "449"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00583"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.47735"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2025-69223"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-472",
+      "id": "GHSA-8495-4g3g-x7pr",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-8495-4g3g-x7pr"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-52304",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-52304"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp allows request smuggling due to incorrect parsing of chunk extensions",
+      "recommendation": "Upgrade aiohttp to 3.10.11",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "472"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00563"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.46711"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2024-52304"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-473",
+      "id": "GHSA-63hw-fmq6-xxg2",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-63hw-fmq6-xxg2"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54277",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54277"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: C HTTP Parser Bypasses max_line_size for Fragmented Lines",
+      "recommendation": "Upgrade aiohttp to 3.14.1",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "473"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00563"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.46696"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-54277"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-480",
+      "id": "GHSA-xcgm-r5h9-7989",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-xcgm-r5h9-7989"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54274",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54274"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: Incomplete websocket frame payloads bypass memory limits",
+      "recommendation": "Upgrade aiohttp to 3.14.1",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "480"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00539"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.45252"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-54274"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-481",
+      "id": "GHSA-m6qw-4cw2-hm4m",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-m6qw-4cw2-hm4m"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-50269",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50269"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: CRLF injection in multipart headers",
+      "recommendation": "Upgrade aiohttp to 3.14.0",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "481"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00533"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.449"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-50269"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-488",
+      "id": "GHSA-cq5v-8q36-5273",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-cq5v-8q36-5273"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-69244",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69244"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 7.1,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: Out-of-bounds heap read in C HTTP response parser error path (malformed chunked response)",
+      "recommendation": "Upgrade aiohttp to 3.14.3",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "488"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00528"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.44558"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-69244"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-494",
+      "id": "GHSA-mq44-7p77-q5h7",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-mq44-7p77-q5h7"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-59881",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59881"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.9,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: WebSocket client accepts compressed frames without negotiated permessage-deflate",
+      "recommendation": "Upgrade aiohttp to 3.14.2",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "494"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00524"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.44289"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-59881"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-510",
+      "id": "GHSA-q2x7-8rv6-6q7h",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-q2x7-8rv6-6q7h"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-56326",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-56326"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.8,
+          "method": "other"
+        }
+      ],
+      "description": "Jinja has a sandbox breakout through indirect reference to format method",
+      "recommendation": "Upgrade jinja2 to 3.1.5",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.10?package-id=cac9478da23b3a61",
+          "versions": [
+            {
+              "version": "2.10",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "510"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00522"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.44143"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2024-56326"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-568",
+      "id": "GHSA-cpwx-vrp4-4pq7",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-cpwx-vrp4-4pq7"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-27516",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27516"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 8.8,
+          "method": "other"
+        }
+      ],
+      "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+      "recommendation": "Upgrade jinja2 to 3.1.6",
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.10?package-id=cac9478da23b3a61",
+          "versions": [
+            {
+              "version": "2.10",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "568"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00507"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.43124"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2025-27516"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-574",
+      "id": "GHSA-g3cq-j2xw-wf74",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-g3cq-j2xw-wf74"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54278",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54278"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: Unread Compressed Request Bodies Bypass client_max_size During Cleanup",
+      "recommendation": "Upgrade aiohttp to 3.14.1",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "574"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00493"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.42232"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-54278"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-575",
+      "id": "GHSA-4fvr-rgm6-gqmc",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-4fvr-rgm6-gqmc"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54273",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54273"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: HTTP/1 Pipelined Requests Queue Without Limit",
+      "recommendation": "Upgrade aiohttp to 3.14.1",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "575"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00493"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.42229"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-54273"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-576",
+      "id": "GHSA-2fqr-mr3j-6wp8",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-2fqr-mr3j-6wp8"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54279",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54279"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: Host-Only Cookies Become Domain Cookies After CookieJar Persistence",
+      "recommendation": "Upgrade aiohttp to 3.14.1",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "576"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00493"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.42228"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-54279"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-609",
+      "id": "GHSA-4m7w-qmgq-4wj5",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-4m7w-qmgq-4wj5"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54275",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54275"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: TLS Server Hostname Override Is Ignored When Reusing HTTPS Connections",
+      "recommendation": "Upgrade aiohttp to 3.14.1",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "609"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0047"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.40587"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-54275"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-612",
+      "id": "GHSA-63hf-3vf5-4wqf",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-63hf-3vf5-4wqf"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-34520",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34520"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 9.1,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP's C parser (llhttp) accepts null bytes and control characters in response header values - header injection/security bypass",
+      "recommendation": "Upgrade aiohttp to 3.13.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "612"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00461"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.39843"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-34520"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-613",
+      "id": "GHSA-9x8q-7h8h-wcw9",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-9x8q-7h8h-wcw9"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54280",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54280"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: Payload Response Resources Are Not Closed After Mid-Body Disconnect",
+      "recommendation": "Upgrade aiohttp to 3.14.1",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "613"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0046"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.39815"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-54280"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-626",
+      "id": "GHSA-mfx4-hv73-q22v",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-mfx4-hv73-q22v"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-69243",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69243"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.3,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: HTTP request smuggling via WebSocket upgrade",
+      "recommendation": "Upgrade aiohttp to 3.14.2",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "626"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00443"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.38406"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-69243"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-627",
+      "id": "GHSA-m5qp-6w8w-w647",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-m5qp-6w8w-w647"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-34516",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34516"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP has a Multipart Header Size Bypass",
+      "recommendation": "Upgrade aiohttp to 3.13.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "627"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0044"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.38151"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-34516"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-628",
+      "id": "GHSA-w2fm-2cpv-w7v5",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-w2fm-2cpv-w7v5"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-22815",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22815"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp allows unlimited trailer headers, leading to possible uncapped memory usage",
+      "recommendation": "Upgrade aiohttp to 3.13.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "628"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0044"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.38151"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-22815"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-629",
+      "id": "GHSA-hcc4-c3v8-rx92",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-hcc4-c3v8-rx92"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-34513",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34513"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP Affected by Denial of Service (DoS) via Unbounded DNS Cache in TCPConnector",
+      "recommendation": "Upgrade aiohttp to 3.13.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "629"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0044"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.38151"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-34513"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-633",
+      "id": "GHSA-p998-jp59-783m",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-p998-jp59-783m"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-34515",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34515"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP affected by UNC SSRF/NTLMv2 Credential Theft/Local File Read in static resource handler on Windows",
+      "recommendation": "Upgrade aiohttp to 3.13.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "633"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00433"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.3752"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-34515"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-650",
+      "id": "GHSA-9xw5-w5jj-pvcg",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-9xw5-w5jj-pvcg"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-111066",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111066"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.2,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: File descriptor exhaustion in multipart requests",
+      "recommendation": "Upgrade aiohttp to 3.14.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "650"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00412"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.35296"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-111066"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-655",
+      "id": "GHSA-65pc-fj4g-8rjx",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-65pc-fj4g-8rjx"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-45409",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45409"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.9,
+          "method": "other"
+        }
+      ],
+      "description": "Internationalized Domain Names in Applications (IDNA): Specially crafted inputs to idna.encode() can bypass CVE-2024-3651 fix",
+      "recommendation": "Upgrade idna to 3.15",
+      "affects": [
+        {
+          "ref": "pkg:pypi/idna@2.8?package-id=9eaf949ddc81b770",
+          "versions": [
+            {
+              "version": "2.8",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "655"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00408"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.34962"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-45409"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-657",
+      "id": "GHSA-6jhg-hg63-jvvf",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-6jhg-hg63-jvvf"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-69228",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69228"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP vulnerable to  denial of service through large payloads",
+      "recommendation": "Upgrade aiohttp to 3.13.3",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "657"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00407"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.34905"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2025-69228"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-658",
+      "id": "GHSA-g84x-mcqj-x9qq",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-g84x-mcqj-x9qq"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-69229",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69229"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.6,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP vulnerable to DoS through chunked messages",
+      "recommendation": "Upgrade aiohttp to 3.13.3",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "658"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00404"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.34581"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2025-69229"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-684",
+      "id": "GHSA-5wr8-gcqf-gqf3",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-5wr8-gcqf-gqf3"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-111064",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111064"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.2,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp server lacks an initial request/header timeout",
+      "recommendation": "Upgrade aiohttp to 3.14.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "684"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00399"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.34049"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-111064"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-686",
+      "id": "GHSA-jj3x-wxrx-4x23",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-jj3x-wxrx-4x23"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-69227",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69227"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP vulnerable to DoS when bypassing asserts",
+      "recommendation": "Upgrade aiohttp to 3.13.3",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "686"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00396"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.33681"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2025-69227"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-688",
+      "id": "GHSA-6cjc-53gc-5rqm",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-6cjc-53gc-5rqm"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-111065",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111065"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.9,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: Connector pool exhaustion via Max-Age overflow",
+      "recommendation": "Upgrade aiohttp to 3.14.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "688"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00395"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.33643"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-111065"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-690",
+      "id": "GHSA-f9xw-jh8m-3mwq",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-f9xw-jh8m-3mwq"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-111748",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111748"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.3,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: Absolute-form request targets can spoof Request.scheme",
+      "recommendation": "Upgrade aiohttp to 3.14.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "690"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00386"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.32599"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-111748"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-700",
+      "id": "GHSA-3wq7-rqq7-wx6j",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-3wq7-rqq7-wx6j"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-34517",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34517"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 5.3,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP has late size enforcement for non-file multipart fields causes memory DoS",
+      "recommendation": "Upgrade aiohttp to 3.13.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "700"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00384"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.32347"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-34517"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-701",
+      "id": "GHSA-gx76-c99x-2c96",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-gx76-c99x-2c96"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-111749",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111749"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 2.3,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: Cookie from subdomain can remove Host-Only Scope from existing cookies",
+      "recommendation": "Upgrade aiohttp to 3.14.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "701"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00384"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.32334"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-111749"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-702",
+      "id": "GHSA-pqxq-w44r-73xw",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-pqxq-w44r-73xw"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-111750",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111750"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.3,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: Pure-Python parser request smuggling",
+      "recommendation": "Upgrade aiohttp to 3.14.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "702"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00382"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.32069"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-111750"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-732",
+      "id": "GHSA-54jq-c3m8-4m76",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-54jq-c3m8-4m76"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-69226",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69226"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 6.3,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP vulnerable to brute-force leak of internal static ﬁle path components",
+      "recommendation": "Upgrade aiohttp to 3.13.3",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "732"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00368"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.30533"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2025-69226"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-737",
+      "id": "GHSA-fh55-r93g-j68g",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-fh55-r93g-j68g"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-69230",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69230"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 5.3,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP Vulnerable to Cookie Parser Warning Storm",
+      "recommendation": "Upgrade aiohttp to 3.13.3",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "737"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00364"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.30094"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2025-69230"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-738",
+      "id": "GHSA-9548-qrrj-x5pj",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-9548-qrrj-x5pj"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-53643",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53643"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP is vulnerable to HTTP Request/Response Smuggling through incorrect parsing of chunked trailer sections",
+      "recommendation": "Upgrade aiohttp to 3.12.14",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "738"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00355"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.29125"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2025-53643"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-758",
+      "id": "GHSA-966j-vmvw-g2g9",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-966j-vmvw-g2g9"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-34518",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34518"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 5.3,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP leaks Cookie and Proxy-Authorization headers on cross-origin redirect",
+      "recommendation": "Upgrade aiohttp to 3.13.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "758"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00337"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.27013"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-34518"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-769",
+      "id": "GHSA-2vrm-gr82-f7m5",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-2vrm-gr82-f7m5"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-34514",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34514"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 5.3,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP has CRLF injection through multipart part content type header construction",
+      "recommendation": "Upgrade aiohttp to 3.13.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "769"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00315"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.24345"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-34514"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-786",
+      "id": "GHSA-hpj7-wq8m-9hgp",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-hpj7-wq8m-9hgp"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-54276",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54276"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.3,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: DigestAuthMiddleware Applies Credentials to Cross-Origin Redirect Challenges",
+      "recommendation": "Upgrade aiohttp to 3.14.1",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "786"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00307"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.23388"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-54276"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-789",
+      "id": "GHSA-mwh4-6h8g-pg8w",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-mwh4-6h8g-pg8w"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-34519",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34519"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 5.3,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP has HTTP response splitting via \\r in reason phrase",
+      "recommendation": "Upgrade aiohttp to 3.13.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "789"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00292"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.21749"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-34519"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-790",
+      "id": "GHSA-c427-h43c-vf67",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-c427-h43c-vf67"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-34525",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34525"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.3,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP accepts duplicate Host headers",
+      "recommendation": "Upgrade aiohttp to 3.13.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "790"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00288"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.21294"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-34525"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-791",
+      "id": "GHSA-mqqc-3gqh-h2x8",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-mqqc-3gqh-h2x8"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-69225",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69225"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 5.3,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP has unicode match groups in regexes for ASCII protocol elements",
+      "recommendation": "Upgrade aiohttp to 3.13.3",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "791"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00282"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.20691"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2025-69225"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-806",
+      "id": "GHSA-69f9-5gxw-wvc2",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-69f9-5gxw-wvc2"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-69224",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69224"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 6.5,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP's unicode processing of header values could cause parsing discrepancies",
+      "recommendation": "Upgrade aiohttp to 3.13.3",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "806"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0025"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.16335"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2025-69224"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-818",
+      "id": "GHSA-494j-54xm-rwp3",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-494j-54xm-rwp3"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-111063",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111063"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 6.3,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: Secure attribute not enforced for shared cookie",
+      "recommendation": "Upgrade aiohttp to 3.14.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "818"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00233"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.14164"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-111063"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-836",
+      "id": "GHSA-jg22-mg44-37j8",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-jg22-mg44-37j8"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-34993",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34993"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.3,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP is Vulnerable to Deserialization of Untrusted Data",
+      "recommendation": "Upgrade aiohttp to 3.14.0",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "836"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00179"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.07427"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-34993"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-852",
+      "id": "GHSA-hg6j-4rv6-33pg",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-hg6j-4rv6-33pg"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-47265",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47265"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP is vulnerable to cross-origin redirect with per-request cookies",
+      "recommendation": "Upgrade aiohttp to 3.14.0",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "852"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0015"
+        },
+        {
+          "name": "fyp:epss:percentile",
+          "value": "0.04143"
+        },
+        {
+          "name": "fyp:epss:cve",
+          "value": "CVE-2026-47265"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "grype"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-870",
+      "id": "GHSA-2g87-pp6c-29x5",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-2g87-pp6c-29x5"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.7,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: Multiple instances of excessive or unbounded memory/CPU use",
+      "recommendation": "Upgrade aiohttp to 3.14.4",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P5 - no EPSS score"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "870"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "none"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-879",
+      "id": "GHSA-pjjw-qhg8-p2p9",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-pjjw-qhg8-p2p9"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium"
+        }
+      ],
+      "description": "aiohttp has vulnerable dependency that is vulnerable to request smuggling",
+      "recommendation": "Upgrade aiohttp to 3.8.6",
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:priority",
+          "value": "P5 - no EPSS score"
+        },
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "879"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:cve_source",
+          "value": "none"
+        },
+        {
+          "name": "fyp:fix_state",
+          "value": "fixed"
+        }
+      ]
+    }
+  ]
+}

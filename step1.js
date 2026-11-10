@@ -62,6 +62,7 @@ for (const repo of repos) {
   console.log(`  SBOM: ${comps.length} components`);
   const raw = run("grype", [`sbom:${sbomPath}`, "-o", "json", "-q"]);
   fs.writeFileSync(path.join(OUT_DIR, `${repo.name}.grype.json`), raw);
+  fs.writeFileSync(path.join(OUT_DIR, `${repo.name}.vulns.cdx.json`), run("grype", [`sbom:${sbomPath}`, "-o", "cyclonedx-json", "-q"]));
   const findings = normalise(JSON.parse(raw), repo, commit);
   console.log(`  Grype: ${findings.length} findings`);
   all.push(...findings);

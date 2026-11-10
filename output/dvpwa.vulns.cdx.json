@@ -1,0 +1,5801 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:9c211292-1083-4796-85e3-fa42ace93077",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-10T09:42:57+08:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "grype",
+          "version": "0.121.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "d6d62732c6d2e5c8",
+      "type": "file",
+      "name": "/home/fadiah/fyp/sbom-javascript/repos/dvpwa"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+      "type": "library",
+      "name": "aiohttp",
+      "version": "3.5.3",
+      "cpe": "cpe:2.3:a:python-aiohttp:python-aiohttp:3.5.3:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/aiohttp@3.5.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp:python_aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp:python-aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp:python_aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp:python-aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp:python_aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp:aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp:aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp:aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:aiohttp:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/aiohttp-jinja2@1.1.0?package-id=pkg%3Apypi%2Faiohttp-jinja2%401.1.0%3Fpackage-id%3D25745c1f9ced19c8",
+      "type": "library",
+      "name": "aiohttp-jinja2",
+      "version": "1.1.0",
+      "cpe": "cpe:2.3:a:python-aiohttp-jinja2:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/aiohttp-jinja2@1.1.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp-jinja2:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp_jinja2:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp_jinja2:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp-jinja2:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp-jinja2:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp_jinja2:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp_jinja2:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp-jinja2:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp-jinja2:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp_jinja2:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp_jinja2:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp-jinja2:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp-jinja2:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp_jinja2:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp_jinja2:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiohttp:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiohttp:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiohttp:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:aiohttp-jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:aiohttp_jinja2:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/aiohttp-session@2.7.0?package-id=pkg%3Apypi%2Faiohttp-session%402.7.0%3Fpackage-id%3D71b2500e73abc7e9",
+      "type": "library",
+      "name": "aiohttp-session",
+      "version": "2.7.0",
+      "cpe": "cpe:2.3:a:aio-libs:aiohttp_session:2.7.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/aiohttp-session@2.7.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/aiopg@0.15.0?package-id=pkg%3Apypi%2Faiopg%400.15.0%3Fpackage-id%3D9bb4cb7bb4d43e21",
+      "type": "library",
+      "name": "aiopg",
+      "version": "0.15.0",
+      "cpe": "cpe:2.3:a:python-aiopg:python-aiopg:0.15.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/aiopg@0.15.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiopg:python_aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiopg:python-aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiopg:python_aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiopg:python-aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiopg:python_aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aiopg:aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aiopg:aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aiopg:aiopg:0.15.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/aioredis@1.2.0?package-id=pkg%3Apypi%2Faioredis%401.2.0%3Fpackage-id%3D1d40cfd8602fc080",
+      "type": "library",
+      "name": "aioredis",
+      "version": "1.2.0",
+      "cpe": "cpe:2.3:a:python-aioredis:python-aioredis:1.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/aioredis@1.2.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aioredis:python_aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aioredis:python-aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aioredis:python_aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aioredis:python-aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aioredis:python_aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-aioredis:aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_aioredis:aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:aioredis:aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:aioredis:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/async-timeout@3.0.1?package-id=pkg%3Apypi%2Fasync-timeout%403.0.1%3Fpackage-id%3D4d5835491bc71fb9",
+      "type": "library",
+      "name": "async-timeout",
+      "version": "3.0.1",
+      "cpe": "cpe:2.3:a:python-async-timeout:python-async-timeout:3.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/async-timeout@3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-async-timeout:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async_timeout:python-async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async_timeout:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async-timeout:python-async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async-timeout:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async_timeout:python-async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async_timeout:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-async-timeout:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-async-timeout:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async_timeout:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async_timeout:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-async:python-async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-async:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async:python-async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async-timeout:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async-timeout:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async_timeout:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async_timeout:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async:python-async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async:python_async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-async:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-async:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_async:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async:async-timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:async:async_timeout:3.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/attrs@18.2.0?package-id=pkg%3Apypi%2Fattrs%4018.2.0%3Fpackage-id%3D52f059f8694c3682",
+      "type": "library",
+      "name": "attrs",
+      "version": "18.2.0",
+      "cpe": "cpe:2.3:a:python-attrs:python-attrs:18.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/attrs@18.2.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-attrs:python_attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_attrs:python-attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_attrs:python_attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:attrs:python-attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:attrs:python_attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-attrs:attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_attrs:attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:attrs:attrs:18.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/chardet@3.0.4?package-id=pkg%3Apypi%2Fchardet%403.0.4%3Fpackage-id%3D565876e75d9f01be",
+      "type": "library",
+      "name": "chardet",
+      "version": "3.0.4",
+      "cpe": "cpe:2.3:a:python-chardet:python-chardet:3.0.4:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/chardet@3.0.4",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-chardet:python_chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_chardet:python-chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_chardet:python_chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:chardet:python-chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:chardet:python_chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-chardet:chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_chardet:chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:chardet:chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:chardet:3.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/hiredis@0.3.1?package-id=pkg%3Apypi%2Fhiredis%400.3.1%3Fpackage-id%3Dc0010bf818cd0789",
+      "type": "library",
+      "name": "hiredis",
+      "version": "0.3.1",
+      "cpe": "cpe:2.3:a:python-hiredis:python-hiredis:0.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/hiredis@0.3.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-hiredis:python_hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_hiredis:python-hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_hiredis:python_hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:hiredis:python-hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:hiredis:python_hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-hiredis:hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_hiredis:hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:hiredis:hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:hiredis:0.3.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/idna@2.8?package-id=pkg%3Apypi%2Fidna%402.8%3Fpackage-id%3D9eaf949ddc81b770",
+      "type": "library",
+      "name": "idna",
+      "version": "2.8",
+      "cpe": "cpe:2.3:a:kjd:internationalized_domain_names_in_applications:2.8:*:*:*:*:python:*:*",
+      "purl": "pkg:pypi/idna@2.8",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/jinja2@2.10?package-id=pkg%3Apypi%2Fjinja2%402.10%3Fpackage-id%3Dcac9478da23b3a61",
+      "type": "library",
+      "name": "jinja2",
+      "version": "2.10",
+      "cpe": "cpe:2.3:a:python-jinja2:python-jinja2:2.10:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/jinja2@2.10",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-jinja2:python_jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_jinja2:python-jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_jinja2:python_jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jinja2:python-jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jinja2:python_jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-jinja2:jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_jinja2:jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jinja2:jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:jinja2:2.10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/markupsafe@1.1.0?package-id=pkg%3Apypi%2Fmarkupsafe%401.1.0%3Fpackage-id%3Dc68044b44cee095d",
+      "type": "library",
+      "name": "markupsafe",
+      "version": "1.1.0",
+      "cpe": "cpe:2.3:a:python-markupsafe:python-markupsafe:1.1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/markupsafe@1.1.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-markupsafe:python_markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_markupsafe:python-markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_markupsafe:python_markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:markupsafe:python-markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:markupsafe:python_markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-markupsafe:markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_markupsafe:markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:markupsafe:markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:markupsafe:1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/multidict@4.5.2?package-id=pkg%3Apypi%2Fmultidict%404.5.2%3Fpackage-id%3D38887899fcdd42d6",
+      "type": "library",
+      "name": "multidict",
+      "version": "4.5.2",
+      "cpe": "cpe:2.3:a:python-multidict:python-multidict:4.5.2:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/multidict@4.5.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-multidict:python_multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_multidict:python-multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_multidict:python_multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:multidict:python-multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:multidict:python_multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-multidict:multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_multidict:multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:multidict:multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:multidict:4.5.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/psycopg2@2.7.6.1?package-id=pkg%3Apypi%2Fpsycopg2%402.7.6.1%3Fpackage-id%3D3b17dc5eb020ec6f",
+      "type": "library",
+      "name": "psycopg2",
+      "version": "2.7.6.1",
+      "cpe": "cpe:2.3:a:python-psycopg2:python-psycopg2:2.7.6.1:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/psycopg2@2.7.6.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-psycopg2:python_psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_psycopg2:python-psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_psycopg2:python_psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:psycopg2:python-psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:psycopg2:python_psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-psycopg2:psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_psycopg2:psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:psycopg2:psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:psycopg2:2.7.6.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/pyyaml@3.13?package-id=pkg%3Apypi%2Fpyyaml%403.13%3Fpackage-id%3D9baf4086d0b93c56",
+      "type": "library",
+      "name": "pyyaml",
+      "version": "3.13",
+      "cpe": "cpe:2.3:a:python-pyyaml:python-pyyaml:3.13:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/pyyaml@3.13",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-pyyaml:python_pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_pyyaml:python-pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_pyyaml:python_pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-pyyaml:pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_pyyaml:pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:pyyaml:python-pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:pyyaml:python_pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:pyyaml:pyyaml:3.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/trafaret@1.2.0?package-id=pkg%3Apypi%2Ftrafaret%401.2.0%3Fpackage-id%3D9a2cccda9ed6eb79",
+      "type": "library",
+      "name": "trafaret",
+      "version": "1.2.0",
+      "cpe": "cpe:2.3:a:python-trafaret:python-trafaret:1.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/trafaret@1.2.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret:python_trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret:python-trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret:python_trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret:trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret:trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret:python-trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret:python_trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret:trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:trafaret:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/trafaret-config@2.0.2?package-id=pkg%3Apypi%2Ftrafaret-config%402.0.2%3Fpackage-id%3D1343bf99ac5b1a0a",
+      "type": "library",
+      "name": "trafaret-config",
+      "version": "2.0.2",
+      "cpe": "cpe:2.3:a:python-trafaret-config:python-trafaret-config:2.0.2:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/trafaret-config@2.0.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret-config:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret_config:python-trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret_config:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret-config:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret-config:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret:python-trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret:python-trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret_config:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret_config:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret-config:python-trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret-config:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret_config:python-trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret_config:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-trafaret:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_trafaret:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret-config:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret-config:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret:python-trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret_config:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret_config:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:trafaret:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:trafaret-config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:trafaret_config:2.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/yarl@1.3.0?package-id=pkg%3Apypi%2Fyarl%401.3.0%3Fpackage-id%3D5b3ce801a12d6fe1",
+      "type": "library",
+      "name": "yarl",
+      "version": "1.3.0",
+      "cpe": "cpe:2.3:a:python-yarl:python-yarl:1.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/yarl@1.3.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-package-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "python-pip-requirements-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-yarl:python_yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_yarl:python-yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_yarl:python_yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-yarl:yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_yarl:yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:yarl:python-yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:yarl:python_yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:yarl:yarl:1.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/requirements.txt"
+        }
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "bom-ref": "urn:uuid:14118ace-39b9-4f4c-afdb-e82effcdbaf3",
+      "id": "GHSA-5h86-8mv2-jq9f",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-5h86-8mv2-jq9f"
+      },
+      "references": [
+        {
+          "id": "GHSA-5h86-8mv2-jq9f",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-5h86-8mv2-jq9f"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.9,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        },
+        {
+          "score": 8.2,
+          "severity": "high",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.76875,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp is vulnerable to directory traversal",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-5h86-8mv2-jq9f"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/pull/8079/files"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/1c335944d6a8b1298baf179b7c0b3069f10c514b"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23334"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/pull/8079"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2024-24.yaml"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ICUOCFGTB25WUT336BZ4UNYLSZOUVKBD"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XXWVZIVAYWEBHNRIILZVB3R3SDQNNAA7"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/02/msg00002.html"
+        },
+        {
+          "url": "https://www.exploit-db.com/exploits/52474"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.9.2",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:9a40b00a-71f0-4e3c-90f1-13261f6c8937",
+      "id": "GHSA-8q59-q68h-6hv4",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-8q59-q68h-6hv4"
+      },
+      "references": [
+        {
+          "id": "GHSA-8q59-q68h-6hv4",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-8q59-q68h-6hv4"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "score": 9.3,
+          "severity": "critical",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.05984,
+          "method": "other"
+        }
+      ],
+      "description": "Improper Input Validation in PyYAML",
+      "advisories": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-14343"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/commit/a001f2782501ad2d24986959f0239a354675f9dc"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1860466"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/issues/420#issuecomment-663673966"
+        },
+        {
+          "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+        },
+        {
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        },
+        {
+          "url": "https://github.com/SeldonIO/seldon-core/issues/2252"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/issues/420"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/pyyaml/PYSEC-2021-142.yaml"
+        },
+        {
+          "url": "https://pypi.org/project/PyYAML"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/pyyaml@3.13?package-id=pkg%3Apypi%2Fpyyaml%403.13%3Fpackage-id%3D9baf4086d0b93c56",
+          "versions": [
+            {
+              "version": "3.13",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=5.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:7e49e4b8-106b-48fd-8cde-2e12316acc04",
+      "id": "GHSA-rprw-h62v-c2w7",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-rprw-h62v-c2w7"
+      },
+      "references": [
+        {
+          "id": "GHSA-rprw-h62v-c2w7",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-rprw-h62v-c2w7"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.05656,
+          "method": "other"
+        }
+      ],
+      "description": "PyYAML insecurely deserializes YAML strings leading to arbitrary code execution",
+      "advisories": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18342"
+        },
+        {
+          "url": "https://github.com/marshmallow-code/apispec/issues/278"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/issues/193"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/pull/74"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/blob/master/CHANGES"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation"
+        },
+        {
+          "url": "https://security.gentoo.org/glsa/202003-45"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/commit/7b68405c81db889f83c32846462b238ccae5be80"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/pyyaml/PYSEC-2018-49.yaml"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JEX7IPV5P2QJITAMA5Z63GQCZA5I6NVZ"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KSQQMRUQSXBSUXLCRD3TSZYQ7SEZRKCE"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/M6JCFGEIEOFMWWIXGHSELMKQDD4CV2BA"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/issues/207#issuecomment-472520007"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/pyyaml@3.13?package-id=pkg%3Apypi%2Fpyyaml%403.13%3Fpackage-id%3D9baf4086d0b93c56",
+          "versions": [
+            {
+              "version": "3.13",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=5.1",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:b9854a5d-16bc-4f78-9414-1fdd47fef513",
+      "id": "GHSA-462w-v97r-4m45",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-462w-v97r-4m45"
+      },
+      "references": [
+        {
+          "id": "GHSA-462w-v97r-4m45",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-462w-v97r-4m45"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 8.6,
+          "severity": "high",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+        },
+        {
+          "score": 7.7,
+          "severity": "high",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.03534,
+          "method": "other"
+        }
+      ],
+      "description": "Jinja2 sandbox escape via string formatting",
+      "advisories": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10906"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:1152"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:1237"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2019:1329"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/09fc842ff444cd43d9d4c510756fec625ef8eb1175f14fd21de2605f@%3Cdevnull.infra.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/2b52b9c8b9d6366a4f1b407a8bde6af28d9fc73fdb3b37695fd0d9ac@%3Cdevnull.infra.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/320441dccbd9a545320f5f07306d711d4bbd31ba43dc9eebcfc602df@%3Cdevnull.infra.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/46c055e173b52d599c648a98199972dbd6a89d2b4c4647b0500f2284@%3Cdevnull.infra.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/57673a78c4d5c870d3f21465c7e2946b9f8285c7c57e54c2ae552f02@%3Ccommits.airflow.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/7f39f01392d320dfb48e4901db68daeece62fd60ef20955966739993@%3Ccommits.airflow.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/b2380d147b508bbcb90d2cad443c159e63e12555966ab4f320ee22da@%3Ccommits.airflow.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/f0c4a03418bcfe70c539c5dbaf99c04c98da13bfa1d3266f08564316@%3Ccommits.airflow.apache.org%3E"
+        },
+        {
+          "url": "https://palletsprojects.com/blog/jinja-2-10-1-released"
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2019-05/msg00030.html"
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00064.html"
+        },
+        {
+          "url": "https://usn.ubuntu.com/4011-2"
+        },
+        {
+          "url": "https://usn.ubuntu.com/4011-1"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TS7IVZAJBWOHNRDMFJDIZVFCMRP6YIUQ"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QCDYIS254EJMBNWOG4S5QY6AOTOR4TZU"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DSW3QZMFVVR7YE3UT4YRQA272TYAL5AF"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/jinja2/PYSEC-2019-217.yaml"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.10?package-id=pkg%3Apypi%2Fjinja2%402.10%3Fpackage-id%3Dcac9478da23b3a61",
+          "versions": [
+            {
+              "version": "2.10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=2.10.1",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:d6b9a87b-2ea1-413c-beac-b6970bdec48a",
+      "id": "GHSA-g3rq-g295-4j3m",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-g3rq-g295-4j3m"
+      },
+      "references": [
+        {
+          "id": "GHSA-g3rq-g295-4j3m",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-g3rq-g295-4j3m"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "score": 6.9,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.03546,
+          "method": "other"
+        }
+      ],
+      "description": "Regular Expression Denial of Service (ReDoS) in Jinja2",
+      "advisories": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-28493"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/pull/1343"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/blob/ab81fd9c277900c85da0c322a2ff9d68a235b2e6/src/jinja2/utils.py%23L20"
+        },
+        {
+          "url": "https://snyk.io/vuln/SNYK-PYTHON-JINJA2-1012994"
+        },
+        {
+          "url": "https://security.gentoo.org/glsa/202107-19"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/commit/15ef8f09b659f9100610583938005a7a10472d4d"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/jinja2/PYSEC-2021-66.yaml"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PVAKCOO7VBVUBM3Q6CBBTPBFNP5NDXF4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.10?package-id=pkg%3Apypi%2Fjinja2%402.10%3Fpackage-id%3Dcac9478da23b3a61",
+          "versions": [
+            {
+              "version": "2.10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=2.11.3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:cd2b44cd-b8ac-47fb-aa3f-bb08226494b8",
+      "id": "GHSA-5m98-qgg9-wh84",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-5m98-qgg9-wh84"
+      },
+      "references": [
+        {
+          "id": "GHSA-5m98-qgg9-wh84",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-5m98-qgg9-wh84"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.01094,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp vulnerable to Denial of Service when trying to parse malformed POST requests",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-5m98-qgg9-wh84"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-30251"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/7eecdff163ccf029fbb1ddc9de4169d4aaeb6597"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/cebe526b9c34dc3a3da9140409db63014bc4cf19"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/f21c6f2ca512a026ce7f0f6c6311f62d6a638866"
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2024/05/02/4"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/02/msg00002.html"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.9.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:06b25a25-1cf6-4ee0-8239-dc85b55a785c",
+      "id": "GHSA-jjg7-2v4v-x38h",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-jjg7-2v4v-x38h"
+      },
+      "references": [
+        {
+          "id": "GHSA-jjg7-2v4v-x38h",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-jjg7-2v4v-x38h"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.2,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "score": 6.9,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.01386,
+          "method": "other"
+        }
+      ],
+      "description": "Internationalized Domain Names in Applications (IDNA) vulnerable to denial of service from specially crafted inputs to idna.encode",
+      "advisories": [
+        {
+          "url": "https://github.com/kjd/idna/security/advisories/GHSA-jjg7-2v4v-x38h"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-3651"
+        },
+        {
+          "url": "https://github.com/kjd/idna/commit/1d365e17e10d72d0b7876316fc7b9ca0eebdd38d"
+        },
+        {
+          "url": "https://huntr.com/bounties/93d78d07-d791-4b39-a845-cbfabc44aadb"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/idna/PYSEC-2024-60.yaml"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2024/05/msg00006.html"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/F2S5E23N6E52S46KGNYTDFB75LOC4N4D"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/S5IDLLD2IKSIVRBSLB34WTSYGLMWUFWF"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ULSC7HBJKXB3BZV367WM5BR6DFEC4Z43"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4YQUPYH3SVZ5GFF2CDQ55FCM575AZTF2"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/idna@2.8?package-id=pkg%3Apypi%2Fidna%402.8%3Fpackage-id%3D9eaf949ddc81b770",
+          "versions": [
+            {
+              "version": "2.8",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.7",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:5e4562a0-ee91-4b6f-9154-abe54e87eb2e",
+      "id": "GHSA-45c4-8wx5-qw6w",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-45c4-8wx5-qw6w"
+      },
+      "references": [
+        {
+          "id": "GHSA-45c4-8wx5-qw6w",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-45c4-8wx5-qw6w"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        },
+        {
+          "score": 6.9,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.01337,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp.web.Application vulnerable to HTTP request smuggling via llhttp HTTP request parser",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-45c4-8wx5-qw6w"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-37276"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/9337fb3f2ab2b5f38d7e98a194bde6f7e3d16c40"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/9c13a52c21c23dfdb49ed89418d28a5b116d0681"
+        },
+        {
+          "url": "https://hackerone.com/reports/2001873"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/blob/v3.8.4/.gitmodules"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2023-120.yaml"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.8.5",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:a5968e0e-cdad-4722-b287-2e9791e9d2b0",
+      "id": "GHSA-8qpw-xqxj-h4r2",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-8qpw-xqxj-h4r2"
+      },
+      "references": [
+        {
+          "id": "GHSA-8qpw-xqxj-h4r2",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-8qpw-xqxj-h4r2"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+        },
+        {
+          "score": 6.9,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.01029,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp's HTTP parser (the python one, not llhttp) still overly lenient about separators",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-8qpw-xqxj-h4r2"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-gfw2-4jvh-wgfg"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/pull/3235"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/pull/8074/files"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/33ccdfb0a12690af5bb49bda2319ec0907fa7827"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23829"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/pull/8074"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2024-26.yaml"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ICUOCFGTB25WUT336BZ4UNYLSZOUVKBD"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XXWVZIVAYWEBHNRIILZVB3R3SDQNNAA7"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/02/msg00002.html"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.9.2",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:6f4be86d-9298-47d5-8d8d-b67a3d39edcc",
+      "id": "GHSA-v6wp-4m6f-gcjg",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-v6wp-4m6f-gcjg"
+      },
+      "references": [
+        {
+          "id": "GHSA-v6wp-4m6f-gcjg",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-v6wp-4m6f-gcjg"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.1,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N"
+        },
+        {
+          "score": 2.3,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.01905,
+          "method": "other"
+        }
+      ],
+      "description": "`aiohttp` Open Redirect vulnerability (`normalize_path_middleware` middleware)",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-v6wp-4m6f-gcjg"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/2545222a3853e31ace15d87ae0e2effb7da0c96b"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/blob/master/CHANGES.rst#374-2021-02-25"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-21330"
+        },
+        {
+          "url": "https://www.debian.org/security/2021/dsa-4864"
+        },
+        {
+          "url": "https://security.gentoo.org/glsa/202208-19"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2021-76.yaml"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FU7ENI54JNEK3PHEFGCE46DGMFNTVU6L"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/JN3V7CZJRT4QFCVXB6LDPCJH7NAOFCA5"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FU7ENI54JNEK3PHEFGCE46DGMFNTVU6L"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JN3V7CZJRT4QFCVXB6LDPCJH7NAOFCA5"
+        },
+        {
+          "url": "https://pypi.org/project/aiohttp"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.7.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:a7c923a7-8b89-458b-8e78-1a303398a983",
+      "id": "GHSA-q3qx-c6g2-7pw2",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-q3qx-c6g2-7pw2"
+      },
+      "references": [
+        {
+          "id": "GHSA-q3qx-c6g2-7pw2",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-q3qx-c6g2-7pw2"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.2,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N"
+        },
+        {
+          "score": 6.9,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00882,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp's ClientSession is vulnerable to CRLF injection via version",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-q3qx-c6g2-7pw2"
+        },
+        {
+          "url": "https://gist.github.com/jnovikov/184afb593d9c2114d77f508e0ccd508e"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49081"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/pull/7835/files"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/1e86b777e61cf4eefc7d92fa57fa19dcc676013b"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2023-250.yaml"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TY5SI6NK5243DEEDQUFKQKW5GQNKQUMA"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WSYWMP64ZFCTC3VO6RY6EC6VSSMV6I3A"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/02/msg00002.html"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.9.0",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:73c33ff3-9ea1-41e1-a44f-2e48f40a7708",
+      "id": "GHSA-qvrw-v9rv-5rjx",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-qvrw-v9rv-5rjx"
+      },
+      "references": [
+        {
+          "id": "GHSA-qvrw-v9rv-5rjx",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-qvrw-v9rv-5rjx"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        },
+        {
+          "score": 6.9,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00948,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp's ClientSession is vulnerable to CRLF injection via method",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-qvrw-v9rv-5rjx"
+        },
+        {
+          "url": "https://gist.github.com/jnovikov/7f411ae9fe6a9a7804cf162a3bdbb44b"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49082"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/pull/7806/files"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/e4ae01c2077d2cfa116aa82e4ff6866857f7c466"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2023-251.yaml"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TY5SI6NK5243DEEDQUFKQKW5GQNKQUMA"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WSYWMP64ZFCTC3VO6RY6EC6VSSMV6I3A"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/02/msg00002.html"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.9.0",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:8c420f87-892b-426d-8563-584c2a952020",
+      "id": "GHSA-h75v-3vvj-5mfj",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-h75v-3vvj-5mfj"
+      },
+      "references": [
+        {
+          "id": "GHSA-h75v-3vvj-5mfj",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-h75v-3vvj-5mfj"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00979,
+          "method": "other"
+        }
+      ],
+      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "advisories": [
+        {
+          "url": "https://github.com/pallets/jinja/security/advisories/GHSA-h75v-3vvj-5mfj"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/commit/0668239dc6b44ef38e7a6c9f91f312fd4ca581cb"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-34064"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/567XIGSZMABG6TSMYWD7MIYNJSUQQRUC"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GCLF44KY43BSVMTE6S53B4V5WP3FRRSE"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SSCBHIL6BYKR5NRCBXP4XMP2CEEKGFVS"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZALNWE3TXPPHVPSI3AZ5CTMSTAVN5UMS"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00009.html"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.10?package-id=pkg%3Apypi%2Fjinja2%402.10%3Fpackage-id%3Dcac9478da23b3a61",
+          "versions": [
+            {
+              "version": "2.10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.1.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:3ecc42c9-08c5-4f12-962c-db7d4db23abc",
+      "id": "GHSA-gfw2-4jvh-wgfg",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-gfw2-4jvh-wgfg"
+      },
+      "references": [
+        {
+          "id": "GHSA-gfw2-4jvh-wgfg",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-gfw2-4jvh-wgfg"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        },
+        {
+          "score": 6.9,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00857,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP has problems in HTTP parser (the python one, not llhttp)",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-gfw2-4jvh-wgfg"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-47627"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/d5c12ba890557a575c313bb3017910d7616fce3d"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.8.6"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2023-246.yaml"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FUSJVQ7OQ55RWL4XAX2F5EZ73N4ZSH6U"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VDKQ6HM3KNDU4OQI476ZWT4O7DMSIT35"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WQYQL6WV535EEKSNH7KRARLLMOW5WXDM"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/02/msg00002.html"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.8.6",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:d3650d63-f895-49ad-bb5f-7add92fa9b89",
+      "id": "GHSA-h5c8-rqwp-cp95",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-h5c8-rqwp-cp95"
+      },
+      "references": [
+        {
+          "id": "GHSA-h5c8-rqwp-cp95",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-h5c8-rqwp-cp95"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00892,
+          "method": "other"
+        }
+      ],
+      "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "advisories": [
+        {
+          "url": "https://github.com/pallets/jinja/security/advisories/GHSA-h5c8-rqwp-cp95"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22195"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/commit/716795349a41d4983a9a4771f7d883c96ea17be7"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/releases/tag/3.1.3"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2024/01/msg00010.html"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5XCWZD464AJJJUBOO7CMPXQ4ROBC6JX2"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DELCVUUYX75I5K4Q5WMJG4MUZJA6VAIP"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O7YWRBX6JQCWC2XXCTZ55C7DPMGICCN3"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00009.html"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.10?package-id=pkg%3Apypi%2Fjinja2%402.10%3Fpackage-id%3Dcac9478da23b3a61",
+          "versions": [
+            {
+              "version": "2.10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.1.3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:11d244f6-6a53-4204-a163-3a7403553b4c",
+      "id": "GHSA-6mq8-rvhq-8wgg",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-6mq8-rvhq-8wgg"
+      },
+      "references": [
+        {
+          "id": "GHSA-6mq8-rvhq-8wgg",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-6mq8-rvhq-8wgg"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00583,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP's HTTP Parser auto_decompress feature is vulnerable to zip bomb",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-6mq8-rvhq-8wgg"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/2b920c39002cee0ec5b402581779bbaaf7c9138a"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69223"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:2edb7c9e-7d98-419c-8d7c-acfec9af9d03",
+      "id": "GHSA-cq5v-8q36-5273",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-cq5v-8q36-5273"
+      },
+      "references": [
+        {
+          "id": "GHSA-cq5v-8q36-5273",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-cq5v-8q36-5273"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.1,
+          "severity": "high",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00528,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: Out-of-bounds heap read in C HTTP response parser error path (malformed chunked response)",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-cq5v-8q36-5273"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/pull/13223"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/49f65d54150397892f7bcc4aae887767d51c322d"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.14.3"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:c88bba68-c15d-4bcf-b6d7-7af50f4f5888",
+      "id": "GHSA-7gpw-8wmc-pm8g",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-7gpw-8wmc-pm8g"
+      },
+      "references": [
+        {
+          "id": "GHSA-7gpw-8wmc-pm8g",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-7gpw-8wmc-pm8g"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.1,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00666,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp Cross-site Scripting vulnerability on index pages for static file handling",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-7gpw-8wmc-pm8g"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/pull/8319/files"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/28335525d1eac015a7e7584137678cbb6ff19397"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27306"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/pull/8319"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/2EXRGTN2WG7VZLUZ7WOXU5GQJKCPPHKP"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NWEI6NIHZ3G7DURDZVMRK7ZEFC2BTD3U"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZIVBMPEY7WWOFMC3CWXFBRQPFECV4SW3"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/02/msg00002.html"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.9.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:a5d678d2-8601-4b19-aa99-4b6219da250b",
+      "id": "GHSA-m5qp-6w8w-w647",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-m5qp-6w8w-w647"
+      },
+      "references": [
+        {
+          "id": "GHSA-m5qp-6w8w-w647",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-m5qp-6w8w-w647"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "score": 6.6,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00609,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP has a Multipart Header Size Bypass",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-m5qp-6w8w-w647"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34516"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/8a74257b3804c9aac0bf644af93070f68f6c5a6f"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.13.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:09da9d77-3c86-4f66-86f5-60ec472d3477",
+      "id": "GHSA-63hw-fmq6-xxg2",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-63hw-fmq6-xxg2"
+      },
+      "references": [
+        {
+          "id": "GHSA-63hw-fmq6-xxg2",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-63hw-fmq6-xxg2"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.6,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00563,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: C HTTP Parser Bypasses max_line_size for Fragmented Lines",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-63hw-fmq6-xxg2"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/5ab61bb4cd88f19b712f12c7c9295fe262bf804d"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.1",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:05c013fa-faa9-4647-93da-76baae5dc6f0",
+      "id": "GHSA-8495-4g3g-x7pr",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-8495-4g3g-x7pr"
+      },
+      "references": [
+        {
+          "id": "GHSA-8495-4g3g-x7pr",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-8495-4g3g-x7pr"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.3,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00563,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp allows request smuggling due to incorrect parsing of chunk extensions",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-8495-4g3g-x7pr"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/259edc369075de63e6f3a4eaade058c62af0df71"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-52304"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/02/msg00002.html"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.10.11",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:39c89038-4ac7-4207-aaa2-bd393f760a1d",
+      "id": "GHSA-5wr8-gcqf-gqf3",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-5wr8-gcqf-gqf3"
+      },
+      "references": [
+        {
+          "id": "GHSA-5wr8-gcqf-gqf3",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-5wr8-gcqf-gqf3"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 8.2,
+          "severity": "high",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00399,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp server lacks an initial request/header timeout",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-5wr8-gcqf-gqf3"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/be846822b4b3a5a54b6163e794b42dc06fba54a3"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.14.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:0c5c6f4a-96c3-43d7-b269-c35196813168",
+      "id": "GHSA-xcgm-r5h9-7989",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-xcgm-r5h9-7989"
+      },
+      "references": [
+        {
+          "id": "GHSA-xcgm-r5h9-7989",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-xcgm-r5h9-7989"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.6,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00539,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: Incomplete websocket frame payloads bypass memory limits",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-xcgm-r5h9-7989"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.1",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:13660caf-255b-4091-9125-145d9f3a6c14",
+      "id": "GHSA-mq44-7p77-q5h7",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-mq44-7p77-q5h7"
+      },
+      "references": [
+        {
+          "id": "GHSA-mq44-7p77-q5h7",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-mq44-7p77-q5h7"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.9,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00524,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: WebSocket client accepts compressed frames without negotiated permessage-deflate",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-mq44-7p77-q5h7"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59881"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/pull/12978"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/47fb6ae354d4fa22048f4dbe7dbf82b625f0a2f6"
+        },
+        {
+          "url": "http://github.com/aio-libs/aiohttp/releases/tag/v3.14.2"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.2",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:3c02ac70-204e-4054-953c-213494699100",
+      "id": "GHSA-q2x7-8rv6-6q7h",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-q2x7-8rv6-6q7h"
+      },
+      "references": [
+        {
+          "id": "GHSA-q2x7-8rv6-6q7h",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-q2x7-8rv6-6q7h"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "score": 5.4,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00522,
+          "method": "other"
+        }
+      ],
+      "description": "Jinja has a sandbox breakout through indirect reference to format method",
+      "advisories": [
+        {
+          "url": "https://github.com/pallets/jinja/security/advisories/GHSA-q2x7-8rv6-6q7h"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/releases/tag/3.1.5"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-56326"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/commit/48b0687e05a5466a91cd5812d604fa37ad0943b4"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/04/msg00022.html"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.10?package-id=pkg%3Apypi%2Fjinja2%402.10%3Fpackage-id%3Dcac9478da23b3a61",
+          "versions": [
+            {
+              "version": "2.10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.1.5",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:7f451011-cfc1-4a84-a25d-7f41ab4a23aa",
+      "id": "GHSA-63hf-3vf5-4wqf",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-63hf-3vf5-4wqf"
+      },
+      "references": [
+        {
+          "id": "GHSA-63hf-3vf5-4wqf",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-63hf-3vf5-4wqf"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 9.1,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+        },
+        {
+          "score": 2.7,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00676,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP's C parser (llhttp) accepts null bytes and control characters in response header values - header injection/security bypass",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-63hf-3vf5-4wqf"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34520"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/9370b9714a7a56003cacd31a9b4ae16eab109ba4"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.13.4"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2026-2102.yaml"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:cbb21a10-428e-4eae-9b82-78051cff64b6",
+      "id": "GHSA-9xw5-w5jj-pvcg",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-9xw5-w5jj-pvcg"
+      },
+      "references": [
+        {
+          "id": "GHSA-9xw5-w5jj-pvcg",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-9xw5-w5jj-pvcg"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 8.2,
+          "severity": "high",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00381,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: File descriptor exhaustion in multipart requests",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-9xw5-w5jj-pvcg"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111066"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/2d94633b7f1b4c1ba07d647b629a8440652b2d09"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.14.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:9f9c9a2e-d974-4cf0-91c6-7f35f8bc22cf",
+      "id": "GHSA-p998-jp59-783m",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-p998-jp59-783m"
+      },
+      "references": [
+        {
+          "id": "GHSA-p998-jp59-783m",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-p998-jp59-783m"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.6,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00497,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP affected by UNC SSRF/NTLMv2 Credential Theft/Local File Read in static resource handler on Windows",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-p998-jp59-783m"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/0ae2aa076c84573df83fc1fdc39eec0f5862fe3d"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34515"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.13.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:71443fe7-0c8c-41f7-8567-64d8b8c51340",
+      "id": "GHSA-4fvr-rgm6-gqmc",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-4fvr-rgm6-gqmc"
+      },
+      "references": [
+        {
+          "id": "GHSA-4fvr-rgm6-gqmc",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-4fvr-rgm6-gqmc"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.6,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00493,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: HTTP/1 Pipelined Requests Queue Without Limit",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-4fvr-rgm6-gqmc"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/dfdfa9d5aad5d21f91c79fb2ceeba0f8046cb6cf"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.1",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:35a7db3c-96a3-4af8-9835-4663dfe581c8",
+      "id": "GHSA-g3cq-j2xw-wf74",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-g3cq-j2xw-wf74"
+      },
+      "references": [
+        {
+          "id": "GHSA-g3cq-j2xw-wf74",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-g3cq-j2xw-wf74"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.6,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00493,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: Unread Compressed Request Bodies Bypass client_max_size During Cleanup",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-g3cq-j2xw-wf74"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.1",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:b620d7ac-3f74-4860-99e7-73b145850d80",
+      "id": "GHSA-jg22-mg44-37j8",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-jg22-mg44-37j8"
+      },
+      "references": [
+        {
+          "id": "GHSA-jg22-mg44-37j8",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-jg22-mg44-37j8"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:L/I:H/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00495,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP is Vulnerable to Deserialization of Untrusted Data",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-jg22-mg44-37j8"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34993"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/dcf40f30637e8752c76781cf6703b5a236749a00"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.0",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:f65f24ad-9b7a-4b5c-a773-87632f4f34a5",
+      "id": "GHSA-cpwx-vrp4-4pq7",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-cpwx-vrp4-4pq7"
+      },
+      "references": [
+        {
+          "id": "GHSA-cpwx-vrp4-4pq7",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-cpwx-vrp4-4pq7"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.4,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00507,
+          "method": "other"
+        }
+      ],
+      "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+      "advisories": [
+        {
+          "url": "https://github.com/pallets/jinja/security/advisories/GHSA-cpwx-vrp4-4pq7"
+        },
+        {
+          "url": "https://github.com/pallets/jinja/commit/90457bbf33b8662926ae65cdde4c4c32e756e403"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27516"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/04/msg00045.html"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/04/msg00022.html"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jinja2@2.10?package-id=pkg%3Apypi%2Fjinja2%402.10%3Fpackage-id%3Dcac9478da23b3a61",
+          "versions": [
+            {
+              "version": "2.10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.1.6",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:736b91e8-18d8-4373-99ff-363876cf78db",
+      "id": "GHSA-w2fm-2cpv-w7v5",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-w2fm-2cpv-w7v5"
+      },
+      "references": [
+        {
+          "id": "GHSA-w2fm-2cpv-w7v5",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-w2fm-2cpv-w7v5"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.9,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.0044,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp allows unlimited trailer headers, leading to possible uncapped memory usage",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-w2fm-2cpv-w7v5"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/0c2e9da51126238a421568eb7c5b53e5b5d17b36"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22815"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.13.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:dbd5b516-bd25-4f8e-9a37-8b115d46abe9",
+      "id": "GHSA-65pc-fj4g-8rjx",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-65pc-fj4g-8rjx"
+      },
+      "references": [
+        {
+          "id": "GHSA-65pc-fj4g-8rjx",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-65pc-fj4g-8rjx"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "score": 6.9,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00457,
+          "method": "other"
+        }
+      ],
+      "description": "Internationalized Domain Names in Applications (IDNA): Specially crafted inputs to idna.encode() can bypass CVE-2024-3651 fix",
+      "advisories": [
+        {
+          "url": "https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45409"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/idna/PYSEC-2026-215.yaml"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/idna@2.8?package-id=pkg%3Apypi%2Fidna%402.8%3Fpackage-id%3D9eaf949ddc81b770",
+          "versions": [
+            {
+              "version": "2.8",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.15",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:18a93b6b-0231-4542-89d6-d9d50ee2897b",
+      "id": "GHSA-mfx4-hv73-q22v",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-mfx4-hv73-q22v"
+      },
+      "references": [
+        {
+          "id": "GHSA-mfx4-hv73-q22v",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-mfx4-hv73-q22v"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.3,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00443,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: HTTP request smuggling via WebSocket upgrade",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-mfx4-hv73-q22v"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/pull/13017"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/6ae358f0983c3f4d6f67692b2f8e65dc8e091c98"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.14.2"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.2",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:46f618bb-f834-4cc4-a77d-cedf50d9f732",
+      "id": "GHSA-xx9p-xxvh-7g8j",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-xx9p-xxvh-7g8j"
+      },
+      "references": [
+        {
+          "id": "GHSA-xx9p-xxvh-7g8j",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-xx9p-xxvh-7g8j"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.4,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:N/A:N"
+        },
+        {
+          "score": 2.3,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00834,
+          "method": "other"
+        }
+      ],
+      "description": "Aiohttp has inconsistent interpretation of `Content-Length` vs. `Transfer-Encoding` differing in C and Python fallbacks",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-xx9p-xxvh-7g8j"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/f016f0680e4ace6742b03a70cb0382ce86abe371"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.8.0"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-47641"
+        },
+        {
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2023-247.yaml"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/02/msg00002.html"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.8.0",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:95a77321-c7f6-4ab1-8648-091d5d252e75",
+      "id": "GHSA-6jhg-hg63-jvvf",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-6jhg-hg63-jvvf"
+      },
+      "references": [
+        {
+          "id": "GHSA-6jhg-hg63-jvvf",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-6jhg-hg63-jvvf"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.6,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00407,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP vulnerable to  denial of service through large payloads",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-6jhg-hg63-jvvf"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/b7dbd35375aedbcd712cbae8ad513d56d11cce60"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69228"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:7c235d30-d1bf-41df-b5fa-9f17b72d92e5",
+      "id": "GHSA-g84x-mcqj-x9qq",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-g84x-mcqj-x9qq"
+      },
+      "references": [
+        {
+          "id": "GHSA-g84x-mcqj-x9qq",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-g84x-mcqj-x9qq"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.6,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00404,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP vulnerable to DoS through chunked messages",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-g84x-mcqj-x9qq"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/4ed97a4e46eaf61bd0f05063245f613469700229"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/dc3170b56904bdf814228fae70a5501a42a6c712"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69229"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:5fdabd12-b4a5-4aa1-9c35-6e142fc02918",
+      "id": "GHSA-jj3x-wxrx-4x23",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-jj3x-wxrx-4x23"
+      },
+      "references": [
+        {
+          "id": "GHSA-jj3x-wxrx-4x23",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-jj3x-wxrx-4x23"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.6,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00396,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP vulnerable to DoS when bypassing asserts",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-jj3x-wxrx-4x23"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/bc1319ec3cbff9438a758951a30907b072561259"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69227"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:aa461923-3d2b-4cef-a91c-f5fdc86c68c6",
+      "id": "GHSA-c427-h43c-vf67",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-c427-h43c-vf67"
+      },
+      "references": [
+        {
+          "id": "GHSA-c427-h43c-vf67",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-c427-h43c-vf67"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.3,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00393,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP accepts duplicate Host headers",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-c427-h43c-vf67"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34525"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/53e2e6fc58b89c6185be7820bd2c9f40216b3000"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/e00ca3cca92c465c7913c4beb763a72da9ed8349"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.13.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:8035a7d1-1523-4e57-8cf7-85fe501a6504",
+      "id": "GHSA-6cjc-53gc-5rqm",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-6cjc-53gc-5rqm"
+      },
+      "references": [
+        {
+          "id": "GHSA-6cjc-53gc-5rqm",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-6cjc-53gc-5rqm"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.9,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00365,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: Connector pool exhaustion via Max-Age overflow",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-6cjc-53gc-5rqm"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111065"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/9dd8eaf4e31f1237ef2c1574a8c82a739fca5805"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.14.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:33ce29f4-8b20-4adc-8d42-1fb7b873b8af",
+      "id": "GHSA-f9xw-jh8m-3mwq",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-f9xw-jh8m-3mwq"
+      },
+      "references": [
+        {
+          "id": "GHSA-f9xw-jh8m-3mwq",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-f9xw-jh8m-3mwq"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.3,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00365,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: Absolute-form request targets can spoof Request.scheme",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-f9xw-jh8m-3mwq"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111748"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/6d4e7b01f9b951aa084a75d7356e907d4ee80411"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.14.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:e1e61dc2-2b8e-446d-8f02-ab7f76db06d5",
+      "id": "GHSA-hcc4-c3v8-rx92",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-hcc4-c3v8-rx92"
+      },
+      "references": [
+        {
+          "id": "GHSA-hcc4-c3v8-rx92",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-hcc4-c3v8-rx92"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 2.7,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00609,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP Affected by Denial of Service (DoS) via Unbounded DNS Cache in TCPConnector",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-hcc4-c3v8-rx92"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/c4d77c3533122be353b8afca8e8675e3b4cbda98"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34513"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.13.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:b45aa27d-5ab4-4c0c-8f4f-df9754caec3d",
+      "id": "GHSA-hpj7-wq8m-9hgp",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-hpj7-wq8m-9hgp"
+      },
+      "references": [
+        {
+          "id": "GHSA-hpj7-wq8m-9hgp",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-hpj7-wq8m-9hgp"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.3,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00307,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: DigestAuthMiddleware Applies Credentials to Cross-Origin Redirect Challenges",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-hpj7-wq8m-9hgp"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/38d16060037e1bfcd6d677abababa3c2a4bb58fa"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.1",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:a0bad7ce-2cb8-4859-81d2-403cbdc28919",
+      "id": "GHSA-pqxq-w44r-73xw",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-pqxq-w44r-73xw"
+      },
+      "references": [
+        {
+          "id": "GHSA-pqxq-w44r-73xw",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-pqxq-w44r-73xw"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.3,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:L/SA:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00304,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: Pure-Python parser request smuggling",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-pqxq-w44r-73xw"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111750"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/9b27347e61454d9f8ca2055f4c67a37dee336e83"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.14.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:e3a3138d-ea92-4bb8-b53b-d40a1cbb6777",
+      "id": "GHSA-m6qw-4cw2-hm4m",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-m6qw-4cw2-hm4m"
+      },
+      "references": [
+        {
+          "id": "GHSA-m6qw-4cw2-hm4m",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-m6qw-4cw2-hm4m"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 2.7,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00533,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: CRLF injection in multipart headers",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-m6qw-4cw2-hm4m"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/bf88077ebb14f4c29924b8e8904cba20c55c28b8"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.0",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:59c069ec-41c2-419a-b4fc-abd7effc9bbc",
+      "id": "GHSA-3wq7-rqq7-wx6j",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-3wq7-rqq7-wx6j"
+      },
+      "references": [
+        {
+          "id": "GHSA-3wq7-rqq7-wx6j",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-3wq7-rqq7-wx6j"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 2.7,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00507,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP has late size enforcement for non-file multipart fields causes memory DoS",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-3wq7-rqq7-wx6j"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34517"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/cbb774f38330563422ca0c413a71021d7b944145"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.13.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:0f231720-ab00-4055-a730-452c69b62942",
+      "id": "GHSA-966j-vmvw-g2g9",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-966j-vmvw-g2g9"
+      },
+      "references": [
+        {
+          "id": "GHSA-966j-vmvw-g2g9",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-966j-vmvw-g2g9"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        },
+        {
+          "score": 2.7,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00405,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP leaks Cookie and Proxy-Authorization headers on cross-origin redirect",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-966j-vmvw-g2g9"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34518"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/5351c980dcec7ad385730efdf4e1f4338b24fdb6"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.13.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:2709b164-bc0b-4d6d-8d1a-d33adca66afc",
+      "id": "GHSA-4m7w-qmgq-4wj5",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-4m7w-qmgq-4wj5"
+      },
+      "references": [
+        {
+          "id": "GHSA-4m7w-qmgq-4wj5",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-4m7w-qmgq-4wj5"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 2.7,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.0047,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: TLS Server Hostname Override Is Ignored When Reusing HTTPS Connections",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-4m7w-qmgq-4wj5"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.1",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:6f659eb9-56a2-40f5-a5b2-8c02e9be5127",
+      "id": "GHSA-hg6j-4rv6-33pg",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-hg6j-4rv6-33pg"
+      },
+      "references": [
+        {
+          "id": "GHSA-hg6j-4rv6-33pg",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-hg6j-4rv6-33pg"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.6,
+          "severity": "medium",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00213,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP is vulnerable to cross-origin redirect with per-request cookies",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-hg6j-4rv6-33pg"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47265"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/f54c40851b0d6c4bbdab97ba518a223adda32478"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.0",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:5268ff37-e943-4d47-884b-5cfd933c03b6",
+      "id": "GHSA-2vrm-gr82-f7m5",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-2vrm-gr82-f7m5"
+      },
+      "references": [
+        {
+          "id": "GHSA-2vrm-gr82-f7m5",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-2vrm-gr82-f7m5"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 2.7,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00398,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP has CRLF injection through multipart part content type header construction",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-2vrm-gr82-f7m5"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/9a6ada97e2c6cf1ce31727c6c9fcea17c21f6f06"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34514"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.13.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:ef0a3298-8668-4f73-bb7c-6463d166e860",
+      "id": "GHSA-mwh4-6h8g-pg8w",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-mwh4-6h8g-pg8w"
+      },
+      "references": [
+        {
+          "id": "GHSA-mwh4-6h8g-pg8w",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-mwh4-6h8g-pg8w"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 2.7,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00398,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP has HTTP response splitting via \\r in reason phrase",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-mwh4-6h8g-pg8w"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34519"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/53b35a2f8869c37a133e60bf1a82a1c01642ba2b"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.13.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:9ab00a19-986a-4cd4-9df1-6443967518d7",
+      "id": "GHSA-9x8q-7h8h-wcw9",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-9x8q-7h8h-wcw9"
+      },
+      "references": [
+        {
+          "id": "GHSA-9x8q-7h8h-wcw9",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-9x8q-7h8h-wcw9"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 1.7,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.0046,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: Payload Response Resources Are Not Closed After Mid-Body Disconnect",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-9x8q-7h8h-wcw9"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/a762eda5242f6490d6ba667533193f8b473ad587"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.1",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:32b66aaa-97b0-4291-a216-3eafa43d5608",
+      "id": "GHSA-2fqr-mr3j-6wp8",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-2fqr-mr3j-6wp8"
+      },
+      "references": [
+        {
+          "id": "GHSA-2fqr-mr3j-6wp8",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-2fqr-mr3j-6wp8"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 1.3,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00493,
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp: Host-Only Cookies Become Domain Cookies After CookieJar Persistence",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-2fqr-mr3j-6wp8"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.1",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:3c8ff19b-3328-41ac-86cf-ac2739b3b9a5",
+      "id": "GHSA-54jq-c3m8-4m76",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-54jq-c3m8-4m76"
+      },
+      "references": [
+        {
+          "id": "GHSA-54jq-c3m8-4m76",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-54jq-c3m8-4m76"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 2.7,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00368,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP vulnerable to brute-force leak of internal static ﬁle path components",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-54jq-c3m8-4m76"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/f2a86fd5ac0383000d1715afddfa704413f0711e"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69226"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:1250f659-55bf-4a27-abb4-94e753fdcb98",
+      "id": "GHSA-fh55-r93g-j68g",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-fh55-r93g-j68g"
+      },
+      "references": [
+        {
+          "id": "GHSA-fh55-r93g-j68g",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-fh55-r93g-j68g"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 2.7,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00364,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP Vulnerable to Cookie Parser Warning Storm",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-fh55-r93g-j68g"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/64629a0834f94e46d9881f4e99c41a137e1f3326"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69230"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:d90b3b29-c815-47b1-8dc3-a9d6d7c86f17",
+      "id": "GHSA-9548-qrrj-x5pj",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-9548-qrrj-x5pj"
+      },
+      "references": [
+        {
+          "id": "GHSA-9548-qrrj-x5pj",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-9548-qrrj-x5pj"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 1.7,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00355,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP is vulnerable to HTTP Request/Response Smuggling through incorrect parsing of chunked trailer sections",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-9548-qrrj-x5pj"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/e8d774f635dc6d1cd3174d0e38891da5de0e2b6a"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53643"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.12.14",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:27d70252-c414-4729-aafa-e782c1919e88",
+      "id": "GHSA-mqqc-3gqh-h2x8",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-mqqc-3gqh-h2x8"
+      },
+      "references": [
+        {
+          "id": "GHSA-mqqc-3gqh-h2x8",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-mqqc-3gqh-h2x8"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 2.7,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00282,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP has unicode match groups in regexes for ASCII protocol elements",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-mqqc-3gqh-h2x8"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/c7b7a044f88c71cefda95ec75cdcfaa4792b3b96"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69225"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:4c65aad4-902b-49f7-b6dd-cfaa8bb6ccfe",
+      "id": "GHSA-gx76-c99x-2c96",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-gx76-c99x-2c96"
+      },
+      "references": [
+        {
+          "id": "GHSA-gx76-c99x-2c96",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-gx76-c99x-2c96"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 2.3,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00294,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: Cookie from subdomain can remove Host-Only Scope from existing cookies",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-gx76-c99x-2c96"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111749"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/6a07c171ef9f3be583e2907dcd1931372efca8d6"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.14.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:42bab63f-ac4c-44db-8b77-81f0e8220475",
+      "id": "GHSA-69f9-5gxw-wvc2",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-69f9-5gxw-wvc2"
+      },
+      "references": [
+        {
+          "id": "GHSA-69f9-5gxw-wvc2",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-69f9-5gxw-wvc2"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 2.7,
+          "severity": "low",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.0025,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP's unicode processing of header values could cause parsing discrepancies",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-69f9-5gxw-wvc2"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/32677f2adfd907420c078dda6b79225c6f4ebce0"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69224"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.13.3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:9e162471-dbde-4ea5-9a6d-b46d25d70b55",
+      "id": "GHSA-494j-54xm-rwp3",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-494j-54xm-rwp3"
+      },
+      "references": [
+        {
+          "id": "GHSA-494j-54xm-rwp3",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-494j-54xm-rwp3"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "severity": "low",
+          "method": "other"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.0022,
+          "method": "other"
+        }
+      ],
+      "description": "AIOHTTP: Secure attribute not enforced for shared cookie",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-494j-54xm-rwp3"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/999c356d61e966faffa97b06ab0d0455226d36c5"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.14.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:88d5e61f-9b5b-451d-8118-22be907fa07b",
+      "id": "GHSA-2g87-pp6c-29x5",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-2g87-pp6c-29x5"
+      },
+      "references": [
+        {
+          "id": "GHSA-2g87-pp6c-29x5",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-2g87-pp6c-29x5"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 8.7,
+          "severity": "high",
+          "method": "other",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+        }
+      ],
+      "description": "aiohttp: Multiple instances of excessive or unbounded memory/CPU use",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-2g87-pp6c-29x5"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/09bcaa73ff084a0c539bbf16a0a78743acb7141f"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/0ae507423f681161efa77d20052b4054397c7fb6"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/3d850ee9b92573c7e913821cbcb96005beb3f4df"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/47babd8c23ca79e2bae6cc8dcb5752b61e369fc7"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/615fec3d4f088f30d2ee72cad760152e92aa1c53"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/6963ee0befec1502b6bb7b4db6c72d044c08f4fa"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/6a4f6682817839313b04b8e5cea2b39c1a88ab4f"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/8cfbe9abe5e11b84006a10f9bdf82bf607671dab"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/a555ab698e08e9baea7386d5b4c0761cb8956fdd"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/c6ac0e44c3c573ff9616f4a6a532992538b31e43"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/d925a80539ffd227da1d93ab4a5bff123cc777db"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/releases/tag/v3.14.4"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.14.4",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:45a9ab4e-c65c-4da6-a092-054a50b50c88",
+      "id": "GHSA-pjjw-qhg8-p2p9",
+      "source": {
+        "name": "github-language-python",
+        "url": "https://github.com/advisories/GHSA-pjjw-qhg8-p2p9"
+      },
+      "references": [
+        {
+          "id": "GHSA-pjjw-qhg8-p2p9",
+          "source": {
+            "name": "github-language-python",
+            "url": "https://github.com/advisories/GHSA-pjjw-qhg8-p2p9"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "severity": "medium",
+          "method": "other"
+        }
+      ],
+      "description": "aiohttp has vulnerable dependency that is vulnerable to request smuggling",
+      "advisories": [
+        {
+          "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-pjjw-qhg8-p2p9"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/996de2629ef6b4c2934a7c04dfd49d0950d4c43b"
+        },
+        {
+          "url": "https://github.com/aio-libs/aiohttp/commit/bcc416e533796d04fb8124ef1e7686b1f338767a"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/aiohttp@3.5.3?package-id=pkg%3Apypi%2Faiohttp%403.5.3%3Fpackage-id%3D0538e83b9cacecff",
+          "versions": [
+            {
+              "version": "3.5.3",
+              "status": "affected"
+            },
+            {
+              "range": "vers:pypi/>=3.8.6",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

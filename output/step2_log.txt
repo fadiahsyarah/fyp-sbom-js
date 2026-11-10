@@ -28,15 +28,11 @@ Top 10 most exploitable:
   #10  P2  dvpwa       aiohttp 3.5.3  CVE-2024-23334  EPSS=0.76875  High
 
 Wrote output/enriched_findings.json, output/ranked_findings.csv, output/step2_metadata.json
-  CVE-2023-4863    snapshot 0.99979 / 0.9998   API 0.99979 / 0.9998   MATCH
-  CVE-2021-39144   snapshot 0.98124 / 0.99912   API 0.98124 / 0.99912   MATCH
-  CVE-2013-7285    snapshot 0.84362 / 0.99697   API 0.84362 / 0.99697   MATCH
-  CVE-2020-26217   snapshot 0.82717 / 0.99666   API 0.82717 / 0.99666   MATCH
-  CVE-2020-26259   snapshot 0.82392 / 0.99661   API 0.82392 / 0.99661   MATCH
-  CVE-2021-21351   snapshot 0.82136 / 0.99653   API 0.82136 / 0.99653   MATCH
-  CVE-2020-26258   snapshot 0.81817 / 0.99645   API 0.81817 / 0.99645   MATCH
-  CVE-2021-21341   snapshot 0.77801 / 0.99568   API 0.77801 / 0.99568   MATCH
-  CVE-2021-29505   snapshot 0.77232 / 0.99552   API 0.77232 / 0.99552   MATCH
-  CVE-2024-23334   snapshot 0.76875 / 0.99546   API 0.76875 / 0.99546   MATCH
+Checking all 421 CVEs with an EPSS score against the live API (date 2026-10-28)...
+  e.g. CVE-2023-4863    snapshot 0.99979  API 0.99979  MATCH
+  e.g. CVE-2021-39144   snapshot 0.98124  API 0.98124  MATCH
+  e.g. CVE-2013-7285    snapshot 0.84362  API 0.84362  MATCH
+  e.g. CVE-2020-26217   snapshot 0.82717  API 0.82717  MATCH
+  e.g. CVE-2020-26259   snapshot 0.82392  API 0.82392  MATCH
 
-API cross-check (2026-10-28): 10/10 match. Wrote output/epss_api_check.json
+API check (2026-10-28): 421/421 CVEs match. Wrote output/epss_api_check.json
