@@ -1,72 +1,59 @@
+// STEP 1 - SBOM + vulnerability scan, one folder per repo.
+// For each repo in testset.json:
+//   1. download it (my fork) and switch to its frozen commit
+//   2. make sure it has a frozen lock file (exact package versions)
+//   3. Syft  -> output/<repo>/sbom.cdx.json   (the SBOM, CycloneDX)
+//   4. Grype -> output/<repo>/grype.json      (vulnerabilities matched against the SBOM)
+// Run: node step1.js
 const { execFileSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
 const ROOT = __dirname;
-const REPOS_DIR = path.join(ROOT, "repos");
-const OUT_DIR = path.join(ROOT, "output");
+const REPOS = path.join(ROOT, "repos");   // downloaded repos (not uploaded to GitHub)
+const LOCKS = path.join(ROOT, "locks");   // frozen npm lock files
+const OUT = path.join(ROOT, "output");
 
-function run(cmd, args, opts = {}) {
+// Run a command, print it first, and return what it prints
+function run(cmd, args, cwd) {
   console.log(`  $ ${cmd} ${args.join(" ")}`);
-  return execFileSync(cmd, args, { stdio: ["ignore", "pipe", "inherit"], maxBuffer: 1 << 30, ...opts }).toString();
+  return execFileSync(cmd, args, { cwd, stdio: ["ignore", "pipe", "inherit"], maxBuffer: 1 << 30 }).toString();
 }
 
-function cloneRepo(repo) {
-  const dir = path.join(REPOS_DIR, repo.name);
-  if (!fs.existsSync(dir)) run("git", ["clone", "--depth", "1", ...(repo.ref ? ["--branch", repo.ref] : []), repo.url, dir]);
-  if (repo.commit && run("git", ["-C", dir, "rev-parse", "HEAD"]).trim() !== repo.commit) {
+const { repos } = JSON.parse(fs.readFileSync(path.join(ROOT, "testset.json"), "utf8"));
+for (const repo of repos) {
+  console.log(`\n== ${repo.name}`);
+  const dir = path.join(REPOS, repo.name);
+  const out = path.join(OUT, repo.name);
+  fs.mkdirSync(out, { recursive: true });
+
+  // 1. Download the repo and go to the frozen commit
+  if (!fs.existsSync(dir)) run("git", ["clone", "--depth", "1", repo.url, dir]);
+  if (run("git", ["-C", dir, "rev-parse", "HEAD"]).trim() !== repo.commit) {
     run("git", ["-C", dir, "fetch", "--depth", "1", "origin", repo.commit]);
     run("git", ["-C", dir, "checkout", "--quiet", repo.commit]);
   }
-  const commit = run("git", ["-C", dir, "rev-parse", "HEAD"]).trim();
-  const hasLock = ["package-lock.json", "yarn.lock", "pnpm-lock.yaml"].some(f => fs.existsSync(path.join(dir, f)));
-  if (!hasLock && fs.existsSync(path.join(dir, "package.json"))) {
-    console.log("  no lock file found -> generating package-lock.json (no scripts run)");
-    try { run("npm", ["install", "--package-lock-only", "--ignore-scripts", "--no-audit", "--no-fund"], { cwd: dir }); }
-    catch { console.warn("  ! could not generate lock file"); }
+
+  // 2. Lock file: Syft needs it to see exact package versions.
+  //    Use the frozen copy in locks/ if the repo has none; if there is no frozen copy yet, create one and save it.
+  const lock = path.join(dir, "package-lock.json");
+  const frozen = path.join(LOCKS, `${repo.name}.package-lock.json`);
+  if (!fs.existsSync(lock) && fs.existsSync(frozen)) fs.copyFileSync(frozen, lock);
+  if (!fs.existsSync(lock)) {
+    run("npm", ["install", "--package-lock-only", "--ignore-scripts", "--no-audit", "--no-fund"], dir);
+    fs.mkdirSync(LOCKS, { recursive: true });
+    fs.copyFileSync(lock, frozen);
   }
-  return { dir, commit };
-}
 
-function normalise(grypeJson, repo, commit) {
-  return (grypeJson.matches || []).map(m => {
-    const v = m.vulnerability, a = m.artifact;
-    const ids = [v.id, ...(m.relatedVulnerabilities || []).map(r => r.id)];
-    const cves = [...new Set(ids.filter(id => /^CVE-\d{4}-\d+$/.test(id)))];
-    const cvss = [...(v.cvss || []), ...(m.relatedVulnerabilities || []).flatMap(r => r.cvss || [])]
-      .map(c => c.metrics && c.metrics.baseScore).filter(n => typeof n === "number");
-    return {
-      repo: repo.name, commit, language: "javascript", package_type: a.type,
-      package: a.name, version: a.version, purl: a.purl || null,
-      vuln_id: v.id, cve_ids: cves, severity: v.severity,
-      cvss_max: cvss.length ? Math.max(...cvss) : null,
-      fix_state: v.fix ? v.fix.state : "unknown",
-      fix_versions: v.fix ? v.fix.versions : [],
-      locations: (a.locations || []).map(l => l.path),
-      description: v.description || (m.relatedVulnerabilities || [])[0]?.description || "",
-      epss: null, epss_percentile: null, kev: null, llm_verdict: null
-    };
-  });
-}
+  // 3. SBOM with Syft (CycloneDX JSON). -q = quiet, so only the SBOM is printed
+  const sbomFile = path.join(out, "sbom.cdx.json");
+  fs.writeFileSync(sbomFile, run("syft", [`dir:${dir}`, "-o", "cyclonedx-json", "-q"]));
 
-fs.mkdirSync(REPOS_DIR, { recursive: true });
-fs.mkdirSync(OUT_DIR, { recursive: true });
-const { repos } = JSON.parse(fs.readFileSync(path.join(ROOT, "testset.json"), "utf8"));
-const all = [];
-for (const repo of repos) {
-  console.log(`\n== ${repo.name}`);
-  const { dir, commit } = cloneRepo(repo);
-  const sbomPath = path.join(OUT_DIR, `${repo.name}.cdx.json`);
-  fs.writeFileSync(sbomPath, run("syft", [`dir:${dir}`, "-o", "cyclonedx-json", "-q"]));
-  const comps = JSON.parse(fs.readFileSync(sbomPath, "utf8")).components || [];
-  console.log(`  SBOM: ${comps.length} components`);
-  const raw = run("grype", [`sbom:${sbomPath}`, "-o", "json", "-q"]);
-  fs.writeFileSync(path.join(OUT_DIR, `${repo.name}.grype.json`), raw);
-  fs.writeFileSync(path.join(OUT_DIR, `${repo.name}.vulns.cdx.json`), run("grype", [`sbom:${sbomPath}`, "-o", "cyclonedx-json", "-q"]));
-  const findings = normalise(JSON.parse(raw), repo, commit);
-  console.log(`  Grype: ${findings.length} findings`);
-  all.push(...findings);
+  // 4. Match the SBOM against Grype's frozen vulnerability database
+  const grype = run("grype", [`sbom:${sbomFile}`, "-o", "json", "-q"]);
+  fs.writeFileSync(path.join(out, "grype.json"), grype);
+
+  const components = JSON.parse(fs.readFileSync(sbomFile, "utf8")).components.length;
+  console.log(`  SBOM: ${components} components | Grype: ${JSON.parse(grype).matches.length} vulnerabilities`);
 }
-fs.writeFileSync(path.join(OUT_DIR, "findings.json"),
-  JSON.stringify({ schema_version: "1.0", generated_at: new Date().toISOString(), findings: all }, null, 2));
-console.log(`\nWrote output/findings.json (${all.length} findings)`);
+console.log("\nStep 1 done: output/<repo>/sbom.cdx.json and output/<repo>/grype.json");

@@ -1,141 +1,154 @@
-// Step 2: add EPSS + CISA KEV to every finding and rank by exploitability
-// Uses the team's frozen catalog (github.com/caffeineintaker/fyp-vuln-catalog) - no live downloads.
-// Usage: node step2.js [--catalog ~/fyp/vuln-catalog] [--snapshot 2026-10-29]
+// STEP 2 - add EPSS + CISA KEV to every vulnerability, rank them, and save the result as CycloneDX.
+// One result per repo, so each repo's owners can see and fix their own vulnerabilities.
+//   Input : output/<repo>/sbom.cdx.json + output/<repo>/grype.json (from step1.js)
+//           kev-epss-snapshot/2026-10-29/ (frozen KEV + EPSS data, checked with SHA-256)
+//   Output: output/<repo>/ranked.cdx.json (CycloneDX 1.7: components + ranked vulnerabilities)
+// Run: node step2.js
 const fs = require("fs");
 const path = require("path");
 const zlib = require("zlib");
 const crypto = require("crypto");
-const { execFileSync } = require("child_process");
 
 const ROOT = __dirname;
 const OUT = path.join(ROOT, "output");
-const arg = (name, def) => { const i = process.argv.indexOf(name); return i > -1 ? process.argv[i + 1] : def; };
-const CATALOG = arg("--catalog", fs.existsSync(path.join(ROOT, "catalog", "snapshots")) ? path.join(ROOT, "catalog") : path.join(process.env.HOME || "", "fyp", "vuln-catalog"));
-const SNAPSHOT = arg("--snapshot", "2026-10-29");
-const SNAP_DIR = path.join(CATALOG, "snapshots", SNAPSHOT);
+const SNAPSHOT = "2026-10-29";
+const SNAP_DIR = path.join(ROOT, "kev-epss-snapshot", SNAPSHOT);
+const read = f => JSON.parse(fs.readFileSync(f, "utf8"));
 
-// Team priority labels - must match the other pipelines EXACTLY
+// Priority rules
 const P1 = "P1 - in CISA KEV", P2 = "P2 - EPSS >= 10%", P3 = "P3 - EPSS 1-10%", P4 = "P4 - EPSS < 1%", P5 = "P5 - no EPSS score";
+const PRIORITIES = [P1, P2, P3, P4, P5];
 const SEVERITY_ORDER = { critical: 5, high: 4, medium: 3, low: 2, negligible: 1 };
+const CDX_SEVERITY = { critical: "critical", high: "high", medium: "medium", low: "low", negligible: "info" };  // words CycloneDX allows
+const CVSS_METHOD = { "2.0": "CVSSv2", "3.0": "CVSSv3", "3.1": "CVSSv31", "4.0": "CVSSv4" };
 
-function fail(msg) { console.error("Step 2 failed: " + msg); process.exit(1); }
+// ---------- 1. Load the frozen KEV + EPSS snapshot and check its SHA-256 fingerprints ----------
 const sha256 = buf => crypto.createHash("sha256").update(buf).digest("hex");
-
-// ---------- 1. Load the frozen snapshot and check it is untouched ----------
-if (!fs.existsSync(SNAP_DIR)) fail(`snapshot not found: ${SNAP_DIR}\n  Clone the catalog first: git clone https://github.com/caffeineintaker/fyp-vuln-catalog ~/fyp/vuln-catalog`);
-const manifest = JSON.parse(fs.readFileSync(path.join(SNAP_DIR, "manifest.json"), "utf8"));
+const manifest = read(path.join(SNAP_DIR, "manifest.json"));
 const kevRaw = fs.readFileSync(path.join(SNAP_DIR, manifest.kev.file));
 const epssRaw = fs.readFileSync(path.join(SNAP_DIR, manifest.epss.file));
-if (sha256(kevRaw) !== manifest.kev.sha256) fail("kev.json does not match the SHA-256 in manifest.json");
-if (sha256(epssRaw) !== manifest.epss.sha256) fail("epss_scores.csv.gz does not match the SHA-256 in manifest.json");
-
-const kev = new Map();
-for (const v of JSON.parse(kevRaw).vulnerabilities || []) kev.set(v.cveID, v);
-
+if (sha256(kevRaw) !== manifest.kev.sha256 || sha256(epssRaw) !== manifest.epss.sha256) {
+  console.error("STOP: the KEV/EPSS files do not match the SHA-256 in manifest.json - the frozen data has changed.");
+  process.exit(1);
+}
+const kev = new Map(JSON.parse(kevRaw).vulnerabilities.map(v => [v.cveID, v]));
 const epss = new Map();
-for (const line of zlib.gunzipSync(epssRaw).toString("utf8").split(/\r?\n/)) {
-  const [cve, score, pct] = line.split(",");
-  if (/^CVE-\d{4}-\d+$/.test(cve)) epss.set(cve, { epss: Number(score), percentile: Number(pct) });
+for (const line of zlib.gunzipSync(epssRaw).toString("utf8").split("\n")) {
+  const [cve, score, percentile] = line.split(",");
+  if (/^CVE-\d+-\d+$/.test(cve)) epss.set(cve, { score: Number(score), percentile: Number(percentile) });
 }
-console.log(`Snapshot ${SNAPSHOT}: KEV ${kev.size} (catalog ${manifest.kev.catalog_version}), EPSS ${epss.size} CVEs (score date ${manifest.epss.score_date})`);
+console.log(`Snapshot ${SNAPSHOT} (SHA-256 OK): KEV ${kev.size} entries, EPSS ${epss.size} CVEs (score date ${manifest.epss.score_date})`);
 
-// ---------- 2. Load Step 1 findings ----------
-const step1 = JSON.parse(fs.readFileSync(path.join(OUT, "findings.json"), "utf8"));
-const findings = Array.isArray(step1) ? step1 : step1.findings;
+// ---------- 2. Each repo ----------
+const { repos } = read(path.join(ROOT, "testset.json"));
+const prop = (name, value) => (value === null || value === undefined ? null : { name, value: String(value) });
+const sourceFor = id =>
+  id.startsWith("GHSA-") ? { name: "GitHub Advisory Database", url: `https://github.com/advisories/${id}` } :
+  id.startsWith("CVE-") ? { name: "NVD", url: `https://nvd.nist.gov/vuln/detail/${id}` } :
+  { name: "OSV", url: `https://osv.dev/vulnerability/${id}` };
 
-// ---------- 3. GHSA advisories with no CVE from Grype: ask GitHub's advisory database ----------
-const ghsaCacheFile = path.join(OUT, "ghsa_cve_lookup.json");
-const ghsaCache = fs.existsSync(ghsaCacheFile) ? JSON.parse(fs.readFileSync(ghsaCacheFile, "utf8")) : {};
-const needLookup = [...new Set(findings.filter(f => !(f.cve_ids || []).length && /^GHSA-/.test(f.vuln_id)).map(f => f.vuln_id))]
-  .filter(id => !(id in ghsaCache));
-if (needLookup.length) {
-  console.log(`Looking up ${needLookup.length} GHSA IDs without a CVE on GitHub (gh api)...`);
-  for (const id of needLookup) {
-    try {
-      const adv = JSON.parse(execFileSync("gh", ["api", `/advisories/${id}`], { stdio: ["ignore", "pipe", "ignore"] }).toString());
-      ghsaCache[id] = adv.cve_id || null;
-    } catch { ghsaCache[id] = null; }
-  }
-  fs.writeFileSync(ghsaCacheFile, JSON.stringify(ghsaCache, null, 2));
-}
+for (const repo of repos) {
+  const dir = path.join(OUT, repo.name);
+  const sbom = read(path.join(dir, "sbom.cdx.json"));
+  const grype = read(path.join(dir, "grype.json"));
 
-// ---------- 4. Enrich every finding ----------
-const enriched = findings.map(f => {
-  let cves = f.cve_ids || [];
-  let cve_source = cves.length ? "grype" : "none";
-  if (!cves.length && ghsaCache[f.vuln_id]) { cves = [ghsaCache[f.vuln_id]]; cve_source = "github"; }
-  let best = null; // if several CVEs, use the one with the highest EPSS
-  for (const c of cves) {
-    const e = epss.get(c);
-    if (e && (!best || e.epss > best.epss)) best = { cve: c, ...e };
-  }
-  const kevHit = cves.map(c => kev.get(c)).find(Boolean);
-  const out = { ...f, cve_ids: cves };
-  delete out.epss; delete out.kev; // old Step 1 placeholders
-  Object.assign(out, {
-    cve_source,
-    epss_score: best ? best.epss : null,
-    epss_percentile: best ? best.percentile : null,
-    epss_cve: best ? best.cve : null,
-    in_kev: Boolean(kevHit),
-    kev_date_added: kevHit ? kevHit.dateAdded : null,
-    kev_due_date: kevHit ? kevHit.dueDate : null,
-    kev_ransomware_use: kevHit ? kevHit.knownRansomwareCampaignUse : null,
+  // Each SBOM component has a bom-ref; vulnerabilities point to the component they affect
+  const refsByPurl = new Map();
+  for (const c of sbom.components || []) if (c.purl) refsByPurl.set(c.purl, [...(refsByPurl.get(c.purl) || []), c["bom-ref"]]);
+
+  // 2a. Enrich every vulnerability Grype found
+  const vulns = grype.matches.map(m => {
+    const v = m.vulnerability, pkg = m.artifact, related = m.relatedVulnerabilities || [];
+    // CVE IDs: the vulnerability's own ID if it is a CVE, plus the CVEs Grype lists as the same vulnerability
+    const cves = [...new Set([v.id, ...related.map(r => r.id)].filter(id => /^CVE-/.test(id)))];
+    let best = null;                                       // several CVEs -> use the highest EPSS
+    for (const c of cves) { const e = epss.get(c); if (e && (!best || e.score > best.score)) best = { cve: c, ...e }; }
+    const inKev = cves.map(c => kev.get(c)).find(Boolean);
+    const priority = inKev ? P1 : !best ? P5 : best.score >= 0.10 ? P2 : best.score >= 0.01 ? P3 : P4;
+    // Highest CVSS score from the vulnerability or its CVEs
+    const cvss = [...(v.cvss || []), ...related.flatMap(r => r.cvss || [])]
+      .filter(c => c.metrics && typeof c.metrics.baseScore === "number")
+      .sort((a, b) => b.metrics.baseScore - a.metrics.baseScore)[0];
+    return { v, pkg, cves, best, inKev, priority, cvss };
   });
-  out.priority = out.in_kev ? P1 : out.epss_score === null ? P5 : out.epss_score >= 0.10 ? P2 : out.epss_score >= 0.01 ? P3 : P4;
-  return out;
-});
 
-// ---------- 5. Rank: KEV first > EPSS score > EPSS percentile > severity ----------
-const num = v => (v === null ? -1 : v);
-const sev = f => SEVERITY_ORDER[String(f.severity).toLowerCase()] || 0;
-enriched.sort((a, b) => (b.in_kev - a.in_kev) || (num(b.epss_score) - num(a.epss_score)) ||
-  (num(b.epss_percentile) - num(a.epss_percentile)) || (sev(b) - sev(a)));
-enriched.forEach((f, i) => { f.exploitability_rank = i + 1; });
+  // 2b. Rank: in KEV first > higher EPSS score > higher EPSS percentile > higher severity
+  const n = x => (x === undefined ? -1 : x);
+  const sev = x => SEVERITY_ORDER[String(x.v.severity).toLowerCase()] || 0;
+  vulns.sort((a, b) => (Boolean(b.inKev) - Boolean(a.inKev)) || (n(b.best?.score) - n(a.best?.score)) ||
+    (n(b.best?.percentile) - n(a.best?.percentile)) || (sev(b) - sev(a)));
 
-// ---------- 6. Write the three Step 2 files ----------
-fs.writeFileSync(path.join(OUT, "enriched_findings.json"),
-  JSON.stringify({ schema_version: "1.0", generated_at: new Date().toISOString(), snapshot: SNAPSHOT, findings: enriched }, null, 2));
+  // 2c. Write them as CycloneDX vulnerabilities
+  const vulnerabilities = vulns.map((x, i) => {
+    const rating = { source: { name: "Grype" }, severity: CDX_SEVERITY[String(x.v.severity).toLowerCase()] || "unknown" };
+    if (x.cvss) { rating.score = x.cvss.metrics.baseScore; rating.method = CVSS_METHOD[x.cvss.version] || "other"; if (x.cvss.vector) rating.vector = x.cvss.vector; }
+    const refs = refsByPurl.get(x.pkg.purl) || [];
+    const fixes = (x.v.fix && x.v.fix.versions) || [];
+    const out = {
+      "bom-ref": `vuln-${i + 1}`,
+      id: x.v.id,
+      source: sourceFor(x.v.id),
+      references: x.cves.filter(c => c !== x.v.id).map(c => ({ id: c, source: sourceFor(c) })),
+      ratings: [rating],
+      description: x.v.description || (x.pkg.name + " " + x.pkg.version),
+      recommendation: fixes.length ? `Upgrade ${x.pkg.name} to ${fixes.join(" or ")}` : "No fixed version available",
+      affects: refs.map(ref => ({ ref, versions: [{ version: x.pkg.version, status: "affected" }] })),
+      properties: [
+        prop("fyp:exploitability_rank", i + 1),
+        prop("fyp:priority", x.priority),
+        prop("fyp:epss:score", x.best?.score),
+        prop("fyp:epss:percentile", x.best?.percentile),
+        prop("fyp:epss:cve", x.best?.cve),
+        prop("fyp:kev:in_kev", Boolean(x.inKev)),
+        prop("fyp:kev:date_added", x.inKev?.dateAdded),
+        prop("fyp:kev:due_date", x.inKev?.dueDate),
+        prop("fyp:kev:ransomware_use", x.inKev?.knownRansomwareCampaignUse),
+        prop("fyp:fix_state", x.v.fix?.state),
+      ].filter(Boolean),
+    };
+    if (!out.references.length) delete out.references;
+    if (!out.affects.length) delete out.affects;
+    return out;
+  });
 
-const cols = ["exploitability_rank", "priority", "repo", "package", "version", "vuln_id", "cve_ids", "severity", "epss_score", "epss_percentile",
-  "epss_cve", "in_kev", "kev_date_added", "kev_due_date", "kev_ransomware_use", "fix_versions", "cve_source", "fix_state"].map(k => [k, k]);
-const cell = (k, v) => {
-  if (k === "in_kev") return v ? "Yes" : "No";
-  const s = Array.isArray(v) ? v.join(" ") : v === null || v === undefined ? "" : String(v);
-  return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
-};
-fs.writeFileSync(path.join(OUT, "ranked_findings.csv"),
-  [cols.map(c => c[1]).join(","), ...enriched.map(f => cols.map(([k]) => cell(k, f[k])).join(","))].join("\n") + "\n");
+  const bom = {
+    $schema: "http://cyclonedx.org/schema/bom-1.7.schema.json",
+    bomFormat: "CycloneDX",
+    specVersion: "1.7",
+    serialNumber: `urn:uuid:${crypto.randomUUID()}`,
+    version: 1,
+    metadata: {
+      timestamp: new Date().toISOString(),
+      tools: { components: [
+        ...((sbom.metadata && sbom.metadata.tools && sbom.metadata.tools.components) || []),       // Syft
+        { type: "application", author: "anchore", name: "grype", version: grype.descriptor.version },
+        { type: "application", name: "fyp-sbom-js step2.js", version: "1.0" },
+      ] },
+      component: {
+        "bom-ref": `repo:${repo.name}`, type: "application", name: repo.name, version: repo.commit,
+        externalReferences: [repo.url, repo.upstream].filter(Boolean).map(url => ({ type: "vcs", url })),
+      },
+      properties: [
+        prop("fyp:grype:db_built", grype.descriptor.db && grype.descriptor.db.status && grype.descriptor.db.status.built),
+        prop("fyp:snapshot", SNAPSHOT),
+        prop("fyp:kev:catalog_version", manifest.kev.catalog_version),
+        prop("fyp:kev:sha256", manifest.kev.sha256),
+        prop("fyp:epss:score_date", manifest.epss.score_date),
+        prop("fyp:epss:model_version", manifest.epss.model_version),
+        prop("fyp:epss:sha256", manifest.epss.sha256),
+        prop("fyp:ranking", "1) in CISA KEV  2) higher EPSS score  3) higher EPSS percentile  4) higher severity"),
+      ].filter(Boolean),
+    },
+    components: sbom.components || [],
+    dependencies: sbom.dependencies || [],
+    vulnerabilities,
+  };
+  fs.writeFileSync(path.join(dir, "ranked.cdx.json"), JSON.stringify(bom, null, 2));
 
-const byPriority = Object.fromEntries([P1, P2, P3, P4, P5].map(p => [p, enriched.filter(f => f.priority === p).length]));
-const repos = [...new Set(enriched.map(f => f.repo))];
-const meta = {
-  generated_at: new Date().toISOString(),
-  pipeline: "JavaScript (step2.js)",
-  snapshot: SNAPSHOT,
-  catalog: "https://github.com/caffeineintaker/fyp-vuln-catalog",
-  kev: { catalog_version: manifest.kev.catalog_version, count: manifest.kev.count, sha256: manifest.kev.sha256 },
-  epss: { score_date: manifest.epss.score_date, model_version: manifest.epss.model_version, count: manifest.epss.count, sha256: manifest.epss.sha256 },
-  ranking: "1) in KEV  2) higher EPSS score  3) higher EPSS percentile  4) higher severity",
-  counts: {
-    findings: enriched.length,
-    unique_cves: new Set(enriched.flatMap(f => f.cve_ids)).size,
-    with_epss: enriched.filter(f => f.epss_score !== null).length,
-    in_kev: enriched.filter(f => f.in_kev).length,
-    no_cve: enriched.filter(f => f.cve_source === "none").length,
-    by_priority: byPriority,
-    by_repo: Object.fromEntries(repos.map(r => [r, Object.fromEntries([P1, P2, P3, P4, P5].map(p => [p.slice(0, 2), enriched.filter(f => f.repo === r && f.priority === p).length]))])),
-  },
-};
-fs.writeFileSync(path.join(OUT, "step2_metadata.json"), JSON.stringify(meta, null, 2));
-
-// ---------- 7. Print a summary ----------
-const c = meta.counts;
-console.log(`\n${c.findings} findings, ${c.unique_cves} unique CVEs, ${c.with_epss} with EPSS, ${c.in_kev} in KEV, ${c.no_cve} with no CVE`);
-for (const [p, n] of Object.entries(byPriority)) console.log(`  ${p.padEnd(20)} ${n}`);
-console.log("\nBy repo (P1 / P2 / P3 / P4 / P5):");
-for (const [r, v] of Object.entries(c.by_repo)) console.log(`  ${r.padEnd(12)} ${Object.values(v).join(" / ")}`);
-console.log("\nTop 10 most exploitable:");
-for (const f of enriched.slice(0, 10))
-  console.log(`  #${String(f.exploitability_rank).padEnd(3)} ${f.priority.slice(0, 2)}  ${f.repo.padEnd(11)} ${f.package} ${f.version}  ${f.epss_cve || f.vuln_id}  EPSS=${f.epss_score ?? "-"}  ${f.severity}`);
-console.log("\nWrote output/enriched_findings.json, output/ranked_findings.csv, output/step2_metadata.json");
+  // 2d. Print a summary for this repo
+  const count = p => vulns.filter(x => x.priority === p).length;
+  console.log(`\n== ${repo.name}: ${vulns.length} vulnerabilities | ` + PRIORITIES.map(p => `${p.slice(0, 2)} ${count(p)}`).join(" / "));
+  for (const [i, x] of vulns.slice(0, 5).entries())
+    console.log(`  #${i + 1} ${x.priority.slice(0, 2)}  ${x.pkg.name} ${x.pkg.version}  ${x.best?.cve || x.v.id}  EPSS ${x.best ? x.best.score : "-"}  ${x.v.severity}`);
+}
+console.log("\nStep 2 done: output/<repo>/ranked.cdx.json");

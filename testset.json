@@ -1,10 +1,7 @@
 {
   "repos": [
-    { "name": "webgoat", "url": "https://github.com/fadiahsyarah/WebGoat", "upstream": "https://github.com/WebGoat/WebGoat", "commit": "e7b131360d74336c0c94ab5c8a21259503f59be8" },
+    { "name": "juice-shop", "url": "https://github.com/fadiahsyarah/juice-shop", "upstream": "https://github.com/juice-shop/juice-shop", "commit": "399fba76194305a312693eee44f4df64bdf0c3ce" },
     { "name": "nodegoat", "url": "https://github.com/fadiahsyarah/NodeGoat", "upstream": "https://github.com/OWASP/NodeGoat", "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8" },
-    { "name": "pygoat", "url": "https://github.com/fadiahsyarah/pygoat", "upstream": "https://github.com/adeyosemanputra/pygoat", "commit": "46fef968f3f44d1191363baf936aaa3335dc5c6d" },
-    { "name": "dvpwa", "url": "https://github.com/fadiahsyarah/dvpwa", "upstream": "https://github.com/anxolerd/dvpwa", "commit": "a1d8f89fac2e57093189853c6527c2b01fc1d9c1" },
-    { "name": "dvga", "url": "https://github.com/fadiahsyarah/Damn-Vulnerable-GraphQL-Application", "upstream": "https://github.com/dolevf/Damn-Vulnerable-GraphQL-Application", "commit": "a961308c02d1fb462b192681c336b0739e432da7" },
-    { "name": "juice-shop", "url": "https://github.com/fadiahsyarah/juice-shop", "upstream": "https://github.com/juice-shop/juice-shop", "commit": "399fba76194305a312693eee44f4df64bdf0c3ce" }
+    { "name": "dvna", "url": "https://github.com/fadiahsyarah/dvna", "upstream": "https://github.com/appsecco/dvna", "commit": "9ba473add536f66ac9007966acb2a775dd31277a" }
   ]
 }
