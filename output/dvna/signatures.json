@@ -1,0 +1,39 @@
+{
+  "signed_by": "Fadiah (github.com/fadiahsyarah)",
+  "signed_at": "2026-11-13T09:06:21.474Z",
+  "algorithm": "Ed25519",
+  "public_key": "keys/fadiah-ed25519.pub.pem",
+  "public_key_sha256": "1cd487f629843d68a0fb20a71a93b55788d3a75c40ce03db060504259f94a024",
+  "files": [
+    {
+      "file": "grype.json",
+      "sha256": "447158c82b987564514f6cdf915296c5718f6426891438f7ae67c5e2cc136b53",
+      "signature": "IJeiqaOSZkGCO05hEPvo/dvg/ubqLUMWLD16N5Tt41o22uhvcAQqHQnzr6mqyJGcN5CpKOZX3t7M9hzmvLWkCQ=="
+    },
+    {
+      "file": "llm.json",
+      "sha256": "0b6421b20746816646efb1919363ab19320b2d2e08ed163787b2cfc0bbf58ee6",
+      "signature": "3PODbbjzTkD6MyHBhQigX8KmIO5N7Xhc6cR588PvGz7DB26wjCRvPynED9YRr1aiAYo8sFA0vuxSEaqTVjANAg=="
+    },
+    {
+      "file": "ranked.cdx.json",
+      "sha256": "93fd26433dc5a1d2f640bc5fd3add81b9646e931315752e69ad050b2f0af025f",
+      "signature": "Y3/WBbAmxBnIi0EzCaYLiDHiGB9aBLNqGmTuCIohdf/I5zRHyqUSlSa4wVjfnNDHSFd+ELpKIYwOA2h3kgbUCw=="
+    },
+    {
+      "file": "review.csv",
+      "sha256": "e3ef34e2783fecd47115eb4de9ec9df64e14281cfaf3984613c7c83e47fb1e02",
+      "signature": "nrWeejK02ztYFfEHMpthiICBJtIjgTVvFX+euME1PmwAcAzDweicbZUy526MOu7GKuWWyBLCvDbE+MIQOMnBAA=="
+    },
+    {
+      "file": "sbom.cdx.json",
+      "sha256": "235d53c0a51505445765f9cb75ef4496968deff45d56986e79d189e99bce5cae",
+      "signature": "dlyx8x6awn0t5e02ncqLRCPo6OO39GNISu5VYHJQrvDz7DXUaFQahjvw1BqutLvGyolKvGLbZsFNpH44jHC9Dw=="
+    },
+    {
+      "file": "vex.cdx.json",
+      "sha256": "aeaf53873ce1126b664b29e8110b87f2b85ce1420dc201f8c8bd19af975f180a",
+      "signature": "MUsr3NJ2PG/tif6Ql61aPfzaBVm6IQfIWmNC83eBU7dUKYmu4GnAy6jo4zkNMYAfpJlp5ReP67nlhkvYbo4BCg=="
+    }
+  ]
+}

@@ -1,0 +1,5550 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:79307d7c-0c8f-40ac-a0d3-346797cb5e4c",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-13T09:06:11.964Z",
+    "authors": [
+      {
+        "name": "Fadiah (github.com/fadiahsyarah)"
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "ollama",
+          "version": "0.40.13"
+        },
+        {
+          "type": "machine-learning-model",
+          "name": "llama3.2:3b",
+          "version": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72"
+        },
+        {
+          "type": "application",
+          "name": "fyp-sbom-js step3_llm.js + step3_vex.js",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "repo:juice-shop",
+      "type": "application",
+      "name": "juice-shop",
+      "version": "399fba76194305a312693eee44f4df64bdf0c3ce",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/fadiahsyarah/juice-shop"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/juice-shop/juice-shop"
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "fyp:vex:applies_to_sbom",
+        "value": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1"
+      },
+      {
+        "name": "fyp:llm:model",
+        "value": "llama3.2:3b"
+      },
+      {
+        "name": "fyp:llm:model_digest",
+        "value": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72"
+      },
+      {
+        "name": "fyp:llm:options",
+        "value": "{\"temperature\":0,\"seed\":42,\"top_k\":1,\"num_ctx\":4096}"
+      },
+      {
+        "name": "fyp:llm:role",
+        "value": "suggests a state; the reviewer checks it (all P1 + P2 at least)"
+      },
+      {
+        "name": "fyp:signoff:by",
+        "value": "Fadiah (github.com/fadiahsyarah)"
+      },
+      {
+        "name": "fyp:signoff:date",
+        "value": "2026-11-13T09:06:11.964Z"
+      },
+      {
+        "name": "fyp:signoff:status",
+        "value": "2 of 63 reviewed by me (all P1 + P2 first); the other 61 use the LLM suggestion, marked \"LLM only - not reviewed\""
+      },
+      {
+        "name": "fyp:review:agreed_with_llm",
+        "value": "2"
+      },
+      {
+        "name": "fyp:review:changed",
+        "value": "0"
+      },
+      {
+        "name": "fyp:review:llm_only",
+        "value": "61"
+      }
+    ]
+  },
+  "externalReferences": [
+    {
+      "type": "bom",
+      "url": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1",
+      "comment": "The SBOM this VEX is about: output/juice-shop/sbom.cdx.json"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "bom-ref": "vuln-1",
+      "id": "GHSA-35jh-r3h4-6jhm",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-35jh-r3h4-6jhm"
+      },
+      "references": [
+        {
+          "id": "CVE-2021-23337",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23337"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 7.2,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "recommendation": "Upgrade lodash to 4.17.21",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is high, suggesting a significant risk.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Flodash%402.4.2%3Fpackage-id%3D3a00efcd52b05a6a",
+          "versions": [
+            {
+              "version": "2.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "1"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P2 - EPSS >= 10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.21333"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is high, suggesting a significant risk."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "b5f9642b77ad47ea1092e84f80c0f2a2b95a410860d630abf02bb61836149395"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "agreed with LLM"
+        },
+        {
+          "name": "fyp:review:by",
+          "value": "Fadiah (github.com/fadiahsyarah)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-2",
+      "id": "GHSA-8hfj-j24r-96c4",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-8hfj-j24r-96c4"
+      },
+      "references": [
+        {
+          "id": "CVE-2022-24785",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-24785"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 7.5,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "recommendation": "Upgrade moment to 2.29.2",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "Kept exploitable: moment is in the production app (via finale-rest). LLM reason contradicts itself, not proven unreachable.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fmoment%402.0.0%3Fpackage-id%3D152bfb13522fcb19",
+          "versions": [
+            {
+              "version": "2.0.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "2"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P2 - EPSS >= 10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.1384"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is in the moment package, which is an indirect dependency of the application. The application does not import the moment package directly, but it is pulled in by another package (finale-rest). The vulnerability is in the locale function, which is not directly reachable by the application's code."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "0c160dd40928317d628b280c15bce599cdda4b4d1c10255f9ab48bc2fd2c2201"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "agreed with LLM"
+        },
+        {
+          "name": "fyp:review:by",
+          "value": "Fadiah (github.com/fadiahsyarah)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-3",
+      "id": "GHSA-87vv-r9j6-g5qv",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-87vv-r9j6-g5qv"
+      },
+      "references": [
+        {
+          "id": "CVE-2016-4055",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-4055"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.8,
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:C"
+        }
+      ],
+      "recommendation": "Upgrade moment to 2.11.2",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is declared in the production lock file, indicating it is a direct dependency of the application, and the fact that it is an indirect dependency does not change this. The vulnerability is also not mitigated by the app's code, as it is not imported directly by the app's own code.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fmoment%402.0.0%3Fpackage-id%3D152bfb13522fcb19",
+          "versions": [
+            {
+              "version": "2.0.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "3"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.09905"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerable package is declared in the production lock file, indicating it is a direct dependency of the application, and the fact that it is an indirect dependency does not change this. The vulnerability is also not mitigated by the app's code, as it is not imported directly by the app's own code."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "d8c401a488a4899f8d5b9d9d1d1061de23d86ae07f3069a64255eccc5145270e"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-4",
+      "id": "GHSA-c7hr-j4mj-j2w6",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-c7hr-j4mj-j2w6"
+      },
+      "references": [
+        {
+          "id": "CVE-2015-9235",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-9235"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "critical",
+          "score": 9.8,
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "recommendation": "Upgrade jsonwebtoken to 4.2.2",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a direct production dependency, and the application uses it in 4 file(s), making the vulnerable code reachable.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fjsonwebtoken%400.1.0%3Fpackage-id%3Dfdb58405ec050220",
+          "versions": [
+            {
+              "version": "0.1.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "4"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.08524"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the /package-lock.json file, indicating it is a direct production dependency, and the application uses it in 4 file(s), making the vulnerable code reachable."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "9c9c4c8f1378189b7c9b1ed9d569ad2a4eb5e601c028fdd915859a64c65801fa"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-5",
+      "id": "GHSA-c7hr-j4mj-j2w6",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-c7hr-j4mj-j2w6"
+      },
+      "references": [
+        {
+          "id": "CVE-2015-9235",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-9235"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "critical",
+          "score": 9.8,
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "recommendation": "Upgrade jsonwebtoken to 4.2.2",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a direct production dependency, and the application uses it in 4 file(s), making the vulnerable code reachable.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fjsonwebtoken%400.4.0%3Fpackage-id%3D598b015c228f3df6",
+          "versions": [
+            {
+              "version": "0.4.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "5"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.08524"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the /package-lock.json file, indicating it is a direct production dependency, and the application uses it in 4 file(s), making the vulnerable code reachable."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "566d65b58d2d62efb977b55c10609c4baa8eefb134a32efaa2ffd7079ea81ee5"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-6",
+      "id": "GHSA-jf85-cpcp-j695",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-jf85-cpcp-j695"
+      },
+      "references": [
+        {
+          "id": "CVE-2019-10744",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10744"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "critical",
+          "score": 9.1,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+        }
+      ],
+      "recommendation": "Upgrade lodash to 4.17.12",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is declared in the lock file and is an indirect dependency, but the app's code does not import it directly, and the package is used in the dependency chain (finale-rest -> lodash).",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Flodash%402.4.2%3Fpackage-id%3D3a00efcd52b05a6a",
+          "versions": [
+            {
+              "version": "2.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "6"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.05006"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerable package is declared in the lock file and is an indirect dependency, but the app's code does not import it directly, and the package is used in the dependency chain (finale-rest -> lodash)."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "49f7cb159c300bc489af5bd16909fbf66d9f2ee4808a9dbf5891362868119de5"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-7",
+      "id": "GHSA-446m-mv8f-q348",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-446m-mv8f-q348"
+      },
+      "references": [
+        {
+          "id": "CVE-2017-18214",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18214"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 7.5,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "recommendation": "Upgrade moment to 2.19.3",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is declared in the production lock file, indicating it is a dependency of the application, and the fact that it is an indirect dependency does not change this. The vulnerability is also not mitigated by the app's code, as it is not imported directly by the app's own code.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fmoment%402.0.0%3Fpackage-id%3D152bfb13522fcb19",
+          "versions": [
+            {
+              "version": "2.0.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "7"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.03649"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerable package is declared in the production lock file, indicating it is a dependency of the application, and the fact that it is an indirect dependency does not change this. The vulnerability is also not mitigated by the app's code, as it is not imported directly by the app's own code."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "7b8211e1285732be25e7ae4d66dc29e4bc9741adab528b4f6149eb06f0818033"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-8",
+      "id": "GHSA-pfrx-2q88-qq97",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-pfrx-2q88-qq97"
+      },
+      "references": [
+        {
+          "id": "CVE-2022-33987",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-33987"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 5.3,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "recommendation": "Upgrade got to 11.8.5",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is described as allowing a redirect to a UNIX socket, but there is no information on whether this redirect can be reached by the running application, and the fact that the package is an indirect dependency and not imported directly by the app's code makes it unclear if the vulnerability can be exploited.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fgot%408.3.2%3Fpackage-id%3D451ba6b24e2b2009",
+          "versions": [
+            {
+              "version": "8.3.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "8"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.02416"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is described as allowing a redirect to a UNIX socket, but there is no information on whether this redirect can be reached by the running application, and the fact that the package is an indirect dependency and not imported directly by the app's code makes it unclear if the vulnerability can be exploited."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "a1f44057344d2336cb34e162483c8ec0d6d7bf1febed874d3a1bf4839e20434e"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-9",
+      "id": "GHSA-fvqr-27wr-82fm",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-fvqr-27wr-82fm"
+      },
+      "references": [
+        {
+          "id": "CVE-2018-3721",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-3721"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.5,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "recommendation": "Upgrade lodash to 4.17.5",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is declared in the lock file and is an indirect dependency, but the app's code does not import it directly. The package is used by a package that is imported by the app's code, but the vulnerability is in the package itself, not in the code that uses it.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Flodash%402.4.2%3Fpackage-id%3D3a00efcd52b05a6a",
+          "versions": [
+            {
+              "version": "2.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "9"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.02347"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerable package is declared in the lock file and is an indirect dependency, but the app's code does not import it directly. The package is used by a package that is imported by the app's code, but the vulnerability is in the package itself, not in the code that uses it."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "76fe9fc61892a92b96762f25da386c57f5076dadcfe584b58a8464ad0e8aea28"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-10",
+      "id": "GHSA-rjqq-98f6-6j3r",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-rjqq-98f6-6j3r"
+      },
+      "references": [
+        {
+          "id": "CVE-2021-26539",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-26539"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 5.3,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "recommendation": "Upgrade sanitize-html to 2.3.1",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fsanitize-html%401.4.2%3Fpackage-id%3Dd0bc476865f46b2a",
+          "versions": [
+            {
+              "version": "1.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "10"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.01953"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "13ca9fa4953497f4f700cedf54aef86ac72995a932ab160aad7f70f3eb983505"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-11",
+      "id": "GHSA-mjxr-4v3x-q3m4",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-mjxr-4v3x-q3m4"
+      },
+      "references": [
+        {
+          "id": "CVE-2021-26540",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-26540"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 5.3,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "recommendation": "Upgrade sanitize-html to 2.3.2",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is a medium-severity issue in sanitize-html, a direct production dependency of the juice-shop application, and the code is imported by the app's code in two file(s), indicating it is reachable.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fsanitize-html%401.4.2%3Fpackage-id%3Dd0bc476865f46b2a",
+          "versions": [
+            {
+              "version": "1.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "11"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.01754"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is a medium-severity issue in sanitize-html, a direct production dependency of the juice-shop application, and the code is imported by the app's code in two file(s), indicating it is reachable."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "aa70db04deaf324f73b01a579a431eb95c67da5cd7bd9917d58a4c495fc61396"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-12",
+      "id": "GHSA-rc47-6667-2j5j",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-rc47-6667-2j5j"
+      },
+      "references": [
+        {
+          "id": "CVE-2022-25881",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25881"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 7.5,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "recommendation": "Upgrade http-cache-semantics to 4.1.1",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency, and the application is not importing the vulnerable package directly. The EPSS is low (0.01613), but more information is needed to determine the exploitability of the vulnerability.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fhttp-cache-semantics%403.8.1%3Fpackage-id%3D3e023e5952322a81",
+          "versions": [
+            {
+              "version": "3.8.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "12"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.01613"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is an indirect dependency, and the application is not importing the vulnerable package directly. The EPSS is low (0.01613), but more information is needed to determine the exploitability of the vulnerability."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "43be9df70436cea24d9d17e4b6c6dfeeaa7155c83699350d6bfb4e91b2741204"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-13",
+      "id": "GHSA-cgfm-xwp7-2cvr",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-cgfm-xwp7-2cvr"
+      },
+      "references": [
+        {
+          "id": "CVE-2022-25887",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25887"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 7.5,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "recommendation": "Upgrade sanitize-html to 2.7.1",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fsanitize-html%401.4.2%3Fpackage-id%3Dd0bc476865f46b2a",
+          "versions": [
+            {
+              "version": "1.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "13"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.01551"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "c83ae435b4475a0629daae7bc3e876415838556be6c362dcb25d5c09574b5201"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-14",
+      "id": "GHSA-4xc9-xhrj-v574",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-4xc9-xhrj-v574"
+      },
+      "references": [
+        {
+          "id": "CVE-2018-16487",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-16487"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 6.8,
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+        }
+      ],
+      "recommendation": "Upgrade lodash to 4.17.11",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is high, suggesting a significant risk.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Flodash%402.4.2%3Fpackage-id%3D3a00efcd52b05a6a",
+          "versions": [
+            {
+              "version": "2.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "14"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.01491"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is high, suggesting a significant risk."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "f5e056e2e617dcfe984254962acea667aaacd0cbb98f278af3be637073e8f113"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-15",
+      "id": "GHSA-xc6g-ggrc-qq4r",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-xc6g-ggrc-qq4r"
+      },
+      "references": [
+        {
+          "id": "CVE-2017-16016",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-16016"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.1,
+          "method": "CVSSv3",
+          "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "recommendation": "Upgrade sanitize-html to 1.11.4",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is a medium-severity Cross-Site Scripting (XSS) issue in sanitize-html, which is a direct production dependency of the juice-shop application. The fact that the vulnerability is declared in the lock file and the application uses it in two files indicates that the vulnerable code is reachable.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fsanitize-html%401.4.2%3Fpackage-id%3Dd0bc476865f46b2a",
+          "versions": [
+            {
+              "version": "1.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "15"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.01336"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is a medium-severity Cross-Site Scripting (XSS) issue in sanitize-html, which is a direct production dependency of the juice-shop application. The fact that the vulnerability is declared in the lock file and the application uses it in two files indicates that the vulnerable code is reachable."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "423e85f2592ec5657eb1f7548e3aaad35762e5229f5bb9133af328d0d03d50a1"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-16",
+      "id": "GHSA-6g6m-m6h5-w9gf",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-6g6m-m6h5-w9gf"
+      },
+      "references": [
+        {
+          "id": "CVE-2020-15084",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15084"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 9.1,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "recommendation": "Upgrade express-jwt to 6.0.0",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The fixed version is available, but the application is using an older version (0.1.3) that is not fixed, and the vulnerability is declared in the package-lock.json file, indicating it is a direct production dependency.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fexpress-jwt%400.1.3%3Fpackage-id%3Daf836ec712f6de4f",
+          "versions": [
+            {
+              "version": "0.1.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "16"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.01221"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The fixed version is available, but the application is using an older version (0.1.3) that is not fixed, and the vulnerability is declared in the package-lock.json file, indicating it is a direct production dependency."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "03b74d328055334d2413ef36eb1f4f8514cf7b81d65c05fc9f88cb5ad1374453"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-17",
+      "id": "GHSA-rm97-x556-q36h",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-rm97-x556-q36h"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-21501",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21501"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 5.3,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "recommendation": "Upgrade sanitize-html to 2.12.1",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fsanitize-html%401.4.2%3Fpackage-id%3Dd0bc476865f46b2a",
+          "versions": [
+            {
+              "version": "1.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "17"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.01027"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "c7e6894a289b66e8a2165bf23447590250a2b8de2db6d0988832b1545f38995c"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-18",
+      "id": "GHSA-8g4m-cjm2-96wq",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-8g4m-cjm2-96wq"
+      },
+      "references": [
+        {
+          "id": "CVE-2021-23771",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23771"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.5,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "recommendation": "No fixed version available",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "can_not_fix"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The package is a direct production dependency and its code is imported by the application's code in routes/b2bOrder.ts, indicating it is reachable and exploitable.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fnotevil%401.3.3%3Fpackage-id%3D69a42763003f96ad",
+          "versions": [
+            {
+              "version": "1.3.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "18"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P3 - EPSS 1-10%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.01013"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The package is a direct production dependency and its code is imported by the application's code in routes/b2bOrder.ts, indicating it is reachable and exploitable."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "d0ac1ec8b0d054311b25f221ba9d84c3b7f0120aa81278c040865b78c2915e81"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-19",
+      "id": "GHSA-3j7m-hmh3-9jmp",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-3j7m-hmh3-9jmp"
+      },
+      "references": [
+        {
+          "id": "CVE-2016-1000237",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-1000237"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.1,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "recommendation": "Upgrade sanitize-html to 1.4.3",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is a medium-severity Cross-Site Scripting issue in sanitize-html, which is a direct production dependency of the juice-shop application. The fact that it is declared in the lock file and imported by the app's code confirms that the vulnerable code is reachable.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fsanitize-html%401.4.2%3Fpackage-id%3Dd0bc476865f46b2a",
+          "versions": [
+            {
+              "version": "1.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "19"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0084"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is a medium-severity Cross-Site Scripting issue in sanitize-html, which is a direct production dependency of the juice-shop application. The fact that it is declared in the lock file and imported by the app's code confirms that the vulnerable code is reachable."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "77c3d7b80bafe5127e7c8451dcdc01b519ee836f131061c04f308a3706487cc2"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-20",
+      "id": "GHSA-hrh2-vp3x-79xf",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-hrh2-vp3x-79xf"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-101894",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101894"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "critical",
+          "score": 9.1,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "recommendation": "No fixed version available",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "can_not_fix"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only an indirect dependency, and the app's code does not import the vulnerable package directly. The fact that it's an indirect dependency makes it unclear if the vulnerability can be reached by the app's code.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fdecompress%404.2.1%3Fpackage-id%3D6186fd4f577f35cf",
+          "versions": [
+            {
+              "version": "4.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "20"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00814"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is only an indirect dependency, and the app's code does not import the vulnerable package directly. The fact that it's an indirect dependency makes it unclear if the vulnerability can be reached by the app's code."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "ec22159ab9e34041b151305bfe42b2b297b715583fb100c6d28894501b2192c4"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-21",
+      "id": "GHSA-hjrf-2m68-5959",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-hjrf-2m68-5959"
+      },
+      "references": [
+        {
+          "id": "CVE-2022-23541",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23541"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.3,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "recommendation": "Upgrade jsonwebtoken to 9.0.0",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a direct production dependency, and the application uses it in 4 file(s), making it reachable.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fjsonwebtoken%400.1.0%3Fpackage-id%3Dfdb58405ec050220",
+          "versions": [
+            {
+              "version": "0.1.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "21"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0081"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the package-lock.json file, indicating it is a direct production dependency, and the application uses it in 4 file(s), making it reachable."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "69c41dc3a0b1adb2ef2e464fc3dc6c74a6c2fc48528d4149ef686f9dae8fd592"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-22",
+      "id": "GHSA-hjrf-2m68-5959",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-hjrf-2m68-5959"
+      },
+      "references": [
+        {
+          "id": "CVE-2022-23541",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23541"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.3,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "recommendation": "Upgrade jsonwebtoken to 9.0.0",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a direct production dependency, and the application uses it in 4 file(s), making it reachable.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fjsonwebtoken%400.4.0%3Fpackage-id%3D598b015c228f3df6",
+          "versions": [
+            {
+              "version": "0.4.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "22"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0081"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the package-lock.json file, indicating it is a direct production dependency, and the application uses it in 4 file(s), making it reachable."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "767d563d2cf939b29eac29acc571d6aaaa5897f816aded35eff3bc0b8827e6e4"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-23",
+      "id": "GHSA-mp2f-45pm-3cg9",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-mp2f-45pm-3cg9"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-53486",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53486"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "critical",
+          "score": 9.1,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "recommendation": "No fixed version available",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "can_not_fix"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it's an indirect dependency, and the app code does not import the vulnerable package directly. This makes it unclear if the vulnerability can be reached by the app's code.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fdecompress%404.2.1%3Fpackage-id%3D6186fd4f577f35cf",
+          "versions": [
+            {
+              "version": "4.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "23"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00749"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the package-lock.json file, indicating it's an indirect dependency, and the app code does not import the vulnerable package directly. This makes it unclear if the vulnerability can be reached by the app's code."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "6f759137dbcb9e67792ff3769166edca849b99793c9d73eb0ab02f9165766854"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-24",
+      "id": "GHSA-w8wr-v893-vjvp",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-w8wr-v893-vjvp"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-59871",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59871"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "recommendation": "Upgrade tar to 7.5.18",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only exploitable via a PAX numeric path type confusion, which is not directly reachable by the app's own code, and the package is only an indirect dependency pulled in by another package (sqlite3).",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Ftar%406.2.1%3Fpackage-id%3Db2e681b3df814ffc",
+          "versions": [
+            {
+              "version": "6.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "24"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00644"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is only exploitable via a PAX numeric path type confusion, which is not directly reachable by the app's own code, and the package is only an indirect dependency pulled in by another package (sqlite3)."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "a6773a339e2838a3121c67bd2456388e34273003ac9fe92886fa600c8a7f7435"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-25",
+      "id": "GHSA-xwcq-pm8m-c4vf",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-xwcq-pm8m-c4vf"
+      },
+      "references": [
+        {
+          "id": "CVE-2023-46233",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-46233"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "critical",
+          "score": 9.1,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "recommendation": "Upgrade crypto-js to 4.2.0",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (pdfkit).",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fcrypto-js%403.3.0%3Fpackage-id%3D7eab7974128c4263",
+          "versions": [
+            {
+              "version": "3.3.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "25"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0064"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (pdfkit)."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "570f090f710a56b36cbe7117836b986d8e7d2434189deeca0144f02c1d87046b"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-26",
+      "id": "GHSA-34x7-hfp2-rc4v",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-34x7-hfp2-rc4v"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-24842",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24842"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.2,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N"
+        }
+      ],
+      "recommendation": "Upgrade tar to 7.5.7",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a declared dependency, and the lock file scope is set to production, meaning it is used by the running application.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Ftar%406.2.1%3Fpackage-id%3Db2e681b3df814ffc",
+          "versions": [
+            {
+              "version": "6.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "26"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00608"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the /package-lock.json file, indicating it is a declared dependency, and the lock file scope is set to production, meaning it is used by the running application."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "d4f25c7e525e8f1be3125cbd5fc913065e02397ac21d3df436b83ef11ffaed70"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-27",
+      "id": "GHSA-23hp-3jrh-7fpw",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-23hp-3jrh-7fpw"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-59873",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59873"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "critical",
+          "score": 9.2,
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H"
+        }
+      ],
+      "recommendation": "Upgrade tar to 7.5.19",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (sqlite3).",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Ftar%406.2.1%3Fpackage-id%3Db2e681b3df814ffc",
+          "versions": [
+            {
+              "version": "6.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "27"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00582"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (sqlite3)."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "ea2b234b35ddea0519f52f57cf3bcdee5a4b23bd178dad6261b9cb8802913050"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-28",
+      "id": "GHSA-3ppc-4f35-3m26",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-3ppc-4f35-3m26"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-26996",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26996"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.7,
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+        }
+      ],
+      "recommendation": "Upgrade minimatch to 3.1.3",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a production dependency, declared in the lock file, and imported by another package (glob), which is used by the running application (juice-shop).",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fminimatch%403.0.5%3Fpackage-id%3D56ed2e088c7b74d6",
+          "versions": [
+            {
+              "version": "3.0.5",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "28"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00577"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerable package is a production dependency, declared in the lock file, and imported by another package (glob), which is used by the running application (juice-shop)."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "ca76afea97d6d1e603d7ae8c6d227d400c0a298e69a3efa7078bd4eac05ebaca"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-29",
+      "id": "GHSA-7r86-cg39-jmmj",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-7r86-cg39-jmmj"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-27903",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27903"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 7.5,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "recommendation": "Upgrade minimatch to 3.1.3",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package in the dependency chain.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fminimatch%403.0.5%3Fpackage-id%3D56ed2e088c7b74d6",
+          "versions": [
+            {
+              "version": "3.0.5",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "29"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00576"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package in the dependency chain."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "e82d818c5b8fe36395c039784a7bb1eb67320d998bcaa4830f84b44d6505abc0"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-30",
+      "id": "GHSA-qwph-4952-7xr6",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-qwph-4952-7xr6"
+      },
+      "references": [
+        {
+          "id": "CVE-2022-23540",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23540"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.6,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L"
+        }
+      ],
+      "recommendation": "Upgrade jsonwebtoken to 9.0.0",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is a medium-severity signature validation bypass in jsonwebtoken, which is a direct production dependency of the juice-shop application. The fact that it is declared in the lock file and imported by the app's code confirms that the vulnerable code is reachable.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fjsonwebtoken%400.1.0%3Fpackage-id%3Dfdb58405ec050220",
+          "versions": [
+            {
+              "version": "0.1.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "30"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00572"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is a medium-severity signature validation bypass in jsonwebtoken, which is a direct production dependency of the juice-shop application. The fact that it is declared in the lock file and imported by the app's code confirms that the vulnerable code is reachable."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "f2bfd422e7a4d82b52a905267b701cbdd2aa70d5240262ed3756a9b3011f7d58"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-31",
+      "id": "GHSA-qwph-4952-7xr6",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-qwph-4952-7xr6"
+      },
+      "references": [
+        {
+          "id": "CVE-2022-23540",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23540"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.6,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L"
+        }
+      ],
+      "recommendation": "Upgrade jsonwebtoken to 9.0.0",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is in the jsonwebtoken package, which is a direct production dependency, and the app uses it in 4 file(s), indicating the vulnerable code is reachable.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fjsonwebtoken%400.4.0%3Fpackage-id%3D598b015c228f3df6",
+          "versions": [
+            {
+              "version": "0.4.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "31"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00572"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is in the jsonwebtoken package, which is a direct production dependency, and the app uses it in 4 file(s), indicating the vulnerable code is reachable."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "b1eaf5e679979d4f87d4ae937b2fa075dbb4d3e6cffc8ef5eb1f62aa65ab9295"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-32",
+      "id": "GHSA-ch52-4w7c-c8xp",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-ch52-4w7c-c8xp"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-93748",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93748"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.7,
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+        }
+      ],
+      "recommendation": "No fixed version available",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "can_not_fix"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency, and the application does not import the vulnerable package directly. The EPSS is 0.00569, which is below the threshold of 0.01, indicating that the exploitability is low, but the lack of a fixed version and the indirect dependency make it unclear how to assess the exploitability.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fhttp-cache-semantics%403.8.1%3Fpackage-id%3D3e023e5952322a81",
+          "versions": [
+            {
+              "version": "3.8.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "32"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00569"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is an indirect dependency, and the application does not import the vulnerable package directly. The EPSS is 0.00569, which is below the threshold of 0.01, indicating that the exploitability is low, but the lack of a fixed version and the indirect dependency make it unclear how to assess the exploitability."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "b662282703734a3beff89b4aa7554628ed643cb4eadf60276b1e355b98207bdc"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-33",
+      "id": "GHSA-rg76-677x-56q9",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-rg76-677x-56q9"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-71851",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71851"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "critical",
+          "score": 9,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "recommendation": "Upgrade crypto-js to 4.0.0",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only reachable through an indirect dependency chain (pdfkit -> crypto-js), and the app's code does not import crypto-js directly.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fcrypto-js%403.3.0%3Fpackage-id%3D7eab7974128c4263",
+          "versions": [
+            {
+              "version": "3.3.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "33"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0055"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is only reachable through an indirect dependency chain (pdfkit -> crypto-js), and the app's code does not import crypto-js directly."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "e6fc885e6f46f6c22a86ca9c631b922adb88983928d38d7880e4d088de61df6f"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-34",
+      "id": "GHSA-r292-9mhp-454m",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-r292-9mhp-454m"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-73566",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73566"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 7.5,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "recommendation": "Upgrade tar to 7.5.21",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a declared dependency, and the application uses it as an indirect dependency through another package (sqlite3).",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Ftar%406.2.1%3Fpackage-id%3Db2e681b3df814ffc",
+          "versions": [
+            {
+              "version": "6.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "34"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00531"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the /package-lock.json file, indicating it is a declared dependency, and the application uses it as an indirect dependency through another package (sqlite3)."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "28037a1958d619b14ed2024a236573277eb2f77f037abe9ee24ff7629a58a3ad"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-35",
+      "id": "GHSA-23c5-xmqv-rm74",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-23c5-xmqv-rm74"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-27904",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27904"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 7.5,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "recommendation": "Upgrade minimatch to 3.1.4",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a production dependency, declared in the lock file, and is pulled in by another package (glob), which is used by the application. The fact that it's an indirect dependency does not change the fact that the vulnerable code is present in the dependency chain.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fminimatch%403.0.5%3Fpackage-id%3D56ed2e088c7b74d6",
+          "versions": [
+            {
+              "version": "3.0.5",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "35"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00525"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerable package is a production dependency, declared in the lock file, and is pulled in by another package (glob), which is used by the application. The fact that it's an indirect dependency does not change the fact that the vulnerable code is present in the dependency chain."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "8dac4a16161dbbd594955835860009391bffcbbaa4268957d860fd6e6fc5e667"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-36",
+      "id": "GHSA-h39j-r5qq-r9mm",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-h39j-r5qq-r9mm"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-10732",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10732"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 7.5,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "recommendation": "No fixed version available",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "can_not_fix"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency, and the app does not import the vulnerable package directly. The dependency chain only involves downloading and decompressing, without any indication of the vulnerable code being executed or accessible.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fdecompress%404.2.1%3Fpackage-id%3D6186fd4f577f35cf",
+          "versions": [
+            {
+              "version": "4.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "36"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00521"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is an indirect dependency, and the app does not import the vulnerable package directly. The dependency chain only involves downloading and decompressing, without any indication of the vulnerable code being executed or accessible."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "9c7d55b5959a95bd8cf84914ec8918e383078b59243e1d06d5178cf1737fbfe3"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-37",
+      "id": "GHSA-8cf7-32gw-wr33",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-8cf7-32gw-wr33"
+      },
+      "references": [
+        {
+          "id": "CVE-2022-23539",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23539"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.1,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "recommendation": "Upgrade jsonwebtoken to 9.0.0",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a direct production dependency and its code is imported by the application's code, indicating that the vulnerable function can be reached.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fjsonwebtoken%400.1.0%3Fpackage-id%3Dfdb58405ec050220",
+          "versions": [
+            {
+              "version": "0.1.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "37"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0052"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerable package is a direct production dependency and its code is imported by the application's code, indicating that the vulnerable function can be reached."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "cc27cc363701a316b51039f94e7920ce17615c96882f4bbb99daafa69ae50d5e"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-38",
+      "id": "GHSA-8cf7-32gw-wr33",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-8cf7-32gw-wr33"
+      },
+      "references": [
+        {
+          "id": "CVE-2022-23539",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23539"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.1,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "recommendation": "Upgrade jsonwebtoken to 9.0.0",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a direct production dependency and its code is imported by the application's code, indicating that the vulnerable function can be reached.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fjsonwebtoken%400.4.0%3Fpackage-id%3D598b015c228f3df6",
+          "versions": [
+            {
+              "version": "0.4.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "38"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0052"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerable package is a direct production dependency and its code is imported by the application's code, indicating that the vulnerable function can be reached."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "c651176c03f17bb23bc0ea574acf0b371735c628803672c4aa115afe19d83319"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-39",
+      "id": "GHSA-vcc3-ghjq-m6fr",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-vcc3-ghjq-m6fr"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-45822",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45822"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.6,
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U/S:N/AU:Y/R:U/V:D/RE:M/U:Amber"
+        }
+      ],
+      "recommendation": "Upgrade decode-uri-component to 0.5.0",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only exploitable via an indirect dependency chain, and the app's code does not import the vulnerable package directly. The lock file scope is production, but the dependency chain does not indicate that the vulnerable package is being used in the running application.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fdecode-uri-component%400.2.2%3Fpackage-id%3D5ce38ca7888f97dd",
+          "versions": [
+            {
+              "version": "0.2.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "39"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00507"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is only exploitable via an indirect dependency chain, and the app's code does not import the vulnerable package directly. The lock file scope is production, but the dependency chain does not indicate that the vulnerable package is being used in the running application."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "dfe764b959b5c35045a2ddb10090d872c42866524a8f77c9e8e5147d5adecb20"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-40",
+      "id": "GHSA-qffp-2rhf-9h96",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-qffp-2rhf-9h96"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-29786",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-29786"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.6,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N"
+        }
+      ],
+      "recommendation": "Upgrade tar to 7.5.10",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is described as a Hardlink Path Traversal via Drive-Relative Linkpath, but the fact that the package is an indirect dependency (pulled in by another package) and not imported directly by the app's own code makes it unclear if the vulnerable code can be reached by the application.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Ftar%406.2.1%3Fpackage-id%3Db2e681b3df814ffc",
+          "versions": [
+            {
+              "version": "6.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "40"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00466"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is described as a Hardlink Path Traversal via Drive-Relative Linkpath, but the fact that the package is an indirect dependency (pulled in by another package) and not imported directly by the app's own code makes it unclear if the vulnerable code can be reached by the application."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "90fadc1327948774471631323786e5b45245276e65aef53a61b1a4274f2afdeb"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-41",
+      "id": "GHSA-8x88-c5mf-7j5w",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-8x88-c5mf-7j5w"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-59874",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59874"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.7,
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+        }
+      ],
+      "recommendation": "Upgrade tar to 7.5.18",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is a known issue in tar, a package used by the application (production dependency), and the application is using a version of tar that is not fixed (6.2.1).",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Ftar%406.2.1%3Fpackage-id%3Db2e681b3df814ffc",
+          "versions": [
+            {
+              "version": "6.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "41"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00434"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is a known issue in tar, a package used by the application (production dependency), and the application is using a version of tar that is not fixed (6.2.1)."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "9484b3670c3f2319515b72f1a6d041152c8cc63ba711dd950a68890a3f4d2c68"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-42",
+      "id": "GHSA-8qq5-rm4j-mr97",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-8qq5-rm4j-mr97"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-23745",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23745"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.2,
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:L/VA:N/SC:H/SI:L/SA:N"
+        }
+      ],
+      "recommendation": "Upgrade tar to 7.5.3",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a declared dependency, and the lock file scope is set to production, meaning it is used by the running application.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Ftar%406.2.1%3Fpackage-id%3Db2e681b3df814ffc",
+          "versions": [
+            {
+              "version": "6.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "42"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00376"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the /package-lock.json file, indicating it is a declared dependency, and the lock file scope is set to production, meaning it is used by the running application."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "6731f96fd1e81022c20d61795e8b5cc9f5ad2a4d286d184f3487cd6b1ba8145f"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-43",
+      "id": "GHSA-c475-qrg2-pj4r",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-c475-qrg2-pj4r"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-102990",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102990"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.2,
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+        }
+      ],
+      "recommendation": "Upgrade basic-ftp to 6.2.1",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is described as a denial of service, but the facts do not indicate that the vulnerable function can be reached by the running application. The application does not import the basic-ftp package directly, and the dependency chain does not suggest that the vulnerable function is executed.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fbasic-ftp%405.3.1%3Fpackage-id%3D8903f1beb0dd8e25",
+          "versions": [
+            {
+              "version": "5.3.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "43"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0037"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is described as a denial of service, but the facts do not indicate that the vulnerable function can be reached by the running application. The application does not import the basic-ftp package directly, and the dependency chain does not suggest that the vulnerable function is executed."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "fe3f8d2d82b93b5360e546857acee46791e34cfb4e9afa39883990a712d2cf1f"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-44",
+      "id": "GHSA-gvwx-54wh-qm9j",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-gvwx-54wh-qm9j"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-59875",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59875"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 5.3,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "recommendation": "Upgrade tar to 7.5.17",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (sqlite3).",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Ftar%406.2.1%3Fpackage-id%3Db2e681b3df814ffc",
+          "versions": [
+            {
+              "version": "6.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "44"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00354"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (sqlite3)."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "aecdf170b4ee16eb00b1757e87e025c0420bbda2398994457da99d50815b3f48"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-45",
+      "id": "GHSA-w5hq-g745-h8pq",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-w5hq-g745-h8pq"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-41907",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41907"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 8.1,
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "recommendation": "Upgrade uuid to 11.1.1",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it's an indirect dependency, and the app's code does not import the vulnerable package directly. This makes it unclear if the vulnerable code is actually executed by the running application.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fuuid%408.3.2%3Fpackage-id%3D8cf0c19ede45d1bc",
+          "versions": [
+            {
+              "version": "8.3.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "45"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.0035"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the /package-lock.json file, indicating it's an indirect dependency, and the app's code does not import the vulnerable package directly. This makes it unclear if the vulnerable code is actually executed by the running application."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "6469eb165f9f3bacbdf65e20f2cb2f94fa18c4949e225e60640984906ab0f4d4"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-46",
+      "id": "GHSA-x3q4-9hxx-gx8m",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-x3q4-9hxx-gx8m"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-113654",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113654"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 5.3,
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N"
+        }
+      ],
+      "recommendation": "Upgrade sanitize-html to 2.18.0",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fsanitize-html%401.4.2%3Fpackage-id%3Dd0bc476865f46b2a",
+          "versions": [
+            {
+              "version": "1.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "46"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00349"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "604fb995fb64087e983bf661c112cbd176be45dc2727d207fe86da5a81933658"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-47",
+      "id": "GHSA-5v7r-6r5c-r473",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-5v7r-6r5c-r473"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-31808",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31808"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 5.3,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "recommendation": "Upgrade file-type to 21.3.1",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in /package-lock.json, indicating it is a direct production dependency, and the application uses it in 1 file(s), routes/profileImageFileUpload.ts, which suggests the vulnerable code can be reached.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Ffile-type%4016.5.4%3Fpackage-id%3D489da1e29d3932f1",
+          "versions": [
+            {
+              "version": "16.5.4",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "47"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00345"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in /package-lock.json, indicating it is a direct production dependency, and the application uses it in 1 file(s), routes/profileImageFileUpload.ts, which suggests the vulnerable code can be reached."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "0deabcea2689312de76182ed7d93f40c76bb912e9c14f950b36f33f12802d7fb"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-48",
+      "id": "GHSA-f23m-r3pf-42rh",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-f23m-r3pf-42rh"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-2950",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2950"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.5,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ],
+      "recommendation": "Upgrade lodash to 4.18.0",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerable code is in a package that is an indirect dependency of the application, and the application does not import the package directly. The package is declared in the lock file and is used in the dependency chain, indicating it is a production dependency.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Flodash%402.4.2%3Fpackage-id%3D3a00efcd52b05a6a",
+          "versions": [
+            {
+              "version": "2.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "48"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00337"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerable code is in a package that is an indirect dependency of the application, and the application does not import the package directly. The package is declared in the lock file and is used in the dependency chain, indicating it is a production dependency."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "3dbe3e5685035651eea53502b07466aad0d4762fca5dbef37339934d0118c32b"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-49",
+      "id": "GHSA-83g3-92jg-28cx",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-83g3-92jg-28cx"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-26960",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26960"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 7.1,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "recommendation": "Upgrade tar to 7.5.8",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a declared dependency, and the application uses it as an indirect dependency through another package (sqlite3).",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Ftar%406.2.1%3Fpackage-id%3Db2e681b3df814ffc",
+          "versions": [
+            {
+              "version": "6.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "49"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00328"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the package-lock.json file, indicating it is a declared dependency, and the application uses it as an indirect dependency through another package (sqlite3)."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "3869a4d682b4b9500ad4858e6bba624957fecb899b687b2b4124bfe7882e8517"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-50",
+      "id": "GHSA-jxwj-j7wr-gfrw",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-jxwj-j7wr-gfrw"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-63670",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63670"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.1,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "recommendation": "Upgrade sanitize-html to 2.17.6",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is fixed by upgrading to version 2.17.6, but the application is using version 1.4.2, indicating that the vulnerable code is not present in the running application.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fsanitize-html%401.4.2%3Fpackage-id%3Dd0bc476865f46b2a",
+          "versions": [
+            {
+              "version": "1.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "50"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00327"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is fixed by upgrading to version 2.17.6, but the application is using version 1.4.2, indicating that the vulnerable code is not present in the running application."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "ab1139625ac472a560b7d149e92a869be893bb584afee1dc7a9c85a3f2dd93a9"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-51",
+      "id": "GHSA-jwp9-9v96-94mx",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-jwp9-9v96-94mx"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-39243",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39243"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 5.5,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "recommendation": "No fixed version available",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "can_not_fix"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only reachable during archive extraction, but the application is not explicitly extracting archives, and the dependency chain only includes 'download' and 'decompress', without any intermediate steps that would trigger the vulnerability.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fdecompress%404.2.1%3Fpackage-id%3D6186fd4f577f35cf",
+          "versions": [
+            {
+              "version": "4.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "51"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00301"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is only reachable during archive extraction, but the application is not explicitly extracting archives, and the dependency chain only includes 'download' and 'decompress', without any intermediate steps that would trigger the vulnerability."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "b2a43977a5ec75ff090a685559b47711347716d9b23db0a8dd6aed120e391421"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-52",
+      "id": "GHSA-qhxp-v273-g94h",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-qhxp-v273-g94h"
+      },
+      "references": [
+        {
+          "id": "CVE-2019-25225",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25225"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.1,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "recommendation": "Upgrade sanitize-html to 2.0.0-beta",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is fixed by upgrading to version 2.0.0-beta, but the application is using version 1.4.2, which is not the latest version. The fact that the package is a direct production dependency and is imported by the app's code also indicates that the vulnerable code can be reached.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fsanitize-html%401.4.2%3Fpackage-id%3Dd0bc476865f46b2a",
+          "versions": [
+            {
+              "version": "1.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "52"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00269"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is fixed by upgrading to version 2.0.0-beta, but the application is using version 1.4.2, which is not the latest version. The fact that the package is a direct production dependency and is imported by the app's code also indicates that the vulnerable code can be reached."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "173d5aafe2e96abf16135815533b7407a39f2d56310ad4f85949db71ad56aa56"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-53",
+      "id": "GHSA-9ppj-qmqm-q256",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-9ppj-qmqm-q256"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-31802",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31802"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.2,
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:H/SA:N"
+        }
+      ],
+      "recommendation": "Upgrade tar to 7.5.11",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is described as a 'Symlink Path Traversal' issue, which implies that the attack vector relies on the application's handling of file paths. However, the fact that the vulnerable package is an indirect dependency (pulled in by another package) and not imported directly by the app's own code makes it unclear whether the vulnerability can be reached by the application.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Ftar%406.2.1%3Fpackage-id%3Db2e681b3df814ffc",
+          "versions": [
+            {
+              "version": "6.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "53"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00269"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is described as a 'Symlink Path Traversal' issue, which implies that the attack vector relies on the application's handling of file paths. However, the fact that the vulnerable package is an indirect dependency (pulled in by another package) and not imported directly by the app's own code makes it unclear whether the vulnerability can be reached by the application."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "c6cdbb417aef2250ef7aa0915d422eb708ef8e6a430a960d6f8269c8e38903e5"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-54",
+      "id": "GHSA-r6q2-hw4h-h46w",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-r6q2-hw4h-h46w"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-23950",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23950"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.8,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:L"
+        }
+      ],
+      "recommendation": "Upgrade tar to 7.5.4",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is fixed by upgrading tar to 7.5.4, and the application is using version 6.2.1, which is not the fixed version. Additionally, the vulnerability is declared in the package-lock.json file, indicating it is a production dependency.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Ftar%406.2.1%3Fpackage-id%3Db2e681b3df814ffc",
+          "versions": [
+            {
+              "version": "6.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "54"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00264"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is fixed by upgrading tar to 7.5.4, and the application is using version 6.2.1, which is not the fixed version. Additionally, the vulnerability is declared in the package-lock.json file, indicating it is a production dependency."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "f35e31a7e2d0915fd7061f819f8de2754088baaefb5093e2a7f99b09d982f5c9"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-55",
+      "id": "GHSA-cv27-6wvh-8x7j",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-cv27-6wvh-8x7j"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-113661",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113661"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 5.4,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "recommendation": "Upgrade sanitize-html to 2.18.0",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is shipped with the application.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fsanitize-html%401.4.2%3Fpackage-id%3Dd0bc476865f46b2a",
+          "versions": [
+            {
+              "version": "1.4.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "55"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00263"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is shipped with the application."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "47e6c6915e8f48dcc40c50b52a74701f2274774c95234041dedf8d598e1d53ef"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-56",
+      "id": "GHSA-869p-cjfg-cm3x",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-869p-cjfg-cm3x"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-65945",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65945"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 7.5,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "recommendation": "Upgrade jws to 3.2.3",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application imports the vulnerable package directly in its code.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fjws%400.2.6%3Fpackage-id%3Db9b9df29d8d7cac2",
+          "versions": [
+            {
+              "version": "0.2.6",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "56"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00215"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application imports the vulnerable package directly in its code."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "15235bbe0c880a4c55d721a25ed9d1f44af197aa3ab266ea99698c455696774b"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-57",
+      "id": "GHSA-vmf3-w455-68vh",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-vmf3-w455-68vh"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-53655",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53655"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.9,
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
+        }
+      ],
+      "recommendation": "Upgrade tar to 7.5.16",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (sqlite3).",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Ftar%406.2.1%3Fpackage-id%3Db2e681b3df814ffc",
+          "versions": [
+            {
+              "version": "6.2.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "57"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00156"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (sqlite3)."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "0cd9b234eb1823778133ed9c0a0774db9751a2a39e8f9aec05236a77763f7128"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-58",
+      "id": "GHSA-vpq2-c234-7xj6",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-vpq2-c234-7xj6"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-3449",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3449"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "low",
+          "score": 3.3,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "recommendation": "Upgrade @tootallnate/once to 2.0.1",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only an indirect dependency, and the app's code does not import the vulnerable package directly. The dependency chain is also not directly reachable by the vulnerable code.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2F%2540tootallnate%2Fonce%401.1.2%3Fpackage-id%3De8a247f8044e7761",
+          "versions": [
+            {
+              "version": "1.1.2",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "58"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P4 - EPSS < 1%"
+        },
+        {
+          "name": "fyp:epss:score",
+          "value": "0.00116"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is only an indirect dependency, and the app's code does not import the vulnerable package directly. The dependency chain is also not directly reachable by the vulnerable code."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "914c6b4363f5d1639b2099890404b823c8d7fc5e1b34ee65572e369d5a8ced21"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-59",
+      "id": "GHSA-5mrr-rgp6-x4gr",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-5mrr-rgp6-x4gr"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "critical"
+        }
+      ],
+      "recommendation": "No fixed version available",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "can_not_fix"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The fixed version is not available, indicating the vulnerability is still present in the latest version of marsdb (0.6.11), and the application is a direct production dependency, meaning the vulnerable package is shipped with the application.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fmarsdb%400.6.11%3Fpackage-id%3D79b3a5768474ea97",
+          "versions": [
+            {
+              "version": "0.6.11",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "59"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P5 - no EPSS score"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The fixed version is not available, indicating the vulnerability is still present in the latest version of marsdb (0.6.11), and the application is a direct production dependency, meaning the vulnerable package is shipped with the application."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "bbadceadcb3f872ea09582e382f4c4c61bda931553bf717b84fa97692aec9382"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-60",
+      "id": "GHSA-gjcw-v447-2w7q",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-gjcw-v447-2w7q"
+      },
+      "references": [
+        {
+          "id": "CVE-2016-1000223",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-1000223"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "high",
+          "score": 8.7,
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "recommendation": "Upgrade jws to 3.0.0",
+      "analysis": {
+        "state": "exploitable",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is described as forgeable Public/Private Tokens in jws, but the fact that the application uses a fixed version (3.0.0) of the jws package suggests that the vulnerability has been patched. However, the fact that the package is declared in the lock file and is an indirect dependency of the application means that the vulnerability could potentially be exploited if the application were to use a different version of the package.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fjws%400.2.6%3Fpackage-id%3Db9b9df29d8d7cac2",
+          "versions": [
+            {
+              "version": "0.2.6",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "60"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P5 - no EPSS score"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "exploitable"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is described as forgeable Public/Private Tokens in jws, but the fact that the application uses a fixed version (3.0.0) of the jws package suggests that the vulnerability has been patched. However, the fact that the package is declared in the lock file and is an indirect dependency of the application means that the vulnerability could potentially be exploited if the application were to use a different version of the package."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "84bb9246c72b998982d97e4abf35ddae421d1ac993d31bd80e84d650261b36f3"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-61",
+      "id": "GHSA-rvg8-pwq2-xj7q",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-rvg8-pwq2-xj7q"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium"
+        }
+      ],
+      "recommendation": "Upgrade base64url to 3.0.0",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "update"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency, and the application does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code can be reached by the application.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fbase64url%400.0.6%3Fpackage-id%3D509eb79504aeaeb7",
+          "versions": [
+            {
+              "version": "0.0.6",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "61"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P5 - no EPSS score"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is an indirect dependency, and the application does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code can be reached by the application."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "9c59b8eefb13c6bd322257aa99ccfdf6a058365e277217bb9af5d41514c6558f"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-62",
+      "id": "GHSA-hp3w-g68c-fv3c",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-hp3w-g68c-fv3c"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-97058",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97058"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.9,
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+        }
+      ],
+      "recommendation": "No fixed version available",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "can_not_fix"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only exploitable through unbounded precision specifiers, which are not present in the application's code. Additionally, the package is an indirect dependency, pulled in by another package, and not imported directly by the app's own code.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fsprintf-js%401.0.3%3Fpackage-id%3Dec19059975609e90",
+          "versions": [
+            {
+              "version": "1.0.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "62"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P5 - no EPSS score"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is only exploitable through unbounded precision specifiers, which are not present in the application's code. Additionally, the package is an indirect dependency, pulled in by another package, and not imported directly by the app's own code."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "9ffce09ff7b53a181a33736649cb385df86b9307fffc436e41eaba65662a5624"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-63",
+      "id": "GHSA-hp3w-g68c-fv3c",
+      "source": {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-hp3w-g68c-fv3c"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-97058",
+          "source": {
+            "name": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97058"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "Grype"
+          },
+          "severity": "medium",
+          "score": 6.9,
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+        }
+      ],
+      "recommendation": "No fixed version available",
+      "analysis": {
+        "state": "in_triage",
+        "response": [
+          "can_not_fix"
+        ],
+        "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only exploitable through unbounded precision specifiers, which are not used by the app's code, and the package is only an indirect dependency, pulled in by another package.",
+        "firstIssued": "2026-11-13T08:31:07.184Z",
+        "lastUpdated": "2026-11-13T09:06:11.964Z"
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1#pkg%3Anpm%2Fsprintf-js%401.1.3%3Fpackage-id%3D11b07f76a8531ab9",
+          "versions": [
+            {
+              "version": "1.1.3",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "fyp:exploitability_rank",
+          "value": "63"
+        },
+        {
+          "name": "fyp:priority",
+          "value": "P5 - no EPSS score"
+        },
+        {
+          "name": "fyp:kev:in_kev",
+          "value": "false"
+        },
+        {
+          "name": "fyp:llm:state",
+          "value": "in_triage"
+        },
+        {
+          "name": "fyp:llm:justification",
+          "value": "none"
+        },
+        {
+          "name": "fyp:llm:reason",
+          "value": "The vulnerability is only exploitable through unbounded precision specifiers, which are not used by the app's code, and the package is only an indirect dependency, pulled in by another package."
+        },
+        {
+          "name": "fyp:llm:prompt_sha256",
+          "value": "9d0c4326d0b0bfb59020e55fa1f7302244aa3f46fe9f0a83097b071376d5224b"
+        },
+        {
+          "name": "fyp:review:decision",
+          "value": "LLM only - not reviewed"
+        }
+      ]
+    }
+  ]
+}

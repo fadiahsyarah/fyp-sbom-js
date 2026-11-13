@@ -1,0 +1,4 @@
+# Keep output files byte-for-byte the same on every computer, so the signatures stay valid
+output/** -text
+kev-epss-snapshot/** -text
+keys/** -text

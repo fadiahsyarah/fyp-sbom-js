@@ -1,0 +1,1902 @@
+{
+  "repo": "dvna",
+  "created": "2026-11-13T07:28:27.174Z",
+  "model": {
+    "name": "llama3.2:3b",
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "ollama_version": "0.40.13",
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "top_k": 1,
+      "num_ctx": 4096
+    }
+  },
+  "system_prompt": "You are a software security analyst writing a VEX (Vulnerability Exploitability eXchange) statement.\nYou get facts about ONE known vulnerability in ONE npm package used by a Node.js application.\nDecide the VEX state for this application using ONLY the facts given:\n- \"exploitable\": the vulnerable package is used by the running application (production dependency, imported by the app's code or by a package the app uses), and nothing in the facts shows the vulnerable function cannot be reached.\n- \"not_affected\": the facts show the vulnerable code cannot affect the running application, for example the package is only a development dependency (used for building or testing, not shipped). Then give a justification.\n- \"in_triage\": the facts are not enough to decide.\nNever say \"not_affected\" only because the application is a training app or because the score is low.\nJustification (only when not_affected), one of: code_not_present, code_not_reachable, requires_configuration, requires_dependency, requires_environment, protected_by_compiler, protected_at_runtime, protected_at_perimeter, protected_by_mitigating_control.\nReason: at most 2 short sentences that point to the facts you used.\nAnswer only with JSON.",
+  "answer_schema": {
+    "type": "object",
+    "properties": {
+      "state": {
+        "type": "string",
+        "enum": [
+          "exploitable",
+          "not_affected",
+          "in_triage"
+        ]
+      },
+      "justification": {
+        "type": "string",
+        "enum": [
+          "none",
+          "code_not_present",
+          "code_not_reachable",
+          "requires_configuration",
+          "requires_dependency",
+          "requires_environment",
+          "protected_by_compiler",
+          "protected_at_runtime",
+          "protected_at_perimeter",
+          "protected_by_mitigating_control"
+        ]
+      },
+      "reason": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "state",
+      "justification",
+      "reason"
+    ]
+  },
+  "results": [
+    {
+      "bom-ref": "vuln-1",
+      "id": "GHSA-q4v7-4rhw-9hqm",
+      "rank": 1,
+      "facts": {
+        "application": "dvna",
+        "package": "node-serialize 0.0.4",
+        "vulnerability": "GHSA-q4v7-4rhw-9hqm",
+        "cve": "CVE-2017-5941",
+        "severity": "critical",
+        "description": "Code Execution through IIFE in node-serialize",
+        "fixed_version": "No fixed version available",
+        "epss": "0.61025",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "node-serialize",
+        "imported_by_app_code": "yes, in 1 file(s): core/appHandler.js"
+      },
+      "prompt_sha256": "8c4fa095db9bd56a07481701a73c5359191aa738b82cc1b06b5b82c1385feb71",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is not available, but the vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application."
+      }
+    },
+    {
+      "bom-ref": "vuln-2",
+      "id": "GHSA-phwq-j96m-2c2q",
+      "rank": 2,
+      "facts": {
+        "application": "dvna",
+        "package": "ejs 2.7.4",
+        "vulnerability": "GHSA-phwq-j96m-2c2q",
+        "cve": "CVE-2022-29078",
+        "severity": "critical",
+        "description": "ejs template injection vulnerability",
+        "fixed_version": "Upgrade ejs to 3.1.7",
+        "epss": "0.32808",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "ejs",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "5b2b3da71cc0bb21236a2d0a924a4bd3074d662feb15328c46ec180c3f0ba970",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is available, but the application is using a version of ejs that is not the latest fixed version (2.7.4)."
+      }
+    },
+    {
+      "bom-ref": "vuln-3",
+      "id": "GHSA-3jfq-g458-7qm9",
+      "rank": 3,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-3jfq-g458-7qm9",
+        "cve": "CVE-2021-32804",
+        "severity": "high",
+        "description": "Arbitrary File Creation/Overwrite due to insufficient absolute path sanitization",
+        "fixed_version": "Upgrade tar to 3.2.2",
+        "epss": "0.15067",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "91a48304c7ef63fe3d17fff576f665dbc7f038dc1c0afabab4035fa7b68f2994",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a declared dependency, and the application uses it as an indirect dependency through another package (libxmljs)."
+      }
+    },
+    {
+      "bom-ref": "vuln-4",
+      "id": "GHSA-9wcg-jrwf-8gg7",
+      "rank": 4,
+      "facts": {
+        "application": "dvna",
+        "package": "express-fileupload 0.4.0",
+        "vulnerability": "GHSA-9wcg-jrwf-8gg7",
+        "cve": "CVE-2020-7699",
+        "severity": "critical",
+        "description": "Prototype Pollution in express-fileupload",
+        "fixed_version": "Upgrade express-fileupload to 1.1.9",
+        "epss": "0.04762",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express-fileupload",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "1406bbda3fd22aa488f90a9373b1e99e206c03427231fc7fecc8aa4b6280972c",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is available, and the vulnerability is declared in the package-lock.json file, indicating it is a production dependency. The fact that the vulnerable code is used by the running application (direct production dependency) and nothing in the facts shows the vulnerable function cannot be reached, makes it exploitable."
+      }
+    },
+    {
+      "bom-ref": "vuln-5",
+      "id": "GHSA-x2fc-mxcx-w4mf",
+      "rank": 5,
+      "facts": {
+        "application": "dvna",
+        "package": "mathjs 3.10.1",
+        "vulnerability": "GHSA-x2fc-mxcx-w4mf",
+        "cve": "CVE-2020-7743",
+        "severity": "high",
+        "description": "Prototype Pollution in mathjs",
+        "fixed_version": "Upgrade mathjs to 7.5.1",
+        "epss": "0.03924",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mathjs",
+        "imported_by_app_code": "yes, in 1 file(s): core/appHandler.js"
+      },
+      "prompt_sha256": "1dc8cc0a792ec9cf8de316ea19cfa93ebe14387a8e708e42fe0f16ab1b26fa4f",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is available, but the application is using an older version of the package (3.10.1) that is not fixed by the EPSS (0.03924)."
+      }
+    },
+    {
+      "bom-ref": "vuln-6",
+      "id": "GHSA-wm7h-9275-46v2",
+      "rank": 6,
+      "facts": {
+        "application": "dvna",
+        "package": "dicer 0.2.5",
+        "vulnerability": "GHSA-wm7h-9275-46v2",
+        "cve": "CVE-2022-24434",
+        "severity": "high",
+        "description": "Crash in HeaderParser in dicer",
+        "fixed_version": "No fixed version available",
+        "epss": "0.03478",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express-fileupload -> busboy -> dicer",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "3d507cf46e58f6a54f71015f468580d85de582154602d2f0a4bb04256fa5f59f",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is a production dependency and is pulled in by another package (express-fileupload) that is used by the application, indicating that the vulnerable code is reachable."
+      }
+    },
+    {
+      "bom-ref": "vuln-7",
+      "id": "GHSA-pmh2-wpjm-fj45",
+      "rank": 7,
+      "facts": {
+        "application": "dvna",
+        "package": "mysql2 1.7.0",
+        "vulnerability": "GHSA-pmh2-wpjm-fj45",
+        "cve": "CVE-2024-21512",
+        "severity": "high",
+        "description": "mysql2 vulnerable to Prototype Pollution",
+        "fixed_version": "Upgrade mysql2 to 3.9.8",
+        "epss": "0.03139",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mysql2",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "dc8088b9f7f8e8defe528209525652e3c78c99abfbe5c8322d1234aef9b3c9b1",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is a direct production dependency, declared in the lock file scope, and not imported by the app's own code, indicating the vulnerable code is not present in the application's runtime environment."
+      }
+    },
+    {
+      "bom-ref": "vuln-8",
+      "id": "GHSA-72xf-g2v4-qvf3",
+      "rank": 8,
+      "facts": {
+        "application": "dvna",
+        "package": "tough-cookie 2.5.0",
+        "vulnerability": "GHSA-72xf-g2v4-qvf3",
+        "cve": "CVE-2023-26136",
+        "severity": "medium",
+        "description": "tough-cookie Prototype Pollution vulnerability",
+        "fixed_version": "Upgrade tough-cookie to 4.1.3",
+        "epss": "0.02627",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "bcrypt -> node-pre-gyp -> request -> tough-cookie",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "8f8680f301cc650d190b5bbc5ed3fa802a130747c6dbc932902a53cc53409c6f",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency, and the application does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code is reachable by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-9",
+      "id": "GHSA-fpw7-j2hg-69v5",
+      "rank": 9,
+      "facts": {
+        "application": "dvna",
+        "package": "mysql2 1.7.0",
+        "vulnerability": "GHSA-fpw7-j2hg-69v5",
+        "cve": "CVE-2024-21508",
+        "severity": "critical",
+        "description": "mysql2 Remote Code Execution (RCE) via the readCodeFor function",
+        "fixed_version": "Upgrade mysql2 to 3.9.4",
+        "epss": "0.02554",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mysql2",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "748dc55f23e327c005a2132ae65ec228a352a8cb83f79357c7fe165c855f6c99",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is a direct production dependency, declared in the lock file scope, and is used by the running application (dvna). The fact that it's not imported directly by the app's own code doesn't affect its exploitability since it's a dependency of another package that is used."
+      }
+    },
+    {
+      "bom-ref": "vuln-10",
+      "id": "GHSA-vx5c-87qx-cv6c",
+      "rank": 10,
+      "facts": {
+        "application": "dvna",
+        "package": "mathjs 3.10.1",
+        "vulnerability": "GHSA-vx5c-87qx-cv6c",
+        "cve": "CVE-2017-1001002",
+        "severity": "critical",
+        "description": "Arbitrary Code Execution in mathjs",
+        "fixed_version": "Upgrade mathjs to 3.17.0",
+        "epss": "0.02357",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mathjs",
+        "imported_by_app_code": "yes, in 1 file(s): core/appHandler.js"
+      },
+      "prompt_sha256": "4fd04e27dfff32b9c90a4ae84e486f5024505684747185104a76da1c0596265d",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is available, indicating that the vulnerability has been patched. The application is using a direct production dependency, and the vulnerable code is imported by the app's code, making it reachable."
+      }
+    },
+    {
+      "bom-ref": "vuln-11",
+      "id": "GHSA-3qh4-r86r-grvm",
+      "rank": 11,
+      "facts": {
+        "application": "dvna",
+        "package": "typed-function 0.10.5",
+        "vulnerability": "GHSA-3qh4-r86r-grvm",
+        "cve": "CVE-2017-1001004",
+        "severity": "high",
+        "description": "Arbitrary JavaScript Execution in typed-function",
+        "fixed_version": "Upgrade typed-function to 0.10.6",
+        "epss": "0.01884",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mathjs -> typed-function",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "cb9dc90642d520b34f18521dd3284091a05653e3a5c9c389a3596a65a4f79fe9",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (mathjs)."
+      }
+    },
+    {
+      "bom-ref": "vuln-12",
+      "id": "GHSA-fjxv-7rqg-78g4",
+      "rank": 12,
+      "facts": {
+        "application": "dvna",
+        "package": "form-data 2.3.3",
+        "vulnerability": "GHSA-fjxv-7rqg-78g4",
+        "cve": "CVE-2025-7783",
+        "severity": "critical",
+        "description": "form-data uses unsafe random function in form-data for choosing boundary",
+        "fixed_version": "Upgrade form-data to 2.5.4",
+        "epss": "0.0181",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "bcrypt -> node-pre-gyp -> request -> form-data",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "aba502bea55e6a22d4e0b037bc1447e0ad933977629fac5cb4370e9faeb50afd",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is high (0.0181), suggesting a significant exploitability."
+      }
+    },
+    {
+      "bom-ref": "vuln-13",
+      "id": "GHSA-qgmg-gppg-76g5",
+      "rank": 13,
+      "facts": {
+        "application": "dvna",
+        "package": "validator 10.11.0",
+        "vulnerability": "GHSA-qgmg-gppg-76g5",
+        "cve": "CVE-2021-3765",
+        "severity": "medium",
+        "description": "Inefficient Regular Expression Complexity in validator.js",
+        "fixed_version": "Upgrade validator to 13.7.0",
+        "epss": "0.01777",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "sequelize -> validator",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "74188335eaed35e6c8d0ea305fd4d7928a61fdc86222c5f6d02303b769025f25",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is declared in /package-lock.json, indicating it's a production dependency, but the imported_by_app_code fact shows the app does not directly import the vulnerable code, suggesting it's not directly reachable."
+      }
+    },
+    {
+      "bom-ref": "vuln-14",
+      "id": "GHSA-pv8x-p9hq-j328",
+      "rank": 14,
+      "facts": {
+        "application": "dvna",
+        "package": "mathjs 3.10.1",
+        "vulnerability": "GHSA-pv8x-p9hq-j328",
+        "cve": "CVE-2017-1001003",
+        "severity": "critical",
+        "description": "Arbitrary Code Execution in mathjs",
+        "fixed_version": "Upgrade mathjs to 3.17.0",
+        "epss": "0.01689",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mathjs",
+        "imported_by_app_code": "yes, in 1 file(s): core/appHandler.js"
+      },
+      "prompt_sha256": "99d72d97282c6609ff26d79d391f11b026b89c49c64ed34d2d8a96be3cc42fd2",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is available, but the application is using an older version of the package (3.10.1) that is not fixed."
+      }
+    },
+    {
+      "bom-ref": "vuln-15",
+      "id": "GHSA-wrh9-cjv3-2hpw",
+      "rank": 15,
+      "facts": {
+        "application": "dvna",
+        "package": "sequelize 4.44.4",
+        "vulnerability": "GHSA-wrh9-cjv3-2hpw",
+        "cve": "CVE-2023-25813",
+        "severity": "critical",
+        "description": "Sequelize vulnerable to SQL Injection via replacements",
+        "fixed_version": "Upgrade sequelize to 6.19.1",
+        "epss": "0.01444",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "sequelize",
+        "imported_by_app_code": "yes, in 1 file(s): models/index.js"
+      },
+      "prompt_sha256": "b54ad860160064e19b239b7f32c159dfecd6ba855750543c4db60fb564a1ea6a",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is available, but the application is using an older version (4.44.4) of sequelize, which is not the latest version (6.19.1)."
+      }
+    },
+    {
+      "bom-ref": "vuln-16",
+      "id": "GHSA-w4m6-x6c2-j5c9",
+      "rank": 16,
+      "facts": {
+        "application": "dvna",
+        "package": "express-fileupload 0.4.0",
+        "vulnerability": "GHSA-w4m6-x6c2-j5c9",
+        "cve": "CVE-2022-27261",
+        "severity": "high",
+        "description": "Express-FileUpload Arbitrary File Overwrite",
+        "fixed_version": "No fixed version available",
+        "epss": "0.01381",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express-fileupload",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "b6e55eda2f68407649244bec43075c891da92cb60feb9715b9ad94e8030063f7",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is not available, but the vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application."
+      }
+    },
+    {
+      "bom-ref": "vuln-17",
+      "id": "GHSA-5955-9wpr-37jh",
+      "rank": 17,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-5955-9wpr-37jh",
+        "cve": "CVE-2021-37713",
+        "severity": "high",
+        "description": "Arbitrary File Creation/Overwrite on Windows via insufficient relative path sanitization",
+        "fixed_version": "Upgrade tar to 4.4.18",
+        "epss": "0.01273",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "cfcbccc0aa71336b0f29bb62d35e38d1df9d1aa13f9e9489037f7c1209ece450",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable on Windows, but the application is not specified to run on Windows, and there is no indication that the tar package is used for building or testing on Windows."
+      }
+    },
+    {
+      "bom-ref": "vuln-18",
+      "id": "GHSA-mg49-jqgw-gcj6",
+      "rank": 18,
+      "facts": {
+        "application": "dvna",
+        "package": "libxmljs 0.19.10",
+        "vulnerability": "GHSA-mg49-jqgw-gcj6",
+        "cve": "CVE-2024-34392",
+        "severity": "critical",
+        "description": "libxmljs vulnerable to type confusion when parsing specially crafted XML",
+        "fixed_version": "No fixed version available",
+        "epss": "0.01136",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs",
+        "imported_by_app_code": "yes, in 1 file(s): core/appHandler.js"
+      },
+      "prompt_sha256": "2d72bfd5896a7e09aff7621e2b3f3cbf7ad1e0e4789b66c3ba1ffdbb171865db",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is not available, indicating the vulnerability is still present in the latest version of libxmljs (0.19.10)."
+      }
+    },
+    {
+      "bom-ref": "vuln-19",
+      "id": "GHSA-6433-x5p4-8jc7",
+      "rank": 19,
+      "facts": {
+        "application": "dvna",
+        "package": "libxmljs 0.19.10",
+        "vulnerability": "GHSA-6433-x5p4-8jc7",
+        "cve": "CVE-2024-34391",
+        "severity": "critical",
+        "description": "libxmljs vulnerable to type confusion when parsing specially crafted XML",
+        "fixed_version": "No fixed version available",
+        "epss": "0.01112",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs",
+        "imported_by_app_code": "yes, in 1 file(s): core/appHandler.js"
+      },
+      "prompt_sha256": "58b1fb88654a59774ca4c0424aed01d7e627a8eff1be08411f69ec6699021b2c",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is not available, indicating the vulnerability is still present in the latest version of libxmljs (0.19.10)."
+      }
+    },
+    {
+      "bom-ref": "vuln-20",
+      "id": "GHSA-v923-w3x8-wh69",
+      "rank": 20,
+      "facts": {
+        "application": "dvna",
+        "package": "passport 0.4.1",
+        "vulnerability": "GHSA-v923-w3x8-wh69",
+        "cve": "CVE-2022-25896",
+        "severity": "medium",
+        "description": "Passport vulnerable to session regeneration when a users logs in or out",
+        "fixed_version": "Upgrade passport to 0.6.0",
+        "epss": "0.0109",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "passport",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "c53e6be56c1e0cad9ba5e47253b9b08b486e42dc19e57a07042825ddc2a2e884",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the lock file scope (production) and is a direct production dependency, indicating it is shipped with the application. The fact that it is used by the app's code (imported by the app's code or by a package the app uses) further supports this state."
+      }
+    },
+    {
+      "bom-ref": "vuln-21",
+      "id": "GHSA-4rch-2fh8-94vw",
+      "rank": 21,
+      "facts": {
+        "application": "dvna",
+        "package": "mysql2 1.7.0",
+        "vulnerability": "GHSA-4rch-2fh8-94vw",
+        "cve": "CVE-2024-21511",
+        "severity": "critical",
+        "description": "MySQL2 for Node Arbitrary Code Injection",
+        "fixed_version": "Upgrade mysql2 to 3.9.7",
+        "epss": "0.01034",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mysql2",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "87f26f1a5bdee1163dd8c5e069a33ed1c6c75854557884bc7315b357896c03de",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is a direct production dependency, declared in the lock file scope, and is used by the running application (dvna). The fact that it's not imported directly by the app's own code does not affect its exploitability."
+      }
+    },
+    {
+      "bom-ref": "vuln-22",
+      "id": "GHSA-49j4-86m8-q2jw",
+      "rank": 22,
+      "facts": {
+        "application": "dvna",
+        "package": "mysql2 1.7.0",
+        "vulnerability": "GHSA-49j4-86m8-q2jw",
+        "cve": "CVE-2024-21509",
+        "severity": "medium",
+        "description": "mysql2 vulnerable to Prototype Poisoning",
+        "fixed_version": "Upgrade mysql2 to 3.9.4",
+        "epss": "0.00955",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mysql2",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "71b54831f6833b408e0b3c874646cf88679b0c1b51a78e2733a349cde1e8bc83",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is a direct production dependency, declared in the lock file scope, and not imported by the app's own code, indicating it is shipped with the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-23",
+      "id": "GHSA-f5x3-32g6-xq36",
+      "rank": 23,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-f5x3-32g6-xq36",
+        "cve": "CVE-2024-28863",
+        "severity": "medium",
+        "description": "Denial of service while parsing a tar file due to lack of folders count validation",
+        "fixed_version": "Upgrade tar to 6.2.1",
+        "epss": "0.00929",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "3a155463108af8ac064592d7677253a8628314d3c1d5a2ed4c23b59fff110e55",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable due to an indirect dependency, and the app's code does not import the vulnerable package directly. The EPSS score is also low (0.00929), which may indicate a lower risk."
+      }
+    },
+    {
+      "bom-ref": "vuln-24",
+      "id": "GHSA-f598-mfpv-gmfx",
+      "rank": 24,
+      "facts": {
+        "application": "dvna",
+        "package": "sequelize 4.44.4",
+        "vulnerability": "GHSA-f598-mfpv-gmfx",
+        "cve": "CVE-2023-22578",
+        "severity": "critical",
+        "description": "Sequelize - Default support for “raw attributes” when using parentheses",
+        "fixed_version": "Upgrade sequelize to 6.29.0",
+        "epss": "0.00831",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "sequelize",
+        "imported_by_app_code": "yes, in 1 file(s): models/index.js"
+      },
+      "prompt_sha256": "8a4675826d8a6557d9dcb4f419f6227d3537c2bc5c46b30518b86e4db2cceeec",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is 6.29.0, which is not present in the production dependency (sequelize 4.44.4)."
+      }
+    },
+    {
+      "bom-ref": "vuln-25",
+      "id": "GHSA-vqfx-gj96-3w95",
+      "rank": 25,
+      "facts": {
+        "application": "dvna",
+        "package": "sequelize 4.44.4",
+        "vulnerability": "GHSA-vqfx-gj96-3w95",
+        "cve": "CVE-2023-22579",
+        "severity": "critical",
+        "description": "Unsafe fall-through in getWhereConditions",
+        "fixed_version": "Upgrade sequelize to 6.28.1",
+        "epss": "0.00809",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "sequelize",
+        "imported_by_app_code": "yes, in 1 file(s): models/index.js"
+      },
+      "prompt_sha256": "8b8e8f9b998449ce6c79dc6323cdaffbbb7ea9cdca078b81337d0c9aeaa17de0",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is 6.28.1, which is not present in the production dependency (sequelize 4.44.4)."
+      }
+    },
+    {
+      "bom-ref": "vuln-26",
+      "id": "GHSA-5wg4-74h6-q47v",
+      "rank": 26,
+      "facts": {
+        "application": "dvna",
+        "package": "bcrypt 1.0.3",
+        "vulnerability": "GHSA-5wg4-74h6-q47v",
+        "cve": "CVE-2020-7689",
+        "severity": "medium",
+        "description": "Integer Overflow or Wraparound and Use of a Broken or Risky Cryptographic Algorithm in bcrypt",
+        "fixed_version": "Upgrade bcrypt to 5.0.0",
+        "epss": "0.00785",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "bcrypt",
+        "imported_by_app_code": "yes, in 3 file(s): core/appHandler.js, core/authHandler.js, core/passport.js"
+      },
+      "prompt_sha256": "284a03fc2418ef5f7ae3e17599632dca7470835628c73a6e9c934b5b63700f52",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is 5.0.0, which is not present in the application's production dependency (bcrypt 1.0.3), indicating the vulnerability is still exploitable."
+      }
+    },
+    {
+      "bom-ref": "vuln-27",
+      "id": "GHSA-mqr2-w7wj-jjgr",
+      "rank": 27,
+      "facts": {
+        "application": "dvna",
+        "package": "mysql2 1.7.0",
+        "vulnerability": "GHSA-mqr2-w7wj-jjgr",
+        "cve": "CVE-2024-21507",
+        "severity": "medium",
+        "description": "mysql2 cache poisoning vulnerability",
+        "fixed_version": "Upgrade mysql2 to 3.9.3",
+        "epss": "0.00744",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mysql2",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "98604a9219c8985aa561e87605cb99aa7bb0d6086fa0a9c8a9f105a846540311",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is a direct production dependency and is declared in the lock file, indicating it is shipped with the application. The fact that it is not imported directly by the app's own code does not negate its potential impact on the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-28",
+      "id": "GHSA-pxg6-pf52-xh8x",
+      "rank": 28,
+      "facts": {
+        "application": "dvna",
+        "package": "cookie 0.4.0",
+        "vulnerability": "GHSA-pxg6-pf52-xh8x",
+        "cve": "CVE-2024-47764",
+        "severity": "low",
+        "description": "cookie accepts cookie name, path, and domain with out of bounds characters",
+        "fixed_version": "Upgrade cookie to 0.7.0",
+        "epss": "0.00744",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "csurf -> cookie",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "602a66bfe638315d3002e448dc161877bc0feea43220b2b92387d78f99487b7c",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable when the cookie name, path, and domain are provided with out of bounds characters, but the fact that the app is not importing the vulnerable code directly implies that the vulnerable function cannot be reached."
+      }
+    },
+    {
+      "bom-ref": "vuln-29",
+      "id": "GHSA-p8p7-x288-28g6",
+      "rank": 29,
+      "facts": {
+        "application": "dvna",
+        "package": "request 2.88.2",
+        "vulnerability": "GHSA-p8p7-x288-28g6",
+        "cve": "CVE-2023-28155",
+        "severity": "medium",
+        "description": "Server-Side Request Forgery in Request",
+        "fixed_version": "No fixed version available",
+        "epss": "0.00719",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "bcrypt -> node-pre-gyp -> request",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "636d360222aa2f1a2aa8f49363de7e8b06f55389cf4409712d5e4eddeb7a3d83",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency, and the app does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code is reachable by the app's code."
+      }
+    },
+    {
+      "bom-ref": "vuln-30",
+      "id": "GHSA-hmw2-7cc7-3qxx",
+      "rank": 30,
+      "facts": {
+        "application": "dvna",
+        "package": "form-data 2.3.3",
+        "vulnerability": "GHSA-hmw2-7cc7-3qxx",
+        "cve": "CVE-2026-12143",
+        "severity": "high",
+        "description": "form-data: CRLF injection in form-data via unescaped multipart field names and filenames",
+        "fixed_version": "Upgrade form-data to 2.5.6",
+        "epss": "0.00669",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "bcrypt -> node-pre-gyp -> request -> form-data",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "829abb866face70b1c27cdef7591418f3913e8b90ce36a9190a9337089e6c5ce",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (bcrypt)."
+      }
+    },
+    {
+      "bom-ref": "vuln-31",
+      "id": "GHSA-w8wr-v893-vjvp",
+      "rank": 31,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-w8wr-v893-vjvp",
+        "cve": "CVE-2026-59871",
+        "severity": "medium",
+        "description": "node-tar: Process crash via PAX numeric path type confusion",
+        "fixed_version": "Upgrade tar to 7.5.18",
+        "epss": "0.00644",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "c837bf1706aaf267b7c19a3974a988972c94aa222a9ad981441f735b4a352499",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "not enough information about the impact of the vulnerability on the application's functionality or data"
+      }
+    },
+    {
+      "bom-ref": "vuln-32",
+      "id": "GHSA-w8wr-v893-vjvp",
+      "rank": 32,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 6.2.1",
+        "vulnerability": "GHSA-w8wr-v893-vjvp",
+        "cve": "CVE-2026-59871",
+        "severity": "medium",
+        "description": "node-tar: Process crash via PAX numeric path type confusion",
+        "fixed_version": "Upgrade tar to 7.5.18",
+        "epss": "0.00644",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "933d00b9532af31a3652d6895145af3ce5013d8c83947a7b0c316ad7be48ff5a",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "not enough information about the impact of the vulnerability on the application's functionality or data"
+      }
+    },
+    {
+      "bom-ref": "vuln-33",
+      "id": "GHSA-ghr5-ch3p-vcr6",
+      "rank": 33,
+      "facts": {
+        "application": "dvna",
+        "package": "ejs 2.7.4",
+        "vulnerability": "GHSA-ghr5-ch3p-vcr6",
+        "cve": "CVE-2024-33883",
+        "severity": "medium",
+        "description": "ejs lacks certain pollution protection",
+        "fixed_version": "Upgrade ejs to 3.1.10",
+        "epss": "0.00614",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "ejs",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "98b54ee006797df7cfc1b5bf8db3975afbcc2943a16a74990f1ae439a1846fb1",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a direct production dependency, and the application imports the vulnerable package in one of its files (server.js)."
+      }
+    },
+    {
+      "bom-ref": "vuln-34",
+      "id": "GHSA-34x7-hfp2-rc4v",
+      "rank": 34,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-34x7-hfp2-rc4v",
+        "cve": "CVE-2026-24842",
+        "severity": "high",
+        "description": "node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal",
+        "fixed_version": "Upgrade tar to 7.5.7",
+        "epss": "0.00608",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "0c508fb03bcd3be46f8f7e0e8062b358d6f4b719af180f825ee0593ec1044bf0",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs -> @mapbox/node-pre-gyp -> tar)."
+      }
+    },
+    {
+      "bom-ref": "vuln-35",
+      "id": "GHSA-34x7-hfp2-rc4v",
+      "rank": 35,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 6.2.1",
+        "vulnerability": "GHSA-34x7-hfp2-rc4v",
+        "cve": "CVE-2026-24842",
+        "severity": "high",
+        "description": "node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal",
+        "fixed_version": "Upgrade tar to 7.5.7",
+        "epss": "0.00608",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "db132ef3051eb750889b87be277b56a601fb3c09103d3dce56743a3ad2466a79",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a declared dependency, and the application uses it as an indirect dependency through another package (libxmljs)."
+      }
+    },
+    {
+      "bom-ref": "vuln-36",
+      "id": "GHSA-8c25-f3mj-v6h8",
+      "rank": 36,
+      "facts": {
+        "application": "dvna",
+        "package": "sequelize 4.44.4",
+        "vulnerability": "GHSA-8c25-f3mj-v6h8",
+        "cve": "CVE-2023-22580",
+        "severity": "medium",
+        "description": "Sequelize information disclosure vulnerability",
+        "fixed_version": "Upgrade sequelize to 6.28.1",
+        "epss": "0.00582",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "sequelize",
+        "imported_by_app_code": "yes, in 1 file(s): models/index.js"
+      },
+      "prompt_sha256": "c6f95b2e1e4381cb74abc079063d70dafa60e4f201a6124471b1da31eb94bad5",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is available, but the application is using an outdated version (4.44.4) of sequelize, which is the vulnerable version. The application is also using the vulnerable package as a direct production dependency, and the vulnerable code is imported by the app's code in one file (models/index.js)."
+      }
+    },
+    {
+      "bom-ref": "vuln-37",
+      "id": "GHSA-23hp-3jrh-7fpw",
+      "rank": 37,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-23hp-3jrh-7fpw",
+        "cve": "CVE-2026-59873",
+        "severity": "critical",
+        "description": "node-tar: Decompression/parse DoS via unlimited input",
+        "fixed_version": "Upgrade tar to 7.5.19",
+        "epss": "0.00582",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "0d023f265f36f9660a927412ed97330891bb1efb9ecf60ac941958b332d63f4b",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs -> @mapbox/node-pre-gyp -> tar)."
+      }
+    },
+    {
+      "bom-ref": "vuln-38",
+      "id": "GHSA-23hp-3jrh-7fpw",
+      "rank": 38,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 6.2.1",
+        "vulnerability": "GHSA-23hp-3jrh-7fpw",
+        "cve": "CVE-2026-59873",
+        "severity": "critical",
+        "description": "node-tar: Decompression/parse DoS via unlimited input",
+        "fixed_version": "Upgrade tar to 7.5.19",
+        "epss": "0.00582",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "e6babb9e9b7a2183f2b640e5498fd685ecc414855e6a1fefd1f08f1518af4629",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "not enough information about the impact of the vulnerability on the application's functionality or data"
+      }
+    },
+    {
+      "bom-ref": "vuln-39",
+      "id": "GHSA-vghf-hv5q-vc2g",
+      "rank": 39,
+      "facts": {
+        "application": "dvna",
+        "package": "validator 10.11.0",
+        "vulnerability": "GHSA-vghf-hv5q-vc2g",
+        "cve": "CVE-2025-12758",
+        "severity": "high",
+        "description": "Validator is Vulnerable to Incomplete Filtering of One or More Instances of Special Elements",
+        "fixed_version": "Upgrade validator to 13.15.22",
+        "epss": "0.00554",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "sequelize -> validator",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "80dfd805fe03b3e99587bbb7ddc93cddc02c3742d142ae69117f97916e0aeaea",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is declared in /package-lock.json, indicating it's a production dependency, but the imported_by_app_code fact shows the app does not directly import the vulnerable package's code."
+      }
+    },
+    {
+      "bom-ref": "vuln-40",
+      "id": "GHSA-v8fg-2rw7-q452",
+      "rank": 40,
+      "facts": {
+        "application": "dvna",
+        "package": "sequelize 4.44.4",
+        "vulnerability": "GHSA-v8fg-2rw7-q452",
+        "cve": "CVE-2026-69240",
+        "severity": "critical",
+        "description": "Sequelize: SQL Injection (Oracle DB)",
+        "fixed_version": "Upgrade sequelize to 6.37.4",
+        "epss": "0.0054",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "sequelize",
+        "imported_by_app_code": "yes, in 1 file(s): models/index.js"
+      },
+      "prompt_sha256": "535cf7013b856254454e931c22471c094edfd57808da4e82aa40db22cad68f73",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is available, but the application is using an older version of sequelize (4.44.4) that is not the latest version (6.37.4)."
+      }
+    },
+    {
+      "bom-ref": "vuln-41",
+      "id": "GHSA-r292-9mhp-454m",
+      "rank": 41,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-r292-9mhp-454m",
+        "cve": "CVE-2026-73566",
+        "severity": "high",
+        "description": "node-tar: Uncontrolled recursion in mapHas/filesFilter allows uncatchable stack-overflow DoS via crafted long-path tar with member selection",
+        "fixed_version": "Upgrade tar to 7.5.21",
+        "epss": "0.00531",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "580fe1ae99f0e2c8f969315c9131e2786cd10d9c905fbdd2db203806aa252542",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is described as uncatchable stack-overflow DoS via crafted long-path tar with member selection, implying that the vulnerable code is not directly reachable by the application's own code, but rather through an indirect dependency."
+      }
+    },
+    {
+      "bom-ref": "vuln-42",
+      "id": "GHSA-r292-9mhp-454m",
+      "rank": 42,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 6.2.1",
+        "vulnerability": "GHSA-r292-9mhp-454m",
+        "cve": "CVE-2026-73566",
+        "severity": "high",
+        "description": "node-tar: Uncontrolled recursion in mapHas/filesFilter allows uncatchable stack-overflow DoS via crafted long-path tar with member selection",
+        "fixed_version": "Upgrade tar to 7.5.21",
+        "epss": "0.00531",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "7c65dc026ad40e930718f86ca592f02e2bad7b4bf2aa8aa98ff08f780b963468",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is in a package that is an indirect dependency (pulled in by another package), and the app's code does not import the vulnerable package directly. The package is also declared in the lock file scope of production, indicating it is a dependency of the app in production."
+      }
+    },
+    {
+      "bom-ref": "vuln-43",
+      "id": "GHSA-qffp-2rhf-9h96",
+      "rank": 43,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-qffp-2rhf-9h96",
+        "cve": "CVE-2026-29786",
+        "severity": "high",
+        "description": "tar has Hardlink Path Traversal via Drive-Relative Linkpath",
+        "fixed_version": "Upgrade tar to 7.5.10",
+        "epss": "0.00466",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "1896a9bc6d5de2044c54f54df8395c66d774aba1347000b9896b64c5f4fea9e9",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs)."
+      }
+    },
+    {
+      "bom-ref": "vuln-44",
+      "id": "GHSA-qffp-2rhf-9h96",
+      "rank": 44,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 6.2.1",
+        "vulnerability": "GHSA-qffp-2rhf-9h96",
+        "cve": "CVE-2026-29786",
+        "severity": "high",
+        "description": "tar has Hardlink Path Traversal via Drive-Relative Linkpath",
+        "fixed_version": "Upgrade tar to 7.5.10",
+        "epss": "0.00466",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "33ec1812330c473f5dfb68ce1fc48112fe9eb0b5ec043074d305101699c44203",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs -> @mapbox/node-pre-gyp -> tar)."
+      }
+    },
+    {
+      "bom-ref": "vuln-45",
+      "id": "GHSA-6rw7-vpxm-498p",
+      "rank": 45,
+      "facts": {
+        "application": "dvna",
+        "package": "qs 6.5.5",
+        "vulnerability": "GHSA-6rw7-vpxm-498p",
+        "cve": "CVE-2025-15284",
+        "severity": "medium",
+        "description": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
+        "fixed_version": "Upgrade qs to 6.14.1",
+        "epss": "0.0045",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express -> qs",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "2ef3bfcdd501238c785ef5f3dc6f918b01e31d4d6cc2e54fe1b9844c6b9000fb",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only a dependency of the application, and the app's code does not import the vulnerable qs package directly. The fact that it's an indirect dependency and not imported by app code makes it unclear if the vulnerability can be reached by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-46",
+      "id": "GHSA-8x88-c5mf-7j5w",
+      "rank": 46,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-8x88-c5mf-7j5w",
+        "cve": "CVE-2026-59874",
+        "severity": "high",
+        "description": "node-tar: Negative tar entry size causes infinite loop in archive replace",
+        "fixed_version": "Upgrade tar to 7.5.18",
+        "epss": "0.00434",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "2a88539fdbfcaaf721350141cb451ddb338efe0fa6e28a69353a27f01c76ac6a",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs -> @mapbox/node-pre-gyp -> tar)."
+      }
+    },
+    {
+      "bom-ref": "vuln-47",
+      "id": "GHSA-8x88-c5mf-7j5w",
+      "rank": 47,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 6.2.1",
+        "vulnerability": "GHSA-8x88-c5mf-7j5w",
+        "cve": "CVE-2026-59874",
+        "severity": "high",
+        "description": "node-tar: Negative tar entry size causes infinite loop in archive replace",
+        "fixed_version": "Upgrade tar to 7.5.18",
+        "epss": "0.00434",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "023db9a5ef88ce0810d5c1c214b92fce78dfbd79d4c43d381dcf3f9be618a33e",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs)."
+      }
+    },
+    {
+      "bom-ref": "vuln-48",
+      "id": "GHSA-jv72-59wq-8rxm",
+      "rank": 48,
+      "facts": {
+        "application": "dvna",
+        "package": "libxmljs 0.19.10",
+        "vulnerability": "GHSA-jv72-59wq-8rxm",
+        "cve": "CVE-2025-25341",
+        "severity": "high",
+        "description": "libxmljs has segmentation fault, potentially leading to a denial-of-service (DoS)",
+        "fixed_version": "No fixed version available",
+        "epss": "0.00422",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs",
+        "imported_by_app_code": "yes, in 1 file(s): core/appHandler.js"
+      },
+      "prompt_sha256": "8da8ea42ee7d7206f91ba2c5c9ba5ab8b63fef9568cf53601086d12d0b0314ca",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is not available, indicating the vulnerability is still present in the latest version of libxmljs (0.19.10) and the application is using it as a direct production dependency."
+      }
+    },
+    {
+      "bom-ref": "vuln-49",
+      "id": "GHSA-4mjr-xmp4-gh2g",
+      "rank": 49,
+      "facts": {
+        "application": "dvna",
+        "package": "qs 6.5.5",
+        "vulnerability": "GHSA-4mjr-xmp4-gh2g",
+        "cve": "CVE-2026-82417",
+        "severity": "medium",
+        "description": "qs: Denial of Service via Attacker Controlled isBuffer",
+        "fixed_version": "Upgrade qs to 6.16.0",
+        "epss": "0.00396",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express -> qs",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "1496224bd5975fd9f9ec7ef371f917f85cf8cae8887b45112cd0ec50a3eff2fd",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only reachable via an indirect dependency (express -> qs), and there is no indication that the vulnerable code is executed by the app's own code."
+      }
+    },
+    {
+      "bom-ref": "vuln-50",
+      "id": "GHSA-8qq5-rm4j-mr97",
+      "rank": 50,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-8qq5-rm4j-mr97",
+        "cve": "CVE-2026-23745",
+        "severity": "high",
+        "description": "node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization",
+        "fixed_version": "Upgrade tar to 7.5.3",
+        "epss": "0.00376",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "b87228fffaf25f250d9c5947d59c178ea38cac0c518eb4e57c967616497c8c1b",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency, and the application does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code can be reached by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-51",
+      "id": "GHSA-8qq5-rm4j-mr97",
+      "rank": 51,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 6.2.1",
+        "vulnerability": "GHSA-8qq5-rm4j-mr97",
+        "cve": "CVE-2026-23745",
+        "severity": "high",
+        "description": "node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization",
+        "fixed_version": "Upgrade tar to 7.5.3",
+        "epss": "0.00376",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "09b601601441b5084f04ee80ee5a21af29e19234e3f9639f6ed5d89ab87e38cc",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency (pulled in by another package) and the app's code does not import the vulnerable package directly, but the vulnerable package is declared in the lock file scope (production) and is used by the running application (libxmljs -> @mapbox/node-pre-gyp -> tar)."
+      }
+    },
+    {
+      "bom-ref": "vuln-52",
+      "id": "GHSA-gvwx-54wh-qm9j",
+      "rank": 52,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-gvwx-54wh-qm9j",
+        "cve": "CVE-2026-59875",
+        "severity": "medium",
+        "description": "node-tar: Uncaught Exception DoS via NUL byte in PAX path/linkpath records",
+        "fixed_version": "Upgrade tar to 7.5.17",
+        "epss": "0.00354",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "6610511d1df8accec6c70d7e1206ee414ccaa69d7e77106f179a93c47b0c22e3",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "imported_by_app_code: no (not imported directly by the app's own code)"
+      }
+    },
+    {
+      "bom-ref": "vuln-53",
+      "id": "GHSA-gvwx-54wh-qm9j",
+      "rank": 53,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 6.2.1",
+        "vulnerability": "GHSA-gvwx-54wh-qm9j",
+        "cve": "CVE-2026-59875",
+        "severity": "medium",
+        "description": "node-tar: Uncaught Exception DoS via NUL byte in PAX path/linkpath records",
+        "fixed_version": "Upgrade tar to 7.5.17",
+        "epss": "0.00354",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "bab4b33bd9f0856ddf0b76e408175e65a868a57e51f4a4356ca87108db19549f",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "not enough information about the impact of the vulnerability on the application's functionality or data"
+      }
+    },
+    {
+      "bom-ref": "vuln-54",
+      "id": "GHSA-w5hq-g745-h8pq",
+      "rank": 54,
+      "facts": {
+        "application": "dvna",
+        "package": "uuid 3.4.0",
+        "vulnerability": "GHSA-w5hq-g745-h8pq",
+        "cve": "CVE-2026-41907",
+        "severity": "medium",
+        "description": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+        "fixed_version": "Upgrade uuid to 11.1.1",
+        "epss": "0.0035",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "sequelize -> uuid",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "25380c895eb146c0870535b4337bea49cc1f9f35fee369a8cc64c9df799ad58a",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is described as a missing buffer bounds check in v3/v5/v6 when buf is provided, but the fact that the package is an indirect dependency (pulled in by another package) and not imported directly by the app's own code makes it unclear if the vulnerable code can be reached by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-55",
+      "id": "GHSA-83g3-92jg-28cx",
+      "rank": 55,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-83g3-92jg-28cx",
+        "cve": "CVE-2026-26960",
+        "severity": "high",
+        "description": "Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction",
+        "fixed_version": "Upgrade tar to 7.5.8",
+        "epss": "0.00328",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "2a5b69a2c407a483230dcb44514d204e5baae7e142de18163a7f9e4d69af06c1",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable via a symlink chain, and there is no indication that the vulnerable package is directly imported by the app's code or used in a way that would allow the exploit to reach the running application."
+      }
+    },
+    {
+      "bom-ref": "vuln-56",
+      "id": "GHSA-83g3-92jg-28cx",
+      "rank": 56,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 6.2.1",
+        "vulnerability": "GHSA-83g3-92jg-28cx",
+        "cve": "CVE-2026-26960",
+        "severity": "high",
+        "description": "Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction",
+        "fixed_version": "Upgrade tar to 7.5.8",
+        "epss": "0.00328",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "01c0a281c833b4107a42433d62139af9100760cdc1c5ead9e47d5de7853fe02a",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs -> @mapbox/node-pre-gyp -> tar)."
+      }
+    },
+    {
+      "bom-ref": "vuln-57",
+      "id": "GHSA-9965-vmph-33xx",
+      "rank": 57,
+      "facts": {
+        "application": "dvna",
+        "package": "validator 10.11.0",
+        "vulnerability": "GHSA-9965-vmph-33xx",
+        "cve": "CVE-2025-56200",
+        "severity": "medium",
+        "description": "validator.js has a URL validation bypass vulnerability in its isURL function",
+        "fixed_version": "Upgrade validator to 13.15.20",
+        "epss": "0.00324",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "sequelize -> validator",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "1a9943880b52ae34789da4fa9be6e546a96b860fa161b39d1d43ad6ab7d24c34",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is declared in /package-lock.json, indicating it's a production dependency, but the imported_by_app_code fact shows the app does not directly import the vulnerable code, suggesting it may not be reachable."
+      }
+    },
+    {
+      "bom-ref": "vuln-58",
+      "id": "GHSA-9ppj-qmqm-q256",
+      "rank": 58,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-9ppj-qmqm-q256",
+        "cve": "CVE-2026-31802",
+        "severity": "high",
+        "description": "node-tar Symlink Path Traversal via Drive-Relative Linkpath",
+        "fixed_version": "Upgrade tar to 7.5.11",
+        "epss": "0.00269",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "2727a7a87a58a803d5fb4668ca172b3d366a4ba0ff787efb2cd46459e04a7af1",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable tar package is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs -> @mapbox/node-pre-gyp -> tar)."
+      }
+    },
+    {
+      "bom-ref": "vuln-59",
+      "id": "GHSA-9ppj-qmqm-q256",
+      "rank": 59,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 6.2.1",
+        "vulnerability": "GHSA-9ppj-qmqm-q256",
+        "cve": "CVE-2026-31802",
+        "severity": "high",
+        "description": "node-tar Symlink Path Traversal via Drive-Relative Linkpath",
+        "fixed_version": "Upgrade tar to 7.5.11",
+        "epss": "0.00269",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "3dd7fd7940939f0a57102682012eee12e27a85d9b7f183c106912032d51bc460",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the /package-lock.json file, indicating it is a declared dependency, and the application uses it as an indirect dependency through another package (libxmljs)."
+      }
+    },
+    {
+      "bom-ref": "vuln-60",
+      "id": "GHSA-r6q2-hw4h-h46w",
+      "rank": 60,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-r6q2-hw4h-h46w",
+        "cve": "CVE-2026-23950",
+        "severity": "high",
+        "description": "Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS",
+        "fixed_version": "Upgrade tar to 7.5.4",
+        "epss": "0.00264",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "0ff4dac6d9cd55864aefa0a275f1217cccafa14f90c654de20a2500bc61617af",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "not enough information about the impact of the vulnerability on the application's functionality or data"
+      }
+    },
+    {
+      "bom-ref": "vuln-61",
+      "id": "GHSA-r6q2-hw4h-h46w",
+      "rank": 61,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 6.2.1",
+        "vulnerability": "GHSA-r6q2-hw4h-h46w",
+        "cve": "CVE-2026-23950",
+        "severity": "high",
+        "description": "Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS",
+        "fixed_version": "Upgrade tar to 7.5.4",
+        "epss": "0.00264",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "ca4e168a46030aeb8977fcaddcd23b9f2d059ff01a91e99c895173f2d9392e3c",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency (pulled in by another package) and the application does not import the vulnerable package directly, which makes it unclear if the vulnerability can be reached by the running application."
+      }
+    },
+    {
+      "bom-ref": "vuln-62",
+      "id": "GHSA-vmf3-w455-68vh",
+      "rank": 62,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 2.2.2",
+        "vulnerability": "GHSA-vmf3-w455-68vh",
+        "cve": "CVE-2026-53655",
+        "severity": "medium",
+        "description": "node-tar applies PAX size override to intermediary GNU long-name/long-link headers, causing tar parser interpretation differential (file smuggling)",
+        "fixed_version": "Upgrade tar to 7.5.16",
+        "epss": "0.00156",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "a020275391a0a78bc7a2b99a8f420b81fca2052d9f8558d9965c64d78adbb240",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency, and the application does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code can be reached by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-63",
+      "id": "GHSA-vmf3-w455-68vh",
+      "rank": 63,
+      "facts": {
+        "application": "dvna",
+        "package": "tar 6.2.1",
+        "vulnerability": "GHSA-vmf3-w455-68vh",
+        "cve": "CVE-2026-53655",
+        "severity": "medium",
+        "description": "node-tar applies PAX size override to intermediary GNU long-name/long-link headers, causing tar parser interpretation differential (file smuggling)",
+        "fixed_version": "Upgrade tar to 7.5.16",
+        "epss": "0.00156",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "libxmljs -> @mapbox/node-pre-gyp -> tar",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "f7c09fb316c11c0dfbd0ae9cc4f28801e0e33bb788164d9873b79a3ad56d0167",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency, and the application does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code is executed by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-64",
+      "id": "GHSA-3f6p-5ww8-9rcr",
+      "rank": 64,
+      "facts": {
+        "application": "dvna",
+        "package": "mysql2 1.7.0",
+        "vulnerability": "GHSA-3f6p-5ww8-9rcr",
+        "cve": "none",
+        "severity": "high",
+        "description": "MySQL2: Auth Plugin Downgrade to mysql_clear_password Leaks Plaintext Credentials",
+        "fixed_version": "Upgrade mysql2 to 3.22.0",
+        "epss": "none",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mysql2",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "5472a87ffaf0ee2d4e1503eccef6c93aec9f623d88ba3fbe88456de86e1da06f",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is a direct production dependency, declared in the lock file scope, and not imported by the app's own code, indicating it is shipped with the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-65",
+      "id": "GHSA-rgwj-5xj2-c3m3",
+      "rank": 65,
+      "facts": {
+        "application": "dvna",
+        "package": "mysql2 1.7.0",
+        "vulnerability": "GHSA-rgwj-5xj2-c3m3",
+        "cve": "none",
+        "severity": "medium",
+        "description": "MySQL2: Unbounded zlib inflate in compressed MySQL protocol handler allows decompression-bomb DoS",
+        "fixed_version": "Upgrade mysql2 to 3.23.1",
+        "epss": "none",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mysql2",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "ebbcd766c92c7b3faef821118b5ee3e6ea6ce3f0d08f1339e647573828275022",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is a direct production dependency and is declared in the lock file, indicating it is shipped with the application. The fact that it is not imported directly by the app's own code does not preclude it from being executed by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-66",
+      "id": "GHSA-q3w9-g74q-vp5f",
+      "rank": 66,
+      "facts": {
+        "application": "dvna",
+        "package": "express-fileupload 0.4.0",
+        "vulnerability": "GHSA-q3w9-g74q-vp5f",
+        "cve": "none",
+        "severity": "low",
+        "description": "Denial of Service in express-fileupload",
+        "fixed_version": "Upgrade express-fileupload to 1.1.6-alpha.6",
+        "epss": "none",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express-fileupload",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "c8e08f220588b7b85a5431a8b1c8db382f4531b0eac2532f7121d2bf1335bc71",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is provided, indicating the vulnerability has been patched. The vulnerability is declared in the package-lock.json file, which is used to manage dependencies for the application, and the dependency is a direct production dependency, meaning it is shipped with the application."
+      }
+    }
+  ]
+}

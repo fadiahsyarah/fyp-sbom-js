@@ -1,0 +1,18 @@
+# Runs on GitHub's servers after every push: checks the frozen KEV/EPSS data and my signatures.
+# A green tick on GitHub = nothing in output/ was changed after I signed it.
+name: Verify signatures
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4          # download this repo
+      - uses: actions/setup-node@v4        # install Node.js 24
+        with:
+          node-version: 24
+      - run: node verify.js                # exit code 1 (red cross) if any check fails

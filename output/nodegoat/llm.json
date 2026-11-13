@@ -1,0 +1,2994 @@
+{
+  "repo": "nodegoat",
+  "created": "2026-11-13T07:13:35.620Z",
+  "model": {
+    "name": "llama3.2:3b",
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "ollama_version": "0.40.13",
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "top_k": 1,
+      "num_ctx": 4096
+    }
+  },
+  "system_prompt": "You are a software security analyst writing a VEX (Vulnerability Exploitability eXchange) statement.\nYou get facts about ONE known vulnerability in ONE npm package used by a Node.js application.\nDecide the VEX state for this application using ONLY the facts given:\n- \"exploitable\": the vulnerable package is used by the running application (production dependency, imported by the app's code or by a package the app uses), and nothing in the facts shows the vulnerable function cannot be reached.\n- \"not_affected\": the facts show the vulnerable code cannot affect the running application, for example the package is only a development dependency (used for building or testing, not shipped). Then give a justification.\n- \"in_triage\": the facts are not enough to decide.\nNever say \"not_affected\" only because the application is a training app or because the score is low.\nJustification (only when not_affected), one of: code_not_present, code_not_reachable, requires_configuration, requires_dependency, requires_environment, protected_by_compiler, protected_at_runtime, protected_at_perimeter, protected_by_mitigating_control.\nReason: at most 2 short sentences that point to the facts you used.\nAnswer only with JSON.",
+  "answer_schema": {
+    "type": "object",
+    "properties": {
+      "state": {
+        "type": "string",
+        "enum": [
+          "exploitable",
+          "not_affected",
+          "in_triage"
+        ]
+      },
+      "justification": {
+        "type": "string",
+        "enum": [
+          "none",
+          "code_not_present",
+          "code_not_reachable",
+          "requires_configuration",
+          "requires_dependency",
+          "requires_environment",
+          "protected_by_compiler",
+          "protected_at_runtime",
+          "protected_at_perimeter",
+          "protected_by_mitigating_control"
+        ]
+      },
+      "reason": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "state",
+      "justification",
+      "reason"
+    ]
+  },
+  "results": [
+    {
+      "bom-ref": "vuln-1",
+      "id": "GHSA-c4w7-xm78-47vh",
+      "rank": 1,
+      "facts": {
+        "application": "nodegoat",
+        "package": "y18n 3.2.1",
+        "vulnerability": "GHSA-c4w7-xm78-47vh",
+        "cve": "CVE-2020-7774",
+        "severity": "high",
+        "description": "Prototype Pollution in y18n",
+        "fixed_version": "Upgrade y18n to 3.2.2",
+        "epss": "0.69589",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> nconf -> yargs -> y18n",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "01d3f52008eb04bfa8c9600b769e73b83b76c20203223148c350f05d76befc66",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is a prototype pollution in y18n, which is an indirect dependency of the application. The package is declared in the lock file scope of production, indicating it is a production dependency."
+      }
+    },
+    {
+      "bom-ref": "vuln-2",
+      "id": "GHSA-w573-4hg7-7wgq",
+      "rank": 2,
+      "facts": {
+        "application": "nodegoat",
+        "package": "decode-uri-component 0.2.0",
+        "vulnerability": "GHSA-w573-4hg7-7wgq",
+        "cve": "CVE-2022-38900",
+        "severity": "high",
+        "description": "decode-uri-component vulnerable to Denial of Service (DoS)",
+        "fixed_version": "Upgrade decode-uri-component to 0.2.1",
+        "epss": "0.2361",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> forever-monitor -> chokidar -> braces -> snapdragon -> source-map-resolve -> decode-uri-component",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "6b0f4043f2e88c2bd02c59c158cbf50989d9add04ea86af9890e86031652d8b0",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only reachable through an indirect dependency, and the app's code does not import the vulnerable package directly."
+      }
+    },
+    {
+      "bom-ref": "vuln-3",
+      "id": "GHSA-hrpp-h998-j3pp",
+      "rank": 3,
+      "facts": {
+        "application": "nodegoat",
+        "package": "qs 6.5.2",
+        "vulnerability": "GHSA-hrpp-h998-j3pp",
+        "cve": "CVE-2022-24999",
+        "severity": "high",
+        "description": "qs vulnerable to Prototype Pollution",
+        "fixed_version": "Upgrade qs to 6.5.3",
+        "epss": "0.15622",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "body-parser -> qs",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "7defea0ceccf0103755c47ec430d467a5aee10c13cf5492db27afc782f22ef3e",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses qs indirectly through another package (body-parser), which pulls in qs. The vulnerability is not explicitly stated to be unreachable or require configuration to be applied."
+      }
+    },
+    {
+      "bom-ref": "vuln-4",
+      "id": "GHSA-3jfq-g458-7qm9",
+      "rank": 4,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-3jfq-g458-7qm9",
+        "cve": "CVE-2021-32804",
+        "severity": "high",
+        "description": "Arbitrary File Creation/Overwrite due to insufficient absolute path sanitization",
+        "fixed_version": "Upgrade tar to 4.4.14",
+        "epss": "0.15067",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "6f838c30af0ca76a0cabaf4a6f6004bb54c869dceacc040d5559b3dcb03cce48",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only present in indirect dependencies, and the application does not import the vulnerable package directly. The lock file scope is production, but the dependency chain is unknown, making it unclear if the vulnerability is actually reached by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-5",
+      "id": "GHSA-r628-mhmh-qjhw",
+      "rank": 5,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-r628-mhmh-qjhw",
+        "cve": "CVE-2021-32803",
+        "severity": "high",
+        "description": "Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning",
+        "fixed_version": "Upgrade tar to 4.4.15",
+        "epss": "0.07795",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "a462e87bb891632d32abb0677f8e9301bafacdd0696fee187fff516bd71ce096",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is described as 'Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning', but the facts do not indicate that the vulnerable code is executed by the running application (nodegoat)."
+      }
+    },
+    {
+      "bom-ref": "vuln-6",
+      "id": "GHSA-xvch-5gv4-984h",
+      "rank": 6,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimist 0.0.10",
+        "vulnerability": "GHSA-xvch-5gv4-984h",
+        "cve": "CVE-2021-44906",
+        "severity": "critical",
+        "description": "Prototype Pollution in minimist",
+        "fixed_version": "Upgrade minimist to 0.2.4",
+        "epss": "0.04581",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> mkdirp -> minimist",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "b3bc4b845e7e1a85fef17bf268cea57e6ce592fa4b4b7e94f6742254f759d87a",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only reachable through an indirect dependency (forever), and the app's code does not import minimist directly, making it unclear if the vulnerability can be exploited."
+      }
+    },
+    {
+      "bom-ref": "vuln-7",
+      "id": "GHSA-xvch-5gv4-984h",
+      "rank": 7,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimist 0.0.8",
+        "vulnerability": "GHSA-xvch-5gv4-984h",
+        "cve": "CVE-2021-44906",
+        "severity": "critical",
+        "description": "Prototype Pollution in minimist",
+        "fixed_version": "Upgrade minimist to 0.2.4",
+        "epss": "0.04581",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> mkdirp -> minimist",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "14b898142519b41c793c78e47c225648d16b873fe0eeb95e981714fd9e44dae4",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency, and the app's code does not import minimist directly. The dependency chain is not fully known, making it unclear if the vulnerable code is reachable."
+      }
+    },
+    {
+      "bom-ref": "vuln-8",
+      "id": "GHSA-xvch-5gv4-984h",
+      "rank": 8,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimist 0.0.8",
+        "vulnerability": "GHSA-xvch-5gv4-984h",
+        "cve": "CVE-2021-44906",
+        "severity": "critical",
+        "description": "Prototype Pollution in minimist",
+        "fixed_version": "Upgrade minimist to 0.2.4",
+        "epss": "0.04581",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> mkdirp -> minimist",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "14b898142519b41c793c78e47c225648d16b873fe0eeb95e981714fd9e44dae4",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only reachable through an indirect dependency (forever), and the app's code does not import minimist directly. Further analysis is required to determine the exploitability of this vulnerability."
+      }
+    },
+    {
+      "bom-ref": "vuln-9",
+      "id": "GHSA-xvch-5gv4-984h",
+      "rank": 9,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimist 1.2.0",
+        "vulnerability": "GHSA-xvch-5gv4-984h",
+        "cve": "CVE-2021-44906",
+        "severity": "critical",
+        "description": "Prototype Pollution in minimist",
+        "fixed_version": "Upgrade minimist to 1.2.6",
+        "epss": "0.04581",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> mkdirp -> minimist",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "46df7278ea122fd7e6152a8430523c9c1e1affd0ef825c695eb345073a63cb47",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency, and the app's code does not import minimist directly. The dependency chain is not fully known, making it unclear if the vulnerable code is reachable."
+      }
+    },
+    {
+      "bom-ref": "vuln-10",
+      "id": "GHSA-xvch-5gv4-984h",
+      "rank": 10,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimist 1.2.5",
+        "vulnerability": "GHSA-xvch-5gv4-984h",
+        "cve": "CVE-2021-44906",
+        "severity": "critical",
+        "description": "Prototype Pollution in minimist",
+        "fixed_version": "Upgrade minimist to 1.2.6",
+        "epss": "0.04581",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> mkdirp -> minimist",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "677eae3b6ea2ef432ee113be919d953ed6916e509a2d10ac8802a36ed138d011",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only reachable through an indirect dependency (forever -> mkdirp -> minimist), and the app's code does not import minimist directly, making it unclear if the vulnerability can be exploited."
+      }
+    },
+    {
+      "bom-ref": "vuln-11",
+      "id": "GHSA-cf4h-3jhx-xvhq",
+      "rank": 11,
+      "facts": {
+        "application": "nodegoat",
+        "package": "underscore 1.9.1",
+        "vulnerability": "GHSA-cf4h-3jhx-xvhq",
+        "cve": "CVE-2021-23358",
+        "severity": "critical",
+        "description": "Arbitrary Code Execution in underscore",
+        "fixed_version": "Upgrade underscore to 1.12.1",
+        "epss": "0.042",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "underscore",
+        "imported_by_app_code": "yes, in 1 file(s): config/config.js"
+      },
+      "prompt_sha256": "55378975eab19a325592012dd665c8386c1156c871e2b31c18c7d90b00bf549b",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is 1.12.1, which is not present in the production dependency (underscore 1.9.1)."
+      }
+    },
+    {
+      "bom-ref": "vuln-12",
+      "id": "GHSA-qqgx-2p2h-9c37",
+      "rank": 12,
+      "facts": {
+        "application": "nodegoat",
+        "package": "ini 1.3.5",
+        "vulnerability": "GHSA-qqgx-2p2h-9c37",
+        "cve": "CVE-2020-7788",
+        "severity": "high",
+        "description": "ini before 1.3.6 vulnerable to Prototype Pollution via ini.parse",
+        "fixed_version": "Upgrade ini to 1.3.6",
+        "epss": "0.03655",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> nconf -> ini",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "eb7eb99197add2ca03a74fe88ff7c7cb692b273761b806526b8578c5f78f116f",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable via Prototype Pollution via ini.parse, but the facts do not show if this function is reachable in the running application's codebase."
+      }
+    },
+    {
+      "bom-ref": "vuln-13",
+      "id": "GHSA-qqgx-2p2h-9c37",
+      "rank": 13,
+      "facts": {
+        "application": "nodegoat",
+        "package": "ini 1.3.5",
+        "vulnerability": "GHSA-qqgx-2p2h-9c37",
+        "cve": "CVE-2020-7788",
+        "severity": "high",
+        "description": "ini before 1.3.6 vulnerable to Prototype Pollution via ini.parse",
+        "fixed_version": "Upgrade ini to 1.3.6",
+        "epss": "0.03655",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> nconf -> ini",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "eb7eb99197add2ca03a74fe88ff7c7cb692b273761b806526b8578c5f78f116f",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable via Prototype Pollution via ini.parse, but the facts do not show if the app's code uses ini.parse or if it's only used by another package (nconf)."
+      }
+    },
+    {
+      "bom-ref": "vuln-14",
+      "id": "GHSA-fhjf-83wg-r2j9",
+      "rank": 14,
+      "facts": {
+        "application": "nodegoat",
+        "package": "mixin-deep 1.3.1",
+        "vulnerability": "GHSA-fhjf-83wg-r2j9",
+        "cve": "CVE-2019-10746",
+        "severity": "critical",
+        "description": "Prototype Pollution in mixin-deep",
+        "fixed_version": "Upgrade mixin-deep to 1.3.2",
+        "epss": "0.03651",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> forever-monitor -> chokidar -> braces -> snapdragon -> base -> mixin-deep",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "4f0e0eb5e1d7c3f427754cfed19485ae03e31fb0438a3648e4621cf6f7b91987",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is 0.03651, suggesting a moderate to high risk of exploitation."
+      }
+    },
+    {
+      "bom-ref": "vuln-15",
+      "id": "GHSA-9r2w-394v-53qc",
+      "rank": 15,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-9r2w-394v-53qc",
+        "cve": "CVE-2021-37701",
+        "severity": "high",
+        "description": "Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning using symbolic links",
+        "fixed_version": "Upgrade tar to 4.4.16",
+        "epss": "0.03286",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "3ce947c1e8544692ac5fff04e953173b99ed73fddb32be3e8cce47b697ecebb0",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is described as being due to directory cache poisoning using symbolic links, but the fact that the package is an indirect dependency and not imported directly by the app's own code suggests that the vulnerable code may not be reachable by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-16",
+      "id": "GHSA-rrrm-qjm4-v8hf",
+      "rank": 16,
+      "facts": {
+        "application": "nodegoat",
+        "package": "marked 0.3.5",
+        "vulnerability": "GHSA-rrrm-qjm4-v8hf",
+        "cve": "CVE-2022-21680",
+        "severity": "high",
+        "description": "Inefficient Regular Expression Complexity in marked",
+        "fixed_version": "Upgrade marked to 4.0.10",
+        "epss": "0.02852",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "marked",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "7809ca4b2d45d98c7d1da92c7beb8cd0f2d65ea9fccda7dee0166445bb1c2781",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is 4.0.10, which is declared in the package-lock.json file, indicating that the vulnerability has been patched in the latest version of the package. The application is using version 0.3.5, which is vulnerable."
+      }
+    },
+    {
+      "bom-ref": "vuln-17",
+      "id": "GHSA-gxpj-cx7g-858c",
+      "rank": 17,
+      "facts": {
+        "application": "nodegoat",
+        "package": "debug 2.2.0",
+        "vulnerability": "GHSA-gxpj-cx7g-858c",
+        "cve": "CVE-2017-16137",
+        "severity": "low",
+        "description": "Regular Expression Denial of Service in debug",
+        "fixed_version": "Upgrade debug to 2.6.9",
+        "epss": "0.02832",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "body-parser -> debug",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "7083f373567063a075d0c196f2e3de7477740711261890aa751dd65c1a170f0d",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only reachable through an indirect dependency (body-parser) and the app's code does not import the vulnerable package directly, making it unclear if the vulnerability can be exploited."
+      }
+    },
+    {
+      "bom-ref": "vuln-18",
+      "id": "GHSA-gxpj-cx7g-858c",
+      "rank": 18,
+      "facts": {
+        "application": "nodegoat",
+        "package": "debug 4.1.1",
+        "vulnerability": "GHSA-gxpj-cx7g-858c",
+        "cve": "CVE-2017-16137",
+        "severity": "low",
+        "description": "Regular Expression Denial of Service in debug",
+        "fixed_version": "Upgrade debug to 4.3.1",
+        "epss": "0.02832",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "body-parser -> debug",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "780472ee0babc254bc3d00d5b4e5ec72db5b78ebc316b6c604492a9834d82925",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only reachable through an indirect dependency (body-parser) and the app's code does not import the vulnerable package directly."
+      }
+    },
+    {
+      "bom-ref": "vuln-19",
+      "id": "GHSA-5v2h-r2cx-5xgj",
+      "rank": 19,
+      "facts": {
+        "application": "nodegoat",
+        "package": "marked 0.3.5",
+        "vulnerability": "GHSA-5v2h-r2cx-5xgj",
+        "cve": "CVE-2022-21681",
+        "severity": "high",
+        "description": "Inefficient Regular Expression Complexity in marked",
+        "fixed_version": "Upgrade marked to 4.0.10",
+        "epss": "0.02766",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "marked",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "abc3bf4acf7f7f0225fa15fb551f09b932565f0e8e7374a60f9dea4209957199",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is 4.0.10, which is declared in the package-lock.json file, indicating that the vulnerability has been patched in the latest version of the package. The application uses version 0.3.5, which is vulnerable."
+      }
+    },
+    {
+      "bom-ref": "vuln-20",
+      "id": "GHSA-c2qf-rxjj-qqgw",
+      "rank": 20,
+      "facts": {
+        "application": "nodegoat",
+        "package": "semver 5.6.0",
+        "vulnerability": "GHSA-c2qf-rxjj-qqgw",
+        "cve": "CVE-2022-25883",
+        "severity": "high",
+        "description": "semver vulnerable to Regular Expression Denial of Service",
+        "fixed_version": "Upgrade semver to 5.7.2",
+        "epss": "0.02761",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mongodb -> mongodb-core -> require_optional -> semver",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "76f78569c924f1288223748b6e5ed3e6c5fffd497e98e84b76e811ceff507f5c",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package semver is declared in the /package-lock.json file, indicating it is a production dependency, and its indirect dependency chain reaches the running application (nodegoat)."
+      }
+    },
+    {
+      "bom-ref": "vuln-21",
+      "id": "GHSA-c2qf-rxjj-qqgw",
+      "rank": 21,
+      "facts": {
+        "application": "nodegoat",
+        "package": "semver 5.7.0",
+        "vulnerability": "GHSA-c2qf-rxjj-qqgw",
+        "cve": "CVE-2022-25883",
+        "severity": "high",
+        "description": "semver vulnerable to Regular Expression Denial of Service",
+        "fixed_version": "Upgrade semver to 5.7.2",
+        "epss": "0.02761",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "mongodb -> mongodb-core -> require_optional -> semver",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "2213447638c53433e31c8b74095f624584bf68361c3cd7661c2fd236fd5eb4a2",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "imported_by_app_code: no (not imported directly by the app's own code)"
+      }
+    },
+    {
+      "bom-ref": "vuln-22",
+      "id": "GHSA-4g88-fppr-53pp",
+      "rank": 22,
+      "facts": {
+        "application": "nodegoat",
+        "package": "set-value 0.4.3",
+        "vulnerability": "GHSA-4g88-fppr-53pp",
+        "cve": "CVE-2019-10747",
+        "severity": "critical",
+        "description": "Prototype Pollution in set-value",
+        "fixed_version": "Upgrade set-value to 2.0.1",
+        "epss": "0.02475",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> forever-monitor -> chokidar -> braces -> snapdragon -> base -> cache-base -> set-value",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "d21754942a280b9d6e7283c16cc17c106f18eb9b434d0aa594fb993bbcaba5fb",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in /package-lock.json, indicating it's a production dependency, but the app's code does not import it directly, and the dependency chain does not include the vulnerable package in a way that would allow the exploit to reach the app's code."
+      }
+    },
+    {
+      "bom-ref": "vuln-23",
+      "id": "GHSA-4g88-fppr-53pp",
+      "rank": 23,
+      "facts": {
+        "application": "nodegoat",
+        "package": "set-value 2.0.0",
+        "vulnerability": "GHSA-4g88-fppr-53pp",
+        "cve": "CVE-2019-10747",
+        "severity": "critical",
+        "description": "Prototype Pollution in set-value",
+        "fixed_version": "Upgrade set-value to 2.0.1",
+        "epss": "0.02475",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> forever-monitor -> chokidar -> braces -> snapdragon -> base -> cache-base -> set-value",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "f6ef45e01fcf3bf5cdc14aaa3da7f329bbffff89f597ab8e1212127dceb82fdd",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in /package-lock.json, indicating it's a production dependency, but the app's code does not import it directly, and the dependency chain does not include the vulnerable package in a way that would allow the exploit to reach the app's code."
+      }
+    },
+    {
+      "bom-ref": "vuln-24",
+      "id": "GHSA-c9f4-xj24-8jqx",
+      "rank": 24,
+      "facts": {
+        "application": "nodegoat",
+        "package": "uglify-js 2.4.24",
+        "vulnerability": "GHSA-c9f4-xj24-8jqx",
+        "cve": "CVE-2015-8858",
+        "severity": "high",
+        "description": "Regular Expression Denial of Service in uglify-js",
+        "fixed_version": "Upgrade uglify-js to 2.6.0",
+        "epss": "0.02358",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "swig -> uglify-js",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "2170b24e0cb79561825029294484a20b0a02ae69969bf92f93efaa575afed84b",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the /package-lock.json file, indicating it is a declared dependency, and the application uses it as an indirect dependency through another package (swig -> uglify-js)."
+      }
+    },
+    {
+      "bom-ref": "vuln-25",
+      "id": "GHSA-6c8f-qphg-qjgp",
+      "rank": 25,
+      "facts": {
+        "application": "nodegoat",
+        "package": "kind-of 6.0.2",
+        "vulnerability": "GHSA-6c8f-qphg-qjgp",
+        "cve": "CVE-2019-20149",
+        "severity": "high",
+        "description": "Validation Bypass in kind-of",
+        "fixed_version": "Upgrade kind-of to 6.0.3",
+        "epss": "0.02342",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> forever-monitor -> chokidar -> anymatch -> micromatch -> kind-of",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "f4c6804b6c207d167d570cdfb0af588ca667ebd3484561b2c34d00e5dca88420",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only an indirect dependency, and the app's code does not import the vulnerable package directly. The dependency chain is complex, making it unclear if the vulnerability can be reached by the app's code."
+      }
+    },
+    {
+      "bom-ref": "vuln-26",
+      "id": "GHSA-f8q6-p94x-37v3",
+      "rank": 26,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimatch 3.0.4",
+        "vulnerability": "GHSA-f8q6-p94x-37v3",
+        "cve": "CVE-2022-3517",
+        "severity": "high",
+        "description": "minimatch ReDoS vulnerability",
+        "fixed_version": "Upgrade minimatch to 3.0.5",
+        "epss": "0.02279",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "4195611875bd7b8f09c79c804f73496f705f748be3aa80523da4fd043e76485d",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency, and the app's code does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code is reachable."
+      }
+    },
+    {
+      "bom-ref": "vuln-27",
+      "id": "GHSA-f8q6-p94x-37v3",
+      "rank": 27,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimatch 3.0.4",
+        "vulnerability": "GHSA-f8q6-p94x-37v3",
+        "cve": "CVE-2022-3517",
+        "severity": "high",
+        "description": "minimatch ReDoS vulnerability",
+        "fixed_version": "Upgrade minimatch to 3.0.5",
+        "epss": "0.02279",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "4195611875bd7b8f09c79c804f73496f705f748be3aa80523da4fd043e76485d",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency, and the app's code does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code is executed by the app."
+      }
+    },
+    {
+      "bom-ref": "vuln-28",
+      "id": "GHSA-v8w9-2789-6hhr",
+      "rank": 28,
+      "facts": {
+        "application": "nodegoat",
+        "package": "bson 1.0.9",
+        "vulnerability": "GHSA-v8w9-2789-6hhr",
+        "cve": "CVE-2020-7610",
+        "severity": "critical",
+        "description": "Deserialization of Untrusted Data in bson",
+        "fixed_version": "Upgrade bson to 1.1.4",
+        "epss": "0.02265",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mongodb -> mongodb-core -> bson",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "635b599c89cc493a04e1fb4eaa6798fd15ddf6fa583fc1cada3b675324e6dc82",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only reachable through an indirect dependency, and the app's code does not import the vulnerable package directly. The lock file scope is production, but the dependency chain does not indicate that the vulnerable package is being used by the app's code."
+      }
+    },
+    {
+      "bom-ref": "vuln-29",
+      "id": "GHSA-4jqc-8m5r-9rpr",
+      "rank": 29,
+      "facts": {
+        "application": "nodegoat",
+        "package": "set-value 0.4.3",
+        "vulnerability": "GHSA-4jqc-8m5r-9rpr",
+        "cve": "CVE-2021-23440",
+        "severity": "high",
+        "description": "Prototype Pollution in set-value",
+        "fixed_version": "Upgrade set-value to 2.0.1",
+        "epss": "0.02206",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> forever-monitor -> chokidar -> braces -> snapdragon -> base -> cache-base -> set-value",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "5268f377ec737d010c2913f3426a2a41d96b4a3e8282da234e7c25f4937dbfde",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package in the dependency chain."
+      }
+    },
+    {
+      "bom-ref": "vuln-30",
+      "id": "GHSA-4jqc-8m5r-9rpr",
+      "rank": 30,
+      "facts": {
+        "application": "nodegoat",
+        "package": "set-value 2.0.0",
+        "vulnerability": "GHSA-4jqc-8m5r-9rpr",
+        "cve": "CVE-2021-23440",
+        "severity": "high",
+        "description": "Prototype Pollution in set-value",
+        "fixed_version": "Upgrade set-value to 2.0.1",
+        "epss": "0.02206",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> forever-monitor -> chokidar -> braces -> snapdragon -> base -> cache-base -> set-value",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "3ff914ac16c0e3818c3952fd09e0e15a7f20b335a9e59829a26799be6b90cd2c",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in /package-lock.json, indicating it is a production dependency, and the application uses it indirectly through another package in the dependency chain."
+      }
+    },
+    {
+      "bom-ref": "vuln-31",
+      "id": "GHSA-9vvw-cc9w-f27h",
+      "rank": 31,
+      "facts": {
+        "application": "nodegoat",
+        "package": "debug 2.2.0",
+        "vulnerability": "GHSA-9vvw-cc9w-f27h",
+        "cve": "CVE-2017-20165",
+        "severity": "high",
+        "description": "debug Inefficient Regular Expression Complexity vulnerability",
+        "fixed_version": "Upgrade debug to 2.6.9",
+        "epss": "0.02105",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "body-parser -> debug",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "5ac470691996f573a506f52f43937c1efd7e2ea53cc2561207fa562bbe0724be",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the app's code does not import the vulnerable package directly."
+      }
+    },
+    {
+      "bom-ref": "vuln-32",
+      "id": "GHSA-vh95-rmgr-6w4m",
+      "rank": 32,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimist 0.0.10",
+        "vulnerability": "GHSA-vh95-rmgr-6w4m",
+        "cve": "CVE-2020-7598",
+        "severity": "medium",
+        "description": "Prototype Pollution in minimist",
+        "fixed_version": "Upgrade minimist to 0.2.1",
+        "epss": "0.01931",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> mkdirp -> minimist",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "6b4d875623b889b2b283df26918a7e46cf30e899e793f84eeb3266e17ec0d033",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency, and the app's code does not import minimist directly. The dependency chain is not fully known, making it unclear if the vulnerable code is reachable."
+      }
+    },
+    {
+      "bom-ref": "vuln-33",
+      "id": "GHSA-vh95-rmgr-6w4m",
+      "rank": 33,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimist 0.0.8",
+        "vulnerability": "GHSA-vh95-rmgr-6w4m",
+        "cve": "CVE-2020-7598",
+        "severity": "medium",
+        "description": "Prototype Pollution in minimist",
+        "fixed_version": "Upgrade minimist to 0.2.1",
+        "epss": "0.01931",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> mkdirp -> minimist",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "5bf30181b1dd1e06378ed83c7b8d38e908a2d6c731bfad2d12bebd9a61867b05",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency, and the app's code does not import minimist directly. The dependency chain is not fully known, making it unclear if the vulnerable code is reachable."
+      }
+    },
+    {
+      "bom-ref": "vuln-34",
+      "id": "GHSA-vh95-rmgr-6w4m",
+      "rank": 34,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimist 0.0.8",
+        "vulnerability": "GHSA-vh95-rmgr-6w4m",
+        "cve": "CVE-2020-7598",
+        "severity": "medium",
+        "description": "Prototype Pollution in minimist",
+        "fixed_version": "Upgrade minimist to 0.2.1",
+        "epss": "0.01931",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> mkdirp -> minimist",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "5bf30181b1dd1e06378ed83c7b8d38e908a2d6c731bfad2d12bebd9a61867b05",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency, and the app's code does not import minimist directly. The dependency chain is not fully known, making it unclear if the vulnerable code is reachable."
+      }
+    },
+    {
+      "bom-ref": "vuln-35",
+      "id": "GHSA-vh95-rmgr-6w4m",
+      "rank": 35,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimist 1.2.0",
+        "vulnerability": "GHSA-vh95-rmgr-6w4m",
+        "cve": "CVE-2020-7598",
+        "severity": "medium",
+        "description": "Prototype Pollution in minimist",
+        "fixed_version": "Upgrade minimist to 1.2.3",
+        "epss": "0.01931",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> mkdirp -> minimist",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "937fe20d2bf110c515aa1fd22330eb2e896a1925c2e0d204e933b932355b9956",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency, and the app's code does not import minimist directly. The dependency chain is not fully known, making it unclear if the vulnerable code is reachable."
+      }
+    },
+    {
+      "bom-ref": "vuln-36",
+      "id": "GHSA-qq89-hq3f-393p",
+      "rank": 36,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-qq89-hq3f-393p",
+        "cve": "CVE-2021-37712",
+        "severity": "high",
+        "description": "Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning using symbolic links",
+        "fixed_version": "Upgrade tar to 4.4.18",
+        "epss": "0.01865",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "1bca9171bd95f45114eeb04e1ead4ebf25d1041f1e3560f32dbc3ba798ed4007",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only present in indirect dependencies, and the application does not import the vulnerable package directly. The lock file scope is production, but the dependency chain is unknown, making it unclear if the vulnerability is actually being used by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-37",
+      "id": "GHSA-6xwr-q98w-rvg7",
+      "rank": 37,
+      "facts": {
+        "application": "nodegoat",
+        "package": "nconf 0.10.0",
+        "vulnerability": "GHSA-6xwr-q98w-rvg7",
+        "cve": "CVE-2022-21803",
+        "severity": "high",
+        "description": "Prototype Pollution in nconf",
+        "fixed_version": "Upgrade nconf to 0.11.4",
+        "epss": "0.0178",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> nconf",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "81693d0bce2313f91ca90ec2838289f56d42c75657b6d597a664dd7879bebdc5",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable when nconf is used with a specific function, but the facts do not show if this function is called by the app's code or not."
+      }
+    },
+    {
+      "bom-ref": "vuln-38",
+      "id": "GHSA-6xwr-q98w-rvg7",
+      "rank": 38,
+      "facts": {
+        "application": "nodegoat",
+        "package": "nconf 0.6.9",
+        "vulnerability": "GHSA-6xwr-q98w-rvg7",
+        "cve": "CVE-2022-21803",
+        "severity": "high",
+        "description": "Prototype Pollution in nconf",
+        "fixed_version": "Upgrade nconf to 0.11.4",
+        "epss": "0.0178",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> nconf",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "ba62923e9d2ac82ea8258f18af56df16329c86a8da46b71f1eb1a3f3631f0a49",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable when nconf is used with a specific function, but the facts do not show if this function is called by the app's code or not."
+      }
+    },
+    {
+      "bom-ref": "vuln-39",
+      "id": "GHSA-x5pg-88wf-qq4p",
+      "rank": 39,
+      "facts": {
+        "application": "nodegoat",
+        "package": "marked 0.3.5",
+        "vulnerability": "GHSA-x5pg-88wf-qq4p",
+        "cve": "CVE-2017-16114",
+        "severity": "high",
+        "description": "Regular Expression Denial of Service in marked",
+        "fixed_version": "Upgrade marked to 0.3.9",
+        "epss": "0.01731",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "marked",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "4ed71db19c99e6469c2cb260b4bcc0ef737a4595b5b6782a6dbf473289486e30",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version of the vulnerability is available in the package-lock.json file, indicating that the vulnerability has been patched in the production dependency. The vulnerability is also directly imported by the app's code, making it exploitable."
+      }
+    },
+    {
+      "bom-ref": "vuln-40",
+      "id": "GHSA-8r6j-v8pm-fqw3",
+      "rank": 40,
+      "facts": {
+        "application": "nodegoat",
+        "package": "fsevents 1.2.9",
+        "vulnerability": "GHSA-8r6j-v8pm-fqw3",
+        "cve": "CVE-2023-45311",
+        "severity": "critical",
+        "description": "Code injection in fsevents",
+        "fixed_version": "Upgrade fsevents to 1.2.11",
+        "epss": "0.01704",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "d9161abe9bea5cba5306bb9c123d6aec5b07fc04bc24eaac15f28901d0df5ac6",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only reachable through an indirect dependency, and the app's code does not import the vulnerable package directly. The lock file scope is production, but the dependency type is an indirect dependency, which makes it unclear if the vulnerability is actually exploited."
+      }
+    },
+    {
+      "bom-ref": "vuln-41",
+      "id": "GHSA-7px7-7xjx-hxm8",
+      "rank": 41,
+      "facts": {
+        "application": "nodegoat",
+        "package": "marked 0.3.5",
+        "vulnerability": "GHSA-7px7-7xjx-hxm8",
+        "cve": "CVE-2017-1000427",
+        "severity": "medium",
+        "description": "Marked vulnerable to XSS from data URIs",
+        "fixed_version": "Upgrade marked to 0.3.7",
+        "epss": "0.01512",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "marked",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "72a424e5aded5004f994c21da9250d174ba94029bc9659f04fac54fb970e4cc0",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is available, indicating the vulnerability has been patched. The application uses the vulnerable package as a direct production dependency, and the vulnerability is not mitigated by any compiler or runtime protection."
+      }
+    },
+    {
+      "bom-ref": "vuln-42",
+      "id": "GHSA-grv7-fg5c-xmjg",
+      "rank": 42,
+      "facts": {
+        "application": "nodegoat",
+        "package": "braces 2.3.2",
+        "vulnerability": "GHSA-grv7-fg5c-xmjg",
+        "cve": "CVE-2024-4068",
+        "severity": "high",
+        "description": "Uncontrolled resource consumption in braces",
+        "fixed_version": "Upgrade braces to 3.0.3",
+        "epss": "0.01471",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> forever-monitor -> chokidar -> braces",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "e4b2044e959b0c00d0ac8b184d0369f10b9a56bd5d5e6cfa2546c3c2f19d454b",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable code is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (forever-monitor)."
+      }
+    },
+    {
+      "bom-ref": "vuln-43",
+      "id": "GHSA-vfvf-mqq8-rwqc",
+      "rank": 43,
+      "facts": {
+        "application": "nodegoat",
+        "package": "marked 0.3.5",
+        "vulnerability": "GHSA-vfvf-mqq8-rwqc",
+        "cve": "CVE-2016-10531",
+        "severity": "medium",
+        "description": "Sanitization bypass using HTML Entities in marked",
+        "fixed_version": "Upgrade marked to 0.3.6",
+        "epss": "0.0144",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "marked",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "bf5b606ad3a33eb25f5f4e6ceddfd956d156d43a7a7a69273034f1def006a51e",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is available, indicating the vulnerability has been patched. The application uses the vulnerable package as a direct production dependency, and the exploit is not mitigated by compiler or runtime protection."
+      }
+    },
+    {
+      "bom-ref": "vuln-44",
+      "id": "GHSA-952p-6rrq-rcjv",
+      "rank": 44,
+      "facts": {
+        "application": "nodegoat",
+        "package": "micromatch 3.1.10",
+        "vulnerability": "GHSA-952p-6rrq-rcjv",
+        "cve": "CVE-2024-4067",
+        "severity": "medium",
+        "description": "Regular Expression Denial of Service (ReDoS) in micromatch",
+        "fixed_version": "Upgrade micromatch to 4.0.8",
+        "epss": "0.01429",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> forever-monitor -> chokidar -> anymatch -> micromatch",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "0ebe24c601d1196252bc17fb1e8e84db37629a24c4a911451808b58a0ca133c2",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only declared in the package-lock.json file, indicating it's an indirect dependency, and the app's code does not import micromatch directly. This makes it unclear if the vulnerable code is actually executed by the running application."
+      }
+    },
+    {
+      "bom-ref": "vuln-45",
+      "id": "GHSA-5955-9wpr-37jh",
+      "rank": 45,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-5955-9wpr-37jh",
+        "cve": "CVE-2021-37713",
+        "severity": "high",
+        "description": "Arbitrary File Creation/Overwrite on Windows via insufficient relative path sanitization",
+        "fixed_version": "Upgrade tar to 4.4.18",
+        "epss": "0.01273",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "8f57157ac0abc6f3e280ab574a72202a892d8c528ae8b778b650f1b61abefa57",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is described as being on Windows, but the application is not specified to be running on Windows. Additionally, the fact that the package is an indirect dependency and not imported directly by the app's own code makes it unclear if the vulnerable code is actually being executed."
+      }
+    },
+    {
+      "bom-ref": "vuln-46",
+      "id": "GHSA-x55w-vjjp-222r",
+      "rank": 46,
+      "facts": {
+        "application": "nodegoat",
+        "package": "i 0.3.6",
+        "vulnerability": "GHSA-x55w-vjjp-222r",
+        "cve": "CVE-2021-3820",
+        "severity": "high",
+        "description": "inflect vulnerable to Inefficient Regular Expression Complexity",
+        "fixed_version": "Upgrade i to 0.3.7",
+        "epss": "0.01222",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> utile -> i",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "4dbd29e3886f82d692672912f1fe1c3f1defe04d7b98acbd5ba3b5daa06a410e",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is an indirect dependency, and the app's code does not import the vulnerable package directly. The dependency chain shows that the vulnerable package is pulled in by another package (utile), but the app's code does not use it."
+      }
+    },
+    {
+      "bom-ref": "vuln-47",
+      "id": "GHSA-2rq5-699j-x7p6",
+      "rank": 47,
+      "facts": {
+        "application": "nodegoat",
+        "package": "swig 1.4.2",
+        "vulnerability": "GHSA-2rq5-699j-x7p6",
+        "cve": "CVE-2023-25345",
+        "severity": "high",
+        "description": "Arbitrary local file read vulnerability during template rendering",
+        "fixed_version": "No fixed version available",
+        "epss": "0.0105",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "swig",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "deffe0771e2b4164b711f9e69746b58c7bd345e3a4d2ea3fea4ff54f03b3e1eb",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is not available, indicating the vulnerability is still present in the latest version of the package (1.4.2)."
+      }
+    },
+    {
+      "bom-ref": "vuln-48",
+      "id": "GHSA-w9mr-4mfr-499f",
+      "rank": 48,
+      "facts": {
+        "application": "nodegoat",
+        "package": "ms 0.7.1",
+        "vulnerability": "GHSA-w9mr-4mfr-499f",
+        "cve": "CVE-2017-20162",
+        "severity": "medium",
+        "description": "Vercel ms Inefficient Regular Expression Complexity vulnerability",
+        "fixed_version": "Upgrade ms to 2.0.0",
+        "epss": "0.01018",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "serve-favicon -> ms",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "dbe8b4a56f832fc73ab461e956dd88213653bf0d6b36919f52efdf300390c328",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only reachable through an indirect dependency (serve-favicon), and there is no indication that the vulnerable code is executed by the app's own code."
+      }
+    },
+    {
+      "bom-ref": "vuln-49",
+      "id": "GHSA-qpx9-hpmf-5gmw",
+      "rank": 49,
+      "facts": {
+        "application": "nodegoat",
+        "package": "underscore 1.9.1",
+        "vulnerability": "GHSA-qpx9-hpmf-5gmw",
+        "cve": "CVE-2026-27601",
+        "severity": "high",
+        "description": "Underscore has unlimited recursion in _.flatten and _.isEqual, potential for DoS attack",
+        "fixed_version": "Upgrade underscore to 1.13.8",
+        "epss": "0.00962",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "underscore",
+        "imported_by_app_code": "yes, in 1 file(s): config/config.js"
+      },
+      "prompt_sha256": "07a1c95c39dc964e10599ff8727f13b4bc55c8b38282f4c4888da60ad72bb9e5",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is 1.13.8, which is not present in the running application's production dependency (underscore 1.9.1)."
+      }
+    },
+    {
+      "bom-ref": "vuln-50",
+      "id": "GHSA-9wv6-86v2-598j",
+      "rank": 50,
+      "facts": {
+        "application": "nodegoat",
+        "package": "path-to-regexp 0.1.7",
+        "vulnerability": "GHSA-9wv6-86v2-598j",
+        "cve": "CVE-2024-45296",
+        "severity": "high",
+        "description": "path-to-regexp outputs backtracking regular expressions",
+        "fixed_version": "Upgrade path-to-regexp to 0.1.10",
+        "epss": "0.00932",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express -> path-to-regexp",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "3fad73ef70610a105056ad6f7bc8516078337bbf21f128899e07ebf30b604944",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the vulnerability has a fixed version that can be upgraded to."
+      }
+    },
+    {
+      "bom-ref": "vuln-51",
+      "id": "GHSA-f5x3-32g6-xq36",
+      "rank": 51,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-f5x3-32g6-xq36",
+        "cve": "CVE-2024-28863",
+        "severity": "medium",
+        "description": "Denial of service while parsing a tar file due to lack of folders count validation",
+        "fixed_version": "Upgrade tar to 6.2.1",
+        "epss": "0.00929",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "91c3a1ab0424cdf8444f69bad100886dfad4a540b8c67acd1779e7750dc9c499",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only a Denial of Service (DoS) issue, and the application does not import the tar package directly. The vulnerability is also only present in the tar package's parsing functionality, which may not be executed by the running application."
+      }
+    },
+    {
+      "bom-ref": "vuln-52",
+      "id": "GHSA-qwcr-r2fm-qrc7",
+      "rank": 52,
+      "facts": {
+        "application": "nodegoat",
+        "package": "body-parser 1.18.3",
+        "vulnerability": "GHSA-qwcr-r2fm-qrc7",
+        "cve": "CVE-2024-45590",
+        "severity": "high",
+        "description": "body-parser vulnerable to denial of service when url encoding is enabled",
+        "fixed_version": "Upgrade body-parser to 1.20.3",
+        "epss": "0.00824",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "body-parser",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "0eb822f540df7b0d0f6a0ddafdffb3203ef94bc6d943e8d80e7a11a0d0b276e5",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is fixed by upgrading to version 1.20.3, and the application is using version 1.18.3, which is not the fixed version. The vulnerability is declared in the package-lock.json file, indicating it is a direct production dependency."
+      }
+    },
+    {
+      "bom-ref": "vuln-53",
+      "id": "GHSA-rhx6-c78j-4q9w",
+      "rank": 53,
+      "facts": {
+        "application": "nodegoat",
+        "package": "path-to-regexp 0.1.7",
+        "vulnerability": "GHSA-rhx6-c78j-4q9w",
+        "cve": "CVE-2024-52798",
+        "severity": "high",
+        "description": "path-to-regexp contains a ReDoS",
+        "fixed_version": "Upgrade path-to-regexp to 0.1.12",
+        "epss": "0.00787",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express -> path-to-regexp",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "41487e0fef0c4e9be1ce522b153cbc7ff295dc8eab1e86ebbe2c35d2ccf93cac",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (express)."
+      }
+    },
+    {
+      "bom-ref": "vuln-54",
+      "id": "GHSA-rv95-896h-c2vc",
+      "rank": 54,
+      "facts": {
+        "application": "nodegoat",
+        "package": "express 4.16.4",
+        "vulnerability": "GHSA-rv95-896h-c2vc",
+        "cve": "CVE-2024-29041",
+        "severity": "medium",
+        "description": "Express.js Open Redirect in malformed URLs",
+        "fixed_version": "Upgrade express to 4.19.2",
+        "epss": "0.00786",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express",
+        "imported_by_app_code": "yes, in 2 file(s): app/routes/tutorial.js, server.js"
+      },
+      "prompt_sha256": "8c0eb3541001a77888a0ec2f9a3a8f7134af2f57496aa6972a801b5cbb8c113d",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is available, but the application is using an older version of Express (4.16.4) that is not yet patched."
+      }
+    },
+    {
+      "bom-ref": "vuln-55",
+      "id": "GHSA-4jwp-vfvf-657p",
+      "rank": 55,
+      "facts": {
+        "application": "nodegoat",
+        "package": "bson 1.0.9",
+        "vulnerability": "GHSA-4jwp-vfvf-657p",
+        "cve": "CVE-2019-2391",
+        "severity": "medium",
+        "description": "Deserialization of Untrusted Data in bson",
+        "fixed_version": "Upgrade bson to 1.1.4",
+        "epss": "0.00766",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mongodb -> mongodb-core -> bson",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "dbb6316cd74e3d09df5e76de742e4595e7515b73ca7f09896f3df0941cc241f7",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is described as a deserialization of untrusted data in bson, but the fact that the package is only an indirect dependency (pulled in by another package) and not imported directly by the app's own code suggests that the vulnerable code may not be reachable by the application's code."
+      }
+    },
+    {
+      "bom-ref": "vuln-56",
+      "id": "GHSA-vfj7-8cjw-p6xm",
+      "rank": 56,
+      "facts": {
+        "application": "nodegoat",
+        "package": "braces 2.3.2",
+        "vulnerability": "GHSA-vfj7-8cjw-p6xm",
+        "cve": "CVE-2026-93687",
+        "severity": "high",
+        "description": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+        "fixed_version": "No fixed version available",
+        "epss": "0.00757",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> forever-monitor -> chokidar -> braces",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "c7d2194b10ab930a687f243d70668adaa1c5e0f9d4ee8a26a842df830214123d",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "not enough information about the impact of the vulnerability on the application's execution path"
+      }
+    },
+    {
+      "bom-ref": "vuln-57",
+      "id": "GHSA-pxg6-pf52-xh8x",
+      "rank": 57,
+      "facts": {
+        "application": "nodegoat",
+        "package": "cookie 0.3.1",
+        "vulnerability": "GHSA-pxg6-pf52-xh8x",
+        "cve": "CVE-2024-47764",
+        "severity": "low",
+        "description": "cookie accepts cookie name, path, and domain with out of bounds characters",
+        "fixed_version": "Upgrade cookie to 0.7.0",
+        "epss": "0.00744",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "csurf -> cookie",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "c35f112a6d411ccb3d3dbb76132daebde041fc4fb68b9b939a0f079d14f64a2a",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable when the cookie name, path, and domain are set with out of bounds characters, but the application does not import the cookie package directly, making it unclear if the vulnerable code can be reached by the app's code."
+      }
+    },
+    {
+      "bom-ref": "vuln-58",
+      "id": "GHSA-rgw5-rvv9-x895",
+      "rank": 58,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-rgw5-rvv9-x895",
+        "cve": "CVE-2026-69152",
+        "severity": "high",
+        "description": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+        "fixed_version": "Upgrade brace-expansion to 1.1.18",
+        "epss": "0.00647",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "bdfc6d090693f8ccdb21044002ce8da8642bac83a14ce35c8b1ae8e2efe304b1",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (minimatch)."
+      }
+    },
+    {
+      "bom-ref": "vuln-59",
+      "id": "GHSA-rgw5-rvv9-x895",
+      "rank": 59,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-rgw5-rvv9-x895",
+        "cve": "CVE-2026-69152",
+        "severity": "high",
+        "description": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+        "fixed_version": "Upgrade brace-expansion to 1.1.18",
+        "epss": "0.00647",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "bdfc6d090693f8ccdb21044002ce8da8642bac83a14ce35c8b1ae8e2efe304b1",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (minimatch)."
+      }
+    },
+    {
+      "bom-ref": "vuln-60",
+      "id": "GHSA-w8wr-v893-vjvp",
+      "rank": 60,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-w8wr-v893-vjvp",
+        "cve": "CVE-2026-59871",
+        "severity": "medium",
+        "description": "node-tar: Process crash via PAX numeric path type confusion",
+        "fixed_version": "Upgrade tar to 7.5.18",
+        "epss": "0.00644",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "1680021df3f99e5cc57541cce3d92e43ee64fe3c617b920786af423ac2868fbf",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable via a numeric path type confusion, which is not directly reachable by the app's own code, and it's an indirect dependency, pulled in by another package."
+      }
+    },
+    {
+      "bom-ref": "vuln-61",
+      "id": "GHSA-mh99-v99m-4gvg",
+      "rank": 61,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-mh99-v99m-4gvg",
+        "cve": "CVE-2026-14257",
+        "severity": "high",
+        "description": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+        "fixed_version": "Upgrade brace-expansion to 1.1.17",
+        "epss": "0.00643",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "a487cf08412cab8e3ea21f46f85e671c8ff9b2ef9762b6c11778a14dea6cb6d3",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (minimatch)."
+      }
+    },
+    {
+      "bom-ref": "vuln-62",
+      "id": "GHSA-mh99-v99m-4gvg",
+      "rank": 62,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-mh99-v99m-4gvg",
+        "cve": "CVE-2026-14257",
+        "severity": "high",
+        "description": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+        "fixed_version": "Upgrade brace-expansion to 1.1.17",
+        "epss": "0.00643",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "a487cf08412cab8e3ea21f46f85e671c8ff9b2ef9762b6c11778a14dea6cb6d3",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (minimatch)."
+      }
+    },
+    {
+      "bom-ref": "vuln-63",
+      "id": "GHSA-cm22-4g7w-348p",
+      "rank": 63,
+      "facts": {
+        "application": "nodegoat",
+        "package": "serve-static 1.13.2",
+        "vulnerability": "GHSA-cm22-4g7w-348p",
+        "cve": "CVE-2024-43800",
+        "severity": "low",
+        "description": "serve-static vulnerable to template injection that can lead to XSS",
+        "fixed_version": "Upgrade serve-static to 1.16.0",
+        "epss": "0.00631",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express -> serve-static",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "64598e076df97ffa954c0bdaaab690f22c8f35f579bad5e1935337904b154d4c",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable if the template injection is triggered, which requires the serve-static package to be used to serve files. Since the app does not import serve-static directly and the vulnerability is only present in versions 1.13.2 and below, it is unclear if the app is using a vulnerable version of the package."
+      }
+    },
+    {
+      "bom-ref": "vuln-64",
+      "id": "GHSA-p9wx-2529-fp83",
+      "rank": 64,
+      "facts": {
+        "application": "nodegoat",
+        "package": "marked 0.3.5",
+        "vulnerability": "GHSA-p9wx-2529-fp83",
+        "cve": "CVE-2018-25110",
+        "severity": "medium",
+        "description": "Marked allows Regular Expression Denial of Service (ReDoS) attacks",
+        "fixed_version": "Upgrade marked to 0.3.17",
+        "epss": "0.0061",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "marked",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "f82b89a9140d693877e93f8f17314a1f7af45a62d395a86453e53c1e08a5ff77",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version of the vulnerable package is available, and the application is using a direct production dependency, indicating that the vulnerable code is present and potentially reachable."
+      }
+    },
+    {
+      "bom-ref": "vuln-65",
+      "id": "GHSA-34x7-hfp2-rc4v",
+      "rank": 65,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-34x7-hfp2-rc4v",
+        "cve": "CVE-2026-24842",
+        "severity": "high",
+        "description": "node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal",
+        "fixed_version": "Upgrade tar to 7.5.7",
+        "epss": "0.00608",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "957d305758f06948ec237bdeb8013def1dc6339915482bb60cd3b4f26608fea7",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is described as a hardlink path traversal issue, which suggests it may be mitigated by the operating system or a compiler. Without further information on how the vulnerable tar package is used by the nodegoat application, it is unclear if the vulnerability can be reached."
+      }
+    },
+    {
+      "bom-ref": "vuln-66",
+      "id": "GHSA-v6h2-p8h4-qcjw",
+      "rank": 66,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-v6h2-p8h4-qcjw",
+        "cve": "CVE-2025-5889",
+        "severity": "low",
+        "description": "brace-expansion Regular Expression Denial of Service vulnerability",
+        "fixed_version": "Upgrade brace-expansion to 1.1.12",
+        "epss": "0.00586",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "3d16ccf2a880a63a6255e97a96e63cb3fbe1cf422344834baa6604e9cdc017b4",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the lock file scope of production, indicating it is a dependency, but the dependency chain shows it is pulled in by another package (forever-monitor), which may not be present in the production environment."
+      }
+    },
+    {
+      "bom-ref": "vuln-67",
+      "id": "GHSA-v6h2-p8h4-qcjw",
+      "rank": 67,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-v6h2-p8h4-qcjw",
+        "cve": "CVE-2025-5889",
+        "severity": "low",
+        "description": "brace-expansion Regular Expression Denial of Service vulnerability",
+        "fixed_version": "Upgrade brace-expansion to 1.1.12",
+        "epss": "0.00586",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "3d16ccf2a880a63a6255e97a96e63cb3fbe1cf422344834baa6604e9cdc017b4",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the lock file scope of production, indicating it is a dependency, but the dependency chain shows it is pulled in by another package (forever-monitor), which may not be present in the production environment."
+      }
+    },
+    {
+      "bom-ref": "vuln-68",
+      "id": "GHSA-23hp-3jrh-7fpw",
+      "rank": 68,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-23hp-3jrh-7fpw",
+        "cve": "CVE-2026-59873",
+        "severity": "critical",
+        "description": "node-tar: Decompression/parse DoS via unlimited input",
+        "fixed_version": "Upgrade tar to 7.5.19",
+        "epss": "0.00582",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "6864ca28bcb962d83784da12eaf37c23f06e481ba795310119a11c8bb8684fea",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable via unlimited input, but the fact that the package is an indirect dependency and not imported directly by the app's own code suggests that the vulnerable code may not be reachable by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-69",
+      "id": "GHSA-3ppc-4f35-3m26",
+      "rank": 69,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimatch 3.0.4",
+        "vulnerability": "GHSA-3ppc-4f35-3m26",
+        "cve": "CVE-2026-26996",
+        "severity": "high",
+        "description": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+        "fixed_version": "Upgrade minimatch to 3.1.3",
+        "epss": "0.00577",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "6b161dee2c11f38831aef72fe2a852af9071b45eeb27a2f24e28ae975f0a66ba",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is high, suggesting a significant risk."
+      }
+    },
+    {
+      "bom-ref": "vuln-70",
+      "id": "GHSA-3ppc-4f35-3m26",
+      "rank": 70,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimatch 3.0.4",
+        "vulnerability": "GHSA-3ppc-4f35-3m26",
+        "cve": "CVE-2026-26996",
+        "severity": "high",
+        "description": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+        "fixed_version": "Upgrade minimatch to 3.1.3",
+        "epss": "0.00577",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "6b161dee2c11f38831aef72fe2a852af9071b45eeb27a2f24e28ae975f0a66ba",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is high, suggesting a significant risk."
+      }
+    },
+    {
+      "bom-ref": "vuln-71",
+      "id": "GHSA-7r86-cg39-jmmj",
+      "rank": 71,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimatch 3.0.4",
+        "vulnerability": "GHSA-7r86-cg39-jmmj",
+        "cve": "CVE-2026-27903",
+        "severity": "high",
+        "description": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+        "fixed_version": "Upgrade minimatch to 3.1.3",
+        "epss": "0.00576",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "dacb6d502b836659ae22ee265aad935c9e54e82076c6e1cb51f8f10e0442ee80",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is high, suggesting a significant exploitability."
+      }
+    },
+    {
+      "bom-ref": "vuln-72",
+      "id": "GHSA-7r86-cg39-jmmj",
+      "rank": 72,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimatch 3.0.4",
+        "vulnerability": "GHSA-7r86-cg39-jmmj",
+        "cve": "CVE-2026-27903",
+        "severity": "high",
+        "description": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+        "fixed_version": "Upgrade minimatch to 3.1.3",
+        "epss": "0.00576",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "dacb6d502b836659ae22ee265aad935c9e54e82076c6e1cb51f8f10e0442ee80",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is high, suggesting a significant exploitability."
+      }
+    },
+    {
+      "bom-ref": "vuln-73",
+      "id": "GHSA-m6fv-jmcg-4jfg",
+      "rank": 73,
+      "facts": {
+        "application": "nodegoat",
+        "package": "send 0.16.2",
+        "vulnerability": "GHSA-m6fv-jmcg-4jfg",
+        "cve": "CVE-2024-43799",
+        "severity": "low",
+        "description": "send vulnerable to template injection that can lead to XSS",
+        "fixed_version": "Upgrade send to 0.19.0",
+        "epss": "0.00541",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express -> send",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "787db763fc0dff8c46dfd440a874fb3187d03b06aec1f2f2e27d77cef919be7e",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only an indirect dependency, and the app's code does not import the vulnerable package directly. The dependency chain is also not explicitly stated to be reachable by the app's code, making it unclear if the vulnerability can be exploited."
+      }
+    },
+    {
+      "bom-ref": "vuln-74",
+      "id": "GHSA-r292-9mhp-454m",
+      "rank": 74,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-r292-9mhp-454m",
+        "cve": "CVE-2026-73566",
+        "severity": "high",
+        "description": "node-tar: Uncontrolled recursion in mapHas/filesFilter allows uncatchable stack-overflow DoS via crafted long-path tar with member selection",
+        "fixed_version": "Upgrade tar to 7.5.21",
+        "epss": "0.00531",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "2af08bc4dc32a8f86c7b43d0222fa06b3887476fe9dc91d2439425bc6d6feaf2",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package."
+      }
+    },
+    {
+      "bom-ref": "vuln-75",
+      "id": "GHSA-23c5-xmqv-rm74",
+      "rank": 75,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimatch 3.0.4",
+        "vulnerability": "GHSA-23c5-xmqv-rm74",
+        "cve": "CVE-2026-27904",
+        "severity": "high",
+        "description": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+        "fixed_version": "Upgrade minimatch to 3.1.4",
+        "epss": "0.00525",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "543722f5b262286842aacc6604eac507f2b22a2168ad82e2df635e10b0ac5a3e",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is high (0.00525), suggesting a high risk of exploitation."
+      }
+    },
+    {
+      "bom-ref": "vuln-76",
+      "id": "GHSA-23c5-xmqv-rm74",
+      "rank": 76,
+      "facts": {
+        "application": "nodegoat",
+        "package": "minimatch 3.0.4",
+        "vulnerability": "GHSA-23c5-xmqv-rm74",
+        "cve": "CVE-2026-27904",
+        "severity": "high",
+        "description": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+        "fixed_version": "Upgrade minimatch to 3.1.4",
+        "epss": "0.00525",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "543722f5b262286842aacc6604eac507f2b22a2168ad82e2df635e10b0ac5a3e",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is high (0.00525), suggesting a high risk of exploitation."
+      }
+    },
+    {
+      "bom-ref": "vuln-77",
+      "id": "GHSA-37ch-88jc-xwx2",
+      "rank": 77,
+      "facts": {
+        "application": "nodegoat",
+        "package": "path-to-regexp 0.1.7",
+        "vulnerability": "GHSA-37ch-88jc-xwx2",
+        "cve": "CVE-2026-4867",
+        "severity": "high",
+        "description": "path-to-regexp vulnerable to Regular Expression Denial of Service via multiple route parameters",
+        "fixed_version": "Upgrade path-to-regexp to 0.1.13",
+        "epss": "0.00515",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express -> path-to-regexp",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "2f8171ca377c5326a4d5c28481bec8849791be3c7caf99c6b1fffc362740eb99",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is declared in the lock file and is an indirect dependency of the application, but it is not imported directly by the app's own code."
+      }
+    },
+    {
+      "bom-ref": "vuln-78",
+      "id": "GHSA-vcc3-ghjq-m6fr",
+      "rank": 78,
+      "facts": {
+        "application": "nodegoat",
+        "package": "decode-uri-component 0.2.0",
+        "vulnerability": "GHSA-vcc3-ghjq-m6fr",
+        "cve": "CVE-2026-45822",
+        "severity": "medium",
+        "description": "decode-uri-component: Denial of service via exponential decoding of malformed percent-encoded input",
+        "fixed_version": "Upgrade decode-uri-component to 0.5.0",
+        "epss": "0.00507",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "forever -> forever-monitor -> chokidar -> braces -> snapdragon -> source-map-resolve -> decode-uri-component",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "4b3dae0317eae669bb5fc14425da842bfc989de9ae3b0be42dbff53344e9bf94",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable via an indirect dependency, and the app's code does not import the vulnerable package directly. The dependency chain is complex, making it unclear whether the vulnerability can be reached without further analysis."
+      }
+    },
+    {
+      "bom-ref": "vuln-79",
+      "id": "GHSA-qw6h-vgh9-j6wx",
+      "rank": 79,
+      "facts": {
+        "application": "nodegoat",
+        "package": "express 4.16.4",
+        "vulnerability": "GHSA-qw6h-vgh9-j6wx",
+        "cve": "CVE-2024-43796",
+        "severity": "low",
+        "description": "express vulnerable to XSS via response.redirect()",
+        "fixed_version": "Upgrade express to 4.20.0",
+        "epss": "0.00486",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express",
+        "imported_by_app_code": "yes, in 2 file(s): app/routes/tutorial.js, server.js"
+      },
+      "prompt_sha256": "41440967de918cde2a37e5ba0b887e5bfa59b4dacc0b8e522ce34b102c1c7e2c",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The fixed version is available, but the application is using a version of express that is not vulnerable (4.16.4 < 4.20.0)."
+      }
+    },
+    {
+      "bom-ref": "vuln-80",
+      "id": "GHSA-qffp-2rhf-9h96",
+      "rank": 80,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-qffp-2rhf-9h96",
+        "cve": "CVE-2026-29786",
+        "severity": "high",
+        "description": "tar has Hardlink Path Traversal via Drive-Relative Linkpath",
+        "fixed_version": "Upgrade tar to 7.5.10",
+        "epss": "0.00466",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "30350813c5221c55eddf616d171aff691065a06d170ab7686bb167833446095a",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is described as a Hardlink Path Traversal via Drive-Relative Linkpath, but the fact that the package is an indirect dependency and not imported directly by the app's own code suggests that the vulnerable code may not be reachable by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-81",
+      "id": "GHSA-6j4f-fj2g-mc7p",
+      "rank": 81,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-6j4f-fj2g-mc7p",
+        "cve": "CVE-2026-102276",
+        "severity": "high",
+        "description": "brace-expansion: DoS via uncontrolled recursion in parseCommaParts causing stack exhaustion",
+        "fixed_version": "Upgrade brace-expansion to 1.1.19",
+        "epss": "0.00455",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "41a58e60d9c90731683b320461db7585297d54abd13c4703b1deb3093e5bdeb4",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (minimatch)."
+      }
+    },
+    {
+      "bom-ref": "vuln-82",
+      "id": "GHSA-6j4f-fj2g-mc7p",
+      "rank": 82,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-6j4f-fj2g-mc7p",
+        "cve": "CVE-2026-102276",
+        "severity": "high",
+        "description": "brace-expansion: DoS via uncontrolled recursion in parseCommaParts causing stack exhaustion",
+        "fixed_version": "Upgrade brace-expansion to 1.1.19",
+        "epss": "0.00455",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "41a58e60d9c90731683b320461db7585297d54abd13c4703b1deb3093e5bdeb4",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (minimatch)."
+      }
+    },
+    {
+      "bom-ref": "vuln-83",
+      "id": "GHSA-qhr7-859c-m2p7",
+      "rank": 83,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-qhr7-859c-m2p7",
+        "cve": "CVE-2026-102278",
+        "severity": "high",
+        "description": "brace-expansion: DoS via uncontrolled recursion on nested brace groups causing stack exhaustion",
+        "fixed_version": "Upgrade brace-expansion to 1.1.20",
+        "epss": "0.00455",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "b96b598bf0ea027c0623c26af1388094b263be3c37c0ebbabf17e1fde8be6c0d",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (minimatch)."
+      }
+    },
+    {
+      "bom-ref": "vuln-84",
+      "id": "GHSA-qhr7-859c-m2p7",
+      "rank": 84,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-qhr7-859c-m2p7",
+        "cve": "CVE-2026-102278",
+        "severity": "high",
+        "description": "brace-expansion: DoS via uncontrolled recursion on nested brace groups causing stack exhaustion",
+        "fixed_version": "Upgrade brace-expansion to 1.1.20",
+        "epss": "0.00455",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "b96b598bf0ea027c0623c26af1388094b263be3c37c0ebbabf17e1fde8be6c0d",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (minimatch)."
+      }
+    },
+    {
+      "bom-ref": "vuln-85",
+      "id": "GHSA-6rw7-vpxm-498p",
+      "rank": 85,
+      "facts": {
+        "application": "nodegoat",
+        "package": "qs 6.5.2",
+        "vulnerability": "GHSA-6rw7-vpxm-498p",
+        "cve": "CVE-2025-15284",
+        "severity": "medium",
+        "description": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
+        "fixed_version": "Upgrade qs to 6.14.1",
+        "epss": "0.0045",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "body-parser -> qs",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "7d29c6958eeb89ddee17df09c9c9993161e4110f21dba440effb54ad5fdb8993",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and qs is used by the running application (nodegoat) through an indirect dependency (body-parser)."
+      }
+    },
+    {
+      "bom-ref": "vuln-86",
+      "id": "GHSA-f886-m6hf-6m8v",
+      "rank": 86,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-f886-m6hf-6m8v",
+        "cve": "CVE-2026-33750",
+        "severity": "medium",
+        "description": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+        "fixed_version": "Upgrade brace-expansion to 1.1.13",
+        "epss": "0.00447",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "ee0f41bd75d32f78dd2a7f4795c83a941a0d145dca8a43ca2810289e7fdb3a2e",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (minimatch)."
+      }
+    },
+    {
+      "bom-ref": "vuln-87",
+      "id": "GHSA-f886-m6hf-6m8v",
+      "rank": 87,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-f886-m6hf-6m8v",
+        "cve": "CVE-2026-33750",
+        "severity": "medium",
+        "description": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+        "fixed_version": "Upgrade brace-expansion to 1.1.13",
+        "epss": "0.00447",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "ee0f41bd75d32f78dd2a7f4795c83a941a0d145dca8a43ca2810289e7fdb3a2e",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (minimatch)."
+      }
+    },
+    {
+      "bom-ref": "vuln-88",
+      "id": "GHSA-8x88-c5mf-7j5w",
+      "rank": 88,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-8x88-c5mf-7j5w",
+        "cve": "CVE-2026-59874",
+        "severity": "high",
+        "description": "node-tar: Negative tar entry size causes infinite loop in archive replace",
+        "fixed_version": "Upgrade tar to 7.5.18",
+        "epss": "0.00434",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "5a95b46fc155814a5d81a1f941b3411b7002315cf113614c5f2425fabe6097c1",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is described as a 'negative tar entry size causes infinite loop in archive replace', which implies that the vulnerability is triggered by the application's own code. However, the fact that the package is an indirect dependency and not imported directly by the app's own code makes it unclear whether the vulnerability can be reached by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-89",
+      "id": "GHSA-q2hr-2g5m-vwhr",
+      "rank": 89,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-q2hr-2g5m-vwhr",
+        "cve": "CVE-2026-102277",
+        "severity": "medium",
+        "description": "brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service",
+        "fixed_version": "Upgrade brace-expansion to 1.1.21",
+        "epss": "0.0042",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "f0d4efb3fc0f00d612e3ebaf8efb2c3f2188f14057985ec2b49357b3bc399c20",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (minimatch)."
+      }
+    },
+    {
+      "bom-ref": "vuln-90",
+      "id": "GHSA-q2hr-2g5m-vwhr",
+      "rank": 90,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-q2hr-2g5m-vwhr",
+        "cve": "CVE-2026-102277",
+        "severity": "medium",
+        "description": "brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service",
+        "fixed_version": "Upgrade brace-expansion to 1.1.21",
+        "epss": "0.0042",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "f0d4efb3fc0f00d612e3ebaf8efb2c3f2188f14057985ec2b49357b3bc399c20",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only reachable when brace-expansion is used by another package in the dependency chain, but the facts do not show the running application (nodegoat) is using that specific package."
+      }
+    },
+    {
+      "bom-ref": "vuln-91",
+      "id": "GHSA-v422-hmwv-36x6",
+      "rank": 91,
+      "facts": {
+        "application": "nodegoat",
+        "package": "body-parser 1.18.3",
+        "vulnerability": "GHSA-v422-hmwv-36x6",
+        "cve": "CVE-2026-12590",
+        "severity": "low",
+        "description": "body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement",
+        "fixed_version": "Upgrade body-parser to 1.20.6",
+        "epss": "0.00412",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "body-parser",
+        "imported_by_app_code": "yes, in 1 file(s): server.js"
+      },
+      "prompt_sha256": "c1bc297b270726e71665cc8b3f6ee21f6cd2edb1a7223679acb93db0b1cf0ba6",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is a production dependency, directly imported by the app's code in server.js, and the fixed version is available for upgrade."
+      }
+    },
+    {
+      "bom-ref": "vuln-92",
+      "id": "GHSA-4mjr-xmp4-gh2g",
+      "rank": 92,
+      "facts": {
+        "application": "nodegoat",
+        "package": "qs 6.5.2",
+        "vulnerability": "GHSA-4mjr-xmp4-gh2g",
+        "cve": "CVE-2026-82417",
+        "severity": "medium",
+        "description": "qs: Denial of Service via Attacker Controlled isBuffer",
+        "fixed_version": "Upgrade qs to 6.16.0",
+        "epss": "0.00396",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "body-parser -> qs",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "cb4b2070182e6857b2db2c511a8f83ce05398637cfd22a5c7859ecfb671a3ea4",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only reachable via an indirect dependency (body-parser), and there is no indication that the qs package is directly imported by the app's code."
+      }
+    },
+    {
+      "bom-ref": "vuln-93",
+      "id": "GHSA-8qq5-rm4j-mr97",
+      "rank": 93,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-8qq5-rm4j-mr97",
+        "cve": "CVE-2026-23745",
+        "severity": "high",
+        "description": "node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization",
+        "fixed_version": "Upgrade tar to 7.5.3",
+        "epss": "0.00376",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "284e6a61e8d3f27368a3ba74c1c72b6cc0e144c7564bce61a43e6f5be68e6301",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable via insufficient path sanitization, but the fact that the package is an indirect dependency and not imported directly by the app's own code suggests that the vulnerable code may not be reachable by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-94",
+      "id": "GHSA-3jxr-9vmj-r5cp",
+      "rank": 94,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-3jxr-9vmj-r5cp",
+        "cve": "CVE-2026-13149",
+        "severity": "high",
+        "description": "brace-expansion: DoS via exponential-time expansion of consecutive non-expanding {} groups",
+        "fixed_version": "Upgrade brace-expansion to 1.1.16",
+        "epss": "0.00364",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "7eaa2837f588027502019bb9bf24df6ded97ba3d327f1bb19ae2f82939e67a7f",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it's an indirect dependency, and the app's code does not import the vulnerable package directly. Further analysis is required to determine the exploitability of this vulnerability."
+      }
+    },
+    {
+      "bom-ref": "vuln-95",
+      "id": "GHSA-3jxr-9vmj-r5cp",
+      "rank": 95,
+      "facts": {
+        "application": "nodegoat",
+        "package": "brace-expansion 1.1.11",
+        "vulnerability": "GHSA-3jxr-9vmj-r5cp",
+        "cve": "CVE-2026-13149",
+        "severity": "high",
+        "description": "brace-expansion: DoS via exponential-time expansion of consecutive non-expanding {} groups",
+        "fixed_version": "Upgrade brace-expansion to 1.1.16",
+        "epss": "0.00364",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "forever -> forever-monitor -> minimatch -> brace-expansion",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "7eaa2837f588027502019bb9bf24df6ded97ba3d327f1bb19ae2f82939e67a7f",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (forever-monitor)."
+      }
+    },
+    {
+      "bom-ref": "vuln-96",
+      "id": "GHSA-gvwx-54wh-qm9j",
+      "rank": 96,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-gvwx-54wh-qm9j",
+        "cve": "CVE-2026-59875",
+        "severity": "medium",
+        "description": "node-tar: Uncaught Exception DoS via NUL byte in PAX path/linkpath records",
+        "fixed_version": "Upgrade tar to 7.5.17",
+        "epss": "0.00354",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "6a4f71c66010b28662ec20617849359cf2da3dde841c1753955d2d889e0a0ce8",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable via NUL byte in PAX path/linkpath records, which is not directly reachable by the app's own code, and the dependency chain is unknown."
+      }
+    },
+    {
+      "bom-ref": "vuln-97",
+      "id": "GHSA-83g3-92jg-28cx",
+      "rank": 97,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-83g3-92jg-28cx",
+        "cve": "CVE-2026-26960",
+        "severity": "high",
+        "description": "Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction",
+        "fixed_version": "Upgrade tar to 7.5.8",
+        "epss": "0.00328",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "d7ddb5e73d59f87b658e31854845b8a0c34aeb907ac02eb0b629ce2d77034a55",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is described as a hardlink target escape through symlink chain in node-tar extraction, which implies it requires a specific setup (e.g., a symlink chain) to be exploitable. Without further information on how the tar package is used in the nodegoat application, it's unclear if this setup is present in the production environment."
+      }
+    },
+    {
+      "bom-ref": "vuln-98",
+      "id": "GHSA-9ppj-qmqm-q256",
+      "rank": 98,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-9ppj-qmqm-q256",
+        "cve": "CVE-2026-31802",
+        "severity": "high",
+        "description": "node-tar Symlink Path Traversal via Drive-Relative Linkpath",
+        "fixed_version": "Upgrade tar to 7.5.11",
+        "epss": "0.00269",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "fb9aa033e41d64f4332497c0b328e8edd5df0bfb15e085cd9e27be178ea17edb",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable via a drive-relative linkpath, which is not present in the application's code or imported by its own code."
+      }
+    },
+    {
+      "bom-ref": "vuln-99",
+      "id": "GHSA-r6q2-hw4h-h46w",
+      "rank": 99,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-r6q2-hw4h-h46w",
+        "cve": "CVE-2026-23950",
+        "severity": "high",
+        "description": "Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS",
+        "fixed_version": "Upgrade tar to 7.5.4",
+        "epss": "0.00264",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "70695efe701eb4a1957c3cbaad4c7d3677409384eed5fc6d575d9d956c49d2df",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is described as a race condition in a path reservation on macOS APFS, but the fact that the package is an indirect dependency and not imported directly by the app's own code suggests that the vulnerable code may not be reachable by the application."
+      }
+    },
+    {
+      "bom-ref": "vuln-100",
+      "id": "GHSA-jqcg-44mw-7w3h",
+      "rank": 100,
+      "facts": {
+        "application": "nodegoat",
+        "package": "proxy-addr 2.0.4",
+        "vulnerability": "GHSA-jqcg-44mw-7w3h",
+        "cve": "CVE-2026-90711",
+        "severity": "critical",
+        "description": "proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet",
+        "fixed_version": "Upgrade proxy-addr to 2.0.8",
+        "epss": "0.0026",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express -> proxy-addr",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "c4358fd9ae706ecd31642d809ddc283fa24a42d614586256ad56c67a19fabed1",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The package is declared in the lock file and is an indirect dependency of the application, indicating it is used in the production environment."
+      }
+    },
+    {
+      "bom-ref": "vuln-101",
+      "id": "GHSA-76c9-3jph-rj3q",
+      "rank": 101,
+      "facts": {
+        "application": "nodegoat",
+        "package": "on-headers 1.0.1",
+        "vulnerability": "GHSA-76c9-3jph-rj3q",
+        "cve": "CVE-2025-7339",
+        "severity": "low",
+        "description": "on-headers is vulnerable to http response header manipulation",
+        "fixed_version": "Upgrade on-headers to 1.1.0",
+        "epss": "0.00208",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "express-session -> on-headers",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "da46fe14c1008404053d06c4c30521f2c843330d4d1557cdaeb88176ff694588",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable if the on-headers package is used by the running application, but the facts do not show that the vulnerable code is reachable by the app's code or any other package it uses."
+      }
+    },
+    {
+      "bom-ref": "vuln-102",
+      "id": "GHSA-vmf3-w455-68vh",
+      "rank": 102,
+      "facts": {
+        "application": "nodegoat",
+        "package": "tar 4.4.8",
+        "vulnerability": "GHSA-vmf3-w455-68vh",
+        "cve": "CVE-2026-53655",
+        "severity": "medium",
+        "description": "node-tar applies PAX size override to intermediary GNU long-name/long-link headers, causing tar parser interpretation differential (file smuggling)",
+        "fixed_version": "Upgrade tar to 7.5.16",
+        "epss": "0.00156",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "a6bf779b724ea68cbcd4f5159cf41143584aa58db1c281184948354a2662c51f",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable if the tar package is used as a direct dependency, but the facts state that it's an indirect dependency pulled in by another package, and there's no indication that this other package is used in the production environment."
+      }
+    },
+    {
+      "bom-ref": "vuln-103",
+      "id": "GHSA-xv2f-5jw4-v95m",
+      "rank": 103,
+      "facts": {
+        "application": "nodegoat",
+        "package": "fsevents 1.2.9",
+        "vulnerability": "GHSA-xv2f-5jw4-v95m",
+        "cve": "none",
+        "severity": "critical",
+        "description": "Malware in fsevents",
+        "fixed_version": "Upgrade fsevents to 1.2.11",
+        "epss": "none",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": true,
+        "dependency_chain": "unknown",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "1de4fe12acb6edb401896be97b85893417e7e7db69ca2d36572af1b168965e06",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application is using it indirectly through another package."
+      }
+    },
+    {
+      "bom-ref": "vuln-104",
+      "id": "GHSA-mh5c-679w-hh4r",
+      "rank": 104,
+      "facts": {
+        "application": "nodegoat",
+        "package": "mongodb 2.2.36",
+        "vulnerability": "GHSA-mh5c-679w-hh4r",
+        "cve": "none",
+        "severity": "high",
+        "description": "Denial of Service in mongodb",
+        "fixed_version": "Upgrade mongodb to 3.1.13",
+        "epss": "none",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "direct production dependency",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "mongodb",
+        "imported_by_app_code": "yes, in 2 file(s): artifacts/db-reset.js, server.js"
+      },
+      "prompt_sha256": "d1da72a6da2d5860319ff3c0b036f830a96bacdbfb8439012f15bae6ed815ffc",
+      "answer": {
+        "state": "exploitable",
+        "justification": "none",
+        "reason": "The vulnerable package is a direct production dependency and its code is imported by the application's code, indicating that the vulnerable function can be reached."
+      }
+    },
+    {
+      "bom-ref": "vuln-105",
+      "id": "GHSA-c3m8-x3cg-qm2c",
+      "rank": 105,
+      "facts": {
+        "application": "nodegoat",
+        "package": "helmet-csp 1.2.2",
+        "vulnerability": "GHSA-c3m8-x3cg-qm2c",
+        "cve": "none",
+        "severity": "medium",
+        "description": "Configuration Override in helmet-csp",
+        "fixed_version": "Upgrade helmet-csp to 2.9.1",
+        "epss": "none",
+        "in_cisa_kev": "false",
+        "declared_in": "/package-lock.json",
+        "dependency_type": "indirect dependency (pulled in by another package)",
+        "lock_file_scope": "production",
+        "optional": false,
+        "dependency_chain": "helmet -> helmet-csp",
+        "imported_by_app_code": "no (not imported directly by the app's own code)"
+      },
+      "prompt_sha256": "b6ae33f2a77e82e35f047ffec43a3b26b4d6ab0788a97a77672f6adac4a8ee26",
+      "answer": {
+        "state": "in_triage",
+        "justification": "none",
+        "reason": "The vulnerability is only exploitable if the application uses helmet-csp in a way that allows the configuration override, but the facts do not provide information on how the application uses helmet-csp, making it unclear if the vulnerability can be reached."
+      }
+    }
+  ]
+}
