@@ -2,8 +2,9 @@
 // For each repo in testset.json:
 //   1. download it (my fork) and switch to its frozen commit
 //   2. make sure it has a frozen lock file (exact package versions)
-//   3. Syft  -> output/<repo>/sbom.cdx.json   (the SBOM, CycloneDX)
-//   4. Grype -> output/<repo>/grype.json      (vulnerabilities matched against the SBOM)
+//   3. Syft  -> output/<repo>/sbom-step1.cdx.json   (the SBOM, CycloneDX)
+//   4. Grype -> output/<repo>/grype.json      (vulnerabilities matched against the SBOM, Grype's own JSON - read by step2.js)
+//            -> output/<repo>/vulnerabilities-step1.vex.cdx.json   (the same findings in CycloneDX, team file name)
 // Run: node step1.js
 const { execFileSync } = require("child_process");
 const fs = require("fs");
@@ -46,14 +47,15 @@ for (const repo of repos) {
   }
 
   // 3. SBOM with Syft (CycloneDX JSON). -q = quiet, so only the SBOM is printed
-  const sbomFile = path.join(out, "sbom.cdx.json");
+  const sbomFile = path.join(out, "sbom-step1.cdx.json");
   fs.writeFileSync(sbomFile, run("syft", [`dir:${dir}`, "-o", "cyclonedx-json", "-q"]));
 
   // 4. Match the SBOM against Grype's frozen vulnerability database
   const grype = run("grype", [`sbom:${sbomFile}`, "-o", "json", "-q"]);
   fs.writeFileSync(path.join(out, "grype.json"), grype);
+  fs.writeFileSync(path.join(out, "vulnerabilities-step1.vex.cdx.json"), run("grype", [`sbom:${sbomFile}`, "-o", "cyclonedx-json", "-q"]));
 
   const components = JSON.parse(fs.readFileSync(sbomFile, "utf8")).components.length;
   console.log(`  SBOM: ${components} components | Grype: ${JSON.parse(grype).matches.length} vulnerabilities`);
 }
-console.log("\nStep 1 done: output/<repo>/sbom.cdx.json and output/<repo>/grype.json");
+console.log("\nStep 1 done: output/<repo>/sbom-step1.cdx.json, grype.json and vulnerabilities-step1.vex.cdx.json");

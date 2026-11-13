@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:383ad9b0-f738-45a2-bbd7-75b365dafe23",
+  "serialNumber": "urn:uuid:82af66ac-5317-4f6e-8d83-101d73faa3b7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-11-13T09:06:11.964Z",
+    "timestamp": "2026-11-13T09:47:13.364Z",
     "authors": [
       {
         "name": "Fadiah (github.com/fadiahsyarah)"
@@ -73,7 +73,7 @@
       },
       {
         "name": "fyp:signoff:date",
-        "value": "2026-11-13T09:06:11.964Z"
+        "value": "2026-11-13T09:47:13.364Z"
       },
       {
         "name": "fyp:signoff:status",
@@ -97,7 +97,7 @@
     {
       "type": "bom",
       "url": "urn:cdx:ad1fc1ca-b34d-4899-a511-7b9642815a7d/1",
-      "comment": "The SBOM this VEX is about: output/dvna/sbom.cdx.json"
+      "comment": "The SBOM this VEX is about: output/dvna/sbom-step1.cdx.json"
     }
   ],
   "vulnerabilities": [
@@ -136,7 +136,7 @@
         ],
         "detail": "Used directly in core/appHandler.js. Remote code execution, no fixed version: replace node-serialize.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -227,7 +227,7 @@
         ],
         "detail": "ejs 2.7.4 is the vulnerable version (fixed in 3.1.7) and builds DVNA's pages in server.js. Upgrade ejs.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -318,7 +318,7 @@
         ],
         "detail": "Same tar issue as NodeGoat: tar is only used by libxmljs's installer to unpack its files, not on user input while DVNA runs. Needs a manual check.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -409,7 +409,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is available, and the vulnerability is declared in the package-lock.json file, indicating it is a production dependency. The fact that the vulnerable code is used by the running application (direct production dependency) and nothing in the facts shows the vulnerable function cannot be reached, makes it exploitable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -496,7 +496,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is available, but the application is using an older version of the package (3.10.1) that is not fixed by the EPSS (0.03924).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -583,7 +583,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a production dependency and is pulled in by another package (express-fileupload) that is used by the application, indicating that the vulnerable code is reachable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -670,7 +670,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a direct production dependency, declared in the lock file scope, and not imported by the app's own code, indicating the vulnerable code is not present in the application's runtime environment.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -757,7 +757,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency, and the application does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code is reachable by the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -844,7 +844,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a direct production dependency, declared in the lock file scope, and is used by the running application (dvna). The fact that it's not imported directly by the app's own code doesn't affect its exploitability since it's a dependency of another package that is used.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -931,7 +931,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is available, indicating that the vulnerability has been patched. The application is using a direct production dependency, and the vulnerable code is imported by the app's code, making it reachable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1018,7 +1018,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (mathjs).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1105,7 +1105,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is high (0.0181), suggesting a significant exploitability.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1192,7 +1192,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in /package-lock.json, indicating it's a production dependency, but the imported_by_app_code fact shows the app does not directly import the vulnerable code, suggesting it's not directly reachable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1279,7 +1279,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is available, but the application is using an older version of the package (3.10.1) that is not fixed.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1366,7 +1366,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is available, but the application is using an older version (4.44.4) of sequelize, which is not the latest version (6.19.1).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1453,7 +1453,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is not available, but the vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1540,7 +1540,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only exploitable on Windows, but the application is not specified to run on Windows, and there is no indication that the tar package is used for building or testing on Windows.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1627,7 +1627,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is not available, indicating the vulnerability is still present in the latest version of libxmljs (0.19.10).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1714,7 +1714,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is not available, indicating the vulnerability is still present in the latest version of libxmljs (0.19.10).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1801,7 +1801,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the lock file scope (production) and is a direct production dependency, indicating it is shipped with the application. The fact that it is used by the app's code (imported by the app's code or by a package the app uses) further supports this state.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1888,7 +1888,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a direct production dependency, declared in the lock file scope, and is used by the running application (dvna). The fact that it's not imported directly by the app's own code does not affect its exploitability.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1975,7 +1975,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a direct production dependency, declared in the lock file scope, and not imported by the app's own code, indicating it is shipped with the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2062,7 +2062,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only exploitable due to an indirect dependency, and the app's code does not import the vulnerable package directly. The EPSS score is also low (0.00929), which may indicate a lower risk.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2149,7 +2149,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is 6.29.0, which is not present in the production dependency (sequelize 4.44.4).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2236,7 +2236,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is 6.28.1, which is not present in the production dependency (sequelize 4.44.4).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2323,7 +2323,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is 5.0.0, which is not present in the application's production dependency (bcrypt 1.0.3), indicating the vulnerability is still exploitable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2410,7 +2410,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a direct production dependency and is declared in the lock file, indicating it is shipped with the application. The fact that it is not imported directly by the app's own code does not negate its potential impact on the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2497,7 +2497,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only exploitable when the cookie name, path, and domain are provided with out of bounds characters, but the fact that the app is not importing the vulnerable code directly implies that the vulnerable function cannot be reached.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2584,7 +2584,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency, and the app does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code is reachable by the app's code.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2671,7 +2671,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (bcrypt).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2758,7 +2758,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: not enough information about the impact of the vulnerability on the application's functionality or data",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2845,7 +2845,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: not enough information about the impact of the vulnerability on the application's functionality or data",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2932,7 +2932,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a direct production dependency, and the application imports the vulnerable package in one of its files (server.js).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3019,7 +3019,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs -> @mapbox/node-pre-gyp -> tar).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3106,7 +3106,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a declared dependency, and the application uses it as an indirect dependency through another package (libxmljs).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3193,7 +3193,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is available, but the application is using an outdated version (4.44.4) of sequelize, which is the vulnerable version. The application is also using the vulnerable package as a direct production dependency, and the vulnerable code is imported by the app's code in one file (models/index.js).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3280,7 +3280,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs -> @mapbox/node-pre-gyp -> tar).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3367,7 +3367,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: not enough information about the impact of the vulnerability on the application's functionality or data",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3454,7 +3454,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in /package-lock.json, indicating it's a production dependency, but the imported_by_app_code fact shows the app does not directly import the vulnerable package's code.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3541,7 +3541,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is available, but the application is using an older version of sequelize (4.44.4) that is not the latest version (6.37.4).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3628,7 +3628,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is described as uncatchable stack-overflow DoS via crafted long-path tar with member selection, implying that the vulnerable code is not directly reachable by the application's own code, but rather through an indirect dependency.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3715,7 +3715,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is in a package that is an indirect dependency (pulled in by another package), and the app's code does not import the vulnerable package directly. The package is also declared in the lock file scope of production, indicating it is a dependency of the app in production.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3802,7 +3802,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3889,7 +3889,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs -> @mapbox/node-pre-gyp -> tar).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3976,7 +3976,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only a dependency of the application, and the app's code does not import the vulnerable qs package directly. The fact that it's an indirect dependency and not imported by app code makes it unclear if the vulnerability can be reached by the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4063,7 +4063,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs -> @mapbox/node-pre-gyp -> tar).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4150,7 +4150,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4237,7 +4237,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is not available, indicating the vulnerability is still present in the latest version of libxmljs (0.19.10) and the application is using it as a direct production dependency.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4324,7 +4324,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only reachable via an indirect dependency (express -> qs), and there is no indication that the vulnerable code is executed by the app's own code.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4411,7 +4411,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency, and the application does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code can be reached by the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4498,7 +4498,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency (pulled in by another package) and the app's code does not import the vulnerable package directly, but the vulnerable package is declared in the lock file scope (production) and is used by the running application (libxmljs -> @mapbox/node-pre-gyp -> tar).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4585,7 +4585,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: imported_by_app_code: no (not imported directly by the app's own code)",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4672,7 +4672,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: not enough information about the impact of the vulnerability on the application's functionality or data",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4759,7 +4759,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is described as a missing buffer bounds check in v3/v5/v6 when buf is provided, but the fact that the package is an indirect dependency (pulled in by another package) and not imported directly by the app's own code makes it unclear if the vulnerable code can be reached by the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4846,7 +4846,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only exploitable via a symlink chain, and there is no indication that the vulnerable package is directly imported by the app's code or used in a way that would allow the exploit to reach the running application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4933,7 +4933,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs -> @mapbox/node-pre-gyp -> tar).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5020,7 +5020,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in /package-lock.json, indicating it's a production dependency, but the imported_by_app_code fact shows the app does not directly import the vulnerable code, suggesting it may not be reachable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5107,7 +5107,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable tar package is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (libxmljs -> @mapbox/node-pre-gyp -> tar).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5194,7 +5194,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a declared dependency, and the application uses it as an indirect dependency through another package (libxmljs).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5281,7 +5281,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: not enough information about the impact of the vulnerability on the application's functionality or data",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5368,7 +5368,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency (pulled in by another package) and the application does not import the vulnerable package directly, which makes it unclear if the vulnerability can be reached by the running application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5455,7 +5455,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency, and the application does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code can be reached by the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5542,7 +5542,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency, and the application does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code is executed by the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5620,7 +5620,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a direct production dependency, declared in the lock file scope, and not imported by the app's own code, indicating it is shipped with the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5694,7 +5694,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a direct production dependency and is declared in the lock file, indicating it is shipped with the application. The fact that it is not imported directly by the app's own code does not preclude it from being executed by the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5765,7 +5765,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is provided, indicating the vulnerability has been patched. The vulnerability is declared in the package-lock.json file, which is used to manage dependencies for the application, and the dependency is a direct production dependency, meaning it is shipped with the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {

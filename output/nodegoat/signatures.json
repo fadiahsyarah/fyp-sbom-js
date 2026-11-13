@@ -1,6 +1,6 @@
 {
   "signed_by": "Fadiah (github.com/fadiahsyarah)",
-  "signed_at": "2026-11-13T09:06:21.469Z",
+  "signed_at": "2026-11-13T09:47:13.479Z",
   "algorithm": "Ed25519",
   "public_key": "keys/fadiah-ed25519.pub.pem",
   "public_key_sha256": "1cd487f629843d68a0fb20a71a93b55788d3a75c40ce03db060504259f94a024",
@@ -16,24 +16,29 @@
       "signature": "SFD/OLmvmQDt2Z2LsQBPbZ2MH1UIkJ2NlKteOuHiPuFAL2Ca6+kArrm5REovUvl8BgHTH8TiHWzhPB1IIaAXBg=="
     },
     {
-      "file": "ranked.cdx.json",
-      "sha256": "a5c4ca251a83683fe1f9ff07a52c59f724cfad5807f9327b3f466dabb5ba10e0",
-      "signature": "wFBFyqRnMUFs0B2a2OC45NWHrrcbGFROLDlWT2cPCi+9jJFP38atC6oEv3hqU49w3UwoHJ5sp10plmrpOAZPBg=="
-    },
-    {
       "file": "review.csv",
       "sha256": "63471c4ddb1cdbbc767eea39e527f46911dcf10069f452fc7cc4b9ebaae87c2a",
       "signature": "BcE/mhGINSjeN6Um6eg9AYtCXj8xOzULGGQfFHDyQp2r9U7MOB5iZtSMEeCS56wVfp95KADnwH+bZzo6rl89BA=="
     },
     {
-      "file": "sbom.cdx.json",
+      "file": "sbom-step1.cdx.json",
       "sha256": "f676d98575bf92c64871594880b021a7c896fc86c112cc007dd1a525be181e35",
       "signature": "x8VIrdIF3yfixYNbUezHxyTtPIMQbG0NW6+8M8pJcvcuQfX3UTNc9omCn/g2NhqfAlZJB7fjhQgODEDySplwBQ=="
     },
     {
-      "file": "vex.cdx.json",
-      "sha256": "ba988a91860f60c399e7af005ed24fcdf7ad71d0afab9f2867933f0bc1960ef6",
-      "signature": "FT3VjZ4rb43D32qhMeVGUqOcOLYaYPglDXyBuCq/gS0CfbaAZhPLbcstushrol9xvF51VwLIQpiqEXnEeDT7Ag=="
+      "file": "vulnerabilities-step1.vex.cdx.json",
+      "sha256": "fe1e17710c7c12bb0928e806889c2e95dbc0da740aed2a175da80bb2ef461543",
+      "signature": "piEFESrB6xeZB90g7EmHLmWsOMV+3DeSRMcq/o1G9x5P/N9P2tbRohT7YuEvTh/tTe9HFBO8N/SYHp9U17EFCA=="
+    },
+    {
+      "file": "vulnerabilities-step2.vex.cdx.json",
+      "sha256": "a5c4ca251a83683fe1f9ff07a52c59f724cfad5807f9327b3f466dabb5ba10e0",
+      "signature": "wFBFyqRnMUFs0B2a2OC45NWHrrcbGFROLDlWT2cPCi+9jJFP38atC6oEv3hqU49w3UwoHJ5sp10plmrpOAZPBg=="
+    },
+    {
+      "file": "vulnerabilities-step3.vex.cdx.json",
+      "sha256": "67681726428ddfb056b77d31fa1e278641fed9f46d6ebebe5d7a2e4876189163",
+      "signature": "qTLUAgaiO9cgAdvHujyN8sq7lD+h4/1bOJnx26fJFWThyaY558ulKE39CE+XFbGwqWNKI4rmzFz5HmT6xedNDA=="
     }
   ]
 }

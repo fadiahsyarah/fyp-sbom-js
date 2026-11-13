@@ -1,8 +1,8 @@
 // STEP 2 - add EPSS + CISA KEV to every vulnerability, rank them, and save the result as CycloneDX.
 // One result per repo, so each repo's owners can see and fix their own vulnerabilities.
-//   Input : output/<repo>/sbom.cdx.json + output/<repo>/grype.json (from step1.js)
+//   Input : output/<repo>/sbom-step1.cdx.json + output/<repo>/grype.json (from step1.js)
 //           kev-epss-snapshot/2026-10-29/ (frozen KEV + EPSS data, checked with SHA-256)
-//   Output: output/<repo>/ranked.cdx.json (CycloneDX 1.7: components + ranked vulnerabilities)
+//   Output: output/<repo>/vulnerabilities-step2.vex.cdx.json (CycloneDX 1.7: components + ranked vulnerabilities)
 // Run: node step2.js
 const fs = require("fs");
 const path = require("path");
@@ -49,7 +49,7 @@ const sourceFor = id =>
 
 for (const repo of repos) {
   const dir = path.join(OUT, repo.name);
-  const sbom = read(path.join(dir, "sbom.cdx.json"));
+  const sbom = read(path.join(dir, "sbom-step1.cdx.json"));
   const grype = read(path.join(dir, "grype.json"));
 
   // Each SBOM component has a bom-ref; vulnerabilities point to the component they affect
@@ -143,7 +143,7 @@ for (const repo of repos) {
     dependencies: sbom.dependencies || [],
     vulnerabilities,
   };
-  fs.writeFileSync(path.join(dir, "ranked.cdx.json"), JSON.stringify(bom, null, 2));
+  fs.writeFileSync(path.join(dir, "vulnerabilities-step2.vex.cdx.json"), JSON.stringify(bom, null, 2));
 
   // 2d. Print a summary for this repo
   const count = p => vulns.filter(x => x.priority === p).length;
@@ -151,4 +151,4 @@ for (const repo of repos) {
   for (const [i, x] of vulns.slice(0, 5).entries())
     console.log(`  #${i + 1} ${x.priority.slice(0, 2)}  ${x.pkg.name} ${x.pkg.version}  ${x.best?.cve || x.v.id}  EPSS ${x.best ? x.best.score : "-"}  ${x.v.severity}`);
 }
-console.log("\nStep 2 done: output/<repo>/ranked.cdx.json");
+console.log("\nStep 2 done: output/<repo>/vulnerabilities-step2.vex.cdx.json");

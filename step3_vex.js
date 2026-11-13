@@ -1,8 +1,8 @@
 // STEP 3b - turn my reviewed decisions into a CycloneDX VEX file, one per repo.
 // VEX = Vulnerability Exploitability eXchange: for each vulnerability, does it really affect this app?
-//   Input : output/<repo>/ranked.cdx.json, sbom.cdx.json, llm.json, review.csv (with my decisions from review.js)
+//   Input : output/<repo>/vulnerabilities-step2.vex.cdx.json, sbom-step1.cdx.json, llm.json, review.csv (with my decisions from review.js)
 //   Rule  : every P1 + P2 must be reviewed by me; any row I did not review uses the LLM suggestion, marked "LLM only - not reviewed"
-//   Output: output/<repo>/vex.cdx.json (CycloneDX 1.7 VEX, linked to sbom.cdx.json)
+//   Output: output/<repo>/vulnerabilities-step3.vex.cdx.json (CycloneDX 1.7 VEX, linked to sbom-step1.cdx.json)
 // Run: node step3_vex.js
 const fs = require("fs");
 const path = require("path");
@@ -27,15 +27,15 @@ const summary = [];
 
 for (const repo of repos) {
   const dir = path.join(OUT, repo.name);
-  const ranked = read(path.join(dir, "ranked.cdx.json"));
-  const sbom = read(path.join(dir, "sbom.cdx.json"));
+  const ranked = read(path.join(dir, "vulnerabilities-step2.vex.cdx.json"));
+  const sbom = read(path.join(dir, "sbom-step1.cdx.json"));
   const llm = read(path.join(dir, "llm.json"));
   const { rows } = readReview(path.join(dir, "review.csv"));
   const review = new Map(rows.map(r => [`${r.rank}|${r.vulnerability}`, r]));
   const llmById = new Map(llm.results.map(r => [r["bom-ref"], r]));
-  const oldVex = fs.existsSync(path.join(dir, "vex.cdx.json")) ? read(path.join(dir, "vex.cdx.json")) : null;
+  const oldVex = fs.existsSync(path.join(dir, "vulnerabilities-step3.vex.cdx.json")) ? read(path.join(dir, "vulnerabilities-step3.vex.cdx.json")) : null;
   const firstIssued = new Map(((oldVex && oldVex.vulnerabilities) || []).map(v => [`${v.id}|${(v.affects || [{}])[0].ref}`, v.analysis && v.analysis.firstIssued]));
-  // BOM-Link: points from this VEX to the exact component inside sbom.cdx.json
+  // BOM-Link: points from this VEX to the exact component inside sbom-step1.cdx.json
   const sbomSerial = sbom.serialNumber.replace("urn:uuid:", "");
   const bomLink = ref => `urn:cdx:${sbomSerial}/${sbom.version || 1}#${encodeURIComponent(ref)}`;
 
@@ -120,7 +120,7 @@ for (const repo of repos) {
         P("fyp:review:agreed_with_llm", agreed), P("fyp:review:changed", changed), P("fyp:review:llm_only", total - reviewed),
       ].filter(Boolean),
     },
-    externalReferences: [{ type: "bom", url: `urn:cdx:${sbomSerial}/${sbom.version || 1}`, comment: `The SBOM this VEX is about: output/${repo.name}/sbom.cdx.json` }],
+    externalReferences: [{ type: "bom", url: `urn:cdx:${sbomSerial}/${sbom.version || 1}`, comment: `The SBOM this VEX is about: output/${repo.name}/sbom-step1.cdx.json` }],
     vulnerabilities,
   };
   const count = s => vulnerabilities.filter(v => v.analysis.state === s).length;
@@ -136,7 +136,7 @@ if (errors.length) {
   process.exit(1);
 }
 for (const s of summary) {
-  fs.writeFileSync(path.join(OUT, s.repo, "vex.cdx.json"), JSON.stringify(s.vex, null, 2));
+  fs.writeFileSync(path.join(OUT, s.repo, "vulnerabilities-step3.vex.cdx.json"), JSON.stringify(s.vex, null, 2));
   console.log(`== ${s.repo}: reviewed by me ${s.reviewed}/${s.total} (agreed ${s.agreed}, changed ${s.changed}), LLM only ${s.total - s.reviewed} | ${s.counts}`);
 }
-console.log("\nStep 3b done: output/<repo>/vex.cdx.json - now sign everything: node sign.js");
+console.log("\nStep 3b done: output/<repo>/vulnerabilities-step3.vex.cdx.json - now sign everything: node sign.js");

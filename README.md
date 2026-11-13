@@ -18,15 +18,17 @@ signed VEX statement for every vulnerability (local LLM suggestion + my sign-off
     node verify.js       # anyone: check the signatures and the frozen KEV/EPSS data
 
 ## Output (one folder per repo, so each repo's owners can fix their own repo)
+File names follow the team standard (`sbom-step1`, `vulnerabilities-step1/2/3`), the same as in fyp-team-sbom.
 
 | File | Made by | What it is |
 |---|---|---|
-| `output/<repo>/sbom.cdx.json` | Syft (step1.js) | The SBOM: every component (library + version) in the repo, CycloneDX |
-| `output/<repo>/grype.json` | Grype (step1.js) | The known vulnerabilities Grype matched to the SBOM |
-| `output/<repo>/ranked.cdx.json` | step2.js | The components + vulnerabilities, ranked, with EPSS, KEV and priority, CycloneDX 1.7 |
+| `output/<repo>/sbom-step1.cdx.json` | Syft (step1.js) | The SBOM: every component (library + version) in the repo, CycloneDX |
+| `output/<repo>/grype.json` | Grype (step1.js) | The known vulnerabilities Grype matched to the SBOM (Grype's own JSON, read by step2.js) |
+| `output/<repo>/vulnerabilities-step1.vex.cdx.json` | Grype (step1.js) | The same Step 1 findings in CycloneDX |
+| `output/<repo>/vulnerabilities-step2.vex.cdx.json` | step2.js | The components + vulnerabilities, ranked, with EPSS, KEV and priority, CycloneDX 1.7 |
 | `output/<repo>/llm.json` | step3_llm.js | For each vulnerability: the evidence, the prompt and the LLM's suggestion + the model's exact version |
 | `output/<repo>/review.csv` | step3_llm.js + review.js | The LLM suggestions and my decision for each one I checked (agree / change) |
-| `output/<repo>/vex.cdx.json` | step3_vex.js | The VEX: final state of each vulnerability (exploitable / not_affected / in_triage ...), CycloneDX 1.7 |
+| `output/<repo>/vulnerabilities-step3.vex.cdx.json` | step3_vex.js | The VEX: final state of each vulnerability (exploitable / not_affected / in_triage ...), CycloneDX 1.7 |
 | `output/<repo>/signatures.json` | sign.js | SHA-256 + my Ed25519 signature for every file above |
 
 ## Repos scanned (`testset.json`)
@@ -39,13 +41,13 @@ so the scan always uses the same code.
 - **Grype vulnerability database:** built 2026-10-22T18:51:21Z, auto-update turned off in `~/.grype.yaml`
 - **KEV + EPSS data:** `kev-epss-snapshot/2026-10-29/` (KEV catalog 2026.10.28, EPSS score date 2026-10-28).
   `step2.js` checks the SHA-256 fingerprint of both files on every run and stops if either has changed.
-- **LLM:** Ollama, model `llama3.2:3b`, temperature 0, seed 42; the model digest is saved in `llm.json` and `vex.cdx.json`.
+- **LLM:** Ollama, model `llama3.2:3b`, temperature 0, seed 42; the model digest is saved in `llm.json` and `vulnerabilities-step3.vex.cdx.json`.
   Answers are cached by prompt SHA-256, so re-running gives the same suggestions.
 
 ## Priority and ranking
 P1 - in CISA KEV (being exploited) / P2 - EPSS >= 10% / P3 - EPSS 1-10% / P4 - EPSS < 1% / P5 - no EPSS score.
 Within each repo: in KEV first, then higher EPSS score, then higher EPSS percentile, then higher severity.
-In `ranked.cdx.json` each vulnerability carries these as properties: `fyp:exploitability_rank`, `fyp:priority`,
+In `vulnerabilities-step2.vex.cdx.json` each vulnerability carries these as properties: `fyp:exploitability_rank`, `fyp:priority`,
 `fyp:epss:score`, `fyp:epss:percentile`, `fyp:epss:cve`, `fyp:kev:in_kev`, `fyp:kev:date_added`,
 `fyp:kev:due_date`, `fyp:kev:ransomware_use`, `fyp:fix_state`.
 
@@ -56,8 +58,8 @@ In `ranked.cdx.json` each vulnerability carries these as properties: `fyp:exploi
 2. I check the suggestions with `review.js` (one at a time in the terminal): `agree`, or `change` with my own state and reason.
    Every P1 + P2 vulnerability must be checked (`step3_vex.js` stops otherwise); `node review.js --all` checks every one.
    Any vulnerability I did not check keeps the LLM's suggestion and is marked `fyp:review:decision = LLM only - not reviewed`.
-3. `step3_vex.js` writes `vex.cdx.json`. Each vulnerability's `analysis` is my final decision; the LLM's suggestion
+3. `step3_vex.js` writes `vulnerabilities-step3.vex.cdx.json`. Each vulnerability's `analysis` is my final decision; the LLM's suggestion
    is kept as `fyp:llm:*` properties and my decision as `fyp:review:decision`. `affects` points to the component in
-   `sbom.cdx.json` with a CycloneDX BOM-Link. The metadata records the sign-off (`fyp:signoff:by`, `fyp:signoff:date`, `fyp:signoff:status`).
+   `sbom-step1.cdx.json` with a CycloneDX BOM-Link. The metadata records the sign-off (`fyp:signoff:by`, `fyp:signoff:date`, `fyp:signoff:status`).
 4. `sign.js` signs every output file. The private key stays on my laptop; the public key is `keys/fadiah-ed25519.pub.pem`.
    `verify.js` checks them, and GitHub Actions (`.github/workflows/verify.yml`) runs it after every push.

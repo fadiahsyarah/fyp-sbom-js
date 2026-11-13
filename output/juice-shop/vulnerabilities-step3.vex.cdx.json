@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:79307d7c-0c8f-40ac-a0d3-346797cb5e4c",
+  "serialNumber": "urn:uuid:9c002fd3-9984-4a1c-8d1f-f509907dad8e",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-11-13T09:06:11.964Z",
+    "timestamp": "2026-11-13T09:47:13.364Z",
     "authors": [
       {
         "name": "Fadiah (github.com/fadiahsyarah)"
@@ -73,7 +73,7 @@
       },
       {
         "name": "fyp:signoff:date",
-        "value": "2026-11-13T09:06:11.964Z"
+        "value": "2026-11-13T09:47:13.364Z"
       },
       {
         "name": "fyp:signoff:status",
@@ -97,7 +97,7 @@
     {
       "type": "bom",
       "url": "urn:cdx:eddbf443-76d7-4aae-b31d-9b0986508537/1",
-      "comment": "The SBOM this VEX is about: output/juice-shop/sbom.cdx.json"
+      "comment": "The SBOM this VEX is about: output/juice-shop/sbom-step1.cdx.json"
     }
   ],
   "vulnerabilities": [
@@ -136,7 +136,7 @@
         ],
         "detail": "The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is high, suggesting a significant risk.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -227,7 +227,7 @@
         ],
         "detail": "Kept exploitable: moment is in the production app (via finale-rest). LLM reason contradicts itself, not proven unreachable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -318,7 +318,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is declared in the production lock file, indicating it is a direct dependency of the application, and the fact that it is an indirect dependency does not change this. The vulnerability is also not mitigated by the app's code, as it is not imported directly by the app's own code.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -405,7 +405,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a direct production dependency, and the application uses it in 4 file(s), making the vulnerable code reachable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -492,7 +492,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a direct production dependency, and the application uses it in 4 file(s), making the vulnerable code reachable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -579,7 +579,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is declared in the lock file and is an indirect dependency, but the app's code does not import it directly, and the package is used in the dependency chain (finale-rest -> lodash).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -666,7 +666,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is declared in the production lock file, indicating it is a dependency of the application, and the fact that it is an indirect dependency does not change this. The vulnerability is also not mitigated by the app's code, as it is not imported directly by the app's own code.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -753,7 +753,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is described as allowing a redirect to a UNIX socket, but there is no information on whether this redirect can be reached by the running application, and the fact that the package is an indirect dependency and not imported directly by the app's code makes it unclear if the vulnerability can be exploited.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -840,7 +840,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is declared in the lock file and is an indirect dependency, but the app's code does not import it directly. The package is used by a package that is imported by the app's code, but the vulnerability is in the package itself, not in the code that uses it.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -927,7 +927,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1014,7 +1014,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is a medium-severity issue in sanitize-html, a direct production dependency of the juice-shop application, and the code is imported by the app's code in two file(s), indicating it is reachable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1101,7 +1101,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency, and the application is not importing the vulnerable package directly. The EPSS is low (0.01613), but more information is needed to determine the exploitability of the vulnerability.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1188,7 +1188,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1275,7 +1275,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is declared in the lock file scope of production, indicating it is a dependency of the application, and the EPSS score is high, suggesting a significant risk.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1362,7 +1362,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is a medium-severity Cross-Site Scripting (XSS) issue in sanitize-html, which is a direct production dependency of the juice-shop application. The fact that the vulnerability is declared in the lock file and the application uses it in two files indicates that the vulnerable code is reachable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1449,7 +1449,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is available, but the application is using an older version (0.1.3) that is not fixed, and the vulnerability is declared in the package-lock.json file, indicating it is a direct production dependency.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1536,7 +1536,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1623,7 +1623,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The package is a direct production dependency and its code is imported by the application's code in routes/b2bOrder.ts, indicating it is reachable and exploitable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1710,7 +1710,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is a medium-severity Cross-Site Scripting issue in sanitize-html, which is a direct production dependency of the juice-shop application. The fact that it is declared in the lock file and imported by the app's code confirms that the vulnerable code is reachable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1797,7 +1797,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only an indirect dependency, and the app's code does not import the vulnerable package directly. The fact that it's an indirect dependency makes it unclear if the vulnerability can be reached by the app's code.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1884,7 +1884,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a direct production dependency, and the application uses it in 4 file(s), making it reachable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -1971,7 +1971,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a direct production dependency, and the application uses it in 4 file(s), making it reachable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2058,7 +2058,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it's an indirect dependency, and the app code does not import the vulnerable package directly. This makes it unclear if the vulnerability can be reached by the app's code.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2145,7 +2145,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only exploitable via a PAX numeric path type confusion, which is not directly reachable by the app's own code, and the package is only an indirect dependency pulled in by another package (sqlite3).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2232,7 +2232,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (pdfkit).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2319,7 +2319,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a declared dependency, and the lock file scope is set to production, meaning it is used by the running application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2406,7 +2406,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (sqlite3).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2493,7 +2493,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a production dependency, declared in the lock file, and imported by another package (glob), which is used by the running application (juice-shop).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2580,7 +2580,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package in the dependency chain.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2667,7 +2667,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is a medium-severity signature validation bypass in jsonwebtoken, which is a direct production dependency of the juice-shop application. The fact that it is declared in the lock file and imported by the app's code confirms that the vulnerable code is reachable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2754,7 +2754,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is in the jsonwebtoken package, which is a direct production dependency, and the app uses it in 4 file(s), indicating the vulnerable code is reachable.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2841,7 +2841,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency, and the application does not import the vulnerable package directly. The EPSS is 0.00569, which is below the threshold of 0.01, indicating that the exploitability is low, but the lack of a fixed version and the indirect dependency make it unclear how to assess the exploitability.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -2928,7 +2928,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only reachable through an indirect dependency chain (pdfkit -> crypto-js), and the app's code does not import crypto-js directly.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3015,7 +3015,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a declared dependency, and the application uses it as an indirect dependency through another package (sqlite3).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3102,7 +3102,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a production dependency, declared in the lock file, and is pulled in by another package (glob), which is used by the application. The fact that it's an indirect dependency does not change the fact that the vulnerable code is present in the dependency chain.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3189,7 +3189,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency, and the app does not import the vulnerable package directly. The dependency chain only involves downloading and decompressing, without any indication of the vulnerable code being executed or accessible.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3276,7 +3276,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a direct production dependency and its code is imported by the application's code, indicating that the vulnerable function can be reached.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3363,7 +3363,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable package is a direct production dependency and its code is imported by the application's code, indicating that the vulnerable function can be reached.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3450,7 +3450,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only exploitable via an indirect dependency chain, and the app's code does not import the vulnerable package directly. The lock file scope is production, but the dependency chain does not indicate that the vulnerable package is being used in the running application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3537,7 +3537,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is described as a Hardlink Path Traversal via Drive-Relative Linkpath, but the fact that the package is an indirect dependency (pulled in by another package) and not imported directly by the app's own code makes it unclear if the vulnerable code can be reached by the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3624,7 +3624,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is a known issue in tar, a package used by the application (production dependency), and the application is using a version of tar that is not fixed (6.2.1).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3711,7 +3711,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a declared dependency, and the lock file scope is set to production, meaning it is used by the running application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3798,7 +3798,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is described as a denial of service, but the facts do not indicate that the vulnerable function can be reached by the running application. The application does not import the basic-ftp package directly, and the dependency chain does not suggest that the vulnerable function is executed.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3885,7 +3885,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (sqlite3).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -3972,7 +3972,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it's an indirect dependency, and the app's code does not import the vulnerable package directly. This makes it unclear if the vulnerable code is actually executed by the running application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4059,7 +4059,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is used by the running application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4146,7 +4146,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in /package-lock.json, indicating it is a direct production dependency, and the application uses it in 1 file(s), routes/profileImageFileUpload.ts, which suggests the vulnerable code can be reached.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4233,7 +4233,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerable code is in a package that is an indirect dependency of the application, and the application does not import the package directly. The package is declared in the lock file and is used in the dependency chain, indicating it is a production dependency.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4320,7 +4320,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file, indicating it is a declared dependency, and the application uses it as an indirect dependency through another package (sqlite3).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4407,7 +4407,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is fixed by upgrading to version 2.17.6, but the application is using version 1.4.2, indicating that the vulnerable code is not present in the running application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4494,7 +4494,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only reachable during archive extraction, but the application is not explicitly extracting archives, and the dependency chain only includes 'download' and 'decompress', without any intermediate steps that would trigger the vulnerability.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4581,7 +4581,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is fixed by upgrading to version 2.0.0-beta, but the application is using version 1.4.2, which is not the latest version. The fact that the package is a direct production dependency and is imported by the app's code also indicates that the vulnerable code can be reached.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4668,7 +4668,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is described as a 'Symlink Path Traversal' issue, which implies that the attack vector relies on the application's handling of file paths. However, the fact that the vulnerable package is an indirect dependency (pulled in by another package) and not imported directly by the app's own code makes it unclear whether the vulnerability can be reached by the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4755,7 +4755,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is fixed by upgrading tar to 7.5.4, and the application is using version 6.2.1, which is not the fixed version. Additionally, the vulnerability is declared in the package-lock.json file, indicating it is a production dependency.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4842,7 +4842,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the package-lock.json file and is a direct production dependency, indicating it is shipped with the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -4929,7 +4929,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application imports the vulnerable package directly in its code.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5016,7 +5016,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is declared in the /package-lock.json file, indicating it is a production dependency, and the application uses it indirectly through another package (sqlite3).",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5103,7 +5103,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only an indirect dependency, and the app's code does not import the vulnerable package directly. The dependency chain is also not directly reachable by the vulnerable code.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5178,7 +5178,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The fixed version is not available, indicating the vulnerability is still present in the latest version of marsdb (0.6.11), and the application is a direct production dependency, meaning the vulnerable package is shipped with the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5261,7 +5261,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is described as forgeable Public/Private Tokens in jws, but the fact that the application uses a fixed version (3.0.0) of the jws package suggests that the vulnerability has been patched. However, the fact that the package is declared in the lock file and is an indirect dependency of the application means that the vulnerability could potentially be exploited if the application were to use a different version of the package.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5332,7 +5332,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is an indirect dependency, and the application does not import the vulnerable package directly. The dependency chain is not fully known, making it unclear if the vulnerable code can be reached by the application.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5415,7 +5415,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only exploitable through unbounded precision specifiers, which are not present in the application's code. Additionally, the package is an indirect dependency, pulled in by another package, and not imported directly by the app's own code.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {
@@ -5498,7 +5498,7 @@
         ],
         "detail": "LLM suggestion, not reviewed by a person: The vulnerability is only exploitable through unbounded precision specifiers, which are not used by the app's code, and the package is only an indirect dependency, pulled in by another package.",
         "firstIssued": "2026-11-13T08:31:07.184Z",
-        "lastUpdated": "2026-11-13T09:06:11.964Z"
+        "lastUpdated": "2026-11-13T09:47:13.364Z"
       },
       "affects": [
         {

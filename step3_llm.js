@@ -1,6 +1,6 @@
 // STEP 3a - collect evidence for every vulnerability and ask a local LLM (Ollama) for a VEX suggestion.
 // The LLM only SUGGESTS. I review every suggestion in review.csv, then step3_vex.js writes the VEX.
-//   Input : output/<repo>/ranked.cdx.json (step2.js) + repos/<repo> (the code, from step1.js)
+//   Input : output/<repo>/vulnerabilities-step2.vex.cdx.json (step2.js) + repos/<repo> (the code, from step1.js)
 //   Output: output/<repo>/llm.json    (evidence + prompt + LLM answer for every vulnerability)
 //           output/<repo>/review.csv  (one row per vulnerability, for me to review in Excel)
 // Run: node step3_llm.js            (needs Ollama running: ollama serve, model llama3.2:3b)
@@ -125,7 +125,7 @@ const csvCell = v => { const s = v === undefined || v === null ? "" : String(v);
   const { repos } = read(path.join(ROOT, "testset.json"));
   for (const repo of repos) {
     const dir = path.join(OUT, repo.name), repoDir = path.join(REPOS, repo.name);
-    const ranked = read(path.join(dir, "ranked.cdx.json"));
+    const ranked = read(path.join(dir, "vulnerabilities-step2.vex.cdx.json"));
     const llmFile = path.join(dir, "llm.json");
     const old = fs.existsSync(llmFile) ? read(llmFile) : { results: [] };
     const cache = new Map(old.model && old.model.digest === model.digest ? old.results.map(r => [r.prompt_sha256, r.answer]) : []);
